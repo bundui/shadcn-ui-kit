@@ -47,6 +47,12 @@ Tổng hợp các quy tắc nghiệp vụ (Business Logic) hiện tại được
 ## Quy tắc Banner (Promo Banners)
 - Ở trang chủ của khách hàng (`Storefront`), hệ thống sẽ chỉ fetch những Banner quảng cáo thỏa mãn điều kiện `is_active = true` và sắp xếp theo thứ tự hiển thị `order_index`.
 
+## Quy tắc Mail Hàng Loạt
+- Trang `/dashboard/notifications` được dùng như một trình soạn email hàng loạt cho admin.
+- Khi chọn gửi cho toàn bộ người dùng, hệ thống lấy danh sách email từ bảng `profiles` và gửi lần lượt qua API server.
+- Khi chọn gửi thử cho một email cụ thể, hệ thống chỉ gửi đúng một địa chỉ để kiểm tra nội dung trước khi phát broadcast.
+- Việc gửi mail phải đi qua server API để giữ `GMAIL_USER` và `GMAIL_APP_PASSWORD` ở phía môi trường, không lộ sang client.
+
 ## Quy tắc Đánh giá (Reviews)
 - Mọi người đều có thể đọc đánh giá (`Anyone can view reviews`).
 - Nhưng chỉ có người dùng đăng nhập mới được thêm đánh giá (`auth.uid() = user_id`) và Rating bắt buộc giới hạn `1 <= rating <= 5` (Database Check Constraint).

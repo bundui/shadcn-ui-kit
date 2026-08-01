@@ -7,6 +7,13 @@ export interface SendEmailOptions {
   text?: string;
 }
 
+export interface BulkSendEmailOptions {
+  subject: string;
+  html: string;
+  text?: string;
+  recipients: string[];
+}
+
 function getTransporter() {
   const gmailUser = process.env.GMAIL_USER;
   const gmailPass = process.env.GMAIL_APP_PASSWORD;
@@ -19,8 +26,8 @@ function getTransporter() {
     service: "gmail",
     auth: {
       user: gmailUser,
-      pass: gmailPass,
-    },
+      pass: gmailPass
+    }
   });
 }
 
@@ -77,17 +84,73 @@ export async function sendEmail(options: SendEmailOptions) {
       html: options.html,
       headers: {
         // Headers chuẩn cho email giao dịch (transactional receipt), không dùng List-Unsubscribe giả
-        "X-Entity-Ref-ID": `ORD-${Date.now()}`,
-      },
+        "X-Entity-Ref-ID": `ORD-${Date.now()}`
+      }
     });
 
-    console.log("✅ [Email Service] Đã gửi email thành công đến:", options.to, "| MessageID:", info.messageId);
+    console.log(
+      "✅ [Email Service] Đã gửi email thành công đến:",
+      options.to,
+      "| MessageID:",
+      info.messageId
+    );
     return { success: true, messageId: info.messageId };
   } catch (error: any) {
     console.error("❌ [Email Service] Lỗi khi gửi email:", error);
-    const errStr = typeof error === "string" 
-      ? error 
-      : (error?.message || error?.code || error?.response || error?.toString() || "Lỗi gửi email không xác định");
+    const errStr =
+      typeof error === "string"
+        ? error
+        : error?.message ||
+          error?.code ||
+          error?.response ||
+          error?.toString() ||
+          "Lỗi gửi email không xác định";
     return { success: false, error: errStr };
   }
+}
+
+export async function sendBulkEmail(options: BulkSendEmailOptions) {
+  const uniqueRecipients = Array.from(
+    new Set(options.recipients.map((recipient) => recipient.trim()).filter(Boolean))
+  );
+
+  if (uniqueRecipients.length === 0) {
+    return { success: false, error: "Missing recipients" };
+  }
+
+  const results: Array<{
+    to: string;
+    success: boolean;
+    messageId?: string;
+    error?: string;
+  }> = [];
+
+  for (const recipient of uniqueRecipients) {
+    const result = await sendEmail({
+      to: recipient,
+      subject: options.subject,
+      html: options.html,
+      text: options.text
+    });
+
+    results.push({
+      to: recipient,
+      success: result.success,
+      messageId: result.success ? result.messageId : undefined,
+      error: result.success
+        ? undefined
+        : typeof result.error === "string"
+          ? result.error
+          : "Email sending failed"
+    });
+  }
+
+  const successCount = results.filter((item) => item.success).length;
+
+  return {
+    success: successCount > 0,
+    successCount,
+    failureCount: results.length - successCount,
+    results
+  };
 }
