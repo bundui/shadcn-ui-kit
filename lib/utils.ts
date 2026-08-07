@@ -28,3 +28,7 @@ export function generateMeta({
     }
   };
 }
+
+export function formatCurrency(val: number) {
+  return new Intl.NumberFormat("vi-VN", { style: "currency", currency: "VND" }).format(val || 0);
+}

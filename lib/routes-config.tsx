@@ -20,7 +20,12 @@ export const page_routes: PageRoutesType[] = [
         href: "/dashboard/default",
         icon: "PieChart"
       },
-      { title: "Users", href: "/dashboard/pages/users", icon: "Users" },
+      { title: "Products", href: "/dashboard/products", icon: "Box" },
+      { title: "Categories", href: "/dashboard/categories", icon: "Tags" },
+      { title: "Promo Banners", href: "/dashboard/promo-banners", icon: "Image" },
+      { title: "Orders", href: "/dashboard/orders", icon: "Receipt" },
+      { title: "Notifications", href: "/dashboard/notifications", icon: "Bell" },
+      { title: "Users", href: "/dashboard/users", icon: "Users" },
       {
         title: "Settings",
         href: "/dashboard/pages/settings",

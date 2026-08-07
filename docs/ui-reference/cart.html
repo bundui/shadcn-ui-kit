@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shopping Cart - LuxeCommerce</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#d3e4fe",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#e2dfff",
+                        "secondary-container": "#dae2fd",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#dce9ff",
+                        "primary-container": "#4f46e5",
+                        "primary": "#3525cd",
+                        "surface-dim": "#cbdbf5",
+                        "on-primary-container": "#dad7ff",
+                        "background": "#f8f9ff",
+                        "tertiary": "#46494b",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "surface-container-low": "#eff4ff",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "tertiary-fixed": "#e0e3e5",
+                        "surface-tint": "#4d44e3",
+                        "secondary": "#565e74",
+                        "outline": "#777587",
+                        "on-background": "#0b1c30",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#e5eeff",
+                        "inverse-primary": "#c3c0ff",
+                        "tertiary-container": "#5e6163",
+                        "on-secondary-container": "#5c647a",
+                        "secondary-fixed": "#dae2fd",
+                        "on-tertiary-container": "#dadcde",
+                        "surface-bright": "#f8f9ff",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#d3e4fe",
+                        "on-surface-variant": "#464555",
+                        "on-primary-fixed": "#0f0069",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c7c4d8",
+                        "surface": "#f8f9ff",
+                        "on-tertiary-fixed": "#191c1e",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-secondary-fixed": "#131b2e",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "on-surface": "#0b1c30",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "inverse-surface": "#213145"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "xl": "64px",
+                        "base": "4px",
+                        "sm": "16px",
+                        "md": "24px",
+                        "xs": "8px",
+                        "lg": "40px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "display-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["30px", {"lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Base typography setting */
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Material symbols utility */
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Subtle elevation utilities for cards/buttons */
+        .elevation-subtle {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+        .elevation-hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .elevation-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="docked full-width top-0 border-b border-outline-variant bg-surface-container-lowest z-50">
+<div class="flex justify-between items-center w-full px-sm md:px-lg max-w-container-max mx-auto h-xl">
+<!-- Left: Search/Brand -->
+<div class="flex items-center gap-md">
+<span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">LuxeCommerce</span>
+</div>
+<!-- Center: Navigation Links -->
+<div class="hidden md:flex items-center gap-md">
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors duration-200" href="#">New Arrivals</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors duration-200" href="#">Collections</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors duration-200" href="#">Bestsellers</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors duration-200" href="#">Journal</a>
+</div>
+<!-- Right: Actions -->
+<div class="flex items-center gap-sm">
+<button aria-label="favorite" class="p-xs text-on-surface-variant hover:text-primary transition-colors duration-200">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button aria-label="shopping_cart" class="p-xs text-primary border-b-2 border-primary pb-1">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<button class="font-label-md text-label-md text-primary hover:text-primary-container transition-colors duration-200 ml-xs font-semibold">
+                    Login
+                </button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-sm md:px-lg py-xl">
+<!-- Header -->
+<div class="mb-lg">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-xs">Your Cart</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Review your selections before checkout.</p>
+</div>
+<!-- Layout Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-lg lg:gap-xl">
+<!-- Left Column: Cart Items -->
+<div class="lg:col-span-8 flex flex-col gap-md">
+<!-- Cart Item 1 -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center p-sm md:p-md bg-surface-container-lowest border border-outline-variant rounded-lg elevation-subtle group">
+<!-- Product Image -->
+<div class="w-full sm:w-32 h-32 flex-shrink-0 bg-surface-container rounded-md overflow-hidden relative mb-sm sm:mb-0">
+<img alt="Chronograph Minimalist Watch" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sleek, minimalist chronograph watch with a matte midnight black face, surrounded by a polished silver bezel, resting on a soft light grey textured background. Studio lighting highlights the crisp details of the dials and the smooth leather strap, embodying high-end modern retail aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMMxKA08phA1ORb8kNAnnwh39cf7oH4LPxs0wF-2zCIKIcs3q3Dq7W9-Xzjjstr6rX91kEZ7hT7JVbyCWW2FRrlSGUlXRKyvzWF0vFjipxLeuSf7n73M_anEjj-JXtR1s9HhiRVjCZWmQgK2DGpMBRZu1ImQn1IIDV3dMu5U8BuoJU_fS8uSRA0rHOWATJzY_VM25C3pJocHe2Ou2lX9Lt5vdjTPpbZy4Y43gytesQJ726aseSUuRponpnDaMP0lAlhoRSmGRTRLA"/>
+</div>
+<!-- Details -->
+<div class="flex-grow sm:pl-md flex flex-col justify-between h-full w-full">
+<div class="flex justify-between items-start w-full">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Chronograph Minimalist Watch</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Midnight Black / 44mm</p>
+</div>
+<button aria-label="Remove item" class="text-on-surface-variant hover:text-error transition-colors p-xs">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex justify-between items-end mt-md w-full">
+<!-- Quantity -->
+<div class="flex items-center border border-outline-variant rounded-md bg-surface-bright">
+<button aria-label="Decrease quantity" class="px-xs py-[2px] text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<span class="px-xs font-label-md text-label-md text-on-surface w-8 text-center">1</span>
+<button aria-label="Increase quantity" class="px-xs py-[2px] text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+<!-- Price -->
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">$249.00</span>
+</div>
+</div>
+</div>
+<!-- Cart Item 2 -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center p-sm md:p-md bg-surface-container-lowest border border-outline-variant rounded-lg elevation-subtle group">
+<!-- Product Image -->
+<div class="w-full sm:w-32 h-32 flex-shrink-0 bg-surface-container rounded-md overflow-hidden relative mb-sm sm:mb-0">
+<img alt="Air VaporMax Stealth" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A pair of pristine white modern athletic sneakers with translucent air bubble soles, angled slightly to show the profile. They sit on a clean, stark white pedestal against a soft, diffuse light background. The image conveys premium athletic lifestyle commerce, clean, minimal, and crisp." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7ostKM_jhDcetzdmhXALIv9rtWX_m5fY322g1bWjvDEeJi6QYus_aEiaehnKzWOpIUR_05OFlUin4RElrwieGRUiXIoY6ryfGchezOXffAjhTj-zSqR1xwMeMzNvt8f2f3wwSCbADmbejNILs8NkIWkSgcYajauiSordQVPbKfBRFq-x7-noqEtt91YsO36JY801xcjGnJOG5rXVxvf9VBN2zu65Kqlcsp0lVEOL7UvpZzJsy4q-JArK7nQuFZuDWzC2hYQPRSwI"/>
+</div>
+<!-- Details -->
+<div class="flex-grow sm:pl-md flex flex-col justify-between h-full w-full">
+<div class="flex justify-between items-start w-full">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Air VaporMax Stealth</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Arctic White / US 10</p>
+</div>
+<button aria-label="Remove item" class="text-on-surface-variant hover:text-error transition-colors p-xs">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex justify-between items-end mt-md w-full">
+<!-- Quantity -->
+<div class="flex items-center border border-outline-variant rounded-md bg-surface-bright">
+<button aria-label="Decrease quantity" class="px-xs py-[2px] text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<span class="px-xs font-label-md text-label-md text-on-surface w-8 text-center">1</span>
+<button aria-label="Increase quantity" class="px-xs py-[2px] text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+<!-- Price -->
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">$185.00</span>
+</div>
+</div>
+</div>
+<!-- Continue Shopping -->
+<div class="mt-sm">
+<a class="inline-flex items-center gap-2 font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+                        Continue Shopping
+                    </a>
+</div>
+</div>
+<!-- Right Column: Order Summary (Sticky) -->
+<div class="lg:col-span-4">
+<div class="sticky top-[104px] bg-surface-container-lowest border border-outline-variant rounded-xl p-md elevation-subtle">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-md">Order Summary</h2>
+<!-- Cost Breakdown -->
+<div class="space-y-sm mb-md border-b border-outline-variant pb-md">
+<div class="flex justify-between items-center">
+<span class="font-body-md text-body-md text-on-surface-variant">Subtotal</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">$434.00</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-body-md text-on-surface-variant">Shipping</span>
+<span class="font-body-md text-body-md text-primary font-medium">Free</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-body-md text-on-surface-variant">Estimated Tax</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">$34.72</span>
+</div>
+</div>
+<!-- Total -->
+<div class="flex justify-between items-center mb-md">
+<span class="font-headline-sm text-headline-sm text-on-surface">Total</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">$468.72</span>
+</div>
+<!-- Promo Code -->
+<div class="mb-lg">
+<label class="sr-only" for="promo">Promo Code</label>
+<div class="flex gap-2">
+<input class="flex-grow bg-surface-bright border border-outline-variant rounded-md px-sm py-[10px] font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder:text-outline" id="promo" placeholder="Promo code" type="text"/>
+<button class="bg-surface-container-highest text-on-surface font-label-md text-label-md px-md py-[10px] rounded-md hover:bg-surface-dim transition-colors font-medium border border-outline-variant">Apply</button>
+</div>
+</div>
+<!-- Checkout Action -->
+<button class="w-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold py-sm rounded-md elevation-hover min-h-[48px] flex justify-center items-center gap-2">
+                        Proceed to Checkout
+                        <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<p class="font-label-sm text-label-sm text-center text-outline mt-sm flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span> Secure SSL Checkout
+                    </p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="full-width bg-surface-container dark:bg-on-secondary-fixed-variant mt-auto border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-sm md:px-lg py-xl max-w-container-max mx-auto w-full transition-all duration-300 ease-in-out">
+<!-- Brand / Copyright -->
+<div class="flex flex-col gap-sm md:col-span-1">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface dark:text-inverse-on-surface">LuxeCommerce</span>
+<p class="font-body-md text-body-md text-on-secondary-fixed-variant dark:text-tertiary-fixed-dim mt-auto">
+                    © 2024 LuxeCommerce. Precision Minimalism in Motion.
+                </p>
+</div>
+<!-- Links Spacer -->
+<div class="hidden md:block"></div>
+<!-- Links Group 1 -->
+<div class="flex flex-col gap-sm md:col-span-1">
+<a class="font-body-md text-body-md text-on-secondary-fixed-variant dark:text-tertiary-fixed-dim hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">About Us</a>
+<a class="font-body-md text-body-md text-on-secondary-fixed-variant dark:text-tertiary-fixed-dim hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">Sustainability</a>
+</div>
+<!-- Links Group 2 -->
+<div class="flex flex-col gap-sm md:col-span-1">
+<a class="font-body-md text-body-md text-on-secondary-fixed-variant dark:text-tertiary-fixed-dim hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">Shipping & Returns</a>
+<a class="font-body-md text-body-md text-on-secondary-fixed-variant dark:text-tertiary-fixed-dim hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-secondary-fixed-variant dark:text-tertiary-fixed-dim hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</body></html>

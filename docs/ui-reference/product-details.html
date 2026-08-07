@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Trang chi tiết sản phẩm - LuxeCommerce</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#c7c4d8",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "surface": "#f8f9ff",
+                        "secondary-fixed": "#dae2fd",
+                        "surface-container-low": "#eff4ff",
+                        "surface-variant": "#d3e4fe",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "surface-container-high": "#dce9ff",
+                        "on-secondary-fixed": "#131b2e",
+                        "tertiary-container": "#5e6163",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "surface-container": "#e5eeff",
+                        "inverse-surface": "#213145",
+                        "outline": "#777587",
+                        "primary": "#3525cd",
+                        "inverse-primary": "#c3c0ff",
+                        "primary-fixed": "#e2dfff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "on-tertiary-fixed": "#191c1e",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#464555",
+                        "secondary": "#565e74",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#0f0069",
+                        "secondary-container": "#dae2fd",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#dadcde",
+                        "tertiary-fixed": "#e0e3e5",
+                        "tertiary": "#46494b",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "on-secondary-container": "#5c647a",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f8f9ff",
+                        "primary-container": "#4f46e5",
+                        "surface-dim": "#cbdbf5",
+                        "on-primary": "#ffffff",
+                        "background": "#f8f9ff",
+                        "on-background": "#0b1c30",
+                        "surface-container-highest": "#d3e4fe",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-primary-container": "#dad7ff",
+                        "surface-tint": "#4d44e3",
+                        "on-surface": "#0b1c30",
+                        "secondary-fixed-dim": "#bec6e0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "8px",
+                        "base": "4px",
+                        "sm": "16px",
+                        "lg": "40px",
+                        "container-max": "1280px",
+                        "md": "24px",
+                        "gutter": "24px",
+                        "xl": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "display-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["24px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["30px", { "lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9ff; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant dark:border-on-secondary-fixed-variant docked full-width top-0 z-50 flat no shadows">
+<div class="flex justify-between items-center w-full px-sm md:px-lg max-w-container-max mx-auto h-xl z-50 bg-surface-container-lowest dark:bg-inverse-surface">
+<!-- Brand -->
+<a class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface dark:text-inverse-on-surface" href="#">LuxeCommerce</a>
+<!-- Navigation -->
+<nav class="hidden md:flex space-x-md">
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">New Arrivals</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Collections</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Bestsellers</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">Journal</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center space-x-sm">
+<button aria-label="Search" class="text-primary dark:text-inverse-primary hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="search" data-weight="regular" style="font-variation-settings: 'FILL' 0;">search</span>
+</button>
+<button aria-label="Favorite" class="text-primary dark:text-inverse-primary hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="favorite" data-weight="regular" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+<button aria-label="Shopping Cart" class="text-primary dark:text-inverse-primary hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="shopping_cart" data-weight="regular" style="font-variation-settings: 'FILL' 0;">shopping_cart</span>
+</button>
+<a class="hidden md:inline-flex items-center justify-center px-sm py-xs bg-surface-container text-primary font-label-md text-label-md rounded-DEFAULT hover:bg-surface-container-high transition-colors" href="#">Login</a>
+<img alt="User profile avatar" class="w-8 h-8 rounded-full border border-outline-variant object-cover ml-sm md:hidden" data-alt="A highly detailed close-up of a minimalist, modern user profile avatar placeholder, featuring soft pastel colors and a clean geometric design, evoking a premium, sophisticated light-mode UI aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8U_wv09UhGRkN51nCKBT_lC3V5PPawbPK3mFmdG1get4PCem5VJQGbeD7on-SS5bksoi9OSwLyhRc0gf9XXM2fuHv4TlG8d8VF6KKTinvF9eKAt97rS5tf63CnwO8mCuRsMsETUu6TcRisGJjbL5EjCwN1t5C6b2soCvjoDiJU7Kq8mji9uzHyGRoqkQ-rvMR1dXmgcmRndYCGpWuIcSIrBREOArJ-3XySIP_RmEDw5NwHLKE_FCIGjB7wZr_2vCh_f-IweCw8wA"/>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-sm md:px-lg py-lg space-y-xl">
+<!-- Product Detail Section -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-xl">
+<!-- Left: Gallery -->
+<div class="flex flex-col space-y-sm">
+<div class="relative rounded-lg overflow-hidden border border-outline-variant bg-surface-container-lowest group aspect-square">
+<img alt="Premium Minimalist Watch" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A highly detailed, professional studio shot of a premium minimalist wristwatch on a pristine white marble block. The lighting is soft and high-key, creating elegant reflections on the watch face. The aesthetic is clean, modern, and high-end retail, perfectly suited for a luxurious light-mode interface." id="main-product-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm_6sDRbFREvCxyaeOlhvAY9YkHkoLSyOWPK7ZwKJL6_vfPKREKa465BOlP7kbxIKmHX1is6j9ldWxFfflgE74RWmz0_6gS66c9OU2IyiBimIiZjyF9-romMrpRcqu1yO-klXfnUmtGe46aZEu7feFd5XQdAziShwI87ilCBJvL3r53kfHLbp6KA-Mg6VFpd5KszStmo5hz5o50eAGwyynofgrOuFuBf1mq7XBwPQUls65FlRsfoOOPgkOrg4YLOtuwXvGHahJsY4"/>
+<button aria-label="Zoom Image" class="absolute top-sm right-sm bg-surface-container-lowest/80 backdrop-blur-md p-xs rounded-full shadow-sm text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="zoom_in">zoom_in</span>
+</button>
+</div>
+<!-- Thumbnails -->
+<div class="flex space-x-sm overflow-x-auto hide-scrollbar pb-xs">
+<button class="flex-shrink-0 w-24 h-24 rounded-lg overflow-hidden border-2 border-primary" onclick="changeImage(this)">
+<img alt="Thumbnail 1" class="w-full h-full object-cover" data-alt="A detailed thumbnail image showing the side profile of a premium minimalist wristwatch, highlighting the slim metal casing and precise crown detailing. The background is a soft, seamless white." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKWGsVQNdOS0aPy_7cokBmSI3AgeSbaHYczRyedXlB1AoaPJuUdNn3hh6eZzch-TwxqXgTGvwHby5RWYlttzNT6-s4odfMz-VhIMHEDEHZKDSWNo3ZHJMlfUeGb_erw2jiDuLYrMzwkmXSFtI9L-vwCs9CWui98IcY_TVM-5Mhf1Wx6QD8EnTwXSPMzqFn0p2CSm_9RNF57zfmE_QMI_HdRFWWvIf8zTmU2wUuIorWmqs2Nk4NOBmln4JLBit0I8ZF48pgbYrlZCY"/>
+</button>
+<button class="flex-shrink-0 w-24 h-24 rounded-lg overflow-hidden border-2 border-transparent hover:border-outline-variant transition-colors" onclick="changeImage(this)">
+<img alt="Thumbnail 2" class="w-full h-full object-cover" data-alt="A detailed thumbnail image focusing on the premium leather strap of a minimalist wristwatch, showing the fine stitching and texture under bright, high-key studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcor5D4V0jQU4HYzEQI_O1rznt885DmjfGrnArpDQeVd0zGgsncE3ZE1f3smiesW7op5OaWaJhZHuUjFLWSP1Hll6H8x0hyGkdK95IiK0UHG9OYM8bRT5ffsTvemlScKFDVcef7b0ZPUF_NnqfncyhEU5-p4ahYAqEbK7ctKzTyxQawaREffDg7uMsBqTU9oEgJriN41sVETpwDtI7Q31YmyjCCBAl_A0aafzrWScYC-w6i2A40KdNXOEYdIj9s9RDv4BZDXiDQ6M"/>
+</button>
+<button class="flex-shrink-0 w-24 h-24 rounded-lg overflow-hidden border-2 border-transparent hover:border-outline-variant transition-colors" onclick="changeImage(this)">
+<img alt="Thumbnail 3" class="w-full h-full object-cover" data-alt="A detailed thumbnail image showing the back of a premium minimalist wristwatch, revealing the engraved logo and smooth metal finish on a pristine white surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvGVlLZAeTtLY23G7oATXneoXSl8gP-T-BJ4MeGYAUCvI0qpD6Pwz4KNj2Vdv6itf_J3W2bPWJwyrgHYmkEkGLcNYsNeK1VqopWzBoYsYX2o5gDQygpjjol2484ijWy51avMQpdwRkyEfyS7rhEMdqmQi0FE41ULzj79dBEB-dhPQHVMKN1TBH3dSIDc6zZlnU47lddzOr7p2SlRfBPWVreC5FkgW_b580-wcJnoNBpIJzndBuIr_gzfzamx3kYtSpmxncd_wPyYs"/>
+</button>
+</div>
+</div>
+<!-- Right: Product Info -->
+<div class="flex flex-col space-y-md">
+<!-- Title & Badge -->
+<div>
+<div class="flex items-center space-x-xs mb-xs">
+<span class="px-xs py-base bg-secondary-container text-on-secondary-container font-label-sm text-label-sm rounded uppercase tracking-wider">Premium Edit</span>
+<span class="flex items-center text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] mr-base text-yellow-500" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+                            4.9 (128 Reviews)
+                        </span>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface font-bold">Chronograph Minimalist Watch</h1>
+</div>
+<!-- Price -->
+<div class="flex items-baseline space-x-sm">
+<span class="font-headline-md text-headline-md text-primary font-bold">$299.00</span>
+<span class="font-body-lg text-body-lg text-outline line-through">$399.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Precision engineering meets absolute minimalism. This timepiece features a slim profile, sapphire crystal glass, and a premium Italian leather strap, designed for the modern professional.
+                </p>
+<!-- Variants -->
+<div class="space-y-sm pt-sm border-t border-outline-variant">
+<!-- Color -->
+<div>
+<h3 class="font-label-md text-label-md text-on-surface mb-xs font-semibold">Color: <span class="font-normal text-on-surface-variant" id="color-label">Midnight Black</span></h3>
+<div class="flex space-x-sm">
+<button aria-label="Midnight Black" class="w-8 h-8 rounded-full bg-slate-900 border-2 border-primary ring-2 ring-transparent focus:ring-primary-container transition-all" onclick="selectColor('Midnight Black', this)"></button>
+<button aria-label="Steel Grey" class="w-8 h-8 rounded-full bg-slate-400 border-2 border-transparent hover:border-outline-variant ring-2 ring-transparent focus:ring-primary-container transition-all" onclick="selectColor('Steel Grey', this)"></button>
+<button aria-label="Classic Brown" class="w-8 h-8 rounded-full bg-amber-800 border-2 border-transparent hover:border-outline-variant ring-2 ring-transparent focus:ring-primary-container transition-all" onclick="selectColor('Classic Brown', this)"></button>
+</div>
+</div>
+<!-- Size -->
+<div>
+<h3 class="font-label-md text-label-md text-on-surface mb-xs font-semibold">Dial Size</h3>
+<div class="flex space-x-sm">
+<button class="px-sm py-xs border border-primary text-primary bg-primary-fixed-dim/20 rounded font-label-md text-label-md hover:bg-surface-container transition-colors">40mm</button>
+<button class="px-sm py-xs border border-outline-variant text-on-surface-variant rounded font-label-md text-label-md hover:border-primary hover:text-primary transition-colors">44mm</button>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row space-y-sm sm:space-y-0 sm:space-x-sm pt-md">
+<button class="flex-1 flex justify-center items-center h-[48px] bg-primary text-on-primary font-label-md text-label-md font-semibold rounded shadow-sm hover:bg-primary-container hover:scale-[1.02] transition-all">
+<span class="material-symbols-outlined mr-xs" data-icon="shopping_bag">shopping_bag</span>
+                        Thêm vào giỏ hàng
+                    </button>
+<button class="flex-1 flex justify-center items-center h-[48px] bg-surface-container-lowest border border-primary text-primary font-label-md text-label-md font-semibold rounded hover:bg-surface-container transition-colors">
+                        Mua ngay
+                    </button>
+</div>
+<!-- Shipping Info -->
+<div class="flex items-center space-x-md pt-sm text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center"><span class="material-symbols-outlined text-[18px] mr-xs" data-icon="local_shipping">local_shipping</span> Free Shipping over $100</div>
+<div class="flex items-center"><span class="material-symbols-outlined text-[18px] mr-xs" data-icon="assignment_return">assignment_return</span> 30-Day Returns</div>
+</div>
+</div>
+</section>
+<!-- Product Information Tabs -->
+<section class="mt-xl border border-outline-variant rounded-lg bg-surface-container-lowest overflow-hidden">
+<div class="flex border-b border-outline-variant bg-surface-container-low">
+<button class="flex-1 py-sm font-label-md text-label-md font-semibold text-primary border-b-2 border-primary bg-surface-container-lowest transition-colors" onclick="openTab(event, 'desc')">Mô tả sản phẩm</button>
+<button class="flex-1 py-sm font-label-md text-label-md font-medium text-on-surface-variant border-b-2 border-transparent hover:text-primary transition-colors" onclick="openTab(event, 'specs')">Thông số kỹ thuật</button>
+<button class="flex-1 py-sm font-label-md text-label-md font-medium text-on-surface-variant border-b-2 border-transparent hover:text-primary transition-colors" onclick="openTab(event, 'reviews')">Đánh giá (128)</button>
+</div>
+<div class="p-lg">
+<!-- Description Tab -->
+<div class="tab-content active space-y-md" id="desc">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Precision in Every Detail</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">The Chronograph Minimalist Watch represents a new era of elegant timekeeping. Stripping away unnecessary clutter, this watch focuses on what matters: precise movement, premium materials, and a design that complements any wardrobe.</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Whether you are in a boardroom or at a casual weekend brunch, the subtle sophistication of this piece stands out without demanding attention.</p>
+</div>
+<!-- Specs Tab -->
+<div class="tab-content" id="specs">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-sm">
+<div class="flex justify-between py-xs border-b border-outline-variant/50">
+<span class="font-label-md text-label-md text-on-surface-variant">Case Material</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">316L Stainless Steel</span>
+</div>
+<div class="flex justify-between py-xs border-b border-outline-variant/50">
+<span class="font-label-md text-label-md text-on-surface-variant">Glass</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Sapphire Crystal</span>
+</div>
+<div class="flex justify-between py-xs border-b border-outline-variant/50">
+<span class="font-label-md text-label-md text-on-surface-variant">Movement</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Japanese Quartz</span>
+</div>
+<div class="flex justify-between py-xs border-b border-outline-variant/50">
+<span class="font-label-md text-label-md text-on-surface-variant">Water Resistance</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">5 ATM</span>
+</div>
+</div>
+</div>
+<!-- Reviews Tab -->
+<div class="tab-content space-y-md" id="reviews">
+<div class="flex items-center space-x-md mb-md">
+<div class="text-display-lg text-on-surface font-bold">4.9</div>
+<div>
+<div class="flex text-yellow-500 mb-xs">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Based on 128 reviews</span>
+</div>
+</div>
+<div class="space-y-sm border-t border-outline-variant/50 pt-sm">
+<div class="bg-surface p-sm rounded-lg border border-outline-variant/30">
+<div class="flex justify-between mb-xs">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Alex M.</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 days ago</span>
+</div>
+<div class="flex text-yellow-500 mb-xs text-[14px]">
+<span class="material-symbols-outlined text-[14px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Absolutely stunning watch. The minimalist design is exactly what I was looking for, and it feels incredibly premium on the wrist.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Related Products (Bento Grid Style) -->
+<section class="mt-xl">
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-md">Sản phẩm liên quan</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<div class="group border border-outline-variant bg-surface-container-lowest rounded-lg overflow-hidden hover:shadow-[0_10px_15px_-3px_rgba(0,0,0,0.05),0_4px_6px_-2px_rgba(0,0,0,0.02)] transition-all duration-300">
+<div class="aspect-[4/3] bg-surface-container overflow-hidden">
+<img alt="Silver Bracelet" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A highly detailed studio shot of a minimalist silver bracelet resting on a light grey textured background, illuminated by soft, natural-looking light to highlight its sleek metal finish, suitable for a premium retail interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhP8enCdfSEibYiGm5lcYrbwldkqPPg1jWSJFkuoH3rCMg9IJVdD5vPXfivL67ytoRvY0G5JML9Yf0wbmJYICLXYRtY8VLln8TjvO8MJhigaZuQJ6Tv_9nGh80ug9ecz44Lf6tEK4aQ27Lyma5L2wPuF8oWP-GHB1OBfUvX8MbVDOJ9pT8Eg7WJPZNGynKk5kwe-5LF_9OsZeaFqbW1bpI1Lpj24t7rq-u4sIv2zYM01b0-YY53ZgaiXcVS2htjL3ZOA9aniUV0Uk"/>
+</div>
+<div class="p-sm">
+<h3 class="font-label-md text-label-md font-semibold text-on-surface mb-xs">Cuff Bracelet Silver</h3>
+<p class="font-body-md text-body-md text-primary font-medium">$85.00</p>
+</div>
+</div>
+<div class="group border border-outline-variant bg-surface-container-lowest rounded-lg overflow-hidden hover:shadow-[0_10px_15px_-3px_rgba(0,0,0,0.05),0_4px_6px_-2px_rgba(0,0,0,0.02)] transition-all duration-300">
+<div class="aspect-[4/3] bg-surface-container overflow-hidden">
+<img alt="Leather Case" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A highly detailed close-up of premium leather sunglasses case on a white marble surface, bathed in bright, soft high-key lighting, emphasizing luxury and minimalist design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTvFxSFycLUmKtYGLVdK4GcUKlS1TCib6HhDxo4Z_YzAVeJYFRyNuiacYq8wjyL-we_Gi6dIxeIQnh6xl-ntUKgkTWI1ttW4Z6mZsRqTYqjGBXextTN4gWUMFc4YV99o8CDI3sZqAeOvcvxk5-ixty_IcVb-6bUumcY6LlwCwM2gHOMft0-EEnBFx786ZlcNuyy0wIqQG07Dq7yqmTHyFCVpJkg3x7d_l4Emt-ituyNDq7aFwHdxgDP-1DtANd2wAVw7AN_E8xkkQ"/>
+</div>
+<div class="p-sm">
+<h3 class="font-label-md text-label-md font-semibold text-on-surface mb-xs">Premium Leather Case</h3>
+<p class="font-body-md text-body-md text-primary font-medium">$45.00</p>
+</div>
+</div>
+<div class="group border border-outline-variant bg-surface-container-lowest rounded-lg overflow-hidden hover:shadow-[0_10px_15px_-3px_rgba(0,0,0,0.05),0_4px_6px_-2px_rgba(0,0,0,0.02)] transition-all duration-300">
+<div class="aspect-[4/3] bg-surface-container overflow-hidden">
+<img alt="Matte Pen" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A highly detailed image of a minimalist matte black fountain pen lying diagonally on a pristine white desk, with subtle soft shadows indicating high-end office luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWxNb7SWxu-6IZCf6eXXgVV_WVJVKFVqDuOrWWgJ233V1QW2dZ_N13oiZR7zJF_5_0hix71ebxwxFCweYNS1jnkyjvXP28jrVRIBIPFBoOdruEz72oHJDXYDnr26q-U5wSHR38vPIiQMQmB_hdO7PpRPP6BxkXBIi8tX9bdOQffPcQRlgkW9AKYoAkSg1TJ8OP6xrQMDCYI-EDXYwFaGPWI7kAMUb7YfaaWtF7iLEibPy8HOAAC-vKlWllnm-uAIiG1uzou7VC-Ro"/>
+</div>
+<div class="p-sm">
+<h3 class="font-label-md text-label-md font-semibold text-on-surface mb-xs">Matte Executive Pen</h3>
+<p class="font-body-md text-body-md text-primary font-medium">$120.00</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-on-secondary-fixed-variant mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-sm md:px-lg py-xl max-w-container-max mx-auto w-full">
+<div class="md:col-span-1">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface dark:text-inverse-on-surface block mb-sm">LuxeCommerce</span>
+<p class="font-body-md text-body-md text-on-secondary-fixed-variant dark:text-tertiary-fixed-dim">
+                    © 2024 LuxeCommerce. Precision Minimalism in Motion.
+                </p>
+</div>
+<div class="flex flex-col space-y-xs">
+<a class="font-body-md text-body-md text-on-secondary-fixed-variant dark:text-tertiary-fixed-dim hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">About Us</a>
+<a class="font-body-md text-body-md text-on-secondary-fixed-variant dark:text-tertiary-fixed-dim hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">Sustainability</a>
+</div>
+<div class="flex flex-col space-y-xs">
+<a class="font-body-md text-body-md text-on-secondary-fixed-variant dark:text-tertiary-fixed-dim hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">Shipping &amp; Returns</a>
+<a class="font-body-md text-body-md text-on-secondary-fixed-variant dark:text-tertiary-fixed-dim hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col space-y-xs">
+<a class="font-body-md text-body-md text-on-secondary-fixed-variant dark:text-tertiary-fixed-dim hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple Thumbnail Swap
+        function changeImage(button) {
+            const newSrc = button.querySelector('img').src;
+            const newAlt = button.querySelector('img').getAttribute('data-alt');
+            const mainImg = document.getElementById('main-product-image');
+            mainImg.src = newSrc;
+            mainImg.setAttribute('data-alt', newAlt);
+            
+            // Update active state
+            const buttons = button.parentElement.querySelectorAll('button');
+            buttons.forEach(btn => {
+                btn.classList.remove('border-primary');
+                btn.classList.add('border-transparent');
+            });
+            button.classList.remove('border-transparent');
+            button.classList.add('border-primary');
+        }
+
+        // Color Selection
+        function selectColor(colorName, button) {
+            document.getElementById('color-label').innerText = colorName;
+            const buttons = button.parentElement.querySelectorAll('button');
+            buttons.forEach(btn => {
+                btn.classList.remove('border-primary');
+                btn.classList.add('border-transparent');
+            });
+            button.classList.remove('border-transparent');
+            button.classList.add('border-primary');
+        }
+
+        // Tab Switching
+        function openTab(evt, tabName) {
+            let i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = evt.currentTarget.parentElement.querySelectorAll('button');
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("border-primary", "text-primary", "bg-surface-container-lowest");
+                tablinks[i].classList.add("border-transparent", "text-on-surface-variant");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.remove("border-transparent", "text-on-surface-variant");
+            evt.currentTarget.classList.add("border-primary", "text-primary", "bg-surface-container-lowest");
+        }
+    </script>
+</body></html>

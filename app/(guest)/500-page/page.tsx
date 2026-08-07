@@ -1,5 +1,6 @@
 import { generateMeta } from "@/lib/utils";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
@@ -23,9 +24,11 @@ export default function Error404() {
       </div>
 
       <div className="col-span-1 hidden lg:block">
-        <img
+        <Image
           src={`/images/500.svg`}
           alt="Login visual"
+          width={500}
+          height={500}
           className="object-contain"
         />
       </div>

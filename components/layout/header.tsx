@@ -1,4 +1,5 @@
 import { LockIcon, Menu } from "lucide-react";
+import Image from "next/image";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,7 +10,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import Search from "./search";
 import Logo from "./logo";
 import { SidebarNavLink } from "./sidebar";
@@ -29,6 +30,7 @@ export default function Header() {
             </Button>
           </SheetTrigger>
           <SheetContent side="left" className="flex flex-col overflow-auto">
+            <SheetTitle className="sr-only">Menu Điều Hướng Admin</SheetTitle>
             <Logo className="px-0" />
             <nav className="grid gap-2 text-lg font-medium">
               {page_routes.map((route) => (
@@ -50,7 +52,7 @@ export default function Header() {
                     Need more pages and components? Then you can get the pro.
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-2">
+                {/* <CardContent className="space-y-2">
                   <Button
                     size="sm"
                     className="w-full items-center bg-gradient-to-r from-indigo-700 via-purple-500 to-pink-700 hover:opacity-90"
@@ -64,7 +66,7 @@ export default function Header() {
                       Learn More
                     </Link>
                   </Button>
-                </CardContent>
+                </CardContent> */}
               </Card>
             </div>
           </SheetContent>
@@ -75,7 +77,7 @@ export default function Header() {
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <figure className="cursor-pointer">
-              <img src={`/images/avatars/1.png`} className="h-10 w-10" alt="..." />
+              <Image src="/images/avatars/1.png" width={40} height={40} className="h-10 w-10" alt="..." />
             </figure>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">

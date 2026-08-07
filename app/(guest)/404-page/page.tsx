@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { generateMeta } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export async function generateMetadata(): Promise<Metadata> {
   return generateMeta({
@@ -31,9 +32,11 @@ export default function Error404() {
       </div>
 
       <div className="hidden lg:block">
-        <img
+        <Image
           src={`/images/404.svg`}
           alt="Login visual"
+          width={500}
+          height={500}
           className="object-contain"
         />
       </div>

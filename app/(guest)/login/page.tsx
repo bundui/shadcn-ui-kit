@@ -1,34 +1,57 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { generateMeta } from "@/lib/utils";
 import { GithubIcon } from "lucide-react";
 import Link from "next/link";
-import { Metadata } from "next";
-
-export async function generateMetadata(): Promise<Metadata> {
-  return generateMeta({
-    title: "Login Page",
-    description:
-      "A login form with email and password. There's an option to login with Google and a link to sign up if you don't have an account.",
-  });
-}
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { authService } from "@/lib/services/auth.service";
+import { getProfile } from "@/lib/services/profile.service";
+import { getRole } from "@/lib/services/role.service";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function LoginPageV1() {
+  const router = useRouter();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const { data: authData, error } = await authService.login(email, password);
+    if (error) {
+      alert(error.message);
+      return;
+    }
+    if (authData?.user) {
+      const { data: profileData } = await getProfile(authData.user.id);
+      if (profileData?.role_id) {
+        const { data: roleData } = await getRole(profileData.role_id);
+        if (roleData?.name === "admin" || roleData?.name === "staff") {
+          router.push("/dashboard");
+          return;
+        }
+      }
+    }
+    router.push("/");
+  };
+
   return (
     <div className="flex pb-8 lg:h-screen lg:pb-0">
-      <div className="hidden w-1/2 bg-gray-100 lg:block">
-        <img src={`/images/cover.png`} alt="Login visual" className="h-full w-full object-cover" />
+      <div className="hidden w-1/2 bg-gray-100 lg:block relative">
+        <Image fill unoptimized src="/images/cover.png" alt="Login visual" className="object-cover" />
       </div>
 
       <div className="flex w-full items-center justify-center lg:w-1/2">
         <div className="w-full max-w-md space-y-8 px-4">
           <div className="text-center">
-            <h2 className="mt-6 text-3xl font-bold text-gray-900">Welcome back</h2>
+            <h2 className="mt-6 text-3xl font-bold text-gray-500">Welcome back</h2>
             <p className="mt-2 text-sm text-gray-600">Please sign in to your account</p>
           </div>
 
-          <form className="mt-8 space-y-6">
+          <form className="mt-8 space-y-6" onSubmit={handleLogin}>
             <div className="space-y-4">
               <div>
                 <Label htmlFor="email" className="sr-only">
@@ -42,6 +65,8 @@ export default function LoginPageV1() {
                   required
                   className="w-full"
                   placeholder="Email address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div>
@@ -56,6 +81,8 @@ export default function LoginPageV1() {
                   required
                   className="w-full"
                   placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
               <div className="text-end">
@@ -73,16 +100,16 @@ export default function LoginPageV1() {
           </form>
 
           <div className="mt-6">
-            <div className="relative">
+            {/* <div className="relative">
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-gray-300" />
               </div>
               <div className="relative flex justify-center text-sm">
                 <span className="bg-muted px-2 text-gray-500">or continue with</span>
               </div>
-            </div>
+            </div> */}
 
-            <div className="mt-6 grid grid-cols-2 gap-3">
+            {/* <div className="mt-6 grid grid-cols-2 gap-3">
               <Button variant="outline" className="w-full">
                 <svg className="mr-2 h-4 w-4" viewBox="0 0 24 24">
                   <path
@@ -105,10 +132,10 @@ export default function LoginPageV1() {
                 Google
               </Button>
               <Button variant="outline" className="w-full">
-                <GithubIcon className="mr-2 h-4 w-4" />
+                <GitHubLogoIcon className="mr-2 h-4 w-4" />
                 GitHub
               </Button>
-            </div>
+            </div> */}
 
             <div className="mt-6 text-center text-sm">
               Don&apos;t have an account?{" "}

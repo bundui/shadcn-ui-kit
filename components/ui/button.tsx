@@ -40,7 +40,7 @@ function Button({
   className,
   variant = "default",
   size = "default",
-  asChild = false,
+  asChild = false, //Chuyển toàn bộ logic và các props khác của button sang button.tsx
   ...props
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {

@@ -34,3 +34,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+CLAUDE.md
+AGENTS.md
+config.toml
+.claude
+
+# AI IDE & MCP Tools Configuration
+/mcps/
+/.agents/
+skills-lock.json

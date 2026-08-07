@@ -5,6 +5,7 @@ import { Dialog as DialogPrimitive } from "radix-ui"
 import { XIcon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
+import Image from "next/image"
 
 function Dialog({
   ...props
@@ -69,9 +70,9 @@ function DialogContent({
         {showCloseButton && (
           <DialogPrimitive.Close
             data-slot="dialog-close"
-            className="ring-offset-background focus:ring-ring data-[state=open]:bg-accent data-[state=open]:text-muted-foreground absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4"
+            className="absolute top-4 right-4 z-50 w-8 h-8 flex items-center justify-center rounded-full bg-muted/50 hover:bg-muted text-muted-foreground hover:text-foreground transition-all focus:outline-none hover:shadow-lg hover:scale-110 transition-all cursor-pointer"
           >
-            <XIcon />
+            <Image src="/icons/cancel1.png" alt="close" width={30} height={30} />
             <span className="sr-only">Close</span>
           </DialogPrimitive.Close>
         )}
