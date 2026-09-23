@@ -17,6 +17,7 @@ export function HeroBannerClient({ initialBanners }: HeroBannerClientProps) {
 
   // Mount effect to trigger initial animation
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 

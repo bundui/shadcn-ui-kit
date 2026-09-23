@@ -12,7 +12,7 @@ export interface Payment {
 }
 
 // Cấu hình ngân hàng mặc định (Có thể tùy chỉnh qua biến môi trường .env.local)
-const BANK_ID = process.env.NEXT_PUBLIC_VIETQR_BANK_ID || "VPBANK";
+const BANK_ID = process.env.NEXT_PUBLIC_VIETQR_BANK_ID || "CAKE";
 const ACCOUNT_NO = process.env.NEXT_PUBLIC_VIETQR_ACCOUNT_NO || "0779461536";
 const ACCOUNT_NAME = process.env.NEXT_PUBLIC_VIETQR_ACCOUNT_NAME || "TRAN QUANG DUNG";
 const QR_TEMPLATE = process.env.NEXT_PUBLIC_VIETQR_TEMPLATE || "compact2";

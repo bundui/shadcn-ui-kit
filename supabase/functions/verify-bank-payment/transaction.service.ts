@@ -8,7 +8,7 @@ export async function checkTransactionExists(supabase: any, gmailMessageId: stri
   try {
     const { data, error } = await supabase
       .from("bank_transactions")
-      .select("id")
+      .select("id, matched")
       .eq("gmail_message_id", gmailMessageId)
       .maybeSingle();
 
@@ -17,7 +17,13 @@ export async function checkTransactionExists(supabase: any, gmailMessageId: stri
       return false;
     }
 
-    return !!data;
+    // Nếu đã tồn tại VÀ đã được khớp thành công (matched = true) -> Bỏ qua để không xử lý lại
+    if (data && data.matched) {
+      return true;
+    }
+
+    // Nếu chưa tồn tại hoặc đã lưu nhưng chưa khớp (matched = false) -> Cho phép kiểm tra lại
+    return false;
   } catch (err) {
     console.error("❌ [Transaction Service] Ngoại lệ khi kiểm tra giao dịch:", err);
     return false;
@@ -25,7 +31,7 @@ export async function checkTransactionExists(supabase: any, gmailMessageId: stri
 }
 
 /**
- * Lưu bản ghi giao dịch ngân hàng mới vào bảng bank_transactions
+ * Lưu bản ghi giao dịch ngân hàng mới vào bảng bank_transactions (sử dụng upsert)
  */
 export async function saveBankTransaction(
   supabase: any,
@@ -44,7 +50,7 @@ export async function saveBankTransaction(
 
     const { data, error } = await supabase
       .from("bank_transactions")
-      .insert(payload)
+      .upsert(payload, { onConflict: "gmail_message_id" })
       .select()
       .single();
 

@@ -21,6 +21,7 @@ export function NavMain({
     title: string
     url: string
     icon?: Icon
+    isBeta?: boolean
   }[]
 }) {
   const pathname = usePathname();
@@ -64,7 +65,14 @@ export function NavMain({
                 >
                   <Link href={item.url} onClick={() => setOpenMobile(false)} className="flex items-center gap-3">
                     {item.icon && <item.icon className="size-5 shrink-0 group-data-[active=true]/navitem:scale-110 transition-transform duration-300" />}
-                    <span>{item.title}</span>
+                    <span className="flex items-center gap-2">
+                      {item.title}
+                      {item.isBeta && (
+                        <span className="px-1.5 py-0.5 rounded-md bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-400 text-[9px] font-bold uppercase tracking-wider group-data-[collapsible=icon]:hidden shadow-xs">
+                          Beta
+                        </span>
+                      )}
+                    </span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>

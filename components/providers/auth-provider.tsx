@@ -230,6 +230,32 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         return () => clearInterval(interval);
     }, [logout]);
 
+    // Global Stale Tab Recovery (Chống lỗi "Stale Tab Syndrome")
+    // Giải quyết triệt để tình trạng: Để tab quá lâu, mở lại bị lỗi hiển thị, tải thiếu dữ liệu hoặc Next.js ChunkLoadError
+    useEffect(() => {
+        let hiddenTime = Date.now();
+        
+        const handleVisibility = () => {
+            if (document.visibilityState === 'hidden') {
+                hiddenTime = Date.now();
+            } else if (document.visibilityState === 'visible') {
+                const idleMs = Date.now() - hiddenTime;
+                
+                if (idleMs > 30 * 60 * 1000) {
+                    // Nếu tab bị ẩn quá 30 phút -> Buộc tải lại trang hoàn toàn (Hard Reload)
+                    // Làm mới toàn bộ bộ nhớ, JS Chunks mới nhất từ server, dọn dẹp memory leak
+                    window.location.reload();
+                } else if (idleMs > 5 * 60 * 1000) {
+                    // Nếu tab ẩn từ 5 -> 30 phút -> Soft Refresh (cập nhật data Server Components ngầm)
+                    router.refresh();
+                }
+            }
+        };
+
+        window.addEventListener('visibilitychange', handleVisibility);
+        return () => window.removeEventListener('visibilitychange', handleVisibility);
+    }, [router]);
+
     // Hybrid Listener: Real-time + Visibility API + Polling (Chống trượt 100%)
     useEffect(() => {
         if (!user?.id) return;

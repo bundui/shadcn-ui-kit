@@ -47,7 +47,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       { title: "Orders", url: "/dashboard/orders", icon: IconListDetails },
       { title: "Coupons", url: "/dashboard/coupons", icon: IconTicket },
       { title: "Banners", url: "/dashboard/promo-banners", icon: IconPhoto },
-      { title: "Notifications", url: "/dashboard/notifications", icon: IconBell },
+      { title: "Notifications", url: "/dashboard/notifications", icon: IconBell, isBeta: true },
     ]
     : [
       { title: "Dashboard", url: "/dashboard", icon: IconDashboard },

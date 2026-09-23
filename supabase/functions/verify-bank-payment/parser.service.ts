@@ -85,19 +85,24 @@ export function parseVcbEmail(message: GmailMessage): ParsedTransaction | null {
   }
 
   // 2. Trích xuất số tiền (Amount)
-  // Tìm mẫu: +500,000 VND hoặc 500.000 VNĐ hoặc Số tiền: 500,000 hoặc SD tăng: +29,992,500
+  // Ưu tiên nhãn "Số tiền" chuẩn, hoặc số tiền có dấu cộng/đơn vị tiền tệ (tránh bắt nhầm "Tài khoản nhận")
   let amount = 0;
   const amountRegexes = [
-    /(?:Số tiền|SD tăng|Amount|tăng|nhận|\+)\s*:?\s*\+?\s*([\d,.]+)\s*(?:VND|VNĐ|đ)?/i,
-    /\+\s*([\d,.]+)\s*(?:VND|VNĐ|đ)?/i,
+    // 1. Nhãn rõ ràng: "Số tiền: +2.000 đ", "Số tiền: 50,000 VND" (Chuẩn của CAKE, VCB, Techcombank, MB...)
+    /(?:Số tiền|Số tiền GD|Số tiền giao dịch|Amount)\s*:?\s*([+\-]?\s*[\d,.]+)\s*(?:VND|VNĐ|đ)?/i,
+    // 2. Số tiền có dấu cộng phía trước kèm đơn vị tiền tệ: +2.000 đ hoặc +50.000 VND
+    /\+\s*([\d,.]+)\s*(?:VND|VNĐ|đ)/i,
+    // 3. Biến động số dư: SD tăng: +50,000 VND
+    /(?:SD tăng|tăng)\s*:?\s*\+?\s*([\d,.]+)\s*(?:VND|VNĐ|đ)/i,
+    // 4. Số tiền kèm đơn vị tiền tệ rõ ràng: 2.000 đ hoặc 50.000 VND
     /([\d,.]+)\s*(?:VND|VNĐ|đ)/i,
   ];
 
   for (const regex of amountRegexes) {
     const match = content.match(regex);
     if (match && match[1]) {
-      // Loại bỏ dấu phẩy, dấu chấm phân cách hàng nghìn
-      const cleanNumStr = match[1].replace(/[,.]/g, "");
+      // Loại bỏ dấu phẩy, dấu chấm phân cách hàng nghìn và dấu cộng
+      const cleanNumStr = match[1].replace(/[,.+\s]/g, "");
       const parsedNum = parseInt(cleanNumStr, 10);
       if (!isNaN(parsedNum) && parsedNum > 0) {
         amount = parsedNum;
