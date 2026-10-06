@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input10",
+  "title": "Input",
+  "description": "Input built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/input/10/index.tsx",
+      "content": "import {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n  InputGroupText,\n  InputGroupTextarea\n} from \"@/components/ui/input-group\";\n\nexport default function Component() {\n  return (\n    <div className=\"w-full max-w-sm\">\n      <InputGroup>\n        <InputGroupAddon>\n          <InputGroupText>$</InputGroupText>\n        </InputGroupAddon>\n        <InputGroupInput placeholder=\"0.00\" />\n        <InputGroupAddon align=\"inline-end\">\n          <InputGroupText>USD</InputGroupText>\n        </InputGroupAddon>\n      </InputGroup>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/input10.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

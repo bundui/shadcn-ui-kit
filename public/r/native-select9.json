@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "native-select9",
+  "title": "Native select",
+  "description": "Native select built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/native-select/9/index.tsx",
+      "content": "import { useId } from \"react\";\n\nimport { NativeSelect, NativeSelectOption } from \"@/components/ui/native-select\";\n\nexport default function NativeSelectComponent() {\n  const id = useId();\n  return (\n    <div className=\"border-input bg-background focus-within:border-ring focus-within:ring-ring/50 has-aria-invalid:border-destructive has-aria-invalid:ring-destructive/20 dark:has-aria-invalid:ring-destructive/40 relative w-full max-w-xs rounded-md border shadow-xs transition-[color,box-shadow] outline-none focus-within:ring-[3px] has-[select:disabled]:cursor-not-allowed has-[select:disabled]:opacity-50 has-[select:is(:disabled)_*]:pointer-events-none *:data-[slot=native-select-wrapper]:w-full\">\n      <label className=\"text-foreground block px-3 pt-2 text-xs font-medium\" htmlFor={id}>\n        Framework\n      </label>\n      <NativeSelect\n        className=\"border-none bg-transparent shadow-none focus-visible:ring-0 focus-visible:ring-offset-0\"\n        defaultValue=\"\"\n        id={id}>\n        <NativeSelectOption disabled value=\"\">\n          Select framework\n        </NativeSelectOption>\n        <NativeSelectOption value=\"1\">React</NativeSelectOption>\n        <NativeSelectOption value=\"2\">Next.js</NativeSelectOption>\n        <NativeSelectOption value=\"3\">Astro</NativeSelectOption>\n        <NativeSelectOption value=\"4\">Gatsby</NativeSelectOption>\n      </NativeSelect>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/native-select9.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

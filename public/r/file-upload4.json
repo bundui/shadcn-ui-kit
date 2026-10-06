@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "file-upload4",
+  "title": "File upload",
+  "description": "File upload built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/file-upload/4/index.tsx",
+      "content": "\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { useFileUpload, type FileMetadata } from \"@/hooks/use-file-upload\";\n\nconst initialFiles: FileMetadata[] = [\n  {\n    id: \"file-1\",\n    name: \"team-workspace.jpg\",\n    size: 384512,\n    type: \"image/jpeg\",\n    url: \"/images/extra/image1.jpg\"\n  }\n];\n\nexport default function Component() {\n  const maxSizeMB = 5;\n  const maxSize = maxSizeMB * 1024 * 1024;\n\n  const [{ files }, { openFileDialog, removeFile, getInputProps }] = useFileUpload({\n    accept: \"image/*\",\n    initialFiles,\n    maxSize\n  });\n\n  const file = files[0];\n\n  return (\n    <div className=\"w-fit max-w-sm space-y-3\">\n      <input {...getInputProps()} className=\"sr-only\" aria-label=\"Upload image file\" />\n\n      <div className=\"flex items-center gap-3\">\n        {file?.preview && (\n          <div className=\"size-12 shrink-0 overflow-hidden rounded-lg border\">\n            <img\n              src={file.preview}\n              alt={file.file.name}\n              className=\"size-full object-cover\"\n            />\n          </div>\n        )}\n        <Button type=\"button\" onClick={openFileDialog}>\n          Upload image\n        </Button>\n      </div>\n\n      {file && (\n        <div className=\"flex items-center gap-3\">\n          <p className=\"text-muted-foreground truncate text-sm\">{file.file.name}</p>\n          <Button\n            type=\"button\"\n            variant=\"link\"\n            className=\"text-destructive h-auto p-0\"\n            onClick={() => removeFile(file.id)}>\n            Remove\n          </Button>\n        </div>\n      )}\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/file-upload4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,55 @@
+import { useId } from "react";
+
+import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+
+const RadioGroupCardRadioDemo = () => {
+  const id = useId();
+
+  return (
+    <RadioGroup className="w-full max-w-96 gap-2" defaultValue="1">
+      <div className="border-input has-data-[state=checked]:border-primary/50 relative flex w-full items-center gap-2 rounded-md border p-4 shadow-xs outline-none">
+        <RadioGroupItem
+          value="1"
+          id={`${id}-1`}
+          aria-label="plan-radio-basic"
+          aria-describedby={`${id}-1-description`}
+          className="size-5 after:absolute after:inset-0 [&_svg]:size-3"
+        />
+        <div className="grid grow gap-2">
+          <Label htmlFor={`${id}-1`} className="justify-between">
+            Starter{" "}
+            <span className="text-muted-foreground text-xs leading-[inherit] font-normal">
+              Free
+            </span>
+          </Label>
+          <p id={`${id}-1-description`} className="text-muted-foreground text-xs">
+            Perfect for individuals and small teams getting started.
+          </p>
+        </div>
+      </div>
+
+      <div className="border-input has-data-[state=checked]:border-primary/50 relative flex w-full items-center gap-2 rounded-md border p-4 shadow-xs outline-none">
+        <RadioGroupItem
+          value="2"
+          id={`${id}-2`}
+          aria-describedby={`${id}-2-description`}
+          className="size-5 after:absolute after:inset-0 [&_svg]:size-3"
+        />
+        <div className="grid grow gap-2">
+          <Label htmlFor={`${id}-2`} className="justify-between">
+            Professional{" "}
+            <span className="text-muted-foreground text-xs leading-[inherit] font-normal">
+              $19/mo
+            </span>
+          </Label>
+          <p id={`${id}-2-description`} className="text-muted-foreground text-xs">
+            Best for growing businesses and professional teams.
+          </p>
+        </div>
+      </div>
+    </RadioGroup>
+  );
+};
+
+export default RadioGroupCardRadioDemo;

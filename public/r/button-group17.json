@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group17",
+  "title": "Button group",
+  "description": "Button group built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/button-group/17/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport { ButtonGroup } from \"@/components/ui/button-group\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuTrigger,\n} from \"@/components/ui/dropdown-menu\";\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n} from \"@/components/ui/input-group\";\nimport { EllipsisVerticalIcon, SearchIcon } from \"lucide-react\";\n\nexport default function ButtonGroupComponent() {\n  return (\n    <ButtonGroup className=\"max-w-xs\">\n      <InputGroup>\n        <InputGroupAddon>\n          <SearchIcon aria-hidden=\"true\" />\n        </InputGroupAddon>\n        <InputGroupInput placeholder=\"Search articles...\" />\n      </InputGroup>\n      <DropdownMenu>\n        <DropdownMenuTrigger asChild>\n          <Button variant=\"outline\" size=\"icon\" aria-label=\"Filter\">\n            <EllipsisVerticalIcon aria-hidden=\"true\" />\n          </Button>\n        </DropdownMenuTrigger>\n        <DropdownMenuContent align=\"end\" className=\"w-40\">\n          <DropdownMenuItem>Latest</DropdownMenuItem>\n          <DropdownMenuItem>Trending</DropdownMenuItem>\n          <DropdownMenuItem>Archived</DropdownMenuItem>\n        </DropdownMenuContent>\n      </DropdownMenu>\n    </ButtonGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button-group17.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

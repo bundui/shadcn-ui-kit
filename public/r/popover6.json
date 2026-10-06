@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover6",
+  "title": "Popover",
+  "description": "Popover built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/popover/6/index.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\nimport { Button } from \"@/components/ui/button\";\nimport {\n  Popover,\n  PopoverContent,\n  PopoverTrigger,\n} from \"@/components/ui/popover\";\nimport { SendIcon } from \"lucide-react\";\n\nexport default function PopoverComponent() {\n  return (\n    <Popover>\n      <PopoverTrigger className=\"flex items-center gap-2\">\n        <Avatar>\n          <AvatarImage src=\"https://i.pravatar.cc/150?u=1\" />\n          <AvatarFallback>PJ</AvatarFallback>\n        </Avatar>\n        <div className=\"text-start\">\n          <div className=\"text-sm font-medium\">Praveen Juge</div>\n          <div className=\"text-muted-foreground text-xs\">@praveenjuge</div>\n        </div>\n      </PopoverTrigger>\n      <PopoverContent className=\"grid w-80 gap-4 p-4 text-sm\">\n        <div className=\"flex items-center gap-3\">\n          <Avatar className=\"size-8\">\n            <AvatarImage src=\"https://i.pravatar.cc/150?u=1\" />\n            <AvatarFallback>PJ</AvatarFallback>\n          </Avatar>\n          <div>\n            <div className=\"font-medium\">Praveen Juge</div>\n            <div className=\"text-muted-foreground\">hi@praveenjuge.com</div>\n          </div>\n        </div>\n        <div className=\"text-muted-foreground\">\n          Praveen is designer that specialize in UI design, accessibility, CSS\n          and design systems with a knack for pixel-perfect outcomes.\n        </div>\n        <div className=\"flex gap-2\">\n          <Button variant=\"outline\" className=\"flex-1\">\n            View Profile\n          </Button>\n          <Button className=\"flex-1\">\n            <SendIcon />\n            Message\n          </Button>\n        </div>\n      </PopoverContent>\n    </Popover>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/popover6.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

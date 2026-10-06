@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select11",
+  "title": "Select",
+  "description": "Select built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/select/11/index.tsx",
+      "content": "import { useId } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue\n} from \"@/components/ui/select\";\n\nexport default function Component() {\n  const id = useId();\n  return (\n    <div className=\"w-full max-w-xs\">\n      <Select defaultValue=\"2\">\n        <SelectTrigger className=\"w-full **:data-desc:hidden\" id={id}>\n          <SelectValue placeholder=\"Choose a plan\" />\n        </SelectTrigger>\n        <SelectContent className=\"[&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2\">\n          <SelectItem value=\"1\">\n            Standard Plan\n            <span className=\"text-muted-foreground mt-1 block text-xs\" data-desc>\n              Ideal for individuals\n            </span>\n          </SelectItem>\n          <SelectItem value=\"2\">\n            Pro Plan\n            <span className=\"text-muted-foreground mt-1 block text-xs\" data-desc>\n              For professional users\n            </span>\n          </SelectItem>\n          <SelectItem value=\"3\">\n            Enterprise Plan\n            <span className=\"text-muted-foreground mt-1 block text-xs\" data-desc>\n              Built for large teams\n            </span>\n          </SelectItem>\n        </SelectContent>\n      </Select>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/select11.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

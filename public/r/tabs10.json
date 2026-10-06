@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs10",
+  "title": "Tabs",
+  "description": "Tabs built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/tabs/10/index.tsx",
+      "content": "import { Badge } from \"@/components/ui/badge\";\nimport { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/components/ui/tabs\";\n\nexport default function Component() {\n  return (\n    <Tabs defaultValue=\"tab-1\">\n      <TabsList className=\"mx-auto flex h-auto! w-full max-w-xs bg-transparent\">\n        <TabsTrigger\n          className=\"group data-[state=active]:bg-muted flex-1 flex-col p-3 text-xs data-[state=active]:shadow-none!\"\n          value=\"tab-1\"\n        >\n          <Badge className=\"mb-1.5 min-w-5 px-1 transition-opacity group-data-[state=inactive]:opacity-50\">\n            3\n          </Badge>\n          Overview\n        </TabsTrigger>\n        <TabsTrigger\n          className=\"group data-[state=active]:bg-muted flex-1 flex-col p-3 text-xs data-[state=active]:shadow-none!\"\n          value=\"tab-2\"\n        >\n          <Badge className=\"mb-1.5 min-w-5 px-1 transition-opacity group-data-[state=inactive]:opacity-50\">\n            0\n          </Badge>\n          Projects\n        </TabsTrigger>\n        <TabsTrigger\n          className=\"group data-[state=active]:bg-muted flex-1 flex-col p-3 text-xs data-[state=active]:shadow-none!\"\n          value=\"tab-3\"\n        >\n          <Badge className=\"mb-1.5 min-w-5 px-1 transition-opacity group-data-[state=inactive]:opacity-50\">\n            7\n          </Badge>\n          Packages\n        </TabsTrigger>\n      </TabsList>\n      <div className=\"bg-muted rounded-lg p-4\">\n        <TabsContent value=\"tab-1\">\n          <p className=\"text-xs\">Content for Tab 1</p>\n        </TabsContent>\n        <TabsContent value=\"tab-2\">\n          <p className=\"text-xs\">Content for Tab 2</p>\n        </TabsContent>\n        <TabsContent value=\"tab-3\">\n          <p className=\"text-xs\">Content for Tab 3</p>\n        </TabsContent>\n      </div>\n    </Tabs>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/tabs10.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

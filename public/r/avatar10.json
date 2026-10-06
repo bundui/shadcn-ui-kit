@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar10",
+  "title": "Avatar",
+  "description": "Avatar built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/avatar/10/index.tsx",
+      "content": "import { UserRoundIcon } from \"lucide-react\";\n\nimport { Avatar, AvatarFallback } from \"@/components/ui/avatar\";\n\nexport default function AvatarComponent() {\n  return (\n    <Avatar>\n      <AvatarFallback className=\"bg-indigo-500\">\n        <UserRoundIcon aria-hidden=\"true\" className=\"text-white\" size={16} />\n      </AvatarFallback>\n    </Avatar>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/avatar10.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

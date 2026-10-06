@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card5",
+  "title": "Card",
+  "description": "Card built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/card/5/index.tsx",
+      "content": "import { Card, CardContent } from \"@/components/ui/card\";\nimport { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/components/ui/tabs\";\n\ninterface TabItem {\n  name: string;\n  value: string;\n  content: string;\n}\n\nconst tabs: TabItem[] = [\n  {\n    name: \"Overview\",\n    value: \"overview\",\n    content:\n      \"Get a comprehensive view of your project metrics, recent activity, and key performance indicators. Monitor your progress and stay on top of important updates.\"\n  },\n  {\n    name: \"Analytics\",\n    value: \"analytics\",\n    content:\n      \"Dive deep into your data with detailed analytics and insights. Track trends, identify patterns, and make data-driven decisions to optimize your workflow.\"\n  },\n  {\n    name: \"Settings\",\n    value: \"settings\",\n    content:\n      \"Customize your preferences and configure your workspace. Manage integrations, adjust notification settings, and personalize your experience to match your needs.\"\n  }\n];\n\nexport default function Component() {\n  return (\n    <Tabs defaultValue={tabs[0].value}>\n      <Card className=\"w-full max-w-xl gap-0 py-0 shadow-none\">\n        <div className=\"border-b px-4\">\n          <TabsList variant=\"line\" className=\"w-full gap-2 px-0\">\n            {tabs.map((tab) => (\n              <TabsTrigger key={tab.value} value={tab.value}>\n                {tab.name}\n              </TabsTrigger>\n            ))}\n          </TabsList>\n        </div>\n        <CardContent className=\"py-6\">\n          {tabs.map((tab) => (\n            <TabsContent key={tab.value} value={tab.value}>\n              <p className=\"text-muted-foreground text-sm leading-relaxed\">{tab.content}</p>\n            </TabsContent>\n          ))}\n        </CardContent>\n      </Card>\n    </Tabs>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/card5.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

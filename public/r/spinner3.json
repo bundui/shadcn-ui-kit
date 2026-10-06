@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner3",
+  "title": "Spinner",
+  "description": "An indicator that can be used to show a loading state. All spinner styles work anywhere Radix UI or Base UI components are used.",
+  "files": [
+    {
+      "path": "contents/components/spinner/3/index.tsx",
+      "content": "import { Spinner } from \"@/components/ui/spinner\";\n\nexport default function SpinnerComponent() {\n  return (\n    <div className=\"flex items-center\">\n      <Spinner className=\"text-red-500\" />\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/spinner3.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

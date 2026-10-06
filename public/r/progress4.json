@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress4",
+  "title": "Progress",
+  "description": "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar. Every progress variant renders consistently with Radix UI and Base UI.",
+  "files": [
+    {
+      "path": "contents/components/progress/4/index.tsx",
+      "content": "\"use client\";\n\nimport { Progress } from \"@/components/ui/progress\";\n\nexport default function ProgressComponent() {\n  return (\n    <div className=\"w-full max-w-sm space-y-4\">\n      <div className=\"space-y-2\">\n        <div className=\"flex items-center justify-between text-sm\">\n          <span>CPU Usage</span>\n          <span className=\"text-muted-foreground\">45%</span>\n        </div>\n        <Progress value={45} />\n      </div>\n      <div className=\"space-y-2\">\n        <div className=\"flex items-center justify-between text-sm\">\n          <span>Memory Usage</span>\n          <span className=\"text-muted-foreground\">62%</span>\n        </div>\n        <Progress value={62} />\n      </div>\n      <div className=\"space-y-2\">\n        <div className=\"flex items-center justify-between text-sm\">\n          <span>Disk Usage</span>\n          <span className=\"text-muted-foreground\">38%</span>\n        </div>\n        <Progress value={38} />\n      </div>\n    </div>\n  );\n}\n\n",
+      "type": "registry:component",
+      "target": "components/progress4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

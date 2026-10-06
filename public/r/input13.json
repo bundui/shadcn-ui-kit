@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input13",
+  "title": "Input",
+  "description": "Input built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/input/13/index.tsx",
+      "content": "\"use client\";\n\nimport { EyeIcon, EyeOffIcon } from \"lucide-react\";\nimport { useId, useState } from \"react\";\n\nimport { Input } from \"@/components/ui/input\";\nimport { Label } from \"@/components/ui/label\";\n\nexport default function Component() {\n  const id = useId();\n  const [isVisible, setIsVisible] = useState<boolean>(false);\n\n  const toggleVisibility = () => setIsVisible((prevState) => !prevState);\n\n  return (\n    <div className=\"w-full max-w-sm *:not-first:mt-2\">\n      <Label htmlFor={id}>Show/hide password input</Label>\n      <div className=\"relative\">\n        <Input\n          className=\"pe-9\"\n          id={id}\n          placeholder=\"Password\"\n          type={isVisible ? \"text\" : \"password\"}\n        />\n        <button\n          aria-controls=\"password\"\n          aria-label={isVisible ? \"Hide password\" : \"Show password\"}\n          aria-pressed={isVisible}\n          className=\"text-muted-foreground/80 hover:text-foreground focus-visible:border-ring focus-visible:ring-ring/50 absolute inset-y-0 end-0 flex h-full w-9 items-center justify-center rounded-e-md transition-[color,box-shadow] outline-none focus:z-10 focus-visible:ring-[3px] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50\"\n          onClick={toggleVisibility}\n          type=\"button\">\n          {isVisible ? (\n            <EyeOffIcon aria-hidden=\"true\" size={16} />\n          ) : (\n            <EyeIcon aria-hidden=\"true\" size={16} />\n          )}\n        </button>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/input13.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

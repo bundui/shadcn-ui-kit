@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select4",
+  "title": "Select",
+  "description": "A select is a form control that allows the user to select a value from a list of options. Every select example supports both Radix UI and Base UI conventions.",
+  "files": [
+    {
+      "path": "contents/components/select/4/index.tsx",
+      "content": "import { ClockIcon } from \"lucide-react\";\nimport { useId } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue\n} from \"@/components/ui/select\";\n\nexport default function SelectComponent() {\n  const id = useId();\n  return (\n    <div className=\"w-full max-w-xs\">\n      <Select defaultValue=\"1\">\n        <SelectTrigger className=\"w-full relative ps-9\">\n          <div className=\"text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 group-has-[select[disabled]]:opacity-50\">\n            <ClockIcon aria-hidden=\"true\" size={16} />\n          </div>\n          <SelectValue placeholder=\"Select time\" />\n        </SelectTrigger>\n        <SelectContent>\n          <SelectItem value=\"1\">00:00 AM - 11:59 PM</SelectItem>\n          <SelectItem value=\"2\">01:00 AM - 12:59 PM</SelectItem>\n          <SelectItem value=\"3\">02:00 AM - 01:59 PM</SelectItem>\n          <SelectItem value=\"4\">03:00 AM - 02:59 PM</SelectItem>\n        </SelectContent>\n      </Select>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/select4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

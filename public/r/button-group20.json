@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group20",
+  "title": "Button group",
+  "description": "Button group built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/button-group/20/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport { ButtonGroup } from \"@/components/ui/button-group\";\nimport {\n  AlignCenterIcon,\n  AlignLeftIcon,\n  AlignRightIcon,\n  MenuIcon,\n} from \"lucide-react\";\n\nexport default function ButtonGroupComponent() {\n  return (\n    <ButtonGroup>\n      <Button variant=\"outline\" size=\"icon\" aria-label=\"Align left\">\n        <AlignLeftIcon aria-hidden=\"true\" />\n      </Button>\n      <Button variant=\"outline\" size=\"icon\" aria-label=\"Align center\">\n        <AlignCenterIcon aria-hidden=\"true\" />\n      </Button>\n      <Button variant=\"outline\" size=\"icon\" aria-label=\"Align right\">\n        <AlignRightIcon aria-hidden=\"true\" />\n      </Button>\n      <Button variant=\"outline\" size=\"icon\" aria-label=\"Align justify\">\n        <MenuIcon aria-hidden=\"true\" />\n      </Button>\n    </ButtonGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button-group20.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

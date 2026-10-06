@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group11",
+  "title": "Button group",
+  "description": "Button group built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/button-group/11/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport { ButtonGroup } from \"@/components/ui/button-group\";\nimport { InputGroup, InputGroupInput } from \"@/components/ui/input-group\";\n\nexport default function ButtonGroupComponent() {\n  return (\n    <ButtonGroup>\n      <ButtonGroup>\n        <InputGroup>\n          <InputGroupInput placeholder=\"Email address\" />\n        </InputGroup>\n      </ButtonGroup>\n      <ButtonGroup>\n        <Button variant=\"outline\">Add</Button>\n      </ButtonGroup>\n    </ButtonGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button-group11.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

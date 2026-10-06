@@ -1,0 +1,48 @@
+import { Button } from "@/components/ui/button";
+import { Pagination, PaginationContent, PaginationItem } from "@/components/ui/pagination";
+
+type PaginationProps = {
+  currentPage: number;
+  totalPages: number;
+};
+
+export default function PaginationComponent() {
+  return <PaginationRender currentPage={1} totalPages={10} />;
+}
+
+function PaginationRender({ currentPage, totalPages }: PaginationProps) {
+  return (
+    <div className="flex items-center w-full justify-between gap-3">
+      <p aria-live="polite" className="text-muted-foreground grow text-sm">
+        Page <span className="text-foreground">{currentPage}</span> of{" "}
+        <span className="text-foreground">{totalPages}</span>
+      </p>
+      <Pagination className="w-auto">
+        <PaginationContent className="gap-3">
+          <PaginationItem>
+            <Button
+              aria-disabled={currentPage === 1 ? true : undefined}
+              asChild
+              className="aria-disabled:pointer-events-none aria-disabled:opacity-50"
+              role={currentPage === 1 ? "link" : undefined}
+              variant="outline">
+              <a href={currentPage === 1 ? undefined : `#/page/${currentPage - 1}`}>Previous</a>
+            </Button>
+          </PaginationItem>
+          <PaginationItem>
+            <Button
+              aria-disabled={currentPage === totalPages ? true : undefined}
+              asChild
+              className="aria-disabled:pointer-events-none aria-disabled:opacity-50"
+              role={currentPage === totalPages ? "link" : undefined}
+              variant="outline">
+              <a href={currentPage === totalPages ? undefined : `#/page/${currentPage + 1}`}>
+                Next
+              </a>
+            </Button>
+          </PaginationItem>
+        </PaginationContent>
+      </Pagination>
+    </div>
+  );
+}

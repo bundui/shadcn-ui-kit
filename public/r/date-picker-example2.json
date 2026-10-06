@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "date-picker-example2",
+  "title": "Use cases",
+  "description": "Calendar and date-range pickers with presets like today, last 7 days, this month. Copy these shadcn/ui patterns for filters and booking flows.",
+  "files": [
+    {
+      "path": "contents/examples/date-picker/use-cases/2/index.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport { startOfDay, subDays, endOfDay } from \"date-fns\";\nimport { DateRange } from \"react-day-picker\";\n\nimport { Calendar } from \"@/components/ui/calendar\";\n\nexport default function DatePickerWithRange() {\n  const today = new Date();\n  const sevenDaysAgo = subDays(today, 6);\n\n  const [date, setDate] = React.useState<DateRange | undefined>({\n    from: startOfDay(sevenDaysAgo),\n    to: endOfDay(today)\n  });\n\n  return (\n    <div className=\"border rounded-lg\">\n      <Calendar\n        mode=\"range\"\n        defaultMonth={date?.from}\n        selected={date}\n        onSelect={setDate}\n        numberOfMonths={2}\n      />\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/date-picker-example2.tsx"
+    }
+  ],
+  "type": "registry:block"
+}

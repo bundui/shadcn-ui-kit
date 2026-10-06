@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "native-select6",
+  "title": "Native select",
+  "description": "Native select built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/native-select/6/index.tsx",
+      "content": "import { useId } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport { NativeSelect, NativeSelectOption } from \"@/components/ui/native-select\";\n\nexport default function NativeSelectComponent() {\n  const id = useId();\n  return (\n    <div className=\"w-full max-w-xs *:not-first:mt-2 *:data-[slot=native-select-wrapper]:w-full\">\n      <Label htmlFor={id}>\n        Framework <span className=\"text-destructive\">*</span>\n      </Label>\n      <NativeSelect id={id}>\n        <NativeSelectOption value=\"1\">React</NativeSelectOption>\n        <NativeSelectOption value=\"2\">Next.js</NativeSelectOption>\n        <NativeSelectOption value=\"3\">Astro</NativeSelectOption>\n        <NativeSelectOption value=\"4\">Gatsby</NativeSelectOption>\n      </NativeSelect>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/native-select6.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button24",
+  "title": "Button",
+  "description": "Button built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/button/24/index.tsx",
+      "content": "import { RiFacebookFill, RiGithubFill, RiGoogleFill, RiTwitterXFill } from \"@remixicon/react\";\n\nimport { Button } from \"@/components/ui/button\";\n\nexport default function Component() {\n  return (\n    <div className=\"flex flex-col gap-2\">\n      <Button variant=\"outline\">\n        <RiGoogleFill\n          aria-hidden=\"true\"\n          className=\"me-1 text-[#DB4437] dark:text-white/60\"\n          size={16}\n        />\n        Login with Google\n      </Button>\n      <Button variant=\"outline\">\n        <RiTwitterXFill\n          aria-hidden=\"true\"\n          className=\"me-1 text-[#14171a] dark:text-white/60\"\n          size={16}\n        />\n        Login with X\n      </Button>\n      <Button variant=\"outline\">\n        <RiFacebookFill\n          aria-hidden=\"true\"\n          className=\"me-1 text-[#1877f2] dark:text-white/60\"\n          size={16}\n        />\n        Login with Facebook\n      </Button>\n      <Button variant=\"outline\">\n        <RiGithubFill\n          aria-hidden=\"true\"\n          className=\"me-1 text-[#333333] dark:text-white/60\"\n          size={16}\n        />\n        Login with GitHub\n      </Button>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button24.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

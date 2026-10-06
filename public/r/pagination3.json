@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination3",
+  "title": "Pagination",
+  "description": "Pagination with page navigation, next and previous links. All pagination variants blend into Radix UI and Base UI codebases.",
+  "files": [
+    {
+      "path": "contents/components/pagination/3/index.tsx",
+      "content": "import { ChevronLeftIcon, ChevronRightIcon } from \"lucide-react\";\n\nimport { cn } from \"@/lib/utils\";\nimport { buttonVariants } from \"@/components/ui/button\";\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationItem,\n  PaginationLink\n} from \"@/components/ui/pagination\";\n\ntype PaginationProps = {\n  currentPage: number;\n  totalPages: number;\n};\n\nexport default function PaginationComponent() {\n  return <PaginationRender currentPage={1} totalPages={10} />;\n}\n\nfunction PaginationRender({ currentPage, totalPages }: PaginationProps) {\n  return (\n    <Pagination>\n      <PaginationContent className=\"w-full justify-between\">\n        <PaginationItem>\n          <PaginationLink\n            aria-disabled={currentPage === 1 ? true : undefined}\n            aria-label=\"Go to previous page\"\n            className={cn(\n              \"aria-disabled:pointer-events-none aria-disabled:opacity-50\",\n              buttonVariants({\n                variant: \"outline\"\n              })\n            )}\n            href={currentPage === 1 ? undefined : `#/page/${currentPage - 1}`}\n            role={currentPage === 1 ? \"link\" : undefined}>\n            <ChevronLeftIcon aria-hidden=\"true\" size={16} />\n          </PaginationLink>\n        </PaginationItem>\n        <PaginationItem>\n          <p aria-live=\"polite\" className=\"text-muted-foreground text-sm\">\n            Page <span className=\"text-foreground\">{currentPage}</span> of{\" \"}\n            <span className=\"text-foreground\">{totalPages}</span>\n          </p>\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationLink\n            aria-disabled={currentPage === totalPages ? true : undefined}\n            aria-label=\"Go to next page\"\n            className={cn(\n              \"aria-disabled:pointer-events-none aria-disabled:opacity-50\",\n              buttonVariants({\n                variant: \"outline\"\n              })\n            )}\n            href={currentPage === totalPages ? undefined : `#/page/${currentPage + 1}`}\n            role={currentPage === totalPages ? \"link\" : undefined}>\n            <ChevronRightIcon aria-hidden=\"true\" size={16} />\n          </PaginationLink>\n        </PaginationItem>\n      </PaginationContent>\n    </Pagination>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/pagination3.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

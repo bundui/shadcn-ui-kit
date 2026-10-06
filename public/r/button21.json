@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button21",
+  "title": "Button",
+  "description": "Button built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/button/21/index.tsx",
+      "content": "import { StarIcon } from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\n\nexport default function Component() {\n  return (\n    <Button>\n      <StarIcon aria-hidden=\"true\" className=\"-ms-1 opacity-60\" size={16} />\n      <span className=\"flex items-baseline gap-2\">\n        Star\n        <span className=\"text-primary-foreground/60 text-xs\">729</span>\n      </span>\n    </Button>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button21.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

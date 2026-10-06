@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "drawer3",
+  "title": "Drawer",
+  "description": "A drawer is a panel that slides in from the side of the screen. Each drawer variant is interchangeable between Radix UI and Base UI projects.",
+  "files": [
+    {
+      "path": "contents/components/drawer/3/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport {\n  Drawer,\n  DrawerTrigger,\n  DrawerContent,\n  DrawerHeader,\n  DrawerTitle,\n  DrawerDescription,\n  DrawerFooter,\n  DrawerClose,\n} from \"@/components/ui/drawer\";\nimport { InfoIcon } from \"lucide-react\";\n\nexport default function DrawerComponent() {\n  return (\n    <Drawer>\n      <DrawerTrigger asChild>\n        <Button variant=\"outline\" className=\"flex items-center gap-2 text-sm\">\n          <InfoIcon className=\"size-4\" /> More Info\n        </Button>\n      </DrawerTrigger>\n      <DrawerContent>\n        <div className=\"mx-auto w-full max-w-sm\">\n          <DrawerHeader>\n            <DrawerTitle className=\"font-normal\">Additional Information</DrawerTitle>\n            <DrawerDescription>\n              Learn more about this feature below.\n            </DrawerDescription>\n          </DrawerHeader>\n          <div className=\"text-muted-foreground p-4 text-sm\">\n            This drawer provides extra context and details that may help you\n            make better decisions when using our product.\n          </div>\n          <DrawerFooter>\n            <DrawerClose asChild>\n              <Button size=\"sm\" variant=\"outline\">\n                Close\n              </Button>\n            </DrawerClose>\n          </DrawerFooter>\n        </div>\n      </DrawerContent>\n    </Drawer>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/drawer3.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

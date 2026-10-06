@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "bubble4",
+  "title": "Bubble",
+  "description": "Bubble built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/bubble/4/index.tsx",
+      "content": "import {\n  Bubble,\n  BubbleContent,\n  BubbleReactions,\n} from \"@/components/ui/bubble\";\n\nexport default function BubbleDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-8 py-4\">\n      <Bubble variant=\"muted\">\n        <BubbleContent>\n          We just crossed 10k downloads on the starter kit!\n        </BubbleContent>\n        <BubbleReactions aria-label=\"Reactions: fire and party\" role=\"img\">\n          <span>🔥</span>\n          <span>🎉</span>\n        </BubbleReactions>\n      </Bubble>\n      <Bubble align=\"end\">\n        <BubbleContent>\n          Huge milestone. Drinks are on me on Friday.\n        </BubbleContent>\n        <BubbleReactions\n          align=\"start\"\n          aria-label=\"Reactions: thumbs up and 3 more\"\n          role=\"img\"\n        >\n          <span>👍</span>\n          <span>+3</span>\n        </BubbleReactions>\n      </Bubble>\n      <Bubble variant=\"muted\">\n        <BubbleContent>\n          Counting on that. I will bring the launch checklist so we can plan\n          the next release too.\n        </BubbleContent>\n        <BubbleReactions\n          aria-label=\"Reaction: eyes\"\n          role=\"img\"\n          side=\"top\"\n        >\n          <span>👀</span>\n        </BubbleReactions>\n      </Bubble>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/bubble4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

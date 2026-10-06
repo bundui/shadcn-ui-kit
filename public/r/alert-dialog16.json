@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog16",
+  "title": "Alert dialog",
+  "description": "Alert dialog built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/alert-dialog/16/index.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\nimport {\n  AlertDialog,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@/components/ui/alert-dialog\";\nimport { Button } from \"@/components/ui/button\";\nimport { TrashIcon } from \"lucide-react\";\n\nexport default function DialogComponent() {\n  const [open, setOpen] = useState(false);\n\n  const handleDelete = () => {\n    console.log(\"Item deleted\");\n    setOpen(false);\n  };\n\n  return (\n    <AlertDialog open={open} onOpenChange={setOpen}>\n      <AlertDialogTrigger asChild>\n        <Button variant=\"destructive\">\n          <TrashIcon />\n          Delete Item\n        </Button>\n      </AlertDialogTrigger>\n      <AlertDialogContent>\n        <AlertDialogHeader>\n          <AlertDialogTitle className=\"font-normal\">\n            Delete Item\n          </AlertDialogTitle>\n          <AlertDialogDescription>\n            Are you sure you want to delete this item? This action cannot be\n            undone.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <AlertDialogFooter>\n          <Button variant=\"outline\" onClick={() => setOpen(false)}>\n            Cancel\n          </Button>\n          <Button variant=\"destructive\" onClick={handleDelete}>\n            Delete\n          </Button>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/alert-dialog16.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

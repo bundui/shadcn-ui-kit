@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner13",
+  "title": "Spinner",
+  "description": "Spinner built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/spinner/13/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport {\n  Item,\n  ItemActions,\n  ItemContent,\n  ItemDescription,\n  ItemMedia,\n  ItemTitle,\n} from \"@/components/ui/item\";\nimport { Spinner } from \"@/components/ui/spinner\";\n\nexport default function SpinnerComponent() {\n  return (\n    <Item variant=\"outline\" className=\"w-full max-w-sm\">\n      <ItemMedia variant=\"icon\" className=\"rounded-full\">\n        <Spinner />\n      </ItemMedia>\n      <ItemContent>\n        <ItemTitle>Downloading (35%)</ItemTitle>\n        <ItemDescription className=\"text-xs\">129 MB / 1000 MB</ItemDescription>\n      </ItemContent>\n      <ItemActions className=\"hidden sm:flex\">\n        <Button size=\"xs\" variant=\"destructive\">\n          Cancel\n        </Button>\n      </ItemActions>\n    </Item>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/spinner13.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

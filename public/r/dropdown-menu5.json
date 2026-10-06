@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu5",
+  "title": "Dropdown menu",
+  "description": "Dropdown menu built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/dropdown-menu/5/index.tsx",
+      "content": "import {\n  BoltIcon,\n  ChevronDownIcon,\n  CopyPlusIcon,\n  FilesIcon,\n  Layers2Icon,\n  TrashIcon,\n} from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuLabel,\n  DropdownMenuSeparator,\n  DropdownMenuTrigger,\n} from \"@/components/ui/dropdown-menu\";\n\nexport default function Component() {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button variant=\"outline\">\n          Labeled grouped items\n          <ChevronDownIcon\n            aria-hidden=\"true\"\n            className=\"-me-1 opacity-60\"\n            size={16}\n          />\n        </Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent>\n        <DropdownMenuLabel>Label</DropdownMenuLabel>\n        <DropdownMenuGroup>\n          <DropdownMenuItem>\n            <CopyPlusIcon aria-hidden=\"true\" className=\"opacity-60\" size={16} />\n            Copy\n          </DropdownMenuItem>\n          <DropdownMenuItem>\n            <BoltIcon aria-hidden=\"true\" className=\"opacity-60\" size={16} />\n            Edit\n          </DropdownMenuItem>\n        </DropdownMenuGroup>\n        <DropdownMenuSeparator />\n        <DropdownMenuLabel>Label</DropdownMenuLabel>\n        <DropdownMenuGroup>\n          <DropdownMenuItem>\n            <Layers2Icon aria-hidden=\"true\" className=\"opacity-60\" size={16} />\n            Group\n          </DropdownMenuItem>\n          <DropdownMenuItem>\n            <FilesIcon aria-hidden=\"true\" className=\"opacity-60\" size={16} />\n            Clone\n          </DropdownMenuItem>\n          <DropdownMenuItem variant=\"destructive\">\n            <TrashIcon aria-hidden=\"true\" size={16} />\n            Delete\n          </DropdownMenuItem>\n        </DropdownMenuGroup>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/dropdown-menu5.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

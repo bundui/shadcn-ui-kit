@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider8",
+  "title": "Slider",
+  "description": "Slider built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/slider/8/index.tsx",
+      "content": "\"use client\";\n\nimport { MinusIcon, PlusIcon } from \"lucide-react\";\nimport { useState } from \"react\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { Label } from \"@/components/ui/label\";\nimport { Slider } from \"@/components/ui/slider\";\n\nexport default function SliderComponent() {\n  const minValue = 0;\n  const maxValue = 200;\n  const steps = 5;\n  const [value, setValue] = useState([100]);\n\n  const decreaseValue = () => setValue((prev) => [Math.max(minValue, prev[0] - steps)]);\n  const increaseValue = () => setValue((prev) => [Math.min(maxValue, prev[0] + steps)]);\n\n  return (\n    <div className=\"w-full max-w-xs *:not-first:mt-3\">\n      <Label className=\"tabular-nums\">{value[0]} credits/mo</Label>\n      <div className=\"flex items-center gap-4\">\n        <div>\n          <Button\n            aria-label=\"Decrease value\"\n            className=\"size-8\"\n            disabled={value[0] === 0}\n            onClick={decreaseValue}\n            size=\"icon\"\n            variant=\"outline\">\n            <MinusIcon aria-hidden=\"true\" size={16} />\n          </Button>\n        </div>\n        <Slider\n          aria-label=\"Dual range slider with buttons\"\n          className=\"grow\"\n          max={maxValue}\n          min={minValue}\n          onValueChange={setValue}\n          step={steps}\n          value={value}\n        />\n        <div>\n          <Button\n            aria-label=\"Increase value\"\n            className=\"size-8\"\n            disabled={value[0] === 200}\n            onClick={increaseValue}\n            size=\"icon\"\n            variant=\"outline\">\n            <PlusIcon aria-hidden=\"true\" size={16} />\n          </Button>\n        </div>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/slider8.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

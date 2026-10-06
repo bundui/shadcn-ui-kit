@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress7",
+  "title": "Progress",
+  "description": "Progress built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/progress/7/index.tsx",
+      "content": "\"use client\";\n\nimport { Progress } from \"@/components/ui/progress\";\nimport { Badge } from \"@/components/ui/badge\";\n\nexport default function ProgressComponent() {\n  const getStatusColor = (value: number) => {\n    if (value >= 80) return \"bg-red-500\";\n    if (value >= 50) return \"bg-yellow-500\";\n    return \"bg-green-500\";\n  };\n\n  const getStatusText = (value: number) => {\n    if (value >= 80) return \"High\";\n    if (value >= 50) return \"Medium\";\n    return \"Low\";\n  };\n\n  const usage = 75;\n\n  return (\n    <div className=\"w-full max-w-sm space-y-2\">\n      <div className=\"flex items-center justify-between\">\n        <span className=\"text-sm font-medium\">Storage Usage</span>\n        <Badge variant={usage >= 80 ? \"destructive\" : usage >= 50 ? \"secondary\" : \"default\"}>\n          {getStatusText(usage)}\n        </Badge>\n      </div>\n      <Progress value={usage} className={getStatusColor(usage)} />\n      <div className=\"flex items-center justify-between text-xs text-muted-foreground\">\n        <span>7.5 GB of 10 GB used</span>\n        <span>{usage}%</span>\n      </div>\n    </div>\n  );\n}\n\n",
+      "type": "registry:component",
+      "target": "components/progress7.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

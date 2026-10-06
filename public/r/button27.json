@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button27",
+  "title": "Button",
+  "description": "Button built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/button/27/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport { ButtonGroup, ButtonGroupSeparator } from \"@/components/ui/button-group\";\n\nexport default function Component() {\n  return (\n    <ButtonGroup>\n      <Button variant=\"secondary\">Left</Button>\n      <ButtonGroupSeparator />\n      <Button variant=\"secondary\">Middle</Button>\n      <ButtonGroupSeparator />\n      <Button variant=\"secondary\">Right</Button>\n    </ButtonGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button27.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

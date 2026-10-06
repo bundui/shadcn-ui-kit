@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu1",
+  "title": "Dropdown menu",
+  "description": "A dropdown menu is a menu that appears when the user clicks on a button. Every menu example matches the semantics of Radix UI and Base UI.",
+  "files": [
+    {
+      "path": "contents/components/dropdown-menu/1/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuLabel,\n  DropdownMenuSeparator,\n  DropdownMenuTrigger,\n} from \"@/components/ui/dropdown-menu\";\n\nexport default function Example() {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button variant=\"outline\">Open Menu</Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent>\n        <DropdownMenuLabel>My Account</DropdownMenuLabel>\n        <DropdownMenuSeparator />\n        <DropdownMenuItem>Profile</DropdownMenuItem>\n        <DropdownMenuItem>Billing</DropdownMenuItem>\n        <DropdownMenuItem>Team</DropdownMenuItem>\n        <DropdownMenuItem>Subscription</DropdownMenuItem>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  );\n}\n\n",
+      "type": "registry:component",
+      "target": "components/dropdown-menu1.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

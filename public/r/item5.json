@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "item5",
+  "title": "Item",
+  "description": "A versatile component for displaying content with media, title, description, and actions. Every item layout is usable in both Radix UI and Base UI based projects.",
+  "files": [
+    {
+      "path": "contents/components/item/5/index.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\nimport { Button } from \"@/components/ui/button\";\nimport {\n  Item,\n  ItemActions,\n  ItemContent,\n  ItemDescription,\n  ItemMedia,\n  ItemTitle,\n} from \"@/components/ui/item\";\n\nexport default function ItemComponent() {\n  return (\n    <Item variant=\"outline\" className=\"w-full max-w-xl\">\n      <ItemMedia>\n        <div className=\"*:data-[slot=avatar]:ring-background flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:grayscale\">\n          <Avatar className=\"hidden sm:flex\">\n            <AvatarImage src=\"https://i.pravatar.cc/150?u=shadcn\" alt=\"@shadcn\" />\n            <AvatarFallback>CN</AvatarFallback>\n          </Avatar>\n          <Avatar className=\"hidden sm:flex\">\n            <AvatarImage\n              src=\"https://i.pravatar.cc/150?u=maxleiter\"\n              alt=\"@maxleiter\"\n            />\n            <AvatarFallback>LR</AvatarFallback>\n          </Avatar>\n          <Avatar>\n            <AvatarImage\n              src=\"https://i.pravatar.cc/150?u=evilrabbit\"\n              alt=\"@evilrabbit\"\n            />\n            <AvatarFallback>ER</AvatarFallback>\n          </Avatar>\n        </div>\n      </ItemMedia>\n      <ItemContent>\n        <ItemTitle>No Team Members</ItemTitle>\n        <ItemDescription>\n          Invite your team to collaborate on this project.\n        </ItemDescription>\n      </ItemContent>\n      <ItemActions>\n        <Button size=\"sm\" variant=\"outline\">\n          Invite\n        </Button>\n      </ItemActions>\n    </Item>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/item5.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea11",
+  "title": "Textarea",
+  "description": "Textarea built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/textarea/11/index.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\nimport { Textarea } from \"@/components/ui/textarea\";\n\nexport default function TextareaComponent() {\n  return (\n    <div className=\"flex w-full items-start max-w-sm gap-2\">\n      <Avatar>\n        <AvatarImage src=\"https://i.pravatar.cc/150?u=1\" />\n        <AvatarFallback>PJ</AvatarFallback>\n      </Avatar>\n      <Textarea id=\"withavatar\" placeholder=\"Enter your name\" />\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/textarea11.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

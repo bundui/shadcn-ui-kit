@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "item2",
+  "title": "Item",
+  "description": "A versatile component for displaying content with media, title, description, and actions. Every item layout is usable in both Radix UI and Base UI based projects.",
+  "files": [
+    {
+      "path": "contents/components/item/2/index.tsx",
+      "content": "import {\n  Item,\n  ItemContent,\n  ItemDescription,\n  ItemMedia,\n  ItemTitle,\n} from \"@/components/ui/item\";\nimport { InboxIcon } from \"lucide-react\";\n\nexport default function ItemComponent() {\n  return (\n    <div className=\"flex w-full max-w-md flex-col gap-6\">\n      <Item>\n        <ItemMedia variant=\"icon\">\n          <InboxIcon />\n        </ItemMedia>\n        <ItemContent>\n          <ItemTitle>Default Variant</ItemTitle>\n          <ItemDescription>\n            Transparent background with no border.\n          </ItemDescription>\n        </ItemContent>\n      </Item>\n      <Item variant=\"outline\">\n        <ItemMedia variant=\"icon\">\n          <InboxIcon />\n        </ItemMedia>\n        <ItemContent>\n          <ItemTitle>Outline Variant</ItemTitle>\n          <ItemDescription>\n            Outlined style with a visible border.\n          </ItemDescription>\n        </ItemContent>\n      </Item>\n      <Item variant=\"muted\">\n        <ItemMedia variant=\"icon\">\n          <InboxIcon />\n        </ItemMedia>\n        <ItemContent>\n          <ItemTitle>Muted Variant</ItemTitle>\n          <ItemDescription>\n            Muted background for secondary content.\n          </ItemDescription>\n        </ItemContent>\n      </Item>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/item2.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

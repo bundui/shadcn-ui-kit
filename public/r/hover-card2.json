@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card2",
+  "title": "Hover card",
+  "description": "A hover card is a card that appears when the user hovers over an element. Every variant behaves consistently across Radix UI and Base UI.",
+  "files": [
+    {
+      "path": "contents/components/hover-card/2/index.tsx",
+      "content": "import { HoverCard, HoverCardContent, HoverCardTrigger } from \"@/components/ui/hover-card\";\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\nimport { Button } from \"@/components/ui/button\";\nimport { CalendarDays } from \"lucide-react\";\n\nexport default function HoverCardComponent() {\n  return (\n    <HoverCard>\n      <HoverCardTrigger asChild>\n        <Button variant=\"link\">\n          <Avatar>\n            <AvatarImage src=\"https://i.pravatar.cc/100?img=12\" />\n            <AvatarFallback>TB</AvatarFallback>\n          </Avatar>\n        </Button>\n      </HoverCardTrigger>\n      <HoverCardContent className=\"w-80\">\n        <div className=\"flex justify-between space-x-2.5\">\n          <Avatar className=\"size-10\">\n            <AvatarImage src=\"https://i.pravatar.cc/100?img=12\" />\n            <AvatarFallback>TB</AvatarFallback>\n          </Avatar>\n          <div className=\"space-y-1\">\n            <h4 className=\"\">John Doe</h4>\n            <p className=\"text-muted-foreground text-sm\">\n              The React Framework – created and maintained by @vercel.\n            </p>\n            <div className=\"mt-2 flex items-center gap-1.5\">\n              <CalendarDays className=\"text-muted-foreground size-3\" />\n              <span className=\"text-muted-foreground text-xs\">Joined Dec 2021</span>\n            </div>\n          </div>\n        </div>\n      </HoverCardContent>\n    </HoverCard>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/hover-card2.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

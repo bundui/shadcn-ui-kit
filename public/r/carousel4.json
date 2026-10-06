@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "carousel4",
+  "title": "Carousel",
+  "description": "A carousel with motion and swipe built using Embla Carousel. All carousel examples are compatible with both Radix UI and Base UI stacks.",
+  "files": [
+    {
+      "path": "contents/components/carousel/4/index.tsx",
+      "content": "\"use client\";\n\nimport Image from \"next/image\";\nimport {\n  Carousel,\n  CarouselContent,\n  CarouselItem,\n  CarouselNext,\n  CarouselPrevious\n} from \"@/components/ui/carousel\";\nimport { useRef } from \"react\";\nimport Autoplay from \"embla-carousel-autoplay\";\n\nconst images = [\n  \"https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop\",\n  \"https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop\",\n  \"https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop\"\n];\n\nexport default function CarouselComponent() {\n  const autoplay = useRef(Autoplay({ delay: 4000, stopOnInteraction: false }));\n\n  return (\n    <Carousel className=\"w-full max-w-xs\" opts={{ loop: true }} plugins={[autoplay.current]}>\n      <CarouselContent>\n        {images.map((src, index) => (\n          <CarouselItem key={index}>\n            <figure>\n              <Image\n                src={src}\n                alt={`Image ${index + 1}`}\n                width={800}\n                height={600}\n                className=\"aspect-4/3 rounded-lg object-cover\"\n              />\n            </figure>\n          </CarouselItem>\n        ))}\n      </CarouselContent>\n      <CarouselPrevious />\n      <CarouselNext />\n    </Carousel>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/carousel4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider4",
+  "title": "Slider",
+  "description": "An input where the user selects a value from within a given range. Each slider example tracks the behavior of Radix UI and Base UI primitives.",
+  "files": [
+    {
+      "path": "contents/components/slider/4/index.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport { Slider } from \"@/components/ui/slider\";\n\nexport default function SliderComponent() {\n  const [value, setValue] = useState([25]);\n\n  return (\n    <div className=\"w-full max-w-xs space-y-4\">\n      <div className=\"flex items-center justify-between gap-2\">\n        <Slider aria-label=\"Slider with output\" onValueChange={setValue} value={value} />\n        <output className=\"w-10 text-sm font-medium tabular-nums\">{value[0]}</output>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/slider4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

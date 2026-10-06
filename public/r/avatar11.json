@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar11",
+  "title": "Avatar",
+  "description": "Avatar built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/avatar/11/index.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\n\nexport default function AvatarComponent() {\n  return (\n    <Avatar className=\"rounded-lg after:rounded-lg **:data-[slot=avatar-image]:rounded-lg **:data-[slot=avatar-fallback]:rounded-lg\">\n      <AvatarImage src=\"https://i.pravatar.cc/150?u=shadcn\" alt=\"@shadcn\" />\n      <AvatarFallback>TB</AvatarFallback>\n    </Avatar>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/avatar11.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

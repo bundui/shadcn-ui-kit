@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip4",
+  "title": "Tooltip",
+  "description": "A tooltip is a small overlay that appears when the user hovers over an element. Each tooltip variant is drop-in compatible with Radix UI and Base UI.",
+  "files": [
+    {
+      "path": "contents/components/tooltip/4/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from \"@/components/ui/tooltip\";\n\nexport default function TooltipComponent() {\n  return (\n    <TooltipProvider>\n      <div className=\"flex flex-wrap gap-2\">\n        <Tooltip>\n          <TooltipTrigger asChild>\n            <Button variant=\"outline\">Left</Button>\n          </TooltipTrigger>\n          <TooltipContent side=\"left\">\n            <p>Hey there!</p>\n          </TooltipContent>\n        </Tooltip>\n\n        <Tooltip>\n          <TooltipTrigger asChild>\n            <Button variant=\"outline\">Top</Button>\n          </TooltipTrigger>\n          <TooltipContent side=\"top\">\n            <p>Hey there!</p>\n          </TooltipContent>\n        </Tooltip>\n\n        <Tooltip>\n          <TooltipTrigger asChild>\n            <Button variant=\"outline\">Bottom</Button>\n          </TooltipTrigger>\n          <TooltipContent side=\"bottom\">\n            <p>Hey there!</p>\n          </TooltipContent>\n        </Tooltip>\n\n        <Tooltip>\n          <TooltipTrigger asChild>\n            <Button variant=\"outline\">Right</Button>\n          </TooltipTrigger>\n          <TooltipContent side=\"right\">\n            <p>Hey there!</p>\n          </TooltipContent>\n        </Tooltip>\n      </div>\n    </TooltipProvider>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/tooltip4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

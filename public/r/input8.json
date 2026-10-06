@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input8",
+  "title": "Input",
+  "description": "Input built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/input/8/index.tsx",
+      "content": "import {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n  InputGroupText\n} from \"@/components/ui/input-group\";\n\nexport default function Component() {\n  return (\n    <InputGroup className=\"max-w-sm\">\n      <InputGroupInput placeholder=\"google.com\" />\n      <InputGroupAddon align=\"inline-end\">\n        <InputGroupText>.com</InputGroupText>\n      </InputGroupAddon>\n    </InputGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/input8.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

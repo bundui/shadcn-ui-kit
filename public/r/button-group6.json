@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group6",
+  "title": "Button group",
+  "description": "Button group built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/button-group/6/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport { ButtonGroup } from \"@/components/ui/button-group\";\nimport { DownloadCloud } from \"lucide-react\";\n\nexport default function ButtonGroupComponent() {\n  return (\n    <ButtonGroup>\n      <Button variant=\"outline\">\n        <DownloadCloud />\n        Download for Free\n      </Button>\n      <Button variant=\"outline\">31K</Button>\n    </ButtonGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button-group6.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

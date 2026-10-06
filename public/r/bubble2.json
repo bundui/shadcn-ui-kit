@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "bubble2",
+  "title": "Bubble",
+  "description": "Chat bubble components for displaying messages with grouping, alignment, and reactions. All bubble examples remain fully compatible with Radix UI and Base UI.",
+  "files": [
+    {
+      "path": "contents/components/bubble/2/index.tsx",
+      "content": "import { Bubble, BubbleContent } from \"@/components/ui/bubble\";\n\nexport default function BubbleDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2\">\n      <Bubble variant=\"default\">\n        <BubbleContent>Default, strong bubble for the current user.</BubbleContent>\n      </Bubble>\n      <Bubble variant=\"secondary\">\n        <BubbleContent>Secondary, neutral conversation bubble.</BubbleContent>\n      </Bubble>\n      <Bubble variant=\"muted\">\n        <BubbleContent>Muted, lower emphasis supporting message.</BubbleContent>\n      </Bubble>\n      <Bubble variant=\"tinted\">\n        <BubbleContent>Tinted, subtle primary tinted appearance.</BubbleContent>\n      </Bubble>\n      <Bubble variant=\"outline\">\n        <BubbleContent>Outline, bordered bubble for rich content.</BubbleContent>\n      </Bubble>\n      <Bubble variant=\"ghost\">\n        <BubbleContent>Ghost, unframed text for assistant replies.</BubbleContent>\n      </Bubble>\n      <Bubble variant=\"destructive\">\n        <BubbleContent>Destructive, this message failed to send.</BubbleContent>\n      </Bubble>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/bubble2.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

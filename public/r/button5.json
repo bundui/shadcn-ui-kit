@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button5",
+  "title": "Button",
+  "description": "Displays a button or a component that looks like a button. Every button example is built to work with both Radix UI and Base UI.",
+  "files": [
+    {
+      "path": "contents/components/button/5/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\n\nexport default function Component() {\n  return (\n    <div className=\"inline-flex items-center gap-2\">\n      <Button variant=\"secondary\">Cancel</Button>\n      <Button>Save</Button>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button5.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

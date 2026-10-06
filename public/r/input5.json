@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input5",
+  "title": "Input",
+  "description": "A text input with a label, placeholder, and helper text. Each input variant pairs cleanly with Radix UI and Base UI form controls.",
+  "files": [
+    {
+      "path": "contents/components/input/5/index.tsx",
+      "content": "\"use client\";\n\nimport { CheckCircle2 } from \"lucide-react\";\n\nimport { Input } from \"@/components/ui/input\";\nimport { Label } from \"@/components/ui/label\";\n\nexport const title = \"Success State\";\n\nconst Example = () => (\n  <div className=\"w-full max-w-sm space-y-2\">\n    <Label htmlFor=\"username-success\">Username</Label>\n    <Input\n      className=\"bg-background border-green-600 focus-visible:border-green-600 focus-visible:ring-green-600/50\"\n      defaultValue=\"haydenbleasel\"\n      id=\"username-success\"\n      placeholder=\"johndoe\"\n    />\n    <div className=\"flex items-center gap-2 text-sm text-green-600 dark:text-green-400\">\n      <CheckCircle2 className=\"h-4 w-4\" />\n      <span>Username is available</span>\n    </div>\n  </div>\n);\n\nexport default Example;\n",
+      "type": "registry:component",
+      "target": "components/input5.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

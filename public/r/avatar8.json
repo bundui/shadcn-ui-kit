@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar8",
+  "title": "Avatar",
+  "description": "Avatar built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/avatar/8/index.tsx",
+      "content": "import {\n  Avatar,\n  AvatarGroup,\n  AvatarGroupCount,\n  AvatarImage,\n} from \"@/components/ui/avatar\";\n\nexport default function AvatarComponent() {\n  return (\n    <AvatarGroup>\n      <Avatar>\n        <AvatarImage alt=\"Avatar 01\" src=\"https://i.pravatar.cc/150?img=1\" />\n      </Avatar>\n      <Avatar>\n        <AvatarImage alt=\"Avatar 02\" src=\"https://i.pravatar.cc/150?img=2\" />\n      </Avatar>\n      <Avatar>\n        <AvatarImage alt=\"Avatar 03\" src=\"https://i.pravatar.cc/150?img=3\" />\n      </Avatar>\n      <Avatar>\n        <AvatarImage alt=\"Avatar 04\" src=\"https://i.pravatar.cc/150?img=4\" />\n      </Avatar>\n      <AvatarGroupCount>+4</AvatarGroupCount>\n    </AvatarGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/avatar8.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

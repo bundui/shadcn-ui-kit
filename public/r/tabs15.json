@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs15",
+  "title": "Tabs",
+  "description": "Tabs built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/tabs/15/index.tsx",
+      "content": "import { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/components/ui/tabs\";\nimport { BoxIcon, HouseIcon, PanelsTopLeftIcon } from \"lucide-react\";\n\nexport default function Component() {\n  return (\n    <Tabs\n      className=\"w-full flex-row\"\n      defaultValue=\"tab-1\"\n      orientation=\"vertical\"\n    >\n      <TabsList className=\"flex-col gap-1 bg-transparent\">\n        <TabsTrigger\n          className=\"data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-full data-[state=active]:shadow-none!\"\n          value=\"tab-1\"\n        >\n          Overview\n        </TabsTrigger>\n        <TabsTrigger\n          className=\"data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-full data-[state=active]:shadow-none!\"\n          value=\"tab-2\"\n        >\n          Projects\n        </TabsTrigger>\n        <TabsTrigger\n          className=\"data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-full data-[state=active]:shadow-none!\"\n          value=\"tab-3\"\n        >\n          Packages\n        </TabsTrigger>\n      </TabsList>\n      <div className=\"grow bg-muted rounded-md \">\n        <TabsContent value=\"tab-1\">\n          <p className=\"text-muted-foreground px-4 py-3 text-xs\">\n            Content for Tab 1\n          </p>\n        </TabsContent>\n        <TabsContent value=\"tab-2\">\n          <p className=\"text-muted-foreground px-4 py-3 text-xs\">\n            Content for Tab 2\n          </p>\n        </TabsContent>\n        <TabsContent value=\"tab-3\">\n          <p className=\"text-muted-foreground px-4 py-3 text-xs\">\n            Content for Tab 3\n          </p>\n        </TabsContent>\n      </div>\n    </Tabs>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/tabs15.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

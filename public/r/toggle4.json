@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle4",
+  "title": "Toggle",
+  "description": "A two-state button that can be either on or off. All toggle examples conform to Radix UI and Base UI state conventions.",
+  "files": [
+    {
+      "path": "contents/components/toggle/4/index.tsx",
+      "content": "import { Italic } from \"lucide-react\";\n\nimport { Toggle } from \"@/components/ui/toggle\";\n\nexport default function ToggleComponent() {\n  return (\n    <Toggle aria-label=\"Toggle italic\">\n      <Italic />\n      Italic\n    </Toggle>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/toggle4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

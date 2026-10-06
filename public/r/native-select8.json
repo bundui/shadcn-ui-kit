@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "native-select8",
+  "title": "Native select",
+  "description": "Native select built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/native-select/8/index.tsx",
+      "content": "import { useId } from \"react\";\n\nimport { NativeSelect, NativeSelectOption } from \"@/components/ui/native-select\";\n\nexport default function NativeSelectComponent() {\n  const id = useId();\n  return (\n    <div className=\"group relative w-full max-w-xs *:data-[slot=native-select-wrapper]:w-full\">\n      <label\n        className=\"bg-background text-foreground absolute start-1 top-0 z-10 block -translate-y-1/2 px-2 text-xs font-medium group-has-[select:disabled]:opacity-50\"\n        htmlFor={id}>\n        Framework\n      </label>\n      <NativeSelect defaultValue=\"\" id={id}>\n        <NativeSelectOption disabled value=\"\">\n          Select framework\n        </NativeSelectOption>\n        <NativeSelectOption value=\"1\">React</NativeSelectOption>\n        <NativeSelectOption value=\"2\">Next.js</NativeSelectOption>\n        <NativeSelectOption value=\"3\">Astro</NativeSelectOption>\n        <NativeSelectOption value=\"4\">Gatsby</NativeSelectOption>\n      </NativeSelect>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/native-select8.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

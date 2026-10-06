@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton4",
+  "title": "Skeleton",
+  "description": "Use to show a placeholder while content is loading. All skeleton variants are usable across Radix UI and Base UI interfaces.",
+  "files": [
+    {
+      "path": "contents/components/skeleton/4/index.tsx",
+      "content": "import { Skeleton } from \"@/components/ui/skeleton\";\n\nexport default function SkeletonCard() {\n  return (\n    <div className=\"w-full max-w-sm space-y-4\">\n      <div className=\"flex items-center space-x-4\">\n        <Skeleton className=\"size-10 rounded-full\" />\n        <div className=\"flex grow justify-between gap-2 space-x-2\">\n          <Skeleton className=\"h-3 w-1/3\" />\n          <Skeleton className=\"h-3 w-8\" />\n        </div>\n      </div>\n      <div className=\"flex items-center space-x-4\">\n        <Skeleton className=\"size-10 rounded-full\" />\n        <div className=\"flex grow justify-between gap-2 space-x-2\">\n          <Skeleton className=\"h-3 w-2/3\" />\n          <Skeleton className=\"h-3 w-8\" />\n        </div>\n      </div>\n      <div className=\"flex items-center space-x-4\">\n        <Skeleton className=\"size-10 rounded-full\" />\n        <div className=\"flex grow justify-between gap-2 space-x-2\">\n          <Skeleton className=\"h-3 w-1/2\" />\n          <Skeleton className=\"h-3 w-8\" />\n        </div>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/skeleton4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

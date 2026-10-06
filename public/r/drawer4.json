@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "drawer4",
+  "title": "Drawer",
+  "description": "A drawer is a panel that slides in from the side of the screen. Each drawer variant is interchangeable between Radix UI and Base UI projects.",
+  "files": [
+    {
+      "path": "contents/components/drawer/4/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport {\n  Drawer,\n  DrawerClose,\n  DrawerContent,\n  DrawerDescription,\n  DrawerFooter,\n  DrawerHeader,\n  DrawerTitle,\n  DrawerTrigger,\n} from \"@/components/ui/drawer\";\n\nexport default function DrawerComponent() {\n  return (\n    <Drawer>\n      <DrawerTrigger asChild>\n        <Button variant=\"outline\">Cookie Settings</Button>\n      </DrawerTrigger>\n      <DrawerContent>\n        <div className=\"mx-auto w-full max-w-sm\">\n          <DrawerHeader>\n            <DrawerTitle className=\"font-normal\">Cookie Settings</DrawerTitle>\n            <DrawerDescription>\n              Manage your cookie preferences.\n            </DrawerDescription>\n          </DrawerHeader>\n          <div className=\"p-4 pb-0\">\n            <p className=\"text-muted-foreground text-sm text-center\">\n              We use cookies to improve your experience. By clicking \"Accept all\",\n              you agree to the storing of cookies on your device to enhance site\n              navigation, analyze site usage, and assist in our marketing efforts.\n            </p>\n          </div>\n          <DrawerFooter>\n            <Button>Accept all</Button>\n            <DrawerClose asChild>\n              <Button variant=\"outline\">Cancel</Button>\n            </DrawerClose>\n          </DrawerFooter>\n        </div>\n      </DrawerContent>\n    </Drawer>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/drawer4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar8",
+  "title": "Calendar",
+  "description": "Calendar built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/calendar/8/index.tsx",
+      "content": "\"use client\";\n\nimport { ClockIcon } from \"lucide-react\";\nimport { useId, useState } from \"react\";\n\nimport { Calendar } from \"@/components/ui/calendar\";\nimport { Input } from \"@/components/ui/input\";\nimport { Label } from \"@/components/ui/label\";\n\nexport default function Component() {\n  const id = useId();\n  const [date, setDate] = useState<Date | undefined>(new Date());\n\n  return (\n      <div className=\"rounded-md border\">\n        <Calendar className=\"p-2\" mode=\"single\" onSelect={setDate} selected={date} />\n        <div className=\"border-t p-3\">\n          <div className=\"flex items-center gap-3\">\n            <Label className=\"text-xs\" htmlFor={id}>\n              Enter time\n            </Label>\n            <div className=\"relative grow\">\n              <Input\n                className=\"peer appearance-none ps-9 [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-calendar-picker-indicator]:appearance-none\"\n                defaultValue=\"12:00:00\"\n                id={id}\n                step=\"1\"\n                type=\"time\"\n              />\n              <div className=\"text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 peer-disabled:opacity-50\">\n                <ClockIcon aria-hidden=\"true\" size={16} />\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/calendar8.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

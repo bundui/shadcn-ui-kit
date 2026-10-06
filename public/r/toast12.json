@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast12",
+  "title": "Sonner toast",
+  "description": "Sonner toast built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/sonner-toast/12/index.tsx",
+      "content": "\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { toast } from \"sonner\";\n\nexport default function Example() {\n  return (\n    <Button\n      variant=\"outline\"\n      onClick={() =>\n        toast(\"Event has been created\", {\n          description: \"Sunday, December 03, 2023 at 9:00 AM\",\n          position: \"top-center\",\n          action: {\n            label: \"Undo\",\n            onClick: () => console.log(\"Undo\")\n          }\n        })\n      }>\n      Toast at Top Center\n    </Button>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/toast12.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

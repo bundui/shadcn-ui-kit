@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "scroll-area5",
+  "title": "Scroll area",
+  "description": "Scroll area built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/scroll-area/5/index.tsx",
+      "content": "\"use client\";\n\nimport { ScrollArea, ScrollBar } from \"@/components/ui/scroll-area\";\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\n\nconst profiles = [\n  {\n    id: 1,\n    name: \"Elon Musk\",\n    avatar: \"https://i.pravatar.cc/150?img=68\",\n    isActive: true\n  },\n  {\n    id: 2,\n    name: \"Olivia Carter\",\n    avatar: \"https://i.pravatar.cc/150?img=47\",\n    isActive: true\n  },\n  {\n    id: 3,\n    name: \"Azumi Tanaka\",\n    avatar: \"https://i.pravatar.cc/150?img=33\",\n    isActive: false\n  },\n  {\n    id: 4,\n    name: \"Xander Ellis\",\n    avatar: \"https://i.pravatar.cc/150?img=25\",\n    isActive: false\n  },\n  {\n    id: 5,\n    name: \"Theo Black\",\n    avatar: \"https://i.pravatar.cc/150?img=19\",\n    isActive: false\n  },\n  {\n    id: 6,\n    name: \"David Gilmore\",\n    avatar: \"https://i.pravatar.cc/150?img=51\",\n    isActive: false\n  },\n  {\n    id: 7,\n    name: \"Gerard White\",\n    avatar: \"https://i.pravatar.cc/150?img=45\",\n    isActive: false\n  },\n  {\n    id: 8,\n    name: \"Sophia Martinez\",\n    avatar: \"https://i.pravatar.cc/150?img=12\",\n    isActive: false\n  },\n  {\n    id: 9,\n    name: \"James Wilson\",\n    avatar: \"https://i.pravatar.cc/150?img=8\",\n    isActive: false\n  },\n  {\n    id: 10,\n    name: \"Emma Brown\",\n    avatar: \"https://i.pravatar.cc/150?img=29\",\n    isActive: false\n  }\n];\n\nexport default function Example() {\n  return (\n    <ScrollArea className=\"w-full whitespace-nowrap\">\n      <div className=\"flex gap-4 pb-4\">\n        {profiles.map((profile) => (\n          <div key={profile.id} className=\"flex flex-col items-center gap-2\">\n            <div\n              className={`relative rounded-full p-0.5 ${\n                profile.isActive ? \"bg-green-500\" : \"bg-muted\"\n              }`}>\n              <Avatar className=\"h-16 w-16\">\n                <AvatarImage src={profile.avatar} alt={profile.name} />\n                <AvatarFallback>\n                  {profile.name\n                    .split(\" \")\n                    .map((n) => n[0])\n                    .join(\"\")}\n                </AvatarFallback>\n              </Avatar>\n            </div>\n            <span className=\"text-xs font-medium\">{profile.name}</span>\n          </div>\n        ))}\n      </div>\n      <ScrollBar orientation=\"horizontal\" />\n    </ScrollArea>\n  );\n}\n\n",
+      "type": "registry:component",
+      "target": "components/scroll-area5.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

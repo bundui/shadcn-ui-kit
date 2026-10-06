@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "empty2",
+  "title": "Empty",
+  "description": "An empty state component. All variants slot into Radix UI and Base UI interfaces with no rework.",
+  "files": [
+    {
+      "path": "contents/components/empty/2/index.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\nimport { Button } from \"@/components/ui/button\";\nimport {\n  Empty,\n  EmptyContent,\n  EmptyDescription,\n  EmptyHeader,\n  EmptyMedia,\n  EmptyTitle,\n} from \"@/components/ui/empty\";\n\nexport default function EmptyComponent() {\n  return (\n    <Empty>\n      <EmptyHeader>\n        <EmptyMedia>\n          <div className=\"flex -space-x-2 items-center justify-center\">\n            <Avatar className=\"size-10 border-2 border-background\">\n              <AvatarImage src=\"https://i.pravatar.cc/150?u=a\" alt=\"User 1\" />\n              <AvatarFallback>CN</AvatarFallback>\n            </Avatar>\n            <Avatar className=\"size-14 z-10 border-4 border-background\">\n              <AvatarImage src=\"https://i.pravatar.cc/150?u=b\" alt=\"User 2\" />\n              <AvatarFallback>CN</AvatarFallback>\n            </Avatar>\n            <Avatar className=\"size-10 border-2 border-background\">\n              <AvatarImage src=\"https://i.pravatar.cc/150?u=c\" alt=\"User 3\" />\n              <AvatarFallback>CN</AvatarFallback>\n            </Avatar>\n          </div>\n        </EmptyMedia>\n        <EmptyTitle>No designers found</EmptyTitle>\n        <EmptyDescription>\n          Sorry, we couldn&apos;t find any designers with the name\n          &ldquo;Elizabeth Mazen&rdquo;. Please try again or{\" \"}\n          <a href=\"#\" className=\"font-medium text-foreground\">\n            create a profile\n          </a>\n          .\n        </EmptyDescription>\n      </EmptyHeader>\n      <EmptyContent>\n        <Button size=\"sm\" variant=\"outline\">Clear search</Button>\n      </EmptyContent>\n    </Empty>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/empty2.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

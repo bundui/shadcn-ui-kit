@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge11",
+  "title": "Badge",
+  "description": "Badge built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/badge/11/index.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\nimport { Badge } from \"@/components/ui/badge\";\nimport { XIcon } from \"lucide-react\";\n\ninterface User {\n  id: number;\n  name: string;\n  image: string;\n}\n\nconst users: User[] = [\n  {\n    id: 1,\n    name: \"Alessandro\",\n    image: \"https://i.pravatar.cc/150?img=1\",\n  },\n  {\n    id: 2,\n    name: \"Jane Smith\",\n    image: \"https://i.pravatar.cc/150?img=2\",\n  },\n];\n\nexport default function BadgeComponent() {\n  return (\n    <div className=\"flex flex-wrap gap-2\">\n      {users.map((user) => (\n        <Badge key={user.id} variant=\"outline\" className=\"pr-1.5 pl-0.5\">\n          <Avatar className=\"size-4\">\n            <AvatarImage src={user.image} alt={user.name} />\n            <AvatarFallback>\n              {user.name\n                .split(\" \")\n                .map((n) => n[0])\n                .join(\"\")}\n            </AvatarFallback>\n          </Avatar>\n          <span>{user.name}</span>\n          <button type=\"button\">\n            <XIcon className=\"size-3 cursor-pointer opacity-60 hover:opacity-100\" />\n          </button>\n        </Badge>\n      ))}\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/badge11.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

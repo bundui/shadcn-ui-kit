@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dashboard-modal12",
+  "title": "Modal dialogs",
+  "description": "Confirmation dialog with icon, message, and dismiss button.",
+  "files": [
+    {
+      "path": "contents/blocks/dashboard-ui/modal-dialogs/16/index.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport { ReceiptTextIcon } from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\nimport {\n  Dialog,\n  DialogContent,\n  DialogDescription,\n  DialogHeader,\n  DialogTitle,\n  DialogTrigger,\n} from \"@/components/ui/dialog\";\n\nexport default function ReceiptUploadedDialog() {\n  const [open, setOpen] = React.useState(true);\n\n  return (\n    <div className=\"flex h-screen w-full items-center justify-center px-4\">\n      <div className=\"mx-auto flex w-full max-w-sm flex-col items-center gap-8\">\n        <Dialog open={open} onOpenChange={setOpen}>\n          <DialogTrigger asChild>\n            <Button variant=\"outline\">Send my receipt</Button>\n          </DialogTrigger>\n          <DialogContent className=\"sm:max-w-md\" showCloseButton={false}>\n            <div className=\"flex flex-col items-center gap-4 py-4 text-center\">\n              <span className=\"flex size-14 items-center justify-center rounded-full bg-muted\">\n                <ReceiptTextIcon className=\"size-6 text-green-600\" />\n              </span>\n\n              <DialogHeader className=\"items-center gap-2\">\n                <DialogTitle className=\"text-lg\">\n                  Transfer Slip Uploaded\n                </DialogTitle>\n                <DialogDescription className=\"max-w-xs\">\n                  We have received your transfer slip! Course access will\n                  unlock once our team confirms the payment!\n                </DialogDescription>\n              </DialogHeader>\n\n              <Button\n                className=\"mt-2 rounded-full px-8\"\n                onClick={() => setOpen(false)}\n              >\n                Great, Thanks!\n              </Button>\n            </div>\n          </DialogContent>\n        </Dialog>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/dashboard-modal12.tsx"
+    }
+  ],
+  "type": "registry:block"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group12",
+  "title": "Button group",
+  "description": "Button group built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/button-group/12/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport { ButtonGroup } from \"@/components/ui/button-group\";\nimport { Field, FieldDescription, FieldLabel } from \"@/components/ui/field\";\nimport {\n  Popover,\n  PopoverContent,\n  PopoverDescription,\n  PopoverHeader,\n  PopoverTitle,\n  PopoverTrigger,\n} from \"@/components/ui/popover\";\nimport { Textarea } from \"@/components/ui/textarea\";\nimport { BotIcon, ChevronDownIcon } from \"lucide-react\";\n\nexport default function ButtonGroupComponent() {\n  return (\n    <ButtonGroup>\n      <Button variant=\"outline\">\n        <BotIcon /> Copilot\n      </Button>\n      <Popover>\n        <PopoverTrigger asChild>\n          <Button variant=\"outline\" size=\"icon\" aria-label=\"Open Popover\">\n            <ChevronDownIcon />\n          </Button>\n        </PopoverTrigger>\n        <PopoverContent align=\"end\" className=\"rounded-xl text-sm\">\n          <PopoverHeader>\n            <PopoverTitle>Start a new task with Copilot</PopoverTitle>\n            <PopoverDescription>\n              Describe your task in natural language.\n            </PopoverDescription>\n          </PopoverHeader>\n          <Field>\n            <FieldLabel htmlFor=\"task\" className=\"sr-only\">\n              Task Description\n            </FieldLabel>\n            <Textarea\n              id=\"task\"\n              placeholder=\"I need to...\"\n              className=\"resize-none\"\n            />\n            <FieldDescription>\n              Copilot will open a pull request for review.\n            </FieldDescription>\n          </Field>\n        </PopoverContent>\n      </Popover>\n    </ButtonGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button-group12.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

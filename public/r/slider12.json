@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider12",
+  "title": "Slider",
+  "description": "Slider built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/slider/12/index.tsx",
+      "content": "import { Slider } from \"@/components/ui/slider\";\n\nexport default function SliderComponent() {\n  return (\n    <div className=\"flex h-40 justify-center\">\n      <Slider aria-label=\"Vertical slider\" defaultValue={[2, 7]} max={10} orientation=\"vertical\" />\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/slider12.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

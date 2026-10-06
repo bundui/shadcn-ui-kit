@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "review-card9",
+  "title": "Review",
+  "description": "Review built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/examples/cards/review/9/index.tsx",
+      "content": "import { StarIcon } from \"lucide-react\";\nimport { Card, CardContent } from \"@/components/ui/card\";\n\nexport default function ReviewCard() {\n  return (\n    <Card className=\"w-full gap-0 overflow-hidden py-0 shadow-none md:w-[480px]\">\n      <CardContent className=\"flex p-0!\">\n        <div className=\"w-48 shrink-0 self-stretch\">\n          <img\n            src=\"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=560&fit=crop&crop=face\"\n            alt=\"Harsh P.\"\n            className=\"h-full w-full object-cover object-top\"\n          />\n        </div>\n\n        <div className=\"flex flex-1 flex-col gap-3 p-6\">\n          <div className=\"flex items-center gap-0.5\">\n            {Array.from({ length: 5 }).map((_, i) => (\n              <StarIcon\n                key={i}\n                className=\"size-4 fill-amber-400 text-amber-400\"\n              />\n            ))}\n          </div>\n\n          <div className=\"space-y-2\">\n            <p className=\"text-lg leading-snug font-semibold\">\n              You have the right place\n            </p>\n            <p className=\"relative text-sm leading-relaxed text-muted-foreground before:mr-0.5 before:font-serif before:text-xl before:content-['\\201C'] after:ml-0.5 after:font-serif after:text-xl after:content-['\\201D']\">\n              This platform has made it possible for me to stay on top of my\n              portfolio and make informed decisions quickly and easily.\n            </p>\n          </div>\n\n          <div className=\"mt-auto border-t pt-3\">\n            <p className=\"text-sm font-semibold\">Harsh P.</p>\n            <p className=\"text-xs font-medium text-primary\">Product Designer</p>\n          </div>\n        </div>\n      </CardContent>\n    </Card>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/review-card9.tsx"
+    }
+  ],
+  "type": "registry:block"
+}

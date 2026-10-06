@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider1",
+  "title": "Slider",
+  "description": "An input where the user selects a value from within a given range. Each slider example tracks the behavior of Radix UI and Base UI primitives.",
+  "files": [
+    {
+      "path": "contents/components/slider/1/index.tsx",
+      "content": "\"use client\";\n\nimport { Slider } from \"@/components/ui/slider\";\nimport { useState } from \"react\";\n\nexport default function Example() {\n  const [value, setValue] = useState([33]);\n\n  return (\n    <div className=\"w-full max-w-xs\">\n      <Slider value={value} onValueChange={setValue} max={100} step={1} />\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/slider1.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

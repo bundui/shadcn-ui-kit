@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group13",
+  "title": "Radio group",
+  "description": "Radio group built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/radio-group/13/index.tsx",
+      "content": "\"use client\";\n\nimport { RiStarFill } from \"@remixicon/react\";\nimport { useId, useState } from \"react\";\n\nimport { RadioGroup, RadioGroupItem } from \"@/components/ui/radio-group\";\n\nexport default function Component() {\n  const id = useId();\n  const [hoverRating, setHoverRating] = useState(\"\");\n  const [currentRating, setCurrentRating] = useState(\"\");\n\n  return (\n    <fieldset className=\"space-y-4\">\n      <legend className=\"text-foreground text-sm leading-none font-medium\">\n        How would you rate this product?\n      </legend>\n      <RadioGroup className=\"inline-flex gap-0\" onValueChange={setCurrentRating}>\n        {[\"1\", \"2\", \"3\", \"4\", \"5\"].map((value) => (\n          <label\n            className=\"group has-focus-visible:border-ring has-focus-visible:ring-ring/50 relative cursor-pointer rounded p-0.5 outline-none has-focus-visible:ring-[3px]\"\n            key={value}\n            onMouseEnter={() => setHoverRating(value)}\n            onMouseLeave={() => setHoverRating(\"\")}>\n            <RadioGroupItem className=\"sr-only\" id={`${id}-${value}`} value={value} />\n            <RiStarFill\n              className={`transition-all ${\n                (hoverRating || currentRating) >= value ? \"text-amber-500\" : \"text-input\"\n              } group-hover:scale-110`}\n              size={24}\n            />\n            <span className=\"sr-only\">\n              {value} star{value === \"1\" ? \"\" : \"s\"}\n            </span>\n          </label>\n        ))}\n      </RadioGroup>\n    </fieldset>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/radio-group13.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

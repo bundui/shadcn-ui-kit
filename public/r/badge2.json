@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge2",
+  "title": "Badge",
+  "description": "Displays a badge or a component that looks like a badge. All badge variants drop into Radix UI and Base UI projects without changes.",
+  "files": [
+    {
+      "path": "contents/components/badge/2/index.tsx",
+      "content": "import { ZapIcon } from \"lucide-react\";\n\nimport { Badge } from \"@/components/ui/badge\";\n\nexport default function Component() {\n  return (\n    <Badge>\n      <ZapIcon aria-hidden=\"true\" className=\"opacity-60\" data-icon=\"inline-start\" />\n      Badge\n    </Badge>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/badge2.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb6",
+  "title": "Breadcrumb",
+  "description": "Breadcrumb built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/breadcrumb/6/index.tsx",
+      "content": "import { HomeIcon } from \"lucide-react\";\n\nimport {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator\n} from \"@/components/ui/breadcrumb\";\n\nexport default function Component() {\n  return (\n    <Breadcrumb>\n      <BreadcrumbList className=\"bg-background rounded-md border px-3 py-2 shadow-xs\">\n        <BreadcrumbItem>\n          <BreadcrumbLink href=\"#\">\n            <HomeIcon aria-hidden=\"true\" size={16} />\n            <span className=\"sr-only\">Home</span>\n          </BreadcrumbLink>\n        </BreadcrumbItem>\n        <BreadcrumbSeparator />\n        <BreadcrumbItem>\n          <BreadcrumbLink href=\"#\">Components</BreadcrumbLink>\n        </BreadcrumbItem>\n        <BreadcrumbSeparator />\n        <BreadcrumbItem>\n          <BreadcrumbPage>Breadcrumb</BreadcrumbPage>\n        </BreadcrumbItem>\n      </BreadcrumbList>\n    </Breadcrumb>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/breadcrumb6.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

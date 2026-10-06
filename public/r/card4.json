@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card4",
+  "title": "Card",
+  "description": "Displays a card with header, content, and footer. Every card layout can be used alongside Radix UI and Base UI components.",
+  "files": [
+    {
+      "path": "contents/components/card/4/index.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuLabel,\n  DropdownMenuSeparator,\n  DropdownMenuTrigger,\n} from \"@/components/ui/dropdown-menu\";\nimport { Button } from \"@/components/ui/button\";\nimport {\n  Card,\n  CardAction,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@/components/ui/card\";\nimport {\n  ExternalLinkIcon,\n  MoreHorizontalIcon,\n  SettingsIcon,\n  UserIcon,\n} from \"lucide-react\";\n\nexport default function CardComponent() {\n  return (\n    <Card className=\"w-full max-w-xs shadow-none\">\n      <CardHeader>\n        <CardTitle>Need a help in Claim?</CardTitle>\n        <CardAction className=\"-me-2 -mt-2\">\n          <DropdownMenu>\n            <DropdownMenuTrigger asChild>\n              <Button variant=\"ghost\" size=\"icon\">\n                <MoreHorizontalIcon aria-hidden=\"true\" />\n              </Button>\n            </DropdownMenuTrigger>\n            <DropdownMenuContent align=\"end\" className=\"w-48\">\n              <DropdownMenuGroup>\n                <DropdownMenuLabel>Team Settings</DropdownMenuLabel>\n                <DropdownMenuSeparator />\n                <DropdownMenuItem>\n                  <UserIcon aria-hidden=\"true\" />\n                  <span>Manage members</span>\n                </DropdownMenuItem>\n                <DropdownMenuItem>\n                  <SettingsIcon aria-hidden=\"true\" />\n                  <span>Team preferences</span>\n                </DropdownMenuItem>\n              </DropdownMenuGroup>\n              <DropdownMenuSeparator />\n              <DropdownMenuItem>\n                <ExternalLinkIcon aria-hidden=\"true\" />\n                <span>Open dashboard</span>\n              </DropdownMenuItem>\n            </DropdownMenuContent>\n          </DropdownMenu>\n        </CardAction>\n        <CardDescription>\n          Go to this step by step guideline process on how to certify for your\n          weekly benefits:\n        </CardDescription>\n      </CardHeader>\n    </Card>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/card4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

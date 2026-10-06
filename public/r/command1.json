@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "command1",
+  "title": "Command",
+  "description": "Command menu for search and quick actions. Each command menu example runs on Radix UI and Base UI without extra work.",
+  "files": [
+    {
+      "path": "contents/components/command/1/index.tsx",
+      "content": "\"use client\";\n\nimport {\n  ShoppingBagIcon,\n  ShirtIcon,\n  HomeIcon,\n  Gamepad2Icon,\n  BookIcon,\n  HeartIcon\n} from \"lucide-react\";\nimport {\n  Command,\n  CommandEmpty,\n  CommandGroup,\n  CommandInput,\n  CommandItem,\n  CommandList\n} from \"@/components/ui/command\";\n\nexport default function Example() {\n  return (\n    <div className=\"w-full max-w-md rounded-lg border shadow-md\">\n      <Command className=\"**:data-[slot=input-group]:border-border **:data-[slot=input-group]:bg-background\">\n        <CommandInput placeholder=\"Search categories...\" />\n        <CommandList>\n          <CommandEmpty>No categories found.</CommandEmpty>\n          <CommandGroup>\n            <CommandItem>\n              <ShoppingBagIcon />\n              <span>Electronics</span>\n            </CommandItem>\n            <CommandItem>\n              <ShirtIcon />\n              <span>Clothing & Fashion</span>\n            </CommandItem>\n            <CommandItem>\n              <HomeIcon />\n              <span>Home & Garden</span>\n            </CommandItem>\n            <CommandItem>\n              <Gamepad2Icon />\n              <span>Sports & Outdoors</span>\n            </CommandItem>\n            <CommandItem>\n              <HeartIcon />\n              <span>Beauty & Personal Care</span>\n            </CommandItem>\n            <CommandItem>\n              <BookIcon />\n              <span>Books & Media</span>\n            </CommandItem>\n          </CommandGroup>\n        </CommandList>\n      </Command>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/command1.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

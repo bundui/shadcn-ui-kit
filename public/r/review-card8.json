@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "review-card8",
+  "title": "Review",
+  "description": "Review built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/examples/cards/review/8/index.tsx",
+      "content": "import { StarIcon } from \"lucide-react\";\nimport { Card, CardContent } from \"@/components/ui/card\";\nimport { cn } from \"@/lib/utils\";\n\nfunction Stars({ value }: { value: number }) {\n  return (\n    <div className=\"flex items-center gap-0.5\">\n      {Array.from({ length: 5 }).map((_, i) => {\n        const fill = Math.min(Math.max(value - i, 0), 1);\n        return (\n          <span key={i} className=\"relative inline-block size-5\">\n            <StarIcon className=\"size-5 fill-muted text-muted\" />\n            <span\n              className=\"absolute inset-0 overflow-hidden\"\n              style={{ width: `${fill * 100}%` }}>\n              <StarIcon className=\"size-5 fill-amber-400 text-amber-400\" />\n            </span>\n          </span>\n        );\n      })}\n    </div>\n  );\n}\n\nexport default function ReviewCard() {\n  return (\n    <Card className=\"w-full shadow-none md:w-[360px]\">\n      <CardContent className=\"space-y-5\">\n        <div className=\"flex items-start justify-between\">\n          <span className=\"font-serif text-5xl leading-none text-muted-foreground/40 select-none\">\n            &ldquo;\n          </span>\n          <Stars value={4.5} />\n        </div>\n\n        <p className=\"text-sm leading-relaxed text-muted-foreground\">\n          \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse\n          varius enim in eros elementum tristique. Duis cursus, mi quis viverra\n          ornare. Suspendisse varius enim in eros elementum tristique.\"\n        </p>\n\n        <div className=\"flex items-center gap-3\">\n          <img\n            src=\"https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=80&h=80&fit=crop&crop=face\"\n            alt=\"Mamad Ahmadi\"\n            className=\"size-10 rounded-full object-cover\"\n          />\n          <div>\n            <p className=\"text-sm font-semibold\">Mamad Ahmadi</p>\n            <p className=\"text-xs text-muted-foreground\">Position, Company name</p>\n          </div>\n        </div>\n      </CardContent>\n    </Card>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/review-card8.tsx"
+    }
+  ],
+  "type": "registry:block"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input16",
+  "title": "Input",
+  "description": "Input built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/input/16/index.tsx",
+      "content": "\"use client\";\n\nimport { XIcon } from \"lucide-react\";\nimport { useId, useRef, useState } from \"react\";\n\nimport { Input } from \"@/components/ui/input\";\nimport { Label } from \"@/components/ui/label\";\n\nexport default function Component() {\n  const id = useId();\n  const [inputValue, setInputValue] = useState(\"Click to clear\");\n  const inputRef = useRef<HTMLInputElement>(null);\n\n  const handleClearInput = () => {\n    setInputValue(\"\");\n    if (inputRef.current) {\n      inputRef.current.focus();\n    }\n  };\n\n  return (\n    <div className=\"w-full max-w-sm *:not-first:mt-2\">\n      <Label htmlFor={id}>Input with clear button</Label>\n      <div className=\"relative\">\n        <Input\n          className=\"pe-9\"\n          id={id}\n          onChange={(e) => setInputValue(e.target.value)}\n          placeholder=\"Type something...\"\n          ref={inputRef}\n          type=\"text\"\n          value={inputValue}\n        />\n        {inputValue && (\n          <button\n            aria-label=\"Clear input\"\n            className=\"text-muted-foreground/80 hover:text-foreground focus-visible:border-ring focus-visible:ring-ring/50 absolute inset-y-0 end-0 flex h-full w-9 items-center justify-center rounded-e-md transition-[color,box-shadow] outline-none focus:z-10 focus-visible:ring-[3px] disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50\"\n            onClick={handleClearInput}\n            type=\"button\">\n            <XIcon aria-hidden=\"true\" size={16} />\n          </button>\n        )}\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/input16.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

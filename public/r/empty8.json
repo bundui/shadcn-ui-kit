@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "empty8",
+  "title": "Empty",
+  "description": "Empty built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/empty/8/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport {\n  Empty,\n  EmptyContent,\n  EmptyDescription,\n  EmptyHeader,\n  EmptyMedia,\n  EmptyTitle,\n} from \"@/components/ui/empty\";\nimport { IconWifiOff } from \"@tabler/icons-react\";\n\nexport default function EmptyComponent() {\n  return (\n    <Empty>\n      <EmptyHeader>\n        <EmptyMedia variant=\"icon\">\n          <IconWifiOff />\n        </EmptyMedia>\n        <EmptyTitle>No Internet Connection</EmptyTitle>\n        <EmptyDescription>\n          It seems you are offline. Check your internet connection and try again.\n        </EmptyDescription>\n      </EmptyHeader>\n      <EmptyContent className=\"flex-row justify-center gap-2\">\n        <Button size=\"sm\">Try Again</Button>\n      </EmptyContent>\n    </Empty>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/empty8.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar13",
+  "title": "Avatar",
+  "description": "Avatar built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/avatar/13/index.tsx",
+      "content": "import { Avatar, AvatarImage } from \"@/components/ui/avatar\";\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipTrigger,\n} from \"@/components/ui/tooltip\";\n\nexport default function AvatarComponent() {\n  return (\n    <Tooltip>\n      <TooltipTrigger asChild>\n        <Avatar>\n          <AvatarImage alt=\"Jane Cooper\" src=\"https://i.pravatar.cc/150?img=1\" />\n        </Avatar>\n      </TooltipTrigger>\n      <TooltipContent>Jane Cooper</TooltipContent>\n    </Tooltip>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/avatar13.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

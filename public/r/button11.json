@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button11",
+  "title": "Button",
+  "description": "Button built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/button/11/index.tsx",
+      "content": "\"use client\";\n\nimport { BellIcon } from \"lucide-react\";\nimport { useState } from \"react\";\n\nimport { Badge } from \"@/components/ui/badge\";\nimport { Button } from \"@/components/ui/button\";\n\nexport default function Component() {\n  const [count, setCount] = useState(3);\n\n  const handleClick = () => {\n    setCount(0);\n  };\n\n  return (\n    <Button\n      aria-label=\"Notifications\"\n      className=\"relative\"\n      onClick={handleClick}\n      size=\"icon\"\n      variant=\"outline\">\n      <BellIcon aria-hidden=\"true\" size={16} />\n      {count > 0 && (\n        <Badge className=\"absolute -top-2 left-full min-w-5 -translate-x-1/2 px-1\">\n          {count > 99 ? \"99+\" : count}\n        </Badge>\n      )}\n    </Button>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button11.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

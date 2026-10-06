@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge9",
+  "title": "Badge",
+  "description": "Badge built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/badge/9/index.tsx",
+      "content": "\"use client\";\n\nimport { XIcon } from \"lucide-react\";\nimport { useState } from \"react\";\n\nimport { Badge } from \"@/components/ui/badge\";\n\nexport default function Component() {\n  const [isActive, setIsActive] = useState(true);\n\n  if (!isActive) return null;\n\n  return (\n    <Badge className=\"gap-0\">\n      Close\n      <button\n        className=\"text-primary-foreground/60 hover:text-primary-foreground focus-visible:border-ring focus-visible:ring-ring/50 -my-px -ms-px -me-1.5 inline-flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-[inherit] p-0 transition-[color,box-shadow] outline-none focus-visible:ring-[3px]\"\n        onClick={() => setIsActive(false)}\n        type=\"button\">\n        <XIcon aria-hidden=\"true\" size={12} />\n      </button>\n    </Badge>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/badge9.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

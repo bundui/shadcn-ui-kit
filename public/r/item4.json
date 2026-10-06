@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "item4",
+  "title": "Item",
+  "description": "A versatile component for displaying content with media, title, description, and actions. Every item layout is usable in both Radix UI and Base UI based projects.",
+  "files": [
+    {
+      "path": "contents/components/item/4/index.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\nimport { Button } from \"@/components/ui/button\";\nimport {\n  Item,\n  ItemActions,\n  ItemContent,\n  ItemDescription,\n  ItemMedia,\n  ItemTitle,\n} from \"@/components/ui/item\";\nimport { Plus } from \"lucide-react\";\n\nexport default function ItemComponent() {\n  return (\n    <Item variant=\"outline\" className=\"w-full max-w-sm\">\n      <ItemMedia>\n        <Avatar className=\"size-10\">\n          <AvatarImage src=\"https://i.pravatar.cc/150?u=evilrabbit\" />\n          <AvatarFallback>ER</AvatarFallback>\n        </Avatar>\n      </ItemMedia>\n      <ItemContent>\n        <ItemTitle>Evil Rabbit</ItemTitle>\n        <ItemDescription>Last seen 5 months ago</ItemDescription>\n      </ItemContent>\n      <ItemActions>\n        <Button\n          size=\"icon-sm\"\n          variant=\"outline\"\n          className=\"rounded-full\"\n          aria-label=\"Invite\"\n        >\n          <Plus />\n        </Button>\n      </ItemActions>\n    </Item>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/item4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

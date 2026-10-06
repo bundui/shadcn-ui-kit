@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider3",
+  "title": "Slider",
+  "description": "An input where the user selects a value from within a given range. Each slider example tracks the behavior of Radix UI and Base UI primitives.",
+  "files": [
+    {
+      "path": "contents/components/slider/3/index.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\nimport { Label } from \"@/components/ui/label\";\nimport { Slider } from \"@/components/ui/slider\";\n\nexport default function SliderComponent() {\n  const max = 12;\n  const skipInterval = 2;\n  const ticks = [...Array(max + 1)].map((_, i) => i);\n\n  return (\n    <div className=\"w-full max-w-xs\">\n      <div>\n        <Slider aria-label=\"Slider with ticks\" defaultValue={[5]} max={max} />\n        <span\n          aria-hidden=\"true\"\n          className=\"text-muted-foreground mt-3 flex w-full items-center justify-between gap-1 px-2.5 text-xs font-medium\">\n          {ticks.map((_, i) => (\n            <span className=\"flex w-0 flex-col items-center justify-center gap-2\" key={String(i)}>\n              <span\n                className={cn(\"bg-muted-foreground/70 h-1 w-px\", i % skipInterval !== 0 && \"h-0.5\")}\n              />\n              <span className={cn(i % skipInterval !== 0 && \"opacity-0\")}>{i}</span>\n            </span>\n          ))}\n        </span>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/slider3.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

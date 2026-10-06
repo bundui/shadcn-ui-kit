@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator12",
+  "title": "Separator",
+  "description": "Separator built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/separator/12/index.tsx",
+      "content": "import { Separator } from \"@/components/ui/separator\";\nimport { ComponentIcon } from \"lucide-react\";\n\nexport default function Example() {\n  return (\n    <div className=\"h-42\">\n      <div className=\"flex h-full flex-col items-center gap-2\">\n        <Separator orientation=\"vertical\" className=\"flex-1 self-center! mask-t-from-50%\" />\n        <span className=\"text-muted-foreground shrink-0 text-sm\">\n          <ComponentIcon className=\"size-4\" />\n        </span>\n        <Separator orientation=\"vertical\" className=\"flex-1 self-center! mask-b-from-50%\" />\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/separator12.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

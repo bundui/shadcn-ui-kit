@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "attachment2",
+  "title": "Attachment",
+  "description": "A component for displaying file attachments with media previews, upload states, and actions. The examples integrate cleanly with projects built on Radix UI or Base UI.",
+  "files": [
+    {
+      "path": "contents/components/attachment/2/index.tsx",
+      "content": "import { FileCodeIcon, XIcon } from \"lucide-react\"\n\nimport {\n  Attachment,\n  AttachmentAction,\n  AttachmentActions,\n  AttachmentContent,\n  AttachmentDescription,\n  AttachmentGroup,\n  AttachmentMedia,\n  AttachmentTitle,\n} from \"@/components/ui/attachment\"\nimport { Spinner } from \"@/components/ui/spinner\"\n\nconst images = [\n  {\n    name: \"workspace.png\",\n    meta: \"PNG · 820 KB\",\n    src: \"https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900&auto=format&fit=crop&q=80\",\n    alt: \"Workspace\",\n  },\n  {\n    name: \"desk-reference.jpg\",\n    meta: \"JPG · 1.1 MB\",\n    src: \"https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=900&auto=format&fit=crop&q=80\",\n    alt: \"Desk\",\n  },\n  {\n    name: \"office-reference.jpg\",\n    meta: \"JPG · 940 KB\",\n    src: \"https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=900&auto=format&fit=crop&q=80\",\n    alt: \"Office\",\n  },\n]\n\nexport default function AttachmentDemo() {\n  return (\n    <div className=\"mx-auto flex w-full max-w-sm flex-col gap-3 py-12\">\n      <Attachment state=\"uploading\" className=\"w-full\">\n        <AttachmentMedia>\n          <Spinner />\n        </AttachmentMedia>\n        <AttachmentContent>\n          <AttachmentTitle>sales-dashboard.pdf</AttachmentTitle>\n          <AttachmentDescription>Uploading · 64%</AttachmentDescription>\n        </AttachmentContent>\n        <AttachmentActions>\n          <AttachmentAction aria-label=\"Cancel upload\">\n            <XIcon />\n          </AttachmentAction>\n        </AttachmentActions>\n      </Attachment>\n      <Attachment className=\"w-full\">\n        <AttachmentMedia>\n          <FileCodeIcon />\n        </AttachmentMedia>\n        <AttachmentContent>\n          <AttachmentTitle>message-renderer.tsx</AttachmentTitle>\n          <AttachmentDescription>TypeScript · 12 KB</AttachmentDescription>\n        </AttachmentContent>\n        <AttachmentActions>\n          <AttachmentAction aria-label=\"Remove message-renderer.tsx\">\n            <XIcon />\n          </AttachmentAction>\n        </AttachmentActions>\n      </Attachment>\n    </div>\n  )\n}\n",
+      "type": "registry:component",
+      "target": "components/attachment2.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

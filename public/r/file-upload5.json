@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "file-upload5",
+  "title": "File upload",
+  "description": "File upload built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/file-upload/5/index.tsx",
+      "content": "\"use client\";\n\nimport { ImageUpIcon, XIcon } from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { useFileUpload, type FileMetadata } from \"@/hooks/use-file-upload\";\n\nconst initialFiles: FileMetadata[] = [\n  {\n    id: \"file-1\",\n    name: \"analytics-overview.jpeg\",\n    size: 612430,\n    type: \"image/jpeg\",\n    url: \"/images/extra/image2.jpg\"\n  }\n];\n\nexport default function Component() {\n  const maxSizeMB = 5;\n  const maxSize = maxSizeMB * 1024 * 1024;\n\n  const [{ files }, { openFileDialog, removeFile, getInputProps }] = useFileUpload({\n    accept: \"image/*\",\n    initialFiles,\n    maxSize\n  });\n\n  const file = files[0];\n\n  return (\n    <div className=\"flex w-full max-w-xs flex-col items-center gap-3\">\n      <input {...getInputProps()} className=\"sr-only\" aria-label=\"Upload image file\" />\n\n      <div className=\"relative\">\n        {file?.preview ? (\n          <>\n            <div className=\"bg-background size-24 rounded-xl border p-1\">\n              <img\n                src={file.preview}\n                alt={file.file.name}\n                className=\"size-full rounded-lg object-cover\"\n              />\n            </div>\n            <Button\n              type=\"button\"\n              size=\"icon\"\n              className=\"border-background absolute -end-2.5 -top-2.5 size-8 rounded-full border-2\"\n              onClick={() => removeFile(file.id)}\n              aria-label=\"Remove image\">\n              <XIcon className=\"size-4\" />\n            </Button>\n          </>\n        ) : (\n          <button\n            type=\"button\"\n            onClick={openFileDialog}\n            className=\"border-input text-muted-foreground hover:bg-accent/40 focus-visible:border-ring focus-visible:ring-ring/50 flex size-24 items-center justify-center rounded-xl border border-dashed transition-colors outline-none focus-visible:ring-[3px]\"\n            aria-label=\"Upload image\">\n            <ImageUpIcon className=\"size-5\" />\n          </button>\n        )}\n      </div>\n\n      {file && <p className=\"max-w-full truncate text-sm\">{file.file.name}</p>}\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/file-upload5.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

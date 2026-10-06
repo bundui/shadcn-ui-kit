@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select9",
+  "title": "Select",
+  "description": "Select built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/select/9/index.tsx",
+      "content": "import { useId } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue\n} from \"@/components/ui/select\";\n\nfunction StatusDot({ className }: { className?: string }) {\n  return (\n    <svg\n      aria-hidden=\"true\"\n      className={className}\n      fill=\"currentColor\"\n      height=\"8\"\n      viewBox=\"0 0 8 8\"\n      width=\"8\"\n      xmlns=\"http://www.w3.org/2000/svg\">\n      <circle cx=\"4\" cy=\"4\" r=\"4\" />\n    </svg>\n  );\n}\n\nexport default function SelectComponent() {\n  const id = useId();\n  return (\n    <div className=\"w-full max-w-xs\">\n      <Select defaultValue=\"1\">\n        <SelectTrigger\n          className=\"w-full [&>span]:flex [&>span]:items-center [&>span]:gap-2 [&>span_svg]:shrink-0\"\n          id={id}>\n          <SelectValue placeholder=\"Select status\" />\n        </SelectTrigger>\n        <SelectContent className=\"[&_*[role=option]>span>svg]:text-muted-foreground/80 [&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2 [&_*[role=option]>span]:flex [&_*[role=option]>span]:items-center [&_*[role=option]>span]:gap-2 [&_*[role=option]>span>svg]:shrink-0\">\n          <SelectItem value=\"1\">\n            <span className=\"flex items-center gap-2\">\n              <StatusDot className=\"text-emerald-600 size-2.5\" />\n              <span className=\"truncate\">Completed</span>\n            </span>\n          </SelectItem>\n          <SelectItem value=\"2\">\n            <span className=\"flex items-center gap-2\">\n              <StatusDot className=\"text-blue-500 size-2.5\" />\n              <span className=\"truncate\">In Progress</span>\n            </span>\n          </SelectItem>\n          <SelectItem value=\"3\">\n            <span className=\"flex items-center gap-2\">\n              <StatusDot className=\"text-amber-500 size-2.5\" />\n              <span className=\"truncate\">Pending</span>\n            </span>\n          </SelectItem>\n          <SelectItem value=\"4\">\n            <span className=\"flex items-center gap-2\">\n              <StatusDot className=\"text-gray-500 size-2.5\" />\n              <span className=\"truncate\">Cancelled</span>\n            </span>\n          </SelectItem>\n          <SelectItem value=\"5\">\n            <span className=\"flex items-center gap-2\">\n              <StatusDot className=\"text-red-500 size-2.5\" />\n              <span className=\"truncate\">Failed</span>\n            </span>\n          </SelectItem>\n        </SelectContent>\n      </Select>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/select9.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

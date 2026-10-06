@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input7",
+  "title": "Input",
+  "description": "Input built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/input/7/index.tsx",
+      "content": "import { InfoIcon } from \"lucide-react\";\n\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupButton,\n  InputGroupInput,\n  InputGroupText\n} from \"@/components/ui/input-group\";\nimport { Tooltip, TooltipContent, TooltipTrigger } from \"@/components/ui/tooltip\";\n\nexport default function Component() {\n  return (\n    <InputGroup className=\"max-w-sm\">\n      <InputGroupInput placeholder=\"example.com\" className=\"pl-1!\" />\n      <InputGroupAddon>\n        <InputGroupText>https://</InputGroupText>\n      </InputGroupAddon>\n      <InputGroupAddon align=\"inline-end\">\n        <Tooltip>\n          <TooltipTrigger asChild>\n            <InputGroupButton className=\"rounded-full\" size=\"icon-xs\">\n              <InfoIcon />\n            </InputGroupButton>\n          </TooltipTrigger>\n          <TooltipContent>This is content in a tooltip.</TooltipContent>\n        </Tooltip>\n      </InputGroupAddon>\n    </InputGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/input7.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

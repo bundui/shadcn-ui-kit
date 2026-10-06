@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar17",
+  "title": "Avatar",
+  "description": "Avatar built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/avatar/17/index.tsx",
+      "content": "import { Avatar, AvatarImage } from \"@/components/ui/avatar\";\nimport { LoaderCircleIcon } from \"lucide-react\";\n\nexport default function AvatarComponent() {\n  return (\n    <Avatar className=\"relative size-12\">\n      <AvatarImage alt=\"Tobias Whetton\" src=\"https://i.pravatar.cc/150?img=1\" />\n      <div className=\"bg-background/30 absolute inset-0 flex cursor-pointer items-center justify-center rounded-full p-1\">\n        <LoaderCircleIcon className=\"size-6 animate-spin text-white\" />\n      </div>\n    </Avatar>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/avatar17.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

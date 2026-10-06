@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "bubble7",
+  "title": "Bubble",
+  "description": "Bubble built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/bubble/7/index.tsx",
+      "content": "import { Bubble, BubbleContent } from \"@/components/ui/bubble\";\nimport {\n  Collapsible,\n  CollapsibleContent,\n  CollapsibleTrigger,\n} from \"@/components/ui/collapsible\";\n\nexport default function BubbleDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2\">\n      <Bubble variant=\"muted\">\n        <BubbleContent>Can you summarize the retro notes?</BubbleContent>\n      </Bubble>\n      <Bubble variant=\"outline\">\n        <BubbleContent>\n          <Collapsible>\n            <p>\n              Sure. The short version: releases were smoother this sprint and\n              review times dropped by a third.\n            </p>\n            <CollapsibleContent className=\"mt-2 space-y-2\">\n              <p>\n                The longer version: automated previews removed most of the\n                back and forth on visual changes, and the new checklist caught\n                two regressions before they shipped.\n              </p>\n              <p>\n                Action items are assigned in the board, nothing is blocking\n                the next release.\n              </p>\n            </CollapsibleContent>\n            <CollapsibleTrigger className=\"text-muted-foreground hover:text-foreground mt-2 cursor-pointer text-xs font-medium underline underline-offset-2 data-open:hidden\">\n              Show more\n            </CollapsibleTrigger>\n          </Collapsible>\n        </BubbleContent>\n      </Bubble>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/bubble7.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

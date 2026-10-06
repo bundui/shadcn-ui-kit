@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input15",
+  "title": "Input",
+  "description": "Input built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/input/15/index.tsx",
+      "content": "\"use client\";\n\nimport { useId } from \"react\";\n\nimport { useCharacterLimit } from \"@/hooks/use-character-limit\";\nimport { Input } from \"@/components/ui/input\";\nimport { Label } from \"@/components/ui/label\";\n\nexport default function Component() {\n  const id = useId();\n  const maxLength = 50;\n  const {\n    value,\n    characterCount,\n    handleChange,\n    maxLength: limit\n  } = useCharacterLimit({ maxLength });\n\n  return (\n    <div className=\"w-full max-w-sm *:not-first:mt-2\">\n      <Label htmlFor={id}>Input with character limit</Label>\n      <div className=\"relative\">\n        <Input\n          aria-describedby={`${id}-description`}\n          className=\"peer pe-14\"\n          id={id}\n          maxLength={maxLength}\n          onChange={handleChange}\n          type=\"text\"\n          value={value}\n        />\n        <div\n          aria-live=\"polite\"\n          className=\"text-muted-foreground pointer-events-none absolute inset-y-0 end-0 flex items-center justify-center pe-3 text-xs tabular-nums peer-disabled:opacity-50\"\n          id={`${id}-description`}\n          role=\"status\">\n          {characterCount}/{limit}\n        </div>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/input15.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

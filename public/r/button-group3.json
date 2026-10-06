@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group3",
+  "title": "Button group",
+  "description": "A container that groups related buttons together with consistent styling. The variants fit naturally into codebases using Radix UI or Base UI.",
+  "files": [
+    {
+      "path": "contents/components/button-group/3/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport { ButtonGroup } from \"@/components/ui/button-group\";\n\nexport default function ButtonGroupComponent() {\n  return (\n    <ButtonGroup>\n      <Button variant=\"outline\">Days</Button>\n      <Button variant=\"outline\">Months</Button>\n      <Button variant=\"outline\">Years</Button>\n    </ButtonGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button-group3.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

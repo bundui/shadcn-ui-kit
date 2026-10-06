@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group9",
+  "title": "Radio group",
+  "description": "Radio group built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/radio-group/9/index.tsx",
+      "content": "import { RiAppleLine, RiBankCardLine, RiPaypalLine } from \"@remixicon/react\";\nimport { useId } from \"react\";\n\nimport { RadioGroup, RadioGroupItem } from \"@/components/ui/radio-group\";\n\nexport default function Component() {\n  const id = useId();\n  return (\n    <RadioGroup className=\"grid-cols-3\" defaultValue=\"1\">\n      <div className=\"border-input has-data-[state=checked]:border-primary/50 has-focus-visible:border-ring has-focus-visible:ring-ring/50 relative flex cursor-pointer flex-col items-center gap-3 rounded-md border px-2 py-3 text-center shadow-xs transition-[color,box-shadow] outline-none has-focus-visible:ring-[3px]\">\n        <RadioGroupItem className=\"sr-only\" id={`${id}-1`} value=\"1\" />\n        <RiBankCardLine aria-hidden=\"true\" className=\"opacity-60\" size={20} />\n        <label\n          className=\"text-foreground cursor-pointer text-xs leading-none font-medium after:absolute after:inset-0\"\n          htmlFor={`${id}-1`}>\n          Card\n        </label>\n      </div>\n      <div className=\"border-input has-data-[state=checked]:border-primary/50 has-focus-visible:border-ring has-focus-visible:ring-ring/50 relative flex cursor-pointer flex-col items-center gap-3 rounded-md border px-2 py-3 text-center shadow-xs transition-[color,box-shadow] outline-none has-focus-visible:ring-[3px]\">\n        <RadioGroupItem className=\"sr-only\" id={`${id}-2`} value=\"2\" />\n        <RiPaypalLine aria-hidden=\"true\" className=\"opacity-60\" size={20} />\n        <label\n          className=\"text-foreground cursor-pointer text-xs leading-none font-medium after:absolute after:inset-0\"\n          htmlFor={`${id}-2`}>\n          PayPal\n        </label>\n      </div>\n      <div className=\"border-input has-data-[state=checked]:border-primary/50 has-focus-visible:border-ring has-focus-visible:ring-ring/50 relative flex cursor-pointer flex-col items-center gap-3 rounded-md border px-2 py-3 text-center shadow-xs transition-[color,box-shadow] outline-none has-focus-visible:ring-[3px]\">\n        <RadioGroupItem className=\"sr-only\" id={`${id}-3`} value=\"3\" />\n        <RiAppleLine aria-hidden=\"true\" className=\"opacity-60\" size={20} />\n        <label\n          className=\"text-foreground cursor-pointer text-xs leading-none font-medium after:absolute after:inset-0\"\n          htmlFor={`${id}-3`}>\n          Apple Pay\n        </label>\n      </div>\n    </RadioGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/radio-group9.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

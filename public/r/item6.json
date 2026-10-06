@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "item6",
+  "title": "Item",
+  "description": "Item built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/item/6/index.tsx",
+      "content": "import Image from \"next/image\";\nimport {\n  Item,\n  ItemContent,\n  ItemDescription,\n  ItemGroup,\n  ItemMedia,\n  ItemTitle,\n} from \"@/components/ui/item\";\n\nconst music = [\n  {\n    title: \"Midnight City Lights\",\n    artist: \"Neon Dreams\",\n    album: \"Electric Nights\",\n    duration: \"3:45\",\n    image:\n      \"https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=200&auto=format&fit=crop\",\n  },\n  {\n    title: \"Coffee Shop Conversations\",\n    artist: \"The Morning Brew\",\n    album: \"Urban Stories\",\n    duration: \"4:05\",\n    image:\n      \"https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=200&auto=format&fit=crop\",\n  },\n  {\n    title: \"Digital Rain\",\n    artist: \"Cyber Symphony\",\n    album: \"Binary Beats\",\n    duration: \"3:30\",\n    image:\n      \"https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=200&auto=format&fit=crop\",\n  },\n];\n\nexport default function ItemComponent() {\n  return (\n    <ItemGroup className=\"w-full max-w-md gap-3\">\n      {music.map((song) => (\n        <Item key={song.title} variant=\"outline\" asChild role=\"listitem\">\n          <a href=\"#\">\n            <ItemMedia variant=\"image\">\n              <Image\n                src={song.image}\n                alt={song.title}\n                width={40}\n                height={40}\n                className=\"aspect-square size-10 rounded-sm object-cover\"\n              />\n            </ItemMedia>\n            <ItemContent>\n              <ItemTitle className=\"line-clamp-1\">\n                {song.title}\n                <span className=\"ml-2 text-muted-foreground font-normal\">\n                  {song.album}\n                </span>\n              </ItemTitle>\n              <ItemDescription>{song.artist}</ItemDescription>\n            </ItemContent>\n            <ItemContent className=\"flex-none text-right\">\n              <ItemDescription>{song.duration}</ItemDescription>\n            </ItemContent>\n          </a>\n        </Item>\n      ))}\n    </ItemGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/item6.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

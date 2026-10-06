@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group13",
+  "title": "Button group",
+  "description": "Button group built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/button-group/13/index.tsx",
+      "content": "import { ButtonGroup } from \"@/components/ui/button-group\";\nimport { Input } from \"@/components/ui/input\";\nimport {\n  Select,\n  SelectContent,\n  SelectGroup,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@/components/ui/select\";\n\nconst CURRENCIES = [\n  {\n    value: \"$\",\n    label: \"US Dollar\",\n  },\n  {\n    value: \"€\",\n    label: \"Euro\",\n  },\n  {\n    value: \"£\",\n    label: \"British Pound\",\n  },\n];\n\nexport default function ButtonGroupComponent() {\n  return (\n    <ButtonGroup>\n      <Select defaultValue=\"$\">\n        <SelectTrigger>\n          <SelectValue placeholder=\"Select status\" />\n        </SelectTrigger>\n        <SelectContent position=\"popper\" className=\"min-w-0\">\n          <SelectGroup>\n            {CURRENCIES.map((currency) => (\n              <SelectItem key={currency.value} value={currency.value}>\n                {currency.value}{\" \"}\n              </SelectItem>\n            ))}\n          </SelectGroup>\n        </SelectContent>\n      </Select>\n      <Input placeholder=\"10.00\" pattern=\"[0-9]*\" className=\"max-w-24\" />\n    </ButtonGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button-group13.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

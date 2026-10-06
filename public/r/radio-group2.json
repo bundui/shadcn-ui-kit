@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group2",
+  "title": "Radio group",
+  "description": "A group of radio buttons that allows the user to select a single option from a list. All radio group examples respect Radix UI and Base UI accessibility patterns.",
+  "files": [
+    {
+      "path": "contents/components/radio-group/2/index.tsx",
+      "content": "import { Label } from \"@/components/ui/label\";\nimport { RadioGroup, RadioGroupItem } from \"@/components/ui/radio-group\";\n\nconst RadioGroupHorizontalDemo = () => {\n  return (\n    <RadioGroup defaultValue=\"email\" className=\"flex items-center gap-4\">\n      <div className=\"flex items-center gap-2\">\n        <RadioGroupItem value=\"email\" id=\"email\" />\n        <Label htmlFor=\"email\">Email</Label>\n      </div>\n      <div className=\"flex items-center gap-2\">\n        <RadioGroupItem value=\"sms\" id=\"sms\" />\n        <Label htmlFor=\"sms\">SMS</Label>\n      </div>\n      <div className=\"flex items-center gap-2\">\n        <RadioGroupItem value=\"push\" id=\"push\" />\n        <Label htmlFor=\"push\">Push</Label>\n      </div>\n    </RadioGroup>\n  );\n};\n\nexport default RadioGroupHorizontalDemo;\n",
+      "type": "registry:component",
+      "target": "components/radio-group2.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

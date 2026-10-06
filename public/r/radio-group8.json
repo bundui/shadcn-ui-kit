@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group8",
+  "title": "Radio group",
+  "description": "Radio group built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/radio-group/8/index.tsx",
+      "content": "import { useId } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport { RadioGroup, RadioGroupItem } from \"@/components/ui/radio-group\";\n\nconst RadioGroupCardRadioDemo = () => {\n  const id = useId();\n\n  return (\n    <RadioGroup className=\"w-full max-w-96 gap-2\" defaultValue=\"1\">\n      <div className=\"border-input has-data-[state=checked]:border-primary/50 relative flex w-full items-center gap-2 rounded-md border p-4 shadow-xs outline-none\">\n        <RadioGroupItem\n          value=\"1\"\n          id={`${id}-1`}\n          aria-label=\"plan-radio-basic\"\n          aria-describedby={`${id}-1-description`}\n          className=\"size-5 after:absolute after:inset-0 [&_svg]:size-3\"\n        />\n        <div className=\"grid grow gap-2\">\n          <Label htmlFor={`${id}-1`} className=\"justify-between\">\n            Starter{\" \"}\n            <span className=\"text-muted-foreground text-xs leading-[inherit] font-normal\">\n              Free\n            </span>\n          </Label>\n          <p id={`${id}-1-description`} className=\"text-muted-foreground text-xs\">\n            Perfect for individuals and small teams getting started.\n          </p>\n        </div>\n      </div>\n\n      <div className=\"border-input has-data-[state=checked]:border-primary/50 relative flex w-full items-center gap-2 rounded-md border p-4 shadow-xs outline-none\">\n        <RadioGroupItem\n          value=\"2\"\n          id={`${id}-2`}\n          aria-describedby={`${id}-2-description`}\n          className=\"size-5 after:absolute after:inset-0 [&_svg]:size-3\"\n        />\n        <div className=\"grid grow gap-2\">\n          <Label htmlFor={`${id}-2`} className=\"justify-between\">\n            Professional{\" \"}\n            <span className=\"text-muted-foreground text-xs leading-[inherit] font-normal\">\n              $19/mo\n            </span>\n          </Label>\n          <p id={`${id}-2-description`} className=\"text-muted-foreground text-xs\">\n            Best for growing businesses and professional teams.\n          </p>\n        </div>\n      </div>\n    </RadioGroup>\n  );\n};\n\nexport default RadioGroupCardRadioDemo;\n",
+      "type": "registry:component",
+      "target": "components/radio-group8.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

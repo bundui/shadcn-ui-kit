@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar12",
+  "title": "Avatar",
+  "description": "Avatar built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/avatar/12/index.tsx",
+      "content": "import { Avatar, AvatarGroup, AvatarImage } from \"@/components/ui/avatar\";\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipTrigger,\n} from \"@/components/ui/tooltip\";\n\nconst users = [\n  {\n    id: \"1\",\n    name: \"Jane Cooper\",\n    avatar: \"https://i.pravatar.cc/150?img=1\",\n  },\n  {\n    id: \"2\",\n    name: \"Devon Lane\",\n    avatar: \"https://i.pravatar.cc/150?img=2\",\n  },\n  {\n    id: \"3\",\n    name: \"Courtney Henry\",\n    avatar: \"https://i.pravatar.cc/150?img=3\",\n  },\n  {\n    id: \"4\",\n    name: \"Leslie Alexander\",\n    avatar: \"https://i.pravatar.cc/150?img=4\",\n  },\n];\n\nexport default function AvatarComponent() {\n  return (\n    <AvatarGroup>\n      {users.map((user) => (\n        <Tooltip key={user.id}>\n          <TooltipTrigger asChild>\n            <Avatar>\n              <AvatarImage alt={user.name} src={user.avatar} />\n            </Avatar>\n          </TooltipTrigger>\n          <TooltipContent>{user.name}</TooltipContent>\n        </Tooltip>\n      ))}\n    </AvatarGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/avatar12.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

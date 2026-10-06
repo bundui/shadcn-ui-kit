@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group9",
+  "title": "Button group",
+  "description": "Button group built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/button-group/9/index.tsx",
+      "content": "import { Badge } from \"@/components/ui/badge\";\nimport { Button } from \"@/components/ui/button\";\nimport { ButtonGroup } from \"@/components/ui/button-group\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuSeparator,\n  DropdownMenuTrigger,\n} from \"@/components/ui/dropdown-menu\";\nimport {\n  BellIcon,\n  ChevronDownIcon,\n  EyeIcon,\n  FlagIcon,\n  GitForkIcon,\n  ListPlusIcon,\n  Share2Icon,\n  StarIcon,\n} from \"lucide-react\";\n\nexport default function ButtonGroupComponent() {\n  return (\n    <ButtonGroup>\n      <Button variant=\"outline\">\n        <StarIcon aria-hidden=\"true\" />\n        <span>Star</span>\n        <Badge variant=\"outline\">2.4k</Badge>\n      </Button>\n      <DropdownMenu>\n        <DropdownMenuTrigger asChild>\n          <Button variant=\"outline\" size=\"icon\">\n            <ChevronDownIcon aria-hidden=\"true\" />\n            <span className=\"sr-only\">Toggle dropdown</span>\n          </Button>\n        </DropdownMenuTrigger>\n        <DropdownMenuContent align=\"end\" className=\"min-w-40\">\n          <DropdownMenuItem>\n            <EyeIcon aria-hidden=\"true\" />\n            Watch\n          </DropdownMenuItem>\n          <DropdownMenuItem>\n            <GitForkIcon aria-hidden=\"true\" />\n            Fork\n          </DropdownMenuItem>\n          <DropdownMenuItem>\n            <ListPlusIcon aria-hidden=\"true\" />\n            Add to list\n          </DropdownMenuItem>\n          <DropdownMenuSeparator />\n          <DropdownMenuItem>\n            <Share2Icon aria-hidden=\"true\" />\n            Share\n          </DropdownMenuItem>\n          <DropdownMenuItem>\n            <BellIcon aria-hidden=\"true\" />\n            Notifications\n          </DropdownMenuItem>\n          <DropdownMenuSeparator />\n          <DropdownMenuItem>\n            <FlagIcon aria-hidden=\"true\" />\n            Report\n          </DropdownMenuItem>\n        </DropdownMenuContent>\n      </DropdownMenu>\n    </ButtonGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button-group9.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

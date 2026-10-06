@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "combobox1",
+  "title": "Combobox",
+  "description": "Autocomplete input and command palette with a list of suggestions. All combobox variants are designed for compatibility with Radix UI and Base UI.",
+  "files": [
+    {
+      "path": "contents/components/combobox/1/index.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport { Check, ChevronsUpDown } from \"lucide-react\";\n\nimport { cn } from \"@/lib/utils\";\nimport { Button } from \"@/components/ui/button\";\nimport {\n  Command,\n  CommandEmpty,\n  CommandGroup,\n  CommandInput,\n  CommandItem,\n  CommandList\n} from \"@/components/ui/command\";\nimport { Popover, PopoverContent, PopoverTrigger } from \"@/components/ui/popover\";\n\nconst frameworks = [\n  {\n    value: \"next.js\",\n    label: \"Next.js\"\n  },\n  {\n    value: \"sveltekit\",\n    label: \"SvelteKit\"\n  },\n  {\n    value: \"nuxt.js\",\n    label: \"Nuxt.js\"\n  },\n  {\n    value: \"remix\",\n    label: \"Remix\"\n  },\n  {\n    value: \"astro\",\n    label: \"Astro\"\n  }\n];\n\nexport default function Combobox() {\n  const [open, setOpen] = React.useState(false);\n  const [value, setValue] = React.useState(\"\");\n\n  return (\n    <div className=\"w-full max-w-xs\">\n      <Popover open={open} onOpenChange={setOpen}>\n        <PopoverTrigger asChild>\n          <Button\n            variant=\"outline\"\n            role=\"combobox\"\n            aria-expanded={open}\n            className=\"w-full justify-between\">\n            {value\n              ? frameworks.find((framework) => framework.value === value)?.label\n              : \"Select framework...\"}\n            <ChevronsUpDown className=\"opacity-50\" />\n          </Button>\n        </PopoverTrigger>\n        <PopoverContent className=\"p-0\">\n          <Command>\n            <CommandInput placeholder=\"Search framework...\" className=\"h-9\" />\n            <CommandList>\n              <CommandEmpty>No framework found.</CommandEmpty>\n              <CommandGroup>\n                {frameworks.map((framework) => (\n                  <CommandItem\n                    key={framework.value}\n                    value={framework.value}\n                    onSelect={(currentValue) => {\n                      setValue(currentValue === value ? \"\" : currentValue);\n                      setOpen(false);\n                    }}>\n                    {framework.label}\n                    <Check\n                      className={cn(\n                        \"ml-auto\",\n                        value === framework.value ? \"opacity-100\" : \"opacity-0\"\n                      )}\n                    />\n                  </CommandItem>\n                ))}\n              </CommandGroup>\n            </CommandList>\n          </Command>\n        </PopoverContent>\n      </Popover>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/combobox1.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

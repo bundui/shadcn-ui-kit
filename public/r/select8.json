@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select8",
+  "title": "Select",
+  "description": "Select built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/select/8/index.tsx",
+      "content": "import { useId } from \"react\";\n\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue\n} from \"@/components/ui/select\";\n\nexport default function SelectComponent() {\n  const id = useId();\n  return (\n    <div className=\"group relative w-full max-w-xs\">\n      <label\n        className=\"bg-background text-foreground absolute start-1 top-0 z-10 block -translate-y-1/2 px-2 text-xs font-medium group-has-disabled:opacity-50\"\n        htmlFor={id}>\n        Frameworks\n      </label>\n      <Select>\n        <SelectTrigger className=\"w-full\" id={id}>\n          <SelectValue placeholder=\"Select framework\" />\n        </SelectTrigger>\n        <SelectContent>\n          <SelectItem value=\"1\">React</SelectItem>\n          <SelectItem value=\"2\">Next.js</SelectItem>\n          <SelectItem value=\"3\">Astro</SelectItem>\n          <SelectItem value=\"4\">Gatsby</SelectItem>\n        </SelectContent>\n      </Select>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/select8.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

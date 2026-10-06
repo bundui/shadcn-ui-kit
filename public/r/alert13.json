@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert13",
+  "title": "Alert",
+  "description": "Alert built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/alert/13/index.tsx",
+      "content": "import { Alert, AlertAction, AlertDescription } from \"@/components/ui/alert\";\nimport { Button } from \"@/components/ui/button\";\nimport { CheckCircle2Icon } from \"lucide-react\";\n\nexport default function AlertComponent() {\n  return (\n    <Alert className=\"grid-cols-[auto_1fr_auto]! items-center\">\n      <CheckCircle2Icon className=\"size-4 shrink-0 translate-y-0! text-green-600!\" />\n      <AlertDescription>All the files have been moved.</AlertDescription>\n      <Button variant=\"outline\" size=\"sm\">\n        Undo\n      </Button>\n    </Alert>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/alert13.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

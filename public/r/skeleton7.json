@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton7",
+  "title": "Skeleton",
+  "description": "Skeleton built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/skeleton/7/index.tsx",
+      "content": "import { Skeleton } from \"@/components/ui/skeleton\";\nimport {\n  Table,\n  TableBody,\n  TableCell,\n  TableHead,\n  TableHeader,\n  TableRow\n} from \"@/components/ui/table\";\n\nexport default function SkeletonTable() {\n  return (\n    <div className=\"rounded-lg border\">\n      <Table className=\"mx-auto lg:max-w-lg\">\n        <TableHeader>\n          <TableRow>\n            <TableHead>\n              <Skeleton className=\"h-3 w-[100px]\" />\n            </TableHead>\n            <TableHead>\n              <Skeleton className=\"h-3 w-[100px]\" />\n            </TableHead>\n            <TableHead>\n              <Skeleton className=\"h-3 w-[100px]\" />\n            </TableHead>\n            <TableHead>\n              <Skeleton className=\"h-3 w-[100px]\" />\n            </TableHead>\n          </TableRow>\n        </TableHeader>\n        <TableBody>\n          {[...Array(3)].map((_, i) => (\n            <TableRow key={i}>\n              <TableCell>\n                <Skeleton className=\"h-5 w-[100px]\" />\n              </TableCell>\n              <TableCell>\n                <Skeleton className=\"h-5 w-[100px]\" />\n              </TableCell>\n              <TableCell>\n                <Skeleton className=\"h-5 w-[100px]\" />\n              </TableCell>\n              <TableCell>\n                <Skeleton className=\"h-5 w-[100px]\" />\n              </TableCell>\n            </TableRow>\n          ))}\n        </TableBody>\n      </Table>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/skeleton7.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

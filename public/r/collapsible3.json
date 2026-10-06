@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible3",
+  "title": "Collapsible",
+  "description": "An interactive component which expands/collapses a panel. Every example works interchangeably with Radix UI and Base UI primitives.",
+  "files": [
+    {
+      "path": "contents/components/collapsible/3/index.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\nimport { ChevronDownIcon, SettingsIcon } from \"lucide-react\";\nimport { Collapsible, CollapsibleContent, CollapsibleTrigger } from \"@/components/ui/collapsible\";\nimport { Card, CardAction, CardContent, CardHeader, CardTitle } from \"@/components/ui/card\";\n\nexport default function CollapsibleComponent() {\n  const [isOpen, setIsOpen] = useState(false);\n\n  return (\n    <Collapsible open={isOpen} onOpenChange={setIsOpen} className=\"w-full max-w-sm\">\n      <Card>\n        <CollapsibleTrigger asChild>\n          <CardHeader className=\"cursor-pointer\">\n            <CardTitle>Settings</CardTitle>\n            <CardAction>\n              <ChevronDownIcon\n                className={`h-4 w-4 transition-transform duration-200 ${isOpen ? \"rotate-180\" : \"\"}`}\n              />\n            </CardAction>\n          </CardHeader>\n        </CollapsibleTrigger>\n        <CollapsibleContent>\n          <CardContent className=\"space-y-2\">Card content</CardContent>\n        </CollapsibleContent>\n      </Card>\n    </Collapsible>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/collapsible3.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

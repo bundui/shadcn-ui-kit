@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card6",
+  "title": "Card",
+  "description": "Card built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/card/6/index.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@/components/ui/card\";\n\nconst attendees = [\n  {\n    name: \"Olivia Martin\",\n    avatar: \"https://i.pravatar.cc/150?u=olivia\",\n  },\n  {\n    name: \"Isabella Nguyen\",\n    avatar: \"https://i.pravatar.cc/150?u=isabella\",\n  },\n  {\n    name: \"Sofia Davis\",\n    avatar: \"https://i.pravatar.cc/150?u=sofia\",\n  },\n];\n\nexport default function CardComponent() {\n  return (\n    <Card className=\"w-full max-w-lg shadow-none\">\n      <CardHeader>\n        <CardTitle>Meeting Notes</CardTitle>\n        <CardDescription>\n          Transcript from the meeting with the client.\n        </CardDescription>\n      </CardHeader>\n      <CardContent className=\"space-y-4 text-sm\">\n        <p>\n          Client requested dashboard redesign with focus on mobile\n          responsiveness.\n        </p>\n        <ol className=\"list-inside list-decimal space-y-2\">\n          <li>New analytics widgets for daily/weekly metrics</li>\n          <li>Simplified navigation menu</li>\n          <li>Dark mode support</li>\n          <li>Timeline: 6 weeks</li>\n          <li>Follow-up meeting scheduled for next Tuesday</li>\n        </ol>\n      </CardContent>\n      <CardFooter>\n        <div className=\"flex -space-x-2\">\n          {attendees.map((attendee, index) => (\n            <Avatar className=\"border-background border-2\" key={index}>\n              <AvatarImage alt={attendee.name} src={attendee.avatar} />\n              <AvatarFallback>\n                {attendee.name\n                  .split(\" \")\n                  .map((n) => n[0])\n                  .join(\"\")}\n              </AvatarFallback>\n            </Avatar>\n          ))}\n        </div>\n      </CardFooter>\n    </Card>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/card6.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

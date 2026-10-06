@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select7",
+  "title": "Select",
+  "description": "Select built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/select/7/index.tsx",
+      "content": "import { useId } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport {\n  Select,\n  SelectContent,\n  SelectGroup,\n  SelectItem,\n  SelectLabel,\n  SelectTrigger,\n  SelectValue\n} from \"@/components/ui/select\";\n\nexport default function SelectComponent() {\n  const id = useId();\n  return (\n    <div className=\"w-full max-w-xs\">\n      <Select defaultValue=\"1\">\n        <SelectTrigger className=\"w-full\">\n          <SelectValue placeholder=\"Select framework\" />\n        </SelectTrigger>\n        <SelectContent>\n          <SelectGroup>\n            <SelectLabel>Frontend</SelectLabel>\n            <SelectItem value=\"1\">React</SelectItem>\n            <SelectItem value=\"2\">Vue</SelectItem>\n            <SelectItem value=\"3\">Angular</SelectItem>\n          </SelectGroup>\n          <SelectGroup>\n            <SelectLabel>Backend</SelectLabel>\n            <SelectItem value=\"4\">Node.js</SelectItem>\n            <SelectItem value=\"5\">Python</SelectItem>\n            <SelectItem value=\"6\">Java</SelectItem>\n          </SelectGroup>\n        </SelectContent>\n      </Select>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/select7.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

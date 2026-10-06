@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge17",
+  "title": "Badge",
+  "description": "Badge built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/badge/17/index.tsx",
+      "content": "import { Badge } from \"@/components/ui/badge\";\nimport { Button } from \"@/components/ui/button\";\n\nexport default function BadgeComponent() {\n  return (\n    <Badge\n      className=\"bg-background h-10 gap-3 rounded-full p-1 ps-4\"\n      variant=\"outline\"\n    >\n      <span aria-hidden=\"true\" className=\"bg-foreground size-2 shrink-0 rounded-full\" />\n      50+ Blocks Added\n      <Button className=\"rounded-full\" size=\"sm\" variant=\"secondary\">\n        View Changes\n      </Button>\n    </Badge>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/badge17.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

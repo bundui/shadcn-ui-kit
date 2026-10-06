@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "empty6",
+  "title": "Empty",
+  "description": "Empty built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/empty/6/index.tsx",
+      "content": "import { SearchIcon } from \"lucide-react\";\n\nimport {\n  Empty,\n  EmptyHeader,\n  EmptyMedia,\n  EmptyTitle,\n} from \"@/components/ui/empty\";\n\nexport default function EmptyComponent() {\n  return (\n    <Empty>\n      <EmptyHeader>\n        <EmptyMedia variant=\"icon\">\n          <SearchIcon />\n        </EmptyMedia>\n        <EmptyTitle>No items found</EmptyTitle>\n      </EmptyHeader>\n    </Empty>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/empty6.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

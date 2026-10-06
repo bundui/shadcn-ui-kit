@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sheet6",
+  "title": "Sheet",
+  "description": "Sheet built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/sheet/6/index.tsx",
+      "content": "\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport {\n  Sheet,\n  SheetContent,\n  SheetDescription,\n  SheetHeader,\n  SheetTitle,\n  SheetTrigger\n} from \"@/components/ui/sheet\";\n\nexport default function SheetComponent() {\n  return (\n    <Sheet>\n      <SheetTrigger asChild>\n        <Button variant=\"outline\">Open Bottom Sheet</Button>\n      </SheetTrigger>\n      <SheetContent side=\"bottom\">\n        <SheetHeader>\n          <SheetTitle>Quick Actions</SheetTitle>\n          <SheetDescription>Choose an action to perform.</SheetDescription>\n        </SheetHeader>\n        <div className=\"grid grid-cols-2 gap-3 p-4\">\n          <Button variant=\"outline\" className=\"h-20 flex-col\">\n            <span className=\"mb-1 text-2xl\">📷</span>\n            <span>Take Photo</span>\n          </Button>\n          <Button variant=\"outline\" className=\"h-20 flex-col\">\n            <span className=\"mb-1 text-2xl\">📁</span>\n            <span>Choose File</span>\n          </Button>\n          <Button variant=\"outline\" className=\"h-20 flex-col\">\n            <span className=\"mb-1 text-2xl\">📍</span>\n            <span>Location</span>\n          </Button>\n          <Button variant=\"outline\" className=\"h-20 flex-col\">\n            <span className=\"mb-1 text-2xl\">✏️</span>\n            <span>Edit</span>\n          </Button>\n        </div>\n      </SheetContent>\n    </Sheet>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/sheet6.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select3",
+  "title": "Select",
+  "description": "A select is a form control that allows the user to select a value from a list of options. Every select example supports both Radix UI and Base UI conventions.",
+  "files": [
+    {
+      "path": "contents/components/select/3/index.tsx",
+      "content": "import { useId } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue\n} from \"@/components/ui/select\";\n\nexport default function SelectComponent() {\n  const id = useId();\n  return (\n    <div className=\"w-full max-w-xs\">\n      <Select>\n        <SelectTrigger className=\"w-full\">\n          <SelectValue placeholder=\"Select framework\" />\n        </SelectTrigger>\n        <SelectContent>\n          <SelectItem value=\"1\">React</SelectItem>\n          <SelectItem value=\"2\">Next.js</SelectItem>\n          <SelectItem value=\"3\">Astro</SelectItem>\n          <SelectItem value=\"4\">Gatsby</SelectItem>\n        </SelectContent>\n      </Select>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/select3.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip5",
+  "title": "Tooltip",
+  "description": "A tooltip is a small overlay that appears when the user hovers over an element. Each tooltip variant is drop-in compatible with Radix UI and Base UI.",
+  "files": [
+    {
+      "path": "contents/components/tooltip/5/index.tsx",
+      "content": "import { InfoIcon } from \"lucide-react\";\nimport { Tooltip, TooltipContent, TooltipTrigger } from \"@/components/ui/tooltip\";\n\nexport default function TooltipComponent() {\n  return (\n    <Tooltip>\n      <TooltipTrigger asChild>\n        <button className=\"hover:bg-accent rounded-full p-2\">\n          <InfoIcon className=\"text-muted-foreground size-4\" />\n        </button>\n      </TooltipTrigger>\n      <TooltipContent>\n        <p>More information</p>\n      </TooltipContent>\n    </Tooltip>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/tooltip5.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

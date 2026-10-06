@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group7",
+  "title": "Radio group",
+  "description": "Radio group built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/radio-group/7/index.tsx",
+      "content": "import { RadioGroup, RadioGroupItem } from \"@/components/ui/radio-group\";\n\nexport default function Component() {\n  return (\n    <fieldset className=\"space-y-4\">\n      <legend className=\"text-foreground text-sm leading-none font-medium\">Product color</legend>\n      <RadioGroup className=\"flex gap-1.5\" defaultValue=\"blue\">\n        <RadioGroupItem\n          aria-label=\"Blue\"\n          className=\"size-6 border-blue-500 bg-blue-500 shadow-none data-[state=checked]:border-blue-500 data-[state=checked]:bg-blue-500\"\n          value=\"blue\"\n        />\n        <RadioGroupItem\n          aria-label=\"Indigo\"\n          className=\"size-6 border-indigo-500 bg-indigo-500 shadow-none data-[state=checked]:border-indigo-500 data-[state=checked]:bg-indigo-500\"\n          value=\"indigo\"\n        />\n        <RadioGroupItem\n          aria-label=\"Pink\"\n          className=\"size-6 border-pink-500 bg-pink-500 shadow-none data-[state=checked]:border-pink-500 data-[state=checked]:bg-pink-500\"\n          value=\"pink\"\n        />\n        <RadioGroupItem\n          aria-label=\"red\"\n          className=\"size-6 border-red-500 bg-red-500 shadow-none data-[state=checked]:border-red-500 data-[state=checked]:bg-red-500\"\n          value=\"red\"\n        />\n        <RadioGroupItem\n          aria-label=\"orange\"\n          className=\"size-6 border-orange-500 bg-orange-500 shadow-none data-[state=checked]:border-orange-500 data-[state=checked]:bg-orange-500\"\n          value=\"orange\"\n        />\n        <RadioGroupItem\n          aria-label=\"amber\"\n          className=\"size-6 border-amber-500 bg-amber-500 shadow-none data-[state=checked]:border-amber-500 data-[state=checked]:bg-amber-500\"\n          value=\"amber\"\n        />\n        <RadioGroupItem\n          aria-label=\"emerald\"\n          className=\"size-6 border-emerald-500 bg-emerald-500 shadow-none data-[state=checked]:border-emerald-500 data-[state=checked]:bg-emerald-500\"\n          value=\"emerald\"\n        />\n      </RadioGroup>\n    </fieldset>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/radio-group7.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

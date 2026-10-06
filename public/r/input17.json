@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input17",
+  "title": "Input",
+  "description": "Input built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/input/17/index.tsx",
+      "content": "\"use client\";\n\nimport { OTPInput, type SlotProps } from \"input-otp\";\nimport { useId } from \"react\";\n\nimport { cn } from \"@/lib/utils\";\nimport { Label } from \"@/components/ui/label\";\n\nexport default function Component() {\n  const id = useId();\n  return (\n    <div className=\"*:not-first:mt-2\">\n      <Label htmlFor={id}>OTP input single</Label>\n      <OTPInput\n        containerClassName=\"flex items-center gap-3 has-disabled:opacity-50\"\n        id={id}\n        maxLength={4}\n        render={({ slots }) => (\n          <div className=\"flex\">\n            {slots.map((slot, idx) => (\n              <Slot key={String(idx)} {...slot} />\n            ))}\n          </div>\n        )}\n      />\n    </div>\n  );\n}\n\nfunction Slot(props: SlotProps) {\n  return (\n    <div\n      className={cn(\n        \"border-input bg-background text-foreground relative -ms-px flex size-9 items-center justify-center border font-medium shadow-xs transition-[color,box-shadow] first:ms-0 first:rounded-s-md last:rounded-e-md\",\n        { \"border-ring ring-ring/50 z-10 ring-[3px]\": props.isActive }\n      )}>\n      {props.char !== null && <div>{props.char}</div>}\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/input17.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

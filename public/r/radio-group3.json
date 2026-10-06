@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group3",
+  "title": "Radio group",
+  "description": "A group of radio buttons that allows the user to select a single option from a list. All radio group examples respect Radix UI and Base UI accessibility patterns.",
+  "files": [
+    {
+      "path": "contents/components/radio-group/3/index.tsx",
+      "content": "import { useId } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport { RadioGroup, RadioGroupItem } from \"@/components/ui/radio-group\";\n\nexport default function Component() {\n  const id = useId();\n  return (\n    <RadioGroup\n      className=\"[--primary:var(--color-indigo-500)] [--ring:var(--color-indigo-300)] in-[.dark]:[--primary:var(--color-indigo-500)] in-[.dark]:[--ring:var(--color-indigo-900)]\"\n      defaultValue=\"credit-card\">\n      <div className=\"flex items-center gap-2\">\n        <RadioGroupItem id={`${id}-credit-card`} value=\"credit-card\" />\n        <Label htmlFor={`${id}-credit-card`}>Credit Card</Label>\n      </div>\n      <div className=\"flex items-center gap-2\">\n        <RadioGroupItem id={`${id}-paypal`} value=\"paypal\" />\n        <Label htmlFor={`${id}-paypal`}>PayPal</Label>\n      </div>\n      <div className=\"flex items-center gap-2\">\n        <RadioGroupItem id={`${id}-apple-pay`} value=\"apple-pay\" />\n        <Label htmlFor={`${id}-apple-pay`}>Apple Pay</Label>\n      </div>\n    </RadioGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/radio-group3.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

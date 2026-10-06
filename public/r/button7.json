@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button7",
+  "title": "Button",
+  "description": "Button built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/button/7/index.tsx",
+      "content": "import { PrinterIcon } from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\n\nexport default function Component() {\n  return (\n    <Button variant=\"outline\">\n      <PrinterIcon aria-hidden=\"true\" className=\"-ms-1 opacity-60\" size={16} />\n      Print\n      <kbd className=\"bg-background text-muted-foreground/70 ms-1 -me-1 inline-flex h-5 max-h-full items-center rounded border px-1 font-[inherit] text-[0.625rem] font-medium\">\n        ⌘P\n      </kbd>\n    </Button>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button7.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

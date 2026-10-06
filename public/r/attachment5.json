@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "attachment5",
+  "title": "Attachment",
+  "description": "Attachment built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/attachment/5/index.tsx",
+      "content": "import {\n  FileCodeIcon,\n  FileTextIcon,\n  TableIcon,\n  XIcon,\n  type LucideIcon,\n} from \"lucide-react\"\n\nimport {\n  Attachment,\n  AttachmentAction,\n  AttachmentActions,\n  AttachmentContent,\n  AttachmentDescription,\n  AttachmentGroup,\n  AttachmentMedia,\n  AttachmentTitle,\n} from \"@/components/ui/attachment\"\n\ntype Item = {\n  name: string\n  meta: string\n  icon?: LucideIcon\n  src?: string\n}\n\nconst items: Item[] = [\n  { name: \"briefing-notes.pdf\", meta: \"PDF · 1.4 MB\", icon: FileTextIcon },\n  {\n    name: \"workspace.png\",\n    meta: \"PNG · 820 KB\",\n    src: \"https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900&auto=format&fit=crop&q=80\",\n  },\n  { name: \"customers.csv\", meta: \"CSV · 18 KB\", icon: TableIcon },\n  { name: \"renderer.tsx\", meta: \"TSX · 12 KB\", icon: FileCodeIcon },\n]\n\nexport default function AttachmentGroupDemo() {\n  return (\n    <div className=\"mx-auto w-full max-w-sm py-12\">\n      <AttachmentGroup className=\"w-full\">\n        {items.map((item) => {\n          const Icon = item.icon\n\n          return (\n            <Attachment key={item.name} className=\"w-64\">\n              {item.src ? (\n                <AttachmentMedia variant=\"image\">\n                  <img src={item.src} alt={item.name} />\n                </AttachmentMedia>\n              ) : Icon ? (\n                <AttachmentMedia>\n                  <Icon />\n                </AttachmentMedia>\n              ) : null}\n              <AttachmentContent>\n                <AttachmentTitle>{item.name}</AttachmentTitle>\n                <AttachmentDescription>{item.meta}</AttachmentDescription>\n              </AttachmentContent>\n              <AttachmentActions>\n                <AttachmentAction aria-label={`Remove ${item.name}`}>\n                  <XIcon />\n                </AttachmentAction>\n              </AttachmentActions>\n            </Attachment>\n          )\n        })}\n      </AttachmentGroup>\n    </div>\n  )\n}\n",
+      "type": "registry:component",
+      "target": "components/attachment5.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

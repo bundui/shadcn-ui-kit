@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox10",
+  "title": "Checkbox",
+  "description": "Checkbox built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/checkbox/10/index.tsx",
+      "content": "import { useId } from \"react\";\n\nimport { Checkbox } from \"@/components/ui/checkbox\";\nimport { Label } from \"@/components/ui/label\";\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\n\nexport default function Component() {\n  const id = useId();\n  return (\n    <div className=\"border-input has-data-[state=checked]:border-primary/50 relative flex w-full items-start gap-2 rounded-md border p-4 shadow-xs outline-none\">\n      <Checkbox\n        aria-describedby={`${id}-description`}\n        className=\"order-1 after:absolute after:inset-0\"\n        id={id}\n      />\n      <div className=\"flex grow items-center gap-3\">\n        <Avatar>\n          <AvatarImage src=\"https://i.pravatar.cc/150?u=shadcn\" alt=\"@shadcn\" />\n          <AvatarFallback>CN</AvatarFallback>\n        </Avatar>\n        <div className=\"grid gap-2\">\n          <Label htmlFor={id}>\n            Label{\" \"}\n            <span className=\"text-muted-foreground text-xs leading-[inherit] font-normal\">\n              (Sublabel)\n            </span>\n          </Label>\n          <p className=\"text-muted-foreground text-xs\" id={`${id}-description`}>\n            A short description goes here.\n          </p>\n        </div>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/checkbox10.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

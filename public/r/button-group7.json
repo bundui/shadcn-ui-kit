@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group7",
+  "title": "Button group",
+  "description": "Button group built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/button-group/7/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport { ButtonGroup } from \"@/components/ui/button-group\";\nimport { BoldIcon, ItalicIcon, UnderlineIcon } from \"lucide-react\";\n\nexport default function ButtonGroupComponent() {\n  return (\n    <ButtonGroup>\n      <Button variant=\"outline\" size=\"icon\">\n        <BoldIcon />\n      </Button>\n      <Button variant=\"outline\" size=\"icon\">\n        <ItalicIcon />\n      </Button>\n      <Button variant=\"outline\" size=\"icon\">\n        <UnderlineIcon />\n      </Button>\n    </ButtonGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button-group7.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

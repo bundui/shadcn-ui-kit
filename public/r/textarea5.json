@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea5",
+  "title": "Textarea",
+  "description": "A multi-line text input control. Every textarea variant fits projects standardized on Radix UI or Base UI.",
+  "files": [
+    {
+      "path": "contents/components/textarea/5/index.tsx",
+      "content": "\"use client\";\n\nimport { useForm } from \"react-hook-form\";\nimport { z } from \"zod\";\nimport { zodResolver } from \"@hookform/resolvers/zod\";\n\nimport { Button } from \"@/components/ui/button\";\nimport {\n  Form,\n  FormControl,\n  FormField,\n  FormItem,\n  FormLabel,\n  FormMessage\n} from \"@/components/ui/form\";\nimport { Textarea } from \"@/components/ui/textarea\";\n\nconst formSchema = z.object({\n  message: z.string().min(10, \"Message must be at least 10 characters\")\n});\n\ntype FormValues = z.infer<typeof formSchema>;\n\nexport default function Component() {\n  const form = useForm<FormValues>({\n    resolver: zodResolver(formSchema),\n    defaultValues: {\n      message: \"\"\n    }\n  });\n\n  const onSubmit = (data: FormValues) => {\n    console.log(data);\n  };\n\n  return (\n    <Form {...form}>\n      <form onSubmit={form.handleSubmit(onSubmit)} className=\"w-full max-w-sm space-y-4\">\n        <FormField\n          control={form.control}\n          name=\"message\"\n          render={({ field }) => (\n            <FormItem>\n              <FormLabel>With zod form</FormLabel>\n              <FormControl>\n                <Textarea placeholder=\"Leave a comment\" {...field} />\n              </FormControl>\n              <FormMessage />\n            </FormItem>\n          )}\n        />\n        <Button type=\"submit\" variant=\"outline\" className=\"w-full\">\n          Send\n        </Button>\n      </form>\n    </Form>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/textarea5.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

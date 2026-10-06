@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination1",
+  "title": "Pagination",
+  "description": "Pagination with page navigation, next and previous links. All pagination variants blend into Radix UI and Base UI codebases.",
+  "files": [
+    {
+      "path": "contents/components/pagination/1/index.tsx",
+      "content": "import { ChevronLeftIcon, ChevronRightIcon } from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { Pagination, PaginationContent, PaginationItem } from \"@/components/ui/pagination\";\n\ntype PaginationProps = {\n  currentPage: number;\n  totalPages: number;\n};\n\nexport default function Component({ currentPage, totalPages }: PaginationProps) {\n  return (\n    <Pagination>\n      <PaginationContent className=\"w-full justify-between gap-3\">\n        <PaginationItem>\n          <Button\n            aria-disabled={currentPage === 1 ? true : undefined}\n            asChild\n            className=\"aria-disabled:pointer-events-none aria-disabled:opacity-50\"\n            role={currentPage === 1 ? \"link\" : undefined}\n            variant=\"outline\">\n            <a href={currentPage === 1 ? undefined : `#/page/${currentPage - 1}`}>\n              <ChevronLeftIcon aria-hidden=\"true\" className=\"-ms-1 opacity-60\" size={16} />\n              Previous\n            </a>\n          </Button>\n        </PaginationItem>\n        <PaginationItem>\n          <Button\n            aria-disabled={currentPage === totalPages ? true : undefined}\n            asChild\n            className=\"aria-disabled:pointer-events-none aria-disabled:opacity-50\"\n            role={currentPage === totalPages ? \"link\" : undefined}\n            variant=\"outline\">\n            <a href={currentPage === totalPages ? undefined : `#/page/${currentPage + 1}`}>\n              Next\n              <ChevronRightIcon aria-hidden=\"true\" className=\"-me-1 opacity-60\" size={16} />\n            </a>\n          </Button>\n        </PaginationItem>\n      </PaginationContent>\n    </Pagination>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/pagination1.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

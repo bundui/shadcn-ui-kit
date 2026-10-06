@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "command5",
+  "title": "Command",
+  "description": "Command menu for search and quick actions. Each command menu example runs on Radix UI and Base UI without extra work.",
+  "files": [
+    {
+      "path": "contents/components/command/5/index.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\nimport {\n  Command,\n  CommandEmpty,\n  CommandGroup,\n  CommandInput,\n  CommandItem,\n  CommandList,\n  CommandSeparator\n} from \"@/components/ui/command\";\nimport { SettingsIcon, BellIcon, ShieldIcon, PaletteIcon, GlobeIcon, LockIcon } from \"lucide-react\";\n\nconst settings = [\n  {\n    category: \"General\",\n    items: [\n      { icon: SettingsIcon, label: \"General Settings\", path: \"/settings/general\" },\n      { icon: BellIcon, label: \"Notifications\", path: \"/settings/notifications\" },\n      { icon: GlobeIcon, label: \"Language\", path: \"/settings/language\" }\n    ]\n  },\n  {\n    category: \"Security\",\n    items: [\n      { icon: LockIcon, label: \"Password\", path: \"/settings/password\" },\n      { icon: ShieldIcon, label: \"Privacy\", path: \"/settings/privacy\" }\n    ]\n  },\n  {\n    category: \"Appearance\",\n    items: [{ icon: PaletteIcon, label: \"Theme\", path: \"/settings/theme\" }]\n  }\n];\n\nexport default function CommandComponent() {\n  const [search, setSearch] = useState(\"\");\n\n  const filteredSettings = settings\n    .map((category) => ({\n      ...category,\n      items: category.items.filter((item) =>\n        item.label.toLowerCase().includes(search.toLowerCase())\n      )\n    }))\n    .filter((category) => category.items.length > 0);\n\n  return (\n    <div className=\"w-full max-w-md rounded-lg border shadow-md\">\n      <Command className=\"**:data-[slot=input-group]:border-border **:data-[slot=input-group]:bg-background\">\n        <CommandInput placeholder=\"Search settings...\" value={search} onValueChange={setSearch} />\n        <CommandList>\n          <CommandEmpty>No settings found.</CommandEmpty>\n          {filteredSettings.map((category, index) => (\n            <div key={category.category}>\n              <CommandGroup heading={category.category}>\n                {category.items.map((item) => (\n                  <CommandItem\n                    key={item.path}\n                    onSelect={() => {\n                      console.log(`Navigate to: ${item.path}`);\n                    }}>\n                    <item.icon />\n                    <span>{item.label}</span>\n                  </CommandItem>\n                ))}\n              </CommandGroup>\n              {index < filteredSettings.length - 1 && <CommandSeparator />}\n            </div>\n          ))}\n        </CommandList>\n      </Command>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/command5.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

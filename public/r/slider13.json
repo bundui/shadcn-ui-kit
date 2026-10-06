@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider13",
+  "title": "Slider",
+  "description": "Slider built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/slider/13/index.tsx",
+      "content": "import { Label } from \"@/components/ui/label\";\nimport { Slider } from \"@/components/ui/slider\";\n\nexport default function SliderComponent() {\n  return (\n    <div className=\"flex h-48 justify-center gap-8\">\n      <div className=\"flex flex-col items-center gap-2\">\n        <Slider\n          aria-label=\"60 Hz\"\n          defaultValue={[2]}\n          max={5}\n          min={-5}\n          orientation=\"vertical\"\n        />\n        <Label className=\"text-muted-foreground flex w-0 justify-center text-xs\">60</Label>\n      </div>\n      <div className=\"flex flex-col items-center gap-2\">\n        <Slider\n          aria-label=\"250 Hz\"\n          defaultValue={[1]}\n          max={5}\n          min={-5}\n          orientation=\"vertical\"\n        />\n        <Label className=\"text-muted-foreground flex w-0 justify-center text-xs\">250</Label>\n      </div>\n      <div className=\"flex flex-col items-center gap-2\">\n        <Slider\n          aria-label=\"1k\"\n          defaultValue={[-1]}\n          max={5}\n          min={-5}\n          orientation=\"vertical\"\n        />\n        <Label className=\"text-muted-foreground flex w-0 justify-center text-xs\">1k</Label>\n      </div>\n      <div className=\"flex flex-col items-center gap-2\">\n        <Slider\n          aria-label=\"4k\"\n          defaultValue={[-3]}\n          max={5}\n          min={-5}\n          orientation=\"vertical\"\n        />\n        <Label className=\"text-muted-foreground flex w-0 justify-center text-xs\">4k</Label>\n      </div>\n      <div className=\"flex flex-col items-center gap-2\">\n        <Slider\n          aria-label=\"16k\"\n          defaultValue={[2]}\n          max={5}\n          min={-5}\n          orientation=\"vertical\"\n        />\n        <Label className=\"text-muted-foreground flex w-0 justify-center text-xs\">16K</Label>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/slider13.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

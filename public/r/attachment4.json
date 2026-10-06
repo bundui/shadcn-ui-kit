@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "attachment4",
+  "title": "Attachment",
+  "description": "A component for displaying file attachments with media previews, upload states, and actions. The examples integrate cleanly with projects built on Radix UI or Base UI.",
+  "files": [
+    {
+      "path": "contents/components/attachment/4/index.tsx",
+      "content": "import { FileTextIcon } from \"lucide-react\"\n\nimport {\n  Attachment,\n  AttachmentContent,\n  AttachmentDescription,\n  AttachmentMedia,\n  AttachmentTitle,\n} from \"@/components/ui/attachment\"\n\nexport default function AttachmentSizes() {\n  return (\n    <div className=\"mx-auto flex w-full max-w-sm flex-col gap-3 py-12\">\n      <Attachment size=\"default\" className=\"w-full\">\n        <AttachmentMedia>\n          <FileTextIcon />\n        </AttachmentMedia>\n        <AttachmentContent>\n          <AttachmentTitle>Default attachment</AttachmentTitle>\n          <AttachmentDescription>PDF · 2.4 MB</AttachmentDescription>\n        </AttachmentContent>\n      </Attachment>\n      <Attachment size=\"sm\" className=\"w-full\">\n        <AttachmentMedia>\n          <FileTextIcon />\n        </AttachmentMedia>\n        <AttachmentContent>\n          <AttachmentTitle>Small attachment</AttachmentTitle>\n          <AttachmentDescription>PDF · 2.4 MB</AttachmentDescription>\n        </AttachmentContent>\n      </Attachment>\n      <Attachment size=\"xs\" className=\"w-full\">\n        <AttachmentMedia>\n          <FileTextIcon />\n        </AttachmentMedia>\n        <AttachmentContent>\n          <AttachmentTitle>Extra small attachment</AttachmentTitle>\n        </AttachmentContent>\n      </Attachment>\n    </div>\n  )\n}\n",
+      "type": "registry:component",
+      "target": "components/attachment4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

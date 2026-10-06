@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox13",
+  "title": "Checkbox",
+  "description": "Checkbox built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/checkbox/13/index.tsx",
+      "content": "import { SmartphoneIcon, MonitorIcon, CloudIcon } from \"lucide-react\";\n\nimport { Checkbox } from \"@/components/ui/checkbox\";\nimport { Label } from \"@/components/ui/label\";\n\nconst platforms = [\n  { label: \"Mobile App\", icon: SmartphoneIcon },\n  { label: \"Desktop App\", icon: MonitorIcon },\n  { label: \"Cloud Service\", icon: CloudIcon }\n];\n\nexport default function Component() {\n  return (\n    <ul className=\"flex w-full flex-col divide-y rounded-md border\">\n      {platforms.map(({ label, icon: Icon }) => (\n        <li key={label}>\n          <Label htmlFor={label} className=\"flex items-center justify-between gap-2 px-5 py-3\">\n            <span className=\"flex items-center gap-2\">\n              <Icon className=\"size-4\" /> {label}\n            </span>\n            <Checkbox id={label} />\n          </Label>\n        </li>\n      ))}\n    </ul>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/checkbox13.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

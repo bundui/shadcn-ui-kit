@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination6",
+  "title": "Pagination",
+  "description": "Pagination built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/pagination/6/index.tsx",
+      "content": "import { usePagination } from \"@/hooks/use-pagination\";\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationEllipsis,\n  PaginationItem,\n  PaginationLink,\n  PaginationNext,\n  PaginationPrevious\n} from \"@/components/ui/pagination\";\n\ntype PaginationProps = {\n  currentPage: number;\n  totalPages: number;\n  paginationItemsToDisplay?: number;\n};\n\nexport default function PaginationComponent() {\n  return <PaginationRender currentPage={1} totalPages={10} paginationItemsToDisplay={5} />;\n}\n\nfunction PaginationRender({ currentPage, totalPages, paginationItemsToDisplay }: PaginationProps) {\n  const { pages, showLeftEllipsis, showRightEllipsis } = usePagination({\n    currentPage,\n    paginationItemsToDisplay: paginationItemsToDisplay ?? 5,\n    totalPages\n  });\n\n  return (\n    <div className=\"w-full\">\n      <Pagination className=\"w-full\">\n        <PaginationContent>\n          <PaginationItem>\n            <PaginationPrevious\n              aria-disabled={currentPage === 1 ? true : undefined}\n              className=\"aria-disabled:pointer-events-none aria-disabled:opacity-50\"\n              href={currentPage === 1 ? undefined : `#/page/${currentPage - 1}`}\n              role={currentPage === 1 ? \"link\" : undefined}\n            />\n          </PaginationItem>\n\n          {showLeftEllipsis && (\n            <PaginationItem>\n              <PaginationEllipsis />\n            </PaginationItem>\n          )}\n\n          {pages.map((page) => (\n            <PaginationItem key={page}>\n              <PaginationLink href={`#/page/${page}`} isActive={page === currentPage}>\n                {page}\n              </PaginationLink>\n            </PaginationItem>\n          ))}\n\n          {showRightEllipsis && (\n            <PaginationItem>\n              <PaginationEllipsis />\n            </PaginationItem>\n          )}\n\n          <PaginationItem>\n            <PaginationNext\n              aria-disabled={currentPage === totalPages ? true : undefined}\n              className=\"aria-disabled:pointer-events-none aria-disabled:opacity-50\"\n              href={currentPage === totalPages ? undefined : `#/page/${currentPage + 1}`}\n              role={currentPage === totalPages ? \"link\" : undefined}\n            />\n          </PaginationItem>\n        </PaginationContent>\n      </Pagination>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/pagination6.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

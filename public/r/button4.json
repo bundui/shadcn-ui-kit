@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button4",
+  "title": "Button",
+  "description": "Displays a button or a component that looks like a button. Every button example is built to work with both Radix UI and Base UI.",
+  "files": [
+    {
+      "path": "contents/components/button/4/index.tsx",
+      "content": "\"use client\";\n\nimport { LoaderCircleIcon } from \"lucide-react\";\nimport { useState } from \"react\";\n\nimport { Button } from \"@/components/ui/button\";\n\nexport default function Component() {\n  const [isLoading, setIsLoading] = useState<boolean>(false);\n\n  const handleClick = () => {\n    setIsLoading(true);\n    setTimeout(() => {\n      setIsLoading(false);\n    }, 1000);\n  };\n\n  return (\n    <Button\n      className=\"group relative\"\n      data-loading={isLoading || undefined}\n      disabled={isLoading}\n      onClick={handleClick}>\n      <span className=\"group-data-loading:text-transparent\">Click me</span>\n      {isLoading && (\n        <div className=\"absolute inset-0 flex items-center justify-center\">\n          <LoaderCircleIcon aria-hidden=\"true\" className=\"animate-spin\" size={16} />\n        </div>\n      )}\n    </Button>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

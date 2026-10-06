@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input11",
+  "title": "Input",
+  "description": "Input built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/input/11/index.tsx",
+      "content": "\"use client\";\n\nimport { Check, Copy } from \"lucide-react\";\nimport { useCopyToClipboard } from \"@/hooks/use-copy-to-clipboard\";\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupButton,\n  InputGroupInput\n} from \"@/components/ui/input-group\";\n\nexport default function Component() {\n  const { copyToClipboard, isCopied } = useCopyToClipboard();\n\n  return (\n    <div className=\"w-full max-w-sm\">\n      <InputGroup>\n        <InputGroupInput placeholder=\"https://x.com/shadcn\" readOnly />\n        <InputGroupAddon align=\"inline-end\">\n          <InputGroupButton\n            aria-label=\"Copy\"\n            title=\"Copy\"\n            size=\"icon-xs\"\n            onClick={() => {\n              copyToClipboard(\"https://x.com/shadcn\");\n            }}>\n            {isCopied ? <Check /> : <Copy />}\n          </InputGroupButton>\n        </InputGroupAddon>\n      </InputGroup>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/input11.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

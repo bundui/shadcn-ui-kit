@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group15",
+  "title": "Radio group",
+  "description": "Radio group built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/radio-group/15/index.tsx",
+      "content": "import { Badge } from \"@/components/ui/badge\";\nimport { Label } from \"@/components/ui/label\";\nimport { RadioGroup, RadioGroupItem } from \"@/components/ui/radio-group\";\n\nexport default function RadioGroupComponent() {\n  return (\n    <RadioGroup className=\"gap-2\" defaultValue=\"pro\">\n      <div className=\"bg-background hover:bg-accent relative flex cursor-pointer items-start space-x-3 rounded-lg border p-4 transition-colors\">\n        <RadioGroupItem className=\"mt-1\" id=\"free\" value=\"free\" />\n        <div className=\"grid flex-1 gap-2 leading-none\">\n          <div className=\"flex items-center justify-between\">\n            <Label className=\"cursor-pointer font-medium\" htmlFor=\"free\">\n              Starter\n            </Label>\n            <Badge variant=\"secondary\">$0/mo</Badge>\n          </div>\n          <p className=\"text-muted-foreground text-sm\">\n            Essential tools to get you started with your projects.\n          </p>\n          <ul className=\"text-muted-foreground space-y-1 text-xs\">\n            <li>• Up to 5 projects</li>\n            <li>• 10GB storage</li>\n            <li>• Email support</li>\n            <li>• Basic templates</li>\n          </ul>\n        </div>\n      </div>\n      <div className=\"bg-background hover:bg-accent relative flex cursor-pointer items-start space-x-3 rounded-lg border p-4 transition-colors\">\n        <RadioGroupItem className=\"mt-1\" id=\"pro\" value=\"pro\" />\n        <div className=\"grid flex-1 gap-2 leading-none\">\n          <div className=\"flex items-center justify-between\">\n            <Label className=\"cursor-pointer font-medium\" htmlFor=\"pro\">\n              Professional\n            </Label>\n            <Badge>$29/mo</Badge>\n          </div>\n          <p className=\"text-muted-foreground text-sm\">\n            Everything you need to scale your business.\n          </p>\n          <ul className=\"text-muted-foreground space-y-1 text-xs\">\n            <li>• Unlimited projects</li>\n            <li>• 500GB storage</li>\n            <li>• Priority support</li>\n            <li>• Advanced analytics & reports</li>\n            <li>• Custom integrations</li>\n          </ul>\n        </div>\n      </div>\n    </RadioGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/radio-group15.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

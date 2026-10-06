@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card3",
+  "title": "Hover card",
+  "description": "A hover card is a card that appears when the user hovers over an element. Every variant behaves consistently across Radix UI and Base UI.",
+  "files": [
+    {
+      "path": "contents/components/hover-card/3/index.tsx",
+      "content": "import { HoverCard, HoverCardContent, HoverCardTrigger } from \"@/components/ui/hover-card\";\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\nimport { Button } from \"@/components/ui/button\";\nimport { UserPlus, MessageCircle, User } from \"lucide-react\";\n\nexport default function HoverCardComponent() {\n  return (\n    <HoverCard>\n      <HoverCardTrigger asChild>\n        <Button variant=\"outline\">\n          <User /> View Profile\n        </Button>\n      </HoverCardTrigger>\n      <HoverCardContent className=\"w-84\">\n        <div className=\"space-y-4\">\n          <div className=\"flex items-start justify-between space-x-4\">\n            <Avatar>\n              <AvatarImage src=\"https://i.pravatar.cc/100?img=20\" />\n              <AvatarFallback>VC</AvatarFallback>\n            </Avatar>\n            <Button size=\"sm\">Follow</Button>\n          </div>\n          <div className=\"space-y-1\">\n            <h4>Jane Barlow</h4>\n            <p className=\"text-muted-foreground text-sm\">\n              The platform for frontend developers. Deploy your projects with the best developer\n              experience.\n            </p>\n          </div>\n          <div className=\"bg-muted flex items-center gap-4 rounded-md px-3 py-2\">\n            <div className=\"flex items-center gap-1.5\">\n              <span className=\"text-sm font-semibold\">1.2k</span>\n              <span className=\"text-muted-foreground text-xs\">Followers</span>\n            </div>\n            <div className=\"flex items-center gap-1.5\">\n              <span className=\"text-sm font-semibold\">342</span>\n              <span className=\"text-muted-foreground text-xs\">Following</span>\n            </div>\n            <div className=\"flex items-center gap-1.5\">\n              <span className=\"text-sm font-semibold\">89</span>\n              <span className=\"text-muted-foreground text-xs\">Projects</span>\n            </div>\n          </div>\n          <div className=\"flex gap-2\">\n            <Button variant=\"outline\" size=\"sm\" className=\"flex-1\">\n              <UserPlus />\n              Follow\n            </Button>\n            <Button variant=\"outline\" size=\"sm\" className=\"flex-1\">\n              <MessageCircle />\n              Message\n            </Button>\n          </div>\n        </div>\n      </HoverCardContent>\n    </HoverCard>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/hover-card3.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu6",
+  "title": "Dropdown menu",
+  "description": "Dropdown menu built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/dropdown-menu/6/index.tsx",
+      "content": "\"use client\";\n\nimport { ChevronDownIcon } from \"lucide-react\";\nimport { useState } from \"react\";\n\nimport { Button } from \"@/components/ui/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuCheckboxItem,\n  DropdownMenuContent,\n  DropdownMenuTrigger,\n} from \"@/components/ui/dropdown-menu\";\n\ntype Checked = boolean;\n\nexport default function Component() {\n  const [nextjs, setNextjs] = useState<Checked>(false);\n  const [sveltekit, setSveltekit] = useState<Checked>(true);\n  const [astro, setAstro] = useState<Checked>(false);\n  const [remix, setRemix] = useState<Checked>(false);\n\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button variant=\"outline\">\n          Checkbox items\n          <ChevronDownIcon\n            aria-hidden=\"true\"\n            className=\"-me-1 opacity-60\"\n            size={16}\n          />\n        </Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent>\n        <DropdownMenuCheckboxItem checked={nextjs} onCheckedChange={setNextjs}>\n          Next.js\n        </DropdownMenuCheckboxItem>\n        <DropdownMenuCheckboxItem\n          checked={sveltekit}\n          onCheckedChange={setSveltekit}\n        >\n          SvelteKit\n        </DropdownMenuCheckboxItem>\n        <DropdownMenuCheckboxItem\n          checked={remix}\n          disabled\n          onCheckedChange={setRemix}\n        >\n          Remix\n        </DropdownMenuCheckboxItem>\n        <DropdownMenuCheckboxItem checked={astro} onCheckedChange={setAstro}>\n          Astro\n        </DropdownMenuCheckboxItem>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/dropdown-menu6.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

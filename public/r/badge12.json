@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge12",
+  "title": "Badge",
+  "description": "Badge built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/badge/12/index.tsx",
+      "content": "import { Badge } from \"@/components/ui/badge\";\nimport { ArrowDown, ArrowDownIcon, ArrowUp } from \"lucide-react\";\n\nexport default function BadgeComponent() {\n  return (\n    <div className=\"flex flex-wrap items-center gap-3\">\n      <Badge className=\"bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-300\">\n        <ArrowUp />\n        9.3%\n      </Badge>\n\n      <Badge className=\"bg-red-50 text-red-700 dark:bg-red-950 dark:text-red-300\">\n        <ArrowDownIcon className=\"stroke-3\" />\n        1.9%\n      </Badge>\n\n      <Badge className=\"bg-green-600 text-white dark:bg-green-700 dark:text-green-200\">\n        <ArrowUp />\n        12.4%\n      </Badge>\n\n      <Badge variant=\"destructive\">\n        <ArrowDown />\n        -2.3%\n      </Badge>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/badge12.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

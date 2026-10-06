@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner10",
+  "title": "Spinner",
+  "description": "Spinner built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/spinner/10/index.tsx",
+      "content": "import {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupButton,\n  InputGroupTextarea,\n} from \"@/components/ui/input-group\";\nimport { Spinner } from \"@/components/ui/spinner\";\nimport { ArrowUpIcon } from \"lucide-react\";\n\nexport default function Component() {\n  return (\n    <div className=\"w-full max-w-xs\">\n      <InputGroup>\n        <InputGroupTextarea placeholder=\"Send a message...\" disabled />\n        <InputGroupAddon align=\"block-end\">\n          <Spinner /> Validating...\n          <InputGroupButton\n            size=\"icon-sm\"\n            className=\"ml-auto rounded-full\"\n            variant=\"default\"\n          >\n            <ArrowUpIcon />\n            <span className=\"sr-only\">Send</span>\n          </InputGroupButton>\n        </InputGroupAddon>\n      </InputGroup>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/spinner10.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

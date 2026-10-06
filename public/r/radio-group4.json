@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group4",
+  "title": "Radio group",
+  "description": "A group of radio buttons that allows the user to select a single option from a list. All radio group examples respect Radix UI and Base UI accessibility patterns.",
+  "files": [
+    {
+      "path": "contents/components/radio-group/4/index.tsx",
+      "content": "import { useId } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport { RadioGroup, RadioGroupItem } from \"@/components/ui/radio-group\";\n\nexport default function Component() {\n  const id = useId();\n  return (\n    <RadioGroup className=\"gap-6\" defaultValue=\"credit-card\">\n      <div className=\"flex items-start gap-2\">\n        <RadioGroupItem\n          aria-describedby={`${id}-credit-card-description`}\n          id={`${id}-credit-card`}\n          value=\"credit-card\"\n        />\n        <div className=\"grid grow gap-2\">\n          <Label htmlFor={`${id}-credit-card`}>\n            Credit or Debit Card{\" \"}\n            <span className=\"text-muted-foreground text-xs leading-[inherit] font-normal\">\n              (Visa, Mastercard, Amex)\n            </span>\n          </Label>\n          <p className=\"text-muted-foreground text-xs\" id={`${id}-credit-card-description`}>\n            Processed securely with 256-bit SSL encryption.\n          </p>\n        </div>\n      </div>\n      <div className=\"flex items-start gap-2\">\n        <RadioGroupItem\n          aria-describedby={`${id}-paypal-description`}\n          id={`${id}-paypal`}\n          value=\"paypal\"\n        />\n        <div className=\"grid grow gap-2\">\n          <Label htmlFor={`${id}-paypal`}>\n            PayPal{\" \"}\n            <span className=\"text-muted-foreground text-xs leading-[inherit] font-normal\">\n              (Digital Wallet)\n            </span>\n          </Label>\n          <p className=\"text-muted-foreground text-xs\" id={`${id}-paypal-description`}>\n            Check out faster using your saved PayPal balance or card.\n          </p>\n        </div>\n      </div>\n    </RadioGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/radio-group4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

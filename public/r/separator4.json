@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator4",
+  "title": "Separator",
+  "description": "Visually or semantically separates content. All separator styles apply cleanly in Radix UI and Base UI layouts.",
+  "files": [
+    {
+      "path": "contents/components/separator/4/index.tsx",
+      "content": "import { Separator } from \"@/components/ui/separator\";\n\nexport default function Example() {\n  return (\n    <div className=\"w-full max-w-sm\">\n      <div className=\"relative flex items-center gap-2\">\n        <span className=\"text-muted-foreground shrink-0 text-sm\">Continue with</span>\n        <Separator className=\"flex-1\" />\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/separator4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

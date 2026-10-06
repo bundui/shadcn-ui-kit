@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button8",
+  "title": "Button",
+  "description": "Button built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/button/8/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\n\nexport default function Component() {\n  return (\n    <Button className=\"gap-0 rounded-full py-0 ps-0\">\n      <div className=\"me-0.5 flex aspect-square h-full p-1.5\">\n        <img\n          alt=\"Profile image\"\n          aria-hidden=\"true\"\n          className=\"h-auto w-full rounded-full\"\n          height={24}\n          src=\"https://i.pravatar.cc/150?u=shadcn\"\n          width={24}\n        />\n      </div>\n      @tobybelhome\n    </Button>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button8.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

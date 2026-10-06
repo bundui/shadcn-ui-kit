@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "native-select1",
+  "title": "Native select",
+  "description": "A native select element styled with shadcn/ui. Each variant is equally at home in Radix UI and Base UI projects.",
+  "files": [
+    {
+      "path": "contents/components/native-select/1/index.tsx",
+      "content": "import { NativeSelect, NativeSelectOption } from \"@/components/ui/native-select\";\n\nexport default function NativeSelectComponent() {\n  return (\n    <div className=\"w-full max-w-xs *:data-[slot=native-select-wrapper]:w-full\">\n      <NativeSelect>\n        <NativeSelectOption value=\"todo\">Todo</NativeSelectOption>\n        <NativeSelectOption value=\"in-progress\">In Progress</NativeSelectOption>\n        <NativeSelectOption value=\"done\">Done</NativeSelectOption>\n        <NativeSelectOption value=\"cancelled\">Cancelled</NativeSelectOption>\n      </NativeSelect>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/native-select1.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

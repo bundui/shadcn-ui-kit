@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge16",
+  "title": "Badge",
+  "description": "Badge built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/badge/16/index.tsx",
+      "content": "import { ArrowRightIcon } from \"lucide-react\";\n\nimport { Badge } from \"@/components/ui/badge\";\n\nexport default function BadgeComponent() {\n  return (\n    <Badge\n      className=\"bg-background h-9 gap-0 rounded-full p-0\"\n      variant=\"outline\"\n    >\n      <span className=\"flex h-full items-center border-e px-4 font-medium\">\n        AI Assistant\n      </span>\n      <a\n        className=\"text-muted-foreground hover:text-foreground flex h-full items-center gap-1.5 px-4 transition-colors\"\n        href=\"#\"\n      >\n        Discover More\n        <ArrowRightIcon aria-hidden=\"true\" className=\"size-4\" />\n      </a>\n    </Badge>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/badge16.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

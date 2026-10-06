@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast10",
+  "title": "Sonner toast",
+  "description": "Sonner toast built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/sonner-toast/10/index.tsx",
+      "content": "\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { toast } from \"sonner\";\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\n\nexport default function ToastComponent() {\n  const handleNotification = () => {\n    toast.custom((t) => (\n      <div className=\"bg-background flex items-start rounded-lg shadow-sm border gap-4 p-4\">\n        <Avatar className=\"mt-0.5\">\n          <AvatarImage src=\"https://i.pravatar.cc/150?img=2\" alt=\"Sarah\" />\n          <AvatarFallback>SM</AvatarFallback>\n        </Avatar>\n        <div>\n          <div className=\"text-sm font-medium\">New message from Sarah</div>\n          <p className=\"text-muted-foreground text-sm\">Hey! Are you available for a quick call?</p>\n          <Button className=\"mt-2\" variant=\"outline\" size=\"sm\" onClick={() => toast.dismiss(t)}>\n            Reply\n          </Button>\n        </div>\n      </div>\n    ));\n  };\n\n  return (\n    <Button variant=\"outline\" onClick={handleNotification}>\n      Custom Toast\n    </Button>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/toast10.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

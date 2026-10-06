@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox1",
+  "title": "Checkbox",
+  "description": "A control that allows the user to toggle between checked and not checked. Each checkbox variant follows the interaction models of Radix UI and Base UI.",
+  "files": [
+    {
+      "path": "contents/components/checkbox/1/index.tsx",
+      "content": "import { useId } from \"react\";\n\nimport { Checkbox } from \"@/components/ui/checkbox\";\nimport { Label } from \"@/components/ui/label\";\n\nexport default function Component() {\n  const id = useId();\n  return (\n    <div className=\"flex items-center gap-2\">\n      <Checkbox id={id} />\n      <Label htmlFor={id}>\n        I agree to the{\" \"}\n        <a className=\"underline\" href=\"https://shadcnuikit.com\" rel=\"noreferrer\" target=\"_blank\">\n          terms of service\n        </a>\n      </Label>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/checkbox1.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

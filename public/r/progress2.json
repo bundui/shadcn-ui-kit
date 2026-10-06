@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress2",
+  "title": "Progress",
+  "description": "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar. Every progress variant renders consistently with Radix UI and Base UI.",
+  "files": [
+    {
+      "path": "contents/components/progress/2/index.tsx",
+      "content": "import { Progress } from \"@/components/ui/progress\";\n\nexport default function ProgressComponent() {\n  return <Progress value={75} className=\"bg-yellow-500/20 [&>div]:bg-yellow-500 w-full max-w-sm\" />;\n}\n",
+      "type": "registry:component",
+      "target": "components/progress2.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

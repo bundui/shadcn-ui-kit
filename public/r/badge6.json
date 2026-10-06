@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge6",
+  "title": "Badge",
+  "description": "Badge built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/badge/6/index.tsx",
+      "content": "import { CheckIcon } from \"lucide-react\";\n\nimport { Badge } from \"@/components/ui/badge\";\n\nexport default function Component() {\n  return (\n    <Badge variant=\"outline\">\n      <CheckIcon\n        aria-hidden=\"true\"\n        className=\"text-emerald-600\"\n        data-icon=\"inline-start\"\n      />\n      Completed\n    </Badge>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/badge6.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

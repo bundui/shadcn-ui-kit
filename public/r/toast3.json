@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast3",
+  "title": "Sonner toast",
+  "description": "An opinionated toast component for React. Every toast example sits comfortably next to Radix UI and Base UI components.",
+  "files": [
+    {
+      "path": "contents/components/sonner-toast/3/index.tsx",
+      "content": "\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { toast } from \"sonner\";\n\nexport default function ToastComponent() {\n  const handlePaymentError = () => {\n    toast.error(\"Payment failed\", {\n      description: \"Your card was declined. Please check your payment details and try again.\",\n      duration: 5000\n    });\n  };\n\n  return (\n    <Button variant=\"destructive\" onClick={handlePaymentError}>\n      Process Payment\n    </Button>\n  );\n}\n\n",
+      "type": "registry:component",
+      "target": "components/toast3.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

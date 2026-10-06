@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input6",
+  "title": "Input",
+  "description": "Input built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/input/6/index.tsx",
+      "content": "import { Search } from \"lucide-react\";\n\nimport { InputGroup, InputGroupAddon, InputGroupInput } from \"@/components/ui/input-group\";\n\nexport default function Component() {\n  return (\n    <InputGroup className=\"max-w-sm\">\n      <InputGroupInput placeholder=\"Search...\" />\n      <InputGroupAddon>\n        <Search />\n      </InputGroupAddon>\n      <InputGroupAddon align=\"inline-end\">12 results</InputGroupAddon>\n    </InputGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/input6.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

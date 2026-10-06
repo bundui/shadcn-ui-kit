@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button10",
+  "title": "Button",
+  "description": "Button built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/button/10/index.tsx",
+      "content": "import { PlusIcon } from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\n\nexport default function Component() {\n  return (\n    <Button aria-label=\"Add new item\" className=\"rounded-full\" size=\"icon\" variant=\"outline\">\n      <PlusIcon aria-hidden=\"true\" size={16} />\n    </Button>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button10.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

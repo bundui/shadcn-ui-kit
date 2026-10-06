@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert10",
+  "title": "Alert",
+  "description": "Alert built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/alert/10/index.tsx",
+      "content": "import { Alert, AlertDescription, AlertTitle } from \"@/components/ui/alert\";\nimport { AlertCircleIcon } from \"lucide-react\";\n\nexport default function AlertComponent() {\n  return (\n    <Alert variant=\"destructive\">\n      <AlertCircleIcon className=\"size-4\" />\n      <AlertTitle>Password does not meet requirements:</AlertTitle>\n      <AlertDescription>\n        <ul className=\"list-inside list-disc text-sm\">\n          <li>Minimum 8 characters</li>\n          <li>At least one uppercase letter</li>\n          <li>At least one lowercase letter</li>\n        </ul>\n      </AlertDescription>\n    </Alert>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/alert10.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

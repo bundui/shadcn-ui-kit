@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea1",
+  "title": "Textarea",
+  "description": "A multi-line text input control. Every textarea variant fits projects standardized on Radix UI or Base UI.",
+  "files": [
+    {
+      "path": "contents/components/textarea/1/index.tsx",
+      "content": "import { Label } from \"@/components/ui/label\";\nimport { Textarea } from \"@/components/ui/textarea\";\n\nexport default function TextareaComponent() {\n  return (\n    <div className=\"grid w-full max-w-sm gap-1.5 *:not-first:mt-2\">\n      <Label htmlFor=\"message\">Your message</Label>\n      <Textarea placeholder=\"Type your message here.\" id=\"message\" />\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/textarea1.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch6",
+  "title": "Switch",
+  "description": "Switch built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/switch/6/index.tsx",
+      "content": "\"use client\";\n\nimport { MoonIcon, SunIcon } from \"lucide-react\";\nimport { useId, useState } from \"react\";\n\nimport { Switch } from \"@/components/ui/switch\";\n\nexport default function SwitchComponent() {\n  const id = useId();\n  const [checked, setChecked] = useState(false);\n\n  const toggleSwitch = () => setChecked((prev) => !prev);\n\n  return (\n    <div\n      className=\"group inline-flex items-center gap-2\"\n      data-state={checked ? \"checked\" : \"unchecked\"}>\n      <span\n        aria-controls={id}\n        className=\"group-data-[state=checked]:text-muted-foreground/70 flex-1 cursor-pointer text-right text-sm font-medium\"\n        id={`${id}-off`}\n        onClick={() => setChecked(false)}>\n        <MoonIcon aria-hidden=\"true\" size={16} />\n      </span>\n      <Switch\n        aria-label=\"Toggle between dark and light mode\"\n        aria-labelledby={`${id}-off ${id}-on`}\n        checked={checked}\n        id={id}\n        onCheckedChange={toggleSwitch}\n      />\n      <span\n        aria-controls={id}\n        className=\"group-data-[state=unchecked]:text-muted-foreground/70 flex-1 cursor-pointer text-left text-sm font-medium\"\n        id={`${id}-on`}\n        onClick={() => setChecked(true)}>\n        <SunIcon aria-hidden=\"true\" size={16} />\n      </span>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/switch6.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

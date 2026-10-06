@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox4",
+  "title": "Checkbox",
+  "description": "A control that allows the user to toggle between checked and not checked. Each checkbox variant follows the interaction models of Radix UI and Base UI.",
+  "files": [
+    {
+      "path": "contents/components/checkbox/4/index.tsx",
+      "content": "import { useId } from \"react\";\n\nimport { Checkbox } from \"@/components/ui/checkbox\";\nimport { Label } from \"@/components/ui/label\";\n\nexport default function Component() {\n  const id = useId();\n  return (\n    <div className=\"flex items-center gap-2\">\n      <Checkbox className=\"rounded-full\" defaultChecked id={id} />\n      <Label\n        className=\"peer-data-[state=checked]:line-throgh after:bg-muted-foreground peer-data-[state=checked]:text-muted-foreground relative [--primary:var(--color-emerald-500)] after:absolute after:top-1/2 after:left-0 after:h-px after:w-full after:origin-bottom after:-translate-y-1/2 after:scale-x-0 after:transition-transform after:ease-in-out peer-data-[state=checked]:after:origin-bottom peer-data-[state=checked]:after:scale-x-100\"\n        htmlFor={id}>\n        Fancy todo item\n      </Label>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/checkbox4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

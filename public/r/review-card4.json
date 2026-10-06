@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "review-card4",
+  "title": "Review",
+  "description": "Review built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/examples/cards/review/4/index.tsx",
+      "content": "import { StarIcon } from \"lucide-react\";\nimport { Card, CardContent } from \"@/components/ui/card\";\n\nfunction Stars({ value }: { value: number }) {\n  return (\n    <div className=\"flex items-center gap-1\">\n      {Array.from({ length: 5 }).map((_, i) => {\n        const fill = Math.min(Math.max(value - i, 0), 1);\n        return (\n          <span key={i} className=\"relative inline-block size-6\">\n            <StarIcon className=\"size-6 fill-muted text-muted\" />\n            <span className=\"absolute inset-0 overflow-hidden\" style={{ width: `${fill * 100}%` }}>\n              <StarIcon className=\"size-6 fill-amber-400 text-amber-400\" />\n            </span>\n          </span>\n        );\n      })}\n    </div>\n  );\n}\n\nexport default function ReviewCard() {\n  return (\n    <Card className=\"w-full shadow-none md:w-[420px]\">\n      <CardContent className=\"space-y-4\">\n        <div className=\"flex items-center gap-4\">\n          <img\n            src=\"https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=80&h=80&fit=crop&crop=face\"\n            alt=\"Shasha Kamala\"\n            className=\"size-14 rounded-full object-cover\"\n          />\n          <div>\n            <p className=\"font-semibold\">Shasha Kamala</p>\n            <p className=\"text-sm text-muted-foreground\">Verified Customer</p>\n          </div>\n        </div>\n\n        <Stars value={3.5} />\n\n        <p className=\"text-muted-foreground leading-relaxed\">\n          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n          eiusmod tempor incididunt ut labore et dolore magna aliqua.\n          Scelerisque eleifend donec pretium vulputate.\n        </p>\n      </CardContent>\n    </Card>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/review-card4.tsx"
+    }
+  ],
+  "type": "registry:block"
+}

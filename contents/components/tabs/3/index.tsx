@@ -1,0 +1,39 @@
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+export default function Component() {
+  return (
+    <Tabs defaultValue="overview">
+      <TabsList className="gap-1 bg-transparent">
+        <TabsTrigger
+          className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-full data-[state=active]:shadow-none"
+          value="overview"
+        >
+          Overview
+        </TabsTrigger>
+        <TabsTrigger
+          className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-full data-[state=active]:shadow-none"
+          value="analytics"
+        >
+          Analytics
+        </TabsTrigger>
+        <TabsTrigger
+          className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground rounded-full data-[state=active]:shadow-none"
+          value="reports"
+        >
+          Reports
+        </TabsTrigger>
+      </TabsList>
+      <div className="bg-muted rounded-lg p-4">
+        <TabsContent value="overview">
+          <p className="text-xs">Content for Tab 1</p>
+        </TabsContent>
+        <TabsContent value="analytics">
+          <p className="text-xs">Content for Tab 2</p>
+        </TabsContent>
+        <TabsContent value="reports">
+          <p className="text-xs">Content for Tab 3</p>
+        </TabsContent>
+      </div>
+    </Tabs>
+  );
+}

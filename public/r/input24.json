@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input24",
+  "title": "Input",
+  "description": "Input built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/input/24/index.tsx",
+      "content": "\"use client\";\n\nimport { type Tag, TagInput } from \"emblor\";\nimport { useId, useState } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\n\nconst tags = [\n  {\n    id: \"1\",\n    text: \"Sport\"\n  },\n  {\n    id: \"2\",\n    text: \"Coding\"\n  },\n  {\n    id: \"3\",\n    text: \"Travel\"\n  }\n];\n\nexport default function Component() {\n  const id = useId();\n  const [exampleTags, setExampleTags] = useState<Tag[]>(tags);\n  const [activeTagIndex, setActiveTagIndex] = useState<number | null>(null);\n\n  return (\n    <div className=\"w-full max-w-sm *:not-first:mt-2\">\n      <Label htmlFor={id}>Input with tags</Label>\n      <TagInput\n        activeTagIndex={activeTagIndex}\n        id={id}\n        inlineTags={false}\n        inputFieldPosition=\"top\"\n        placeholder=\"Add a tag\"\n        setActiveTagIndex={setActiveTagIndex}\n        setTags={(newTags) => {\n          setExampleTags(newTags);\n        }}\n        styleClasses={{\n          input:\n            \"rounded-md transition-[color,box-shadow] placeholder:text-muted-foreground/70 focus-visible:border-ring outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50\",\n          tag: {\n            body: \"relative h-7 bg-background border border-input hover:bg-background rounded-md font-medium text-xs ps-2 pe-7\",\n            closeButton:\n              \"absolute -inset-y-px -end-px p-0 rounded-s-none rounded-e-md flex size-7 transition-[color,box-shadow] outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] text-muted-foreground/80 hover:text-foreground\"\n          },\n          tagList: {\n            container: \"gap-1\"\n          }\n        }}\n        tags={exampleTags}\n      />\n      <p aria-live=\"polite\" className=\"text-muted-foreground mt-2 text-xs\" role=\"region\">\n        Built with{\" \"}\n        <a\n          className=\"hover:text-foreground underline\"\n          href=\"https://github.com/JaleelB/emblor\"\n          rel=\"noreferrer noopener nofollow\"\n          target=\"_blank\">\n          emblor\n        </a>\n      </p>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/input24.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

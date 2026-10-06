@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner11",
+  "title": "Spinner",
+  "description": "Spinner built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/spinner/11/index.tsx",
+      "content": "import { Avatar, AvatarImage } from \"@/components/ui/avatar\";\nimport { Spinner } from \"@/components/ui/spinner\";\n\nexport default function SpinnerComponent() {\n  return (\n    <Avatar className=\"relative size-10\">\n      <AvatarImage alt=\"Tobias Whetton\" src=\"https://i.pravatar.cc/150?img=3\" />\n      <div className=\"absolute inset-0 flex cursor-pointer items-center justify-center rounded-full bg-black/20 p-1\">\n        <Spinner className=\"size-6 animate-spin text-white\" />\n      </div>\n    </Avatar>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/spinner11.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

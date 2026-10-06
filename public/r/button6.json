@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button6",
+  "title": "Button",
+  "description": "Button built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/button/6/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\n\nexport default function Component() {\n  return (\n    <Button className=\"gap-3\" variant=\"outline\">\n      Messages\n      <span className=\"text-muted-foreground -me-1 inline-flex h-5 max-h-full items-center rounded border px-1 font-[inherit] text-[0.625rem] font-medium\">\n        18\n      </span>\n    </Button>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button6.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

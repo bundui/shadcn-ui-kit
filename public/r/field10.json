@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field10",
+  "title": "Field",
+  "description": "Field built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/field/10/index.tsx",
+      "content": "import {\n  Field,\n  FieldContent,\n  FieldDescription,\n  FieldGroup,\n  FieldLabel,\n  FieldLegend,\n  FieldSet,\n  FieldTitle,\n} from \"@/components/ui/field\";\nimport { RadioGroup, RadioGroupItem } from \"@/components/ui/radio-group\";\n\nexport default function FieldComponent() {\n  return (\n    <FieldGroup className=\"w-full max-w-xs\">\n      <FieldSet>\n        <FieldLegend variant=\"label\">Compute Environment</FieldLegend>\n        <FieldDescription>\n          Select the compute environment for your cluster.\n        </FieldDescription>\n        <RadioGroup defaultValue=\"kubernetes\">\n          <FieldLabel htmlFor=\"kubernetes-r2h\">\n            <Field orientation=\"horizontal\">\n              <FieldContent>\n                <FieldTitle>Kubernetes</FieldTitle>\n                <FieldDescription>\n                  Run GPU workloads on a K8s cluster.\n                </FieldDescription>\n              </FieldContent>\n              <RadioGroupItem value=\"kubernetes\" id=\"kubernetes-r2h\" />\n            </Field>\n          </FieldLabel>\n          <FieldLabel htmlFor=\"vm-z4k\">\n            <Field orientation=\"horizontal\">\n              <FieldContent>\n                <FieldTitle>Virtual Machine</FieldTitle>\n                <FieldDescription>\n                  Access a cluster to run GPU workloads.\n                </FieldDescription>\n              </FieldContent>\n              <RadioGroupItem value=\"vm\" id=\"vm-z4k\" />\n            </Field>\n          </FieldLabel>\n        </RadioGroup>\n      </FieldSet>\n    </FieldGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/field10.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

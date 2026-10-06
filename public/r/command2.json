@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "command2",
+  "title": "Command",
+  "description": "Command menu for search and quick actions. Each command menu example runs on Radix UI and Base UI without extra work.",
+  "files": [
+    {
+      "path": "contents/components/command/2/index.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\nimport {\n  Command,\n  CommandEmpty,\n  CommandGroup,\n  CommandInput,\n  CommandItem,\n  CommandList,\n  CommandShortcut\n} from \"@/components/ui/command\";\nimport { Button } from \"@/components/ui/button\";\nimport { FileIcon, FolderIcon, SettingsIcon, UserIcon, SearchIcon, HomeIcon } from \"lucide-react\";\n\nexport default function CommandComponent() {\n  const [open, setOpen] = useState(false);\n\n  const commands = [\n    {\n      group: \"Navigation\",\n      items: [\n        { icon: HomeIcon, label: \"Home\", shortcut: \"⌘H\" },\n        { icon: FileIcon, label: \"Documents\", shortcut: \"⌘D\" },\n        { icon: FolderIcon, label: \"Projects\", shortcut: \"⌘P\" }\n      ]\n    },\n    {\n      group: \"Actions\",\n      items: [\n        { icon: SearchIcon, label: \"Search\", shortcut: \"⌘K\" },\n        { icon: SettingsIcon, label: \"Settings\", shortcut: \"⌘,\" },\n        { icon: UserIcon, label: \"Profile\", shortcut: \"⌘U\" }\n      ]\n    }\n  ];\n\n  return (\n    <div className=\"w-full max-w-md rounded-lg border shadow-md\">\n      <Command className=\"**:data-[slot=input-group]:border-border **:data-[slot=input-group]:bg-background\">\n        <CommandInput placeholder=\"Type a command or search...\" />\n        <CommandList>\n          <CommandEmpty>No results found.</CommandEmpty>\n          {commands.map((group) => (\n            <CommandGroup key={group.group} heading={group.group}>\n              {group.items.map((item) => (\n                <CommandItem\n                  key={item.label}\n                  onSelect={() => {\n                    console.log(`Selected: ${item.label}`);\n                    setOpen(false);\n                  }}>\n                  <item.icon />\n                  <span>{item.label}</span>\n                  <CommandShortcut>{item.shortcut}</CommandShortcut>\n                </CommandItem>\n              ))}\n            </CommandGroup>\n          ))}\n        </CommandList>\n      </Command>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/command2.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

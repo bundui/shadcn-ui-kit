@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input9",
+  "title": "Input",
+  "description": "Input built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/input/9/index.tsx",
+      "content": "import { ChevronDownIcon, MoreHorizontal } from \"lucide-react\";\n\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuTrigger\n} from \"@/components/ui/dropdown-menu\";\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupButton,\n  InputGroupInput\n} from \"@/components/ui/input-group\";\nimport {\n  Select,\n  SelectItem,\n  SelectValue,\n  SelectTrigger,\n  SelectContent\n} from \"@/components/ui/select\";\n\nexport default function Component() {\n  return (\n    <div className=\"grid w-full max-w-sm gap-4\">\n      <InputGroup>\n        <InputGroupInput placeholder=\"Enter search query\" />\n        <InputGroupAddon align=\"inline-end\">\n          <Select defaultValue=\".com\">\n            <SelectTrigger className=\"absolute end-0 border-0! focus:ring-0!\">\n              <SelectValue />\n            </SelectTrigger>\n            <SelectContent align=\"end\">\n              <SelectItem value=\".com\">.com</SelectItem>\n              <SelectItem value=\".net\">.net</SelectItem>\n              <SelectItem value=\".org\">.org</SelectItem>\n            </SelectContent>\n          </Select>\n        </InputGroupAddon>\n      </InputGroup>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/input9.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

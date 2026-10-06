@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "item8",
+  "title": "Item",
+  "description": "Item built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/item/8/index.tsx",
+      "content": "import Image from \"next/image\";\nimport {\n  Item,\n  ItemContent,\n  ItemDescription,\n  ItemGroup,\n  ItemHeader,\n  ItemTitle,\n} from \"@/components/ui/item\";\n\nconst models = [\n  {\n    name: \"v0-1.5-sm\",\n    description: \"Everyday tasks and UI generation.\",\n    image:\n      \"https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=640&auto=format&fit=crop\",\n    credit: \"Codioful (formerly Gradienta) on Unsplash\",\n  },\n  {\n    name: \"v0-1.5-lg\",\n    description: \"Advanced thinking or reasoning.\",\n    image:\n      \"https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=640&auto=format&fit=crop\",\n    credit: \"Milad Fakurian on Unsplash\",\n  },\n];\n\nexport default function ItemComponent() {\n  return (\n    <ItemGroup className=\"grid grid-cols-2 max-w-sm gap-4\">\n      {models.map((model) => (\n        <Item key={model.name} variant=\"outline\">\n          <ItemHeader>\n            <Image\n              src={model.image}\n              alt={model.name}\n              width={128}\n              height={128}\n              className=\"aspect-square w-full rounded-sm object-cover\"\n            />\n          </ItemHeader>\n          <ItemContent>\n            <ItemTitle>{model.name}</ItemTitle>\n            <ItemDescription>{model.description}</ItemDescription>\n          </ItemContent>\n        </Item>\n      ))}\n    </ItemGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/item8.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

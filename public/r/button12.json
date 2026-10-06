@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button12",
+  "title": "Button",
+  "description": "Button built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/button/12/index.tsx",
+      "content": "\"use client\";\n\nimport { MoonIcon, SunIcon } from \"lucide-react\";\nimport { useState } from \"react\";\n\nimport { Toggle } from \"@/components/ui/toggle\";\n\nexport default function Component() {\n  const [theme, setTheme] = useState<string>(\"light\");\n\n  return (\n    <div>\n      <Toggle\n        aria-label={`Switch to ${theme === \"dark\" ? \"light\" : \"dark\"} mode`}\n        className=\"group data-[state=on]:hover:bg-muted size-9 data-[state=on]:bg-transparent\"\n        onPressedChange={() => setTheme((prev) => (prev === \"dark\" ? \"light\" : \"dark\"))}\n        pressed={theme === \"dark\"}\n        variant=\"outline\">\n        <MoonIcon\n          aria-hidden=\"true\"\n          className=\"shrink-0 scale-0 opacity-0 transition-all group-data-[state=on]:scale-100 group-data-[state=on]:opacity-100\"\n          size={16}\n        />\n        <SunIcon\n          aria-hidden=\"true\"\n          className=\"absolute shrink-0 scale-100 opacity-100 transition-all group-data-[state=on]:scale-0 group-data-[state=on]:opacity-0\"\n          size={16}\n        />\n      </Toggle>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button12.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sheet5",
+  "title": "Sheet",
+  "description": "Extends the Dialog component to display content that complements the main content of the screen. Each sheet variant adapts to either Radix UI or Base UI foundations.",
+  "files": [
+    {
+      "path": "contents/components/sheet/5/index.tsx",
+      "content": "\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport {\n  Sheet,\n  SheetContent,\n  SheetDescription,\n  SheetHeader,\n  SheetTitle,\n  SheetTrigger\n} from \"@/components/ui/sheet\";\n\nexport default function SheetComponent() {\n  return (\n    <Sheet>\n      <SheetTrigger asChild>\n        <Button variant=\"outline\">Open Top Sheet</Button>\n      </SheetTrigger>\n      <SheetContent side=\"top\">\n        <SheetHeader>\n          <SheetTitle>Notifications</SheetTitle>\n          <SheetDescription>You have 3 new notifications.</SheetDescription>\n        </SheetHeader>\n        <div className=\"space-y-3 p-4 pt-0\">\n          <div className=\"rounded-lg border p-3\">\n            <p className=\"font-medium\">New message received</p>\n            <p className=\"text-muted-foreground text-sm\">You have a new message from John Doe</p>\n          </div>\n          <div className=\"rounded-lg border p-3\">\n            <p className=\"font-medium\">Task completed</p>\n            <p className=\"text-muted-foreground text-sm\">Your task has been marked as completed</p>\n          </div>\n          <div className=\"rounded-lg border p-3\">\n            <p className=\"font-medium\">System update</p>\n            <p className=\"text-muted-foreground text-sm\">A new system update is available</p>\n          </div>\n        </div>\n      </SheetContent>\n    </Sheet>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/sheet5.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

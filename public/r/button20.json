@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button20",
+  "title": "Button",
+  "description": "Button built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/button/20/index.tsx",
+      "content": "import { ChevronRightIcon } from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { ButtonGroup } from \"@/components/ui/button-group\";\n\nexport default function Component() {\n  return (\n    <ButtonGroup aria-label=\"Pagination\">\n      <Button aria-label=\"Next\" variant=\"outline\">\n        Next\n      </Button>\n      <Button aria-label=\"Next\" variant=\"outline\" size=\"icon\">\n        <ChevronRightIcon />\n      </Button>\n    </ButtonGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button20.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

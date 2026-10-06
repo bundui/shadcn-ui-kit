@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card8",
+  "title": "Card",
+  "description": "Card built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/card/8/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardHeader,\n  CardTitle,\n} from \"@/components/ui/card\";\nimport {\n  Empty,\n  EmptyContent,\n  EmptyDescription,\n  EmptyHeader,\n  EmptyMedia,\n  EmptyTitle,\n} from \"@/components/ui/empty\";\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n} from \"@/components/ui/input-group\";\nimport { SearchIcon, UserPlusIcon } from \"lucide-react\";\n\nexport default function CardComponent() {\n  return (\n    <Card className=\"w-full max-w-md shadow-none\">\n      <CardHeader>\n        <CardTitle>Team Members</CardTitle>\n        <CardDescription>\n          Invite your team members to collaborate.\n        </CardDescription>\n      </CardHeader>\n      <CardContent>\n        <InputGroup>\n          <InputGroupAddon>\n            <SearchIcon />\n          </InputGroupAddon>\n          <InputGroupInput type=\"search\" placeholder=\"Search team...\" />\n        </InputGroup>\n        <Empty>\n          <EmptyHeader>\n            <EmptyMedia variant=\"icon\">\n              <UserPlusIcon />\n            </EmptyMedia>\n            <EmptyTitle>No team members found</EmptyTitle>\n            <EmptyDescription>\n              We couldn&apos;t find any team members matching your search. Try\n              adjusting your filters or invite a new member.\n            </EmptyDescription>\n          </EmptyHeader>\n          <EmptyContent>\n            <Button>Invite Member</Button>\n          </EmptyContent>\n        </Empty>\n      </CardContent>\n    </Card>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/card8.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu2",
+  "title": "Dropdown menu",
+  "description": "A dropdown menu is a menu that appears when the user clicks on a button. Every menu example matches the semantics of Radix UI and Base UI.",
+  "files": [
+    {
+      "path": "contents/components/dropdown-menu/2/index.tsx",
+      "content": "import { EllipsisIcon } from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuTrigger\n} from \"@/components/ui/dropdown-menu\";\n\nexport default function Component() {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button\n          aria-label=\"Open edit menu\"\n          className=\"rounded-full shadow-none\"\n          size=\"icon\"\n          variant=\"ghost\">\n          <EllipsisIcon aria-hidden=\"true\" size={16} />\n        </Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent>\n        <DropdownMenuItem>Option 1</DropdownMenuItem>\n        <DropdownMenuItem>Option 2</DropdownMenuItem>\n        <DropdownMenuItem>Option 3</DropdownMenuItem>\n        <DropdownMenuItem>Option 4</DropdownMenuItem>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/dropdown-menu2.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

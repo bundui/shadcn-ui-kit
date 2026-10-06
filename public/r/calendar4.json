@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar4",
+  "title": "Calendar",
+  "description": "A calendar component that allows users to select a date or a range of dates. Each calendar variant integrates smoothly with Radix UI and Base UI setups.",
+  "files": [
+    {
+      "path": "contents/components/calendar/4/index.tsx",
+      "content": "\"use client\";\n\nimport { addDays, subDays } from \"date-fns\";\nimport { useState } from \"react\";\n\nimport { Calendar } from \"@/components/ui/calendar\";\n\nexport default function Component() {\n  const today = new Date();\n  const [date, setDate] = useState<Date[] | undefined>([\n    subDays(today, 17),\n    addDays(today, 2),\n    addDays(today, 6),\n    addDays(today, 8)\n  ]);\n\n  return (\n    <Calendar\n      className=\"rounded-md border p-2\"\n      mode=\"multiple\"\n      onSelect={setDate}\n      selected={date}\n    />\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/calendar4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

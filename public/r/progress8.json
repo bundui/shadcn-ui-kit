@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress8",
+  "title": "Progress",
+  "description": "Progress built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/progress/8/index.tsx",
+      "content": "import { Progress } from \"@/components/ui/progress\";\n\nexport default function ProgressComponent() {\n  return (\n    <div className=\"w-full max-w-sm space-y-2\">\n      <Progress value={50} className=\"h-3\" />\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/progress8.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

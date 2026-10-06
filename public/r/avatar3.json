@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar3",
+  "title": "Avatar",
+  "description": "An image element with a fallback for representing the user. Every avatar style is compatible with Radix UI and Base UI out of the box.",
+  "files": [
+    {
+      "path": "contents/components/avatar/3/index.tsx",
+      "content": "import { UserRoundIcon } from \"lucide-react\";\n\nimport { Avatar, AvatarFallback } from \"@/components/ui/avatar\";\n\nexport default function AvatarComponent() {\n  return (\n    <Avatar>\n      <AvatarFallback>\n        <UserRoundIcon aria-hidden=\"true\" className=\"opacity-60\" size={16} />\n      </AvatarFallback>\n    </Avatar>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/avatar3.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

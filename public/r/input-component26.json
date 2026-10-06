@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-component26",
+  "title": "Input",
+  "description": "Input built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/input/26/index.tsx",
+      "content": "import { Input } from \"@/components/ui/input\";\nimport { Label } from \"@/components/ui/label\";\n\nexport default function Example() {\n  return (\n    <div className=\"grid w-full max-w-sm items-center gap-1.5\">\n      <Label htmlFor=\"email\">Email</Label>\n      <Input type=\"email\" id=\"email\" placeholder=\"Email\" />\n    </div>\n  );\n}\n\n",
+      "type": "registry:component",
+      "target": "components/input-component26.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

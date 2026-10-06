@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button17",
+  "title": "Button",
+  "description": "Button built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/button/17/index.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\nimport { MinusIcon, PlusIcon } from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { ButtonGroup } from \"@/components/ui/button-group\";\nimport { Input } from \"@/components/ui/input\";\n\nexport default function Component() {\n  const [value, setValue] = useState<number>(1);\n\n  const handleIncrement = () => setValue((prev) => prev + 1);\n  const handleDecrement = () => setValue((prev) => (prev > 1 ? prev - 1 : 1));\n\n  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {\n    const newValue = parseInt(e.target.value, 10);\n    if (!isNaN(newValue) && newValue > 0) {\n      setValue(newValue);\n    } else if (e.target.value === \"\") {\n      setValue(1);\n    }\n  };\n\n  return (\n    <ButtonGroup aria-label=\"Quantity selector\">\n      <Button variant=\"outline\" size=\"icon\" onClick={handleDecrement}>\n        <MinusIcon />\n      </Button>\n      <Input readOnly value={value} onChange={handleInputChange} className=\"w-14 text-center\" min={1} />\n      <Button variant=\"outline\" size=\"icon\" onClick={handleIncrement}>\n        <PlusIcon />\n      </Button>\n    </ButtonGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button17.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

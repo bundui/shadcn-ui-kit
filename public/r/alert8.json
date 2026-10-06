@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert8",
+  "title": "Alert",
+  "description": "Alert built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/alert/8/index.tsx",
+      "content": "import { Alert, AlertTitle } from \"@/components/ui/alert\";\nimport { CheckCircle2Icon } from \"lucide-react\";\n\nexport default function AlertComponent() {\n  return (\n    <Alert>\n      <CheckCircle2Icon className=\"text-green-600! size-4\" />\n      <AlertTitle>Payment successful</AlertTitle>\n    </Alert>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/alert8.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

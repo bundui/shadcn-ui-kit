@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast4",
+  "title": "Sonner toast",
+  "description": "An opinionated toast component for React. Every toast example sits comfortably next to Radix UI and Base UI components.",
+  "files": [
+    {
+      "path": "contents/components/sonner-toast/4/index.tsx",
+      "content": "\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { toast } from \"sonner\";\n\nexport default function ToastComponent() {\n  const promise = () =>\n    new Promise((resolve) => setTimeout(() => resolve({ name: \"Sonner\" }), 2000));\n\n  const handleFileUpload = () => {\n    toast.promise(promise, {\n      loading: \"Uploading file...\",\n      success: \"File uploaded successfully\",\n      error: \"Failed to upload file\"\n    });\n  };\n\n  return (\n    <Button variant=\"outline\" onClick={handleFileUpload}>\n      Upload File\n    </Button>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/toast4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

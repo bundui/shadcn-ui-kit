@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider5",
+  "title": "Slider",
+  "description": "An input where the user selects a value from within a given range. Each slider example tracks the behavior of Radix UI and Base UI primitives.",
+  "files": [
+    {
+      "path": "contents/components/slider/5/index.tsx",
+      "content": "import { Slider } from \"@/components/ui/slider\";\nimport { Volume2Icon, VolumeOffIcon } from \"lucide-react\";\n\nexport default function ProgressComponent() {\n  return (\n    <div className=\"flex w-full max-w-xs gap-4 font-medium\">\n      <VolumeOffIcon className=\"text-muted-foreground size-5 shrink-0\" />\n      <Slider defaultValue={[80]} max={100} />\n      <Volume2Icon className=\"text-muted-foreground size-5 shrink-0\" />\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/slider5.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

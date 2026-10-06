@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hero1",
+  "title": "Hero sections",
+  "description": "Centered hero with a small announcement badge, headline, short text, and two buttons.",
+  "files": [
+    {
+      "path": "contents/blocks/marketing/hero-sections/1/index.tsx",
+      "content": "import { ArrowRightIcon } from \"lucide-react\";\nimport Link from \"next/link\";\n\nimport { Button } from \"@/components/ui/button\";\n\nexport default function HeroSection() {\n  return (\n    <div className=\"w-full mx-auto max-w-2xl px-4 py-14 sm:px-6 sm:py-20 lg:max-w-7xl lg:px-8\">\n      <div className=\"container\">\n        <div className=\"mx-auto max-w-2xl text-center\">\n          <div className=\"hidden sm:mb-4 sm:flex sm:justify-center\">\n            <div className=\"relative rounded-full border px-3 py-1 text-sm\">\n              Announcing our next round of funding.{\" \"}\n              <Link href=\"#\" className=\"font-semibold text-indigo-600\">\n                <span aria-hidden=\"true\" className=\"absolute inset-0\" />\n                Read more\n              </Link>\n            </div>\n          </div>\n          <div className=\"text-center\">\n            <h1 className=\"text-foreground text-4xl leading-tight font-bold md:text-5xl\">\n              Empower Your Creativity with Innovative Tools\n            </h1>\n            <p className=\"text-muted-foreground mt-4 text-lg leading-relaxed text-balance\">\n              Unlock your potential with a suite of tools designed to transform\n              your ideas into reality. Create, build, and inspire with ease\n              while achieving stunning results that truly stand out.\n            </p>\n            <div className=\"mt-10 flex items-center justify-center gap-x-3\">\n              <Button size=\"lg\" asChild>\n                <Link href=\"#\">Get started</Link>\n              </Button>\n              <Button\n                size=\"lg\"\n                variant=\"ghost\"\n                className=\"font-semibold\"\n                asChild\n              >\n                <Link href=\"#\">\n                  Learn more <ArrowRightIcon />\n                </Link>\n              </Button>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/hero1.tsx"
+    }
+  ],
+  "type": "registry:block"
+}

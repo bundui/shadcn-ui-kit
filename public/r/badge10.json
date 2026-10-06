@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge10",
+  "title": "Badge",
+  "description": "Badge built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/badge/10/index.tsx",
+      "content": "\"use client\";\n\nimport { XIcon } from \"lucide-react\";\nimport { useState } from \"react\";\n\nimport { Badge } from \"@/components/ui/badge\";\n\nexport default function Component() {\n  const [badges, setBadges] = useState([\n    { id: \"react\", label: \"React\" },\n    { id: \"tailwind\", label: \"Tailwind\" },\n    { id: \"shadcn\", label: \"Shadcn\" }\n  ]);\n\n  const handleRemove = (id: string) => {\n    setBadges((prev) => prev.filter((badge) => badge.id !== id));\n  };\n\n  return (\n    <div className=\"flex gap-2\">\n      {badges.map((badge) => (\n        <Badge key={badge.id} className=\"gap-0 rounded-md px-2 py-1\" variant=\"outline\">\n          {badge.label}\n          <button\n            aria-label=\"Delete\"\n            className=\"text-foreground/60 hover:text-foreground focus-visible:border-ring focus-visible:ring-ring/50 -my-[5px] -ms-0.5 -me-2 inline-flex size-7 shrink-0 cursor-pointer items-center justify-center rounded-[inherit] p-0 transition-[color,box-shadow] outline-none focus-visible:ring-[3px]\"\n            onClick={() => handleRemove(badge.id)}\n            type=\"button\">\n            <XIcon aria-hidden=\"true\" size={14} />\n          </button>\n        </Badge>\n      ))}\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/badge10.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

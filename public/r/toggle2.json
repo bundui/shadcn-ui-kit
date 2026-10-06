@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle2",
+  "title": "Toggle",
+  "description": "A two-state button that can be either on or off. All toggle examples conform to Radix UI and Base UI state conventions.",
+  "files": [
+    {
+      "path": "contents/components/toggle/2/index.tsx",
+      "content": "import { BookmarkIcon } from \"lucide-react\";\n\nimport { Toggle } from \"@/components/ui/toggle\";\n\nexport default function ToggleComponent() {\n  return (\n    <Toggle\n      aria-label=\"Toggle bookmark\"\n      size=\"sm\"\n      variant=\"outline\"\n      className=\"data-[state=on]:bg-transparent data-[state=on]:*:[svg]:fill-blue-500 data-[state=on]:*:[svg]:stroke-blue-500\">\n      <BookmarkIcon />\n      Bookmark\n    </Toggle>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/toggle2.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

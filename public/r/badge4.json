@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge4",
+  "title": "Badge",
+  "description": "Displays a badge or a component that looks like a badge. All badge variants drop into Radix UI and Base UI projects without changes.",
+  "files": [
+    {
+      "path": "contents/components/badge/4/index.tsx",
+      "content": "import { Badge } from \"@/components/ui/badge\";\n\nexport default function Component() {\n  return (\n    <Badge asChild>\n      <a href=\"#\">Go to Website</a>\n    </Badge>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/badge4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

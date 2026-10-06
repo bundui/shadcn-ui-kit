@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast8",
+  "title": "Sonner toast",
+  "description": "Sonner toast built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/sonner-toast/8/index.tsx",
+      "content": "\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { toast } from \"sonner\";\n\nexport default function ToastComponent() {\n  const promise = () =>\n    new Promise((_, reject) => setTimeout(() => reject({ name: \"Sonner\" }), 2000));\n\n  const handleSyncError = () => {\n    toast.promise(promise, {\n      loading: \"Syncing data...\",\n      success: \"Data synced successfully\",\n      error: \"Failed to sync data\"\n    });\n  };\n\n  return (\n    <Button variant=\"outline\" onClick={handleSyncError}>\n      Sync Error\n    </Button>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/toast8.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

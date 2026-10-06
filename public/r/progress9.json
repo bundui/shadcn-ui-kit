@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress9",
+  "title": "Progress",
+  "description": "Progress built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/progress/9/index.tsx",
+      "content": "\"use client\";\n\nimport { Progress } from \"@/components/ui/progress\";\nimport { useState } from \"react\";\nimport { Button } from \"@/components/ui/button\";\n\nexport default function ProgressComponent() {\n  const [progress, setProgress] = useState(0);\n  const [isLoading, setIsLoading] = useState(false);\n\n  const startProgress = () => {\n    setIsLoading(true);\n    setProgress(0);\n\n    const interval = setInterval(() => {\n      setProgress((prev) => {\n        if (prev >= 100) {\n          clearInterval(interval);\n          setIsLoading(false);\n          return 100;\n        }\n        return prev + 10;\n      });\n    }, 200);\n  };\n\n  return (\n    <div className=\"w-full max-w-sm space-y-4\">\n      <div className=\"space-y-2\">\n        <div className=\"flex items-center justify-between text-sm\">\n          <span>File Upload</span>\n          <span className=\"text-muted-foreground\">{progress}%</span>\n        </div>\n        <Progress value={progress} />\n      </div>\n      <Button onClick={startProgress} disabled={isLoading} className=\"w-full\">\n        {isLoading ? \"Uploading...\" : \"Start Upload\"}\n      </Button>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/progress9.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

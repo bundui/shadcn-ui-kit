@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "carousel6",
+  "title": "Carousel",
+  "description": "Carousel built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/carousel/6/index.tsx",
+      "content": "\"use client\";\n\nimport {\n  Carousel,\n  CarouselContent,\n  CarouselItem,\n  CarouselNext,\n  CarouselPrevious,\n} from \"@/components/ui/carousel\";\nimport { Card, CardContent } from \"@/components/ui/card\";\n\nconst cards = [\n  { title: \"Card 1\", description: \"Description for card 1\" },\n  { title: \"Card 2\", description: \"Description for card 2\" },\n  { title: \"Card 3\", description: \"Description for card 3\" },\n  { title: \"Card 4\", description: \"Description for card 4\" },\n];\n\nexport default function CarouselComponent() {\n  return (\n    <Carousel className=\"w-full max-w-xs\">\n      <CarouselContent>\n        {cards.map((card, index) => (\n          <CarouselItem key={index}>\n            <div className=\"p-2\">\n              <Card>\n                <CardContent className=\"flex aspect-square items-center justify-center p-6\">\n                  <div className=\"text-center\">\n                    <h3 className=\"mb-2 font-semibold\">{card.title}</h3>\n                    <p className=\"text-muted-foreground text-sm\">{card.description}</p>\n                  </div>\n                </CardContent>\n              </Card>\n            </div>\n          </CarouselItem>\n        ))}\n      </CarouselContent>\n      <CarouselPrevious />\n      <CarouselNext />\n    </Carousel>\n  );\n}\n\n",
+      "type": "registry:component",
+      "target": "components/carousel6.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

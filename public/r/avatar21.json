@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar21",
+  "title": "Avatar",
+  "description": "Avatar built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/avatar/21/index.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\nimport { Button } from \"@/components/ui/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuGroup,\n  DropdownMenuItem,\n  DropdownMenuLabel,\n  DropdownMenuSeparator,\n  DropdownMenuTrigger,\n} from \"@/components/ui/dropdown-menu\";\nimport {\n  ChevronsUpDownIcon,\n  LogOutIcon,\n  PlusIcon,\n  SettingsIcon,\n  UserIcon,\n} from \"lucide-react\";\n\nexport default function AvatarComponent() {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger>\n        <Button\n          variant=\"outline\"\n          size=\"sm\"\n          className=\"h-8 gap-1.5 rounded-full pr-2.5 pl-1\"\n        >\n          <Avatar size=\"sm\">\n            <AvatarImage\n              src=\"https://i.pravatar.cc/150?img=1\"\n              alt=\"Toby Belhome\"\n            />\n            <AvatarFallback>TB</AvatarFallback>\n          </Avatar>\n          <span className=\"text-sm\">Toby Belhome</span>\n          <ChevronsUpDownIcon\n            className=\"size-3.5 opacity-60\"\n            aria-hidden=\"true\"\n          />\n        </Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent className=\"w-44\" align=\"center\" sideOffset={8}>\n        <DropdownMenuGroup>\n          <DropdownMenuLabel>Account</DropdownMenuLabel>\n          <DropdownMenuItem>\n            <UserIcon aria-hidden=\"true\" />\n            <span>Profile</span>\n          </DropdownMenuItem>\n          <DropdownMenuItem>\n            <SettingsIcon aria-hidden=\"true\" />\n            <span>Settings</span>\n          </DropdownMenuItem>\n        </DropdownMenuGroup>\n        <DropdownMenuSeparator />\n        <DropdownMenuGroup>\n          <DropdownMenuItem>\n            <UserIcon aria-hidden=\"true\" />\n            <span>Teams</span>\n          </DropdownMenuItem>\n          <DropdownMenuItem>\n            <PlusIcon aria-hidden=\"true\" />\n            <span>Invite</span>\n          </DropdownMenuItem>\n        </DropdownMenuGroup>\n        <DropdownMenuSeparator />\n        <DropdownMenuItem variant=\"destructive\">\n          <LogOutIcon aria-hidden=\"true\" />\n          <span>Log out</span>\n        </DropdownMenuItem>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/avatar21.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

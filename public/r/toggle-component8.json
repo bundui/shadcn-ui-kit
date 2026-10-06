@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-component8",
+  "title": "Toggle",
+  "description": "Toggle built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/toggle/8/index.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\nimport { Star } from \"lucide-react\";\nimport { Toggle } from \"@/components/ui/toggle\";\n\nexport default function ToggleComponent() {\n  const [isStarred, setIsStarred] = useState(false);\n  return (\n    <Toggle\n      aria-label=\"Toggle star\"\n      pressed={isStarred}\n      onPressedChange={setIsStarred}\n      variant=\"outline\"\n      className=\"data-[state=on]:bg-yellow-500 data-[state=on]:text-yellow-950 data-[state=on]:*:[svg]:fill-yellow-950\"\n    >\n      <Star />\n      Star\n    </Toggle>\n  );\n}\n\n",
+      "type": "registry:component",
+      "target": "components/toggle-component8.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

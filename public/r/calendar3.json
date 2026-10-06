@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar3",
+  "title": "Calendar",
+  "description": "A calendar component that allows users to select a date or a range of dates. Each calendar variant integrates smoothly with Radix UI and Base UI setups.",
+  "files": [
+    {
+      "path": "contents/components/calendar/3/index.tsx",
+      "content": "import { addDays } from \"date-fns\";\n\nimport { Calendar } from \"@/components/ui/calendar\";\n\nexport default function Component() {\n  const today = new Date();\n\n  return (\n    <div>\n      <Calendar\n        className=\"rounded-md border p-2\"\n        disabled={[\n          { before: new Date() },\n          new Date(),\n          { dayOfWeek: [0, 6] },\n          {\n            from: addDays(today, 14),\n            to: addDays(today, 16)\n          },\n          {\n            from: addDays(today, 23),\n            to: addDays(today, 24)\n          }\n        ]}\n        excludeDisabled\n        mode=\"range\"\n      />\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/calendar3.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

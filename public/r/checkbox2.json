@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox2",
+  "title": "Checkbox",
+  "description": "A control that allows the user to toggle between checked and not checked. Each checkbox variant follows the interaction models of Radix UI and Base UI.",
+  "files": [
+    {
+      "path": "contents/components/checkbox/2/index.tsx",
+      "content": "import { useId } from \"react\";\n\nimport { Checkbox } from \"@/components/ui/checkbox\";\nimport { Label } from \"@/components/ui/label\";\n\nexport default function Component() {\n  const id = useId();\n  return (\n    <div className=\"flex items-center gap-2 [--primary:var(--color-indigo-500)] [--ring:var(--color-indigo-300)] in-[.dark]:[--primary:var(--color-indigo-500)] in-[.dark]:[--ring:var(--color-indigo-900)]\">\n      <Checkbox defaultChecked id={id} />\n      <Label htmlFor={id}>Colored checkbox</Label>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/checkbox2.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

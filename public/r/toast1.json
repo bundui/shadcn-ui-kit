@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast1",
+  "title": "Sonner toast",
+  "description": "An opinionated toast component for React. Every toast example sits comfortably next to Radix UI and Base UI components.",
+  "files": [
+    {
+      "path": "contents/components/sonner-toast/1/index.tsx",
+      "content": "\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { toast } from \"sonner\";\n\nexport default function Example() {\n  return (\n    <Button\n      variant=\"outline\"\n      onClick={() =>\n        toast(\"Event has been created\", {\n          description: \"Sunday, December 03, 2023 at 9:00 AM\",\n          action: {\n            label: \"Undo\",\n            onClick: () => console.log(\"Undo\"),\n          },\n        })\n      }\n    >\n      Show Toast\n    </Button>\n  );\n}\n\n",
+      "type": "registry:component",
+      "target": "components/toast1.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

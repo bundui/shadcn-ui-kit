@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select12",
+  "title": "Select",
+  "description": "Select built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/select/12/index.tsx",
+      "content": "import { useId } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport {\n  Select,\n  SelectContent,\n  SelectGroup,\n  SelectItem,\n  SelectLabel,\n  SelectTrigger,\n  SelectValue\n} from \"@/components/ui/select\";\n\nexport default function Component() {\n  const id = useId();\n  return (\n    <div className=\"w-full max-w-xs\">\n      <Select defaultValue=\"1\">\n        <SelectTrigger\n          className=\"w-full ps-2 [&>span]:flex [&>span]:items-center [&>span]:gap-2 [&>span_img]:shrink-0\"\n          id={id}>\n          <SelectValue placeholder=\"Select framework\" />\n        </SelectTrigger>\n        <SelectContent className=\"[&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2 [&_*[role=option]>span]:flex [&_*[role=option]>span]:items-center [&_*[role=option]>span]:gap-2\">\n          <SelectGroup>\n            <SelectLabel className=\"ps-2\">Impersonate user</SelectLabel>\n            <SelectItem value=\"1\">\n              <img\n                alt=\"Jenny Hamilton\"\n                className=\"size-5 rounded\"\n                height={20}\n                src=\"https://i.pravatar.cc/20?u=jennyhamilton\"\n                width={20}\n              />\n              <span className=\"truncate\">Jenny Hamilton</span>\n            </SelectItem>\n            <SelectItem value=\"2\">\n              <img\n                alt=\"Paul Smith\"\n                className=\"size-5 rounded\"\n                height={20}\n                src=\"https://i.pravatar.cc/20?u=paulsmith\"\n                width={20}\n              />\n              <span className=\"truncate\">Paul Smith</span>\n            </SelectItem>\n            <SelectItem value=\"3\">\n              <img\n                alt=\"Luna Wyen\"\n                className=\"size-5 rounded\"\n                height={20}\n                src=\"https://i.pravatar.cc/20?u=lunawyen\"\n                width={20}\n              />\n              <span className=\"truncate\">Luna Wyen</span>\n            </SelectItem>\n          </SelectGroup>\n        </SelectContent>\n      </Select>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/select12.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

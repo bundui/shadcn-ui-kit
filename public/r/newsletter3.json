@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "newsletter3",
+  "title": "Newsletter sections",
+  "description": "Email signup section with optional headline and CTA.",
+  "files": [
+    {
+      "path": "contents/blocks/marketing/newsletter-sections/3/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport { Input } from \"@/components/ui/input\";\n\nexport default function NewsletterSection() {\n  return (\n    <footer className=\"w-full\">\n      <div className=\"mx-auto flex max-w-7xl flex-col items-center justify-between space-y-4 px-4 py-10 md:flex-row lg:space-y-8 lg:py-16\">\n        <div className=\"mb-8 lg:mb-0 lg:max-w-md\">\n          <h3 className=\"text-foreground mb-2 font-bold text-3xl\">Join our newsletter</h3>\n          <p className=\"text-muted-foreground text-balance\">\n            Stay updated with the latest news, insights, and exclusive offers\n            delivered straight to your inbox.\n          </p>\n        </div>\n\n        <div className=\"w-full lg:w-auto\">\n          <div className=\"flex gap-2\">\n            <Input\n              type=\"email\"\n              placeholder=\"Enter your email\"\n              className=\"min-w-[280px] flex-1\"\n            />\n            <Button className=\"whitespace-nowrap\">Subscribe</Button>\n          </div>\n        </div>\n      </div>\n    </footer>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/newsletter3.tsx"
+    }
+  ],
+  "type": "registry:block"
+}

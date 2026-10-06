@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu7",
+  "title": "Dropdown menu",
+  "description": "Dropdown menu built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/dropdown-menu/7/index.tsx",
+      "content": "\"use client\";\n\nimport { ChevronDownIcon } from \"lucide-react\";\nimport { useState } from \"react\";\n\nimport { Button } from \"@/components/ui/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuRadioGroup,\n  DropdownMenuRadioItem,\n  DropdownMenuTrigger,\n} from \"@/components/ui/dropdown-menu\";\n\nexport default function Component() {\n  const [framework, setFramework] = useState(\"nextjs\");\n\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button variant=\"outline\">\n          Radio items\n          <ChevronDownIcon\n            aria-hidden=\"true\"\n            className=\"-me-1 opacity-60\"\n            size={16}\n          />\n        </Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent>\n        <DropdownMenuRadioGroup onValueChange={setFramework} value={framework}>\n          <DropdownMenuRadioItem value=\"nextjs\">Next.js</DropdownMenuRadioItem>\n          <DropdownMenuRadioItem disabled value=\"sveltekit\">\n            SvelteKit\n          </DropdownMenuRadioItem>\n          <DropdownMenuRadioItem value=\"remix\">Remix</DropdownMenuRadioItem>\n          <DropdownMenuRadioItem value=\"astro\">Astro</DropdownMenuRadioItem>\n        </DropdownMenuRadioGroup>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/dropdown-menu7.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

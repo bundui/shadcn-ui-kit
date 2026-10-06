@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner6",
+  "title": "Spinner",
+  "description": "Spinner built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/spinner/6/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport { Spinner } from \"@/components/ui/spinner\";\n\nexport default function SpinnerComponent() {\n  return (\n    <div className=\"flex flex-col items-center gap-4\">\n      <Button size=\"icon\" variant=\"destructive\" disabled>\n        <Spinner />\n      </Button>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/spinner6.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

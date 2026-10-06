@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "carousel2",
+  "title": "Carousel",
+  "description": "A carousel with motion and swipe built using Embla Carousel. All carousel examples are compatible with both Radix UI and Base UI stacks.",
+  "files": [
+    {
+      "path": "contents/components/carousel/2/index.tsx",
+      "content": "\"use client\";\n\nimport Image from \"next/image\";\nimport {\n  Carousel,\n  CarouselContent,\n  CarouselItem,\n  CarouselNext,\n  CarouselPrevious\n} from \"@/components/ui/carousel\";\n\nconst images = [\n  \"https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop\",\n  \"https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop\",\n  \"https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop\",\n  \"https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&h=600&fit=crop\",\n  \"https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?w=800&h=600&fit=crop\"\n];\n\nexport default function CarouselComponent() {\n  return (\n    <Carousel className=\"w-full max-w-md\">\n      <CarouselContent>\n        {images.map((src, index) => (\n          <CarouselItem key={index} className=\"md:basis-1/2 lg:basis-1/3\">\n            <figure>\n              <Image\n                src={src}\n                alt={`Image ${index + 1}`}\n                width={800}\n                height={600}\n                className=\"aspect-4/3 rounded-lg object-cover\"\n              />\n            </figure>\n          </CarouselItem>\n        ))}\n      </CarouselContent>\n      <CarouselPrevious />\n      <CarouselNext />\n    </Carousel>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/carousel2.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

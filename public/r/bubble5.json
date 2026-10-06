@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "bubble5",
+  "title": "Bubble",
+  "description": "Bubble built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/bubble/5/index.tsx",
+      "content": "import { Bubble, BubbleContent } from \"@/components/ui/bubble\";\n\nexport default function BubbleDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2\">\n      <Bubble variant=\"muted\">\n        <BubbleContent>\n          I published the changelog, you can read it here:\n        </BubbleContent>\n      </Bubble>\n      <Bubble variant=\"outline\">\n        <BubbleContent asChild>\n          <a href=\"#\">Release v2.4 — What&apos;s new in this build</a>\n        </BubbleContent>\n      </Bubble>\n      <Bubble align=\"end\">\n        <BubbleContent asChild>\n          <button type=\"button\">Tap to copy the invite link</button>\n        </BubbleContent>\n      </Bubble>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/bubble5.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

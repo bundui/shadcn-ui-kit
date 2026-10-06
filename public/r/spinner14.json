@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner14",
+  "title": "Spinner",
+  "description": "Spinner built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/spinner/14/index.tsx",
+      "content": "import { Item, ItemContent, ItemMedia, ItemTitle } from \"@/components/ui/item\";\nimport { Spinner } from \"@/components/ui/spinner\";\n\nexport default function SpinnerComponent() {\n  return (\n    <Item variant=\"muted\" className=\"w-full max-w-sm\">\n      <ItemMedia>\n        <Spinner />\n      </ItemMedia>\n      <ItemContent>\n        <ItemTitle className=\"line-clamp-1\">Processing payment...</ItemTitle>\n      </ItemContent>\n      <ItemContent className=\"flex-none justify-end\">\n        <span className=\"text-sm tabular-nums\">$100.00</span>\n      </ItemContent>\n    </Item>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/spinner14.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress1",
+  "title": "Progress",
+  "description": "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar. Every progress variant renders consistently with Radix UI and Base UI.",
+  "files": [
+    {
+      "path": "contents/components/progress/1/index.tsx",
+      "content": "\"use client\";\n\nimport { Progress } from \"@/components/ui/progress\";\nimport { useEffect, useState } from \"react\";\n\nexport default function Example() {\n  const [progress, setProgress] = useState(13);\n\n  useEffect(() => {\n    const timer = setTimeout(() => setProgress(66), 500);\n    return () => clearTimeout(timer);\n  }, []);\n\n  return <Progress value={progress} className=\"w-full max-w-sm\" />;\n}\n",
+      "type": "registry:component",
+      "target": "components/progress1.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

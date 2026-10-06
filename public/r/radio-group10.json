@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group10",
+  "title": "Radio group",
+  "description": "Radio group built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/radio-group/10/index.tsx",
+      "content": "import { useId } from \"react\";\n\nimport { RadioGroup, RadioGroupItem } from \"@/components/ui/radio-group\";\n\nexport default function Component() {\n  const id = useId();\n\n  const items = [\n    { label: \"2 CPU\", value: \"1\" },\n    { label: \"4 CPU\", value: \"2\" },\n    { label: \"6 CPU\", value: \"3\" },\n    { label: \"8 CPU\", value: \"4\" },\n    { label: \"12 CPU\", value: \"5\" },\n    { disabled: true, label: \"16 CPU\", value: \"6\" }\n  ];\n\n  return (\n    <fieldset className=\"space-y-4\">\n      <legend className=\"text-foreground text-sm leading-none font-medium\">Compute resources</legend>\n      <RadioGroup className=\"grid grid-cols-3 gap-2\" defaultValue=\"1\">\n        {items.map((item) => (\n          <label\n            className=\"border-input has-data-[state=checked]:border-primary/50 has-focus-visible:border-ring has-focus-visible:ring-ring/50 relative flex cursor-pointer flex-col items-center gap-3 rounded-md border px-2 py-3 text-center shadow-xs transition-[color,box-shadow] outline-none has-focus-visible:ring-[3px] has-data-disabled:cursor-not-allowed has-data-disabled:opacity-50\"\n            key={`${id}-${item.value}`}>\n            <RadioGroupItem\n              className=\"sr-only after:absolute after:inset-0\"\n              disabled={item.disabled}\n              id={`${id}-${item.value}`}\n              value={item.value}\n            />\n            <p className=\"text-foreground text-sm leading-none font-medium\">{item.label}</p>\n          </label>\n        ))}\n      </RadioGroup>\n    </fieldset>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/radio-group10.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

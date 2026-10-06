@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field4",
+  "title": "Field",
+  "description": "A field is a form control that allows the user to enter a value. Each field example is compatible with form primitives from Radix UI and Base UI.",
+  "files": [
+    {
+      "path": "contents/components/field/4/index.tsx",
+      "content": "import { Field, FieldDescription, FieldLabel } from \"@/components/ui/field\";\nimport {\n  Select,\n  SelectContent,\n  SelectGroup,\n  SelectItem,\n  SelectTrigger,\n  SelectValue,\n} from \"@/components/ui/select\";\n\nexport default function FieldComponent() {\n  return (\n    <Field className=\"w-full max-w-xs\">\n      <FieldLabel>Department</FieldLabel>\n      <Select>\n        <SelectTrigger>\n          <SelectValue placeholder=\"Choose department\" />\n        </SelectTrigger>\n        <SelectContent>\n          <SelectGroup>\n            <SelectItem value=\"engineering\">Engineering</SelectItem>\n            <SelectItem value=\"design\">Design</SelectItem>\n            <SelectItem value=\"marketing\">Marketing</SelectItem>\n            <SelectItem value=\"sales\">Sales</SelectItem>\n            <SelectItem value=\"support\">Customer Support</SelectItem>\n            <SelectItem value=\"hr\">Human Resources</SelectItem>\n            <SelectItem value=\"finance\">Finance</SelectItem>\n            <SelectItem value=\"operations\">Operations</SelectItem>\n          </SelectGroup>\n        </SelectContent>\n      </Select>\n      <FieldDescription>\n        Select your department or area of work.\n      </FieldDescription>\n    </Field>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/field4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

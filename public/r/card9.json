@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card9",
+  "title": "Card",
+  "description": "Card built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/card/9/index.tsx",
+      "content": "import { ArrowUpRight, Feather } from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { Card, CardContent } from \"@/components/ui/card\";\n\nconst ProfileCardDemo = () => {\n  return (\n    <Card className=\"w-full max-w-sm gap-0 overflow-hidden py-0 shadow-none\">\n      <CardContent className=\"relative h-36 overflow-hidden bg-foreground px-0\">\n        <ArrowUpRight\n          className=\"absolute -top-6 -right-6 size-32 text-orange-600\"\n          strokeWidth={2.5}\n        />\n      </CardContent>\n      <CardContent className=\"relative flex flex-col gap-4 pt-4 pb-6\">\n        <div className=\"absolute -top-8 left-6 flex size-16 items-center justify-center rounded-full bg-green-700 ring-4 ring-background\">\n          <Feather className=\"size-7 text-white\" />\n        </div>\n        <div className=\"flex justify-end\">\n          <Button className=\"rounded-full\">Follow</Button>\n        </div>\n        <div className=\"flex flex-col gap-1\">\n          <h3 className=\"font-semibold leading-snug\">\n            Notabli AI - Meeting Notetaker\n          </h3>\n          <p className=\"text-muted-foreground text-sm\">@notabli.ai</p>\n        </div>\n        <p className=\"text-sm leading-snug\">\n          Focus on the Conversation, We&apos;ll Take the Notes.\n        </p>\n        <div className=\"flex items-center gap-4 text-sm\">\n          <p>\n            <span className=\"font-semibold\">184</span>{\" \"}\n            <span className=\"text-muted-foreground\">Following</span>\n          </p>\n          <p>\n            <span className=\"font-semibold\">98,215</span>{\" \"}\n            <span className=\"text-muted-foreground\">Followers</span>\n          </p>\n        </div>\n      </CardContent>\n    </Card>\n  );\n};\n\nexport default ProfileCardDemo;\n",
+      "type": "registry:component",
+      "target": "components/card9.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

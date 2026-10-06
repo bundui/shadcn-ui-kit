@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropdown-menu3",
+  "title": "Dropdown menu",
+  "description": "A dropdown menu is a menu that appears when the user clicks on a button. Every menu example matches the semantics of Radix UI and Base UI.",
+  "files": [
+    {
+      "path": "contents/components/dropdown-menu/3/index.tsx",
+      "content": "import { BoltIcon, ChevronDownIcon, CopyPlusIcon, FilesIcon, Layers2Icon } from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuItem,\n  DropdownMenuTrigger\n} from \"@/components/ui/dropdown-menu\";\n\nexport default function Component() {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button variant=\"outline\">\n          Menu with icons\n          <ChevronDownIcon aria-hidden=\"true\" className=\"-me-1 opacity-60\" size={16} />\n        </Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent>\n        <DropdownMenuItem>\n          <CopyPlusIcon aria-hidden=\"true\" className=\"opacity-60\" size={16} />\n          Copy\n        </DropdownMenuItem>\n        <DropdownMenuItem>\n          <BoltIcon aria-hidden=\"true\" className=\"opacity-60\" size={16} />\n          Edit\n        </DropdownMenuItem>\n        <DropdownMenuItem>\n          <Layers2Icon aria-hidden=\"true\" className=\"opacity-60\" size={16} />\n          Group\n        </DropdownMenuItem>\n        <DropdownMenuItem>\n          <FilesIcon aria-hidden=\"true\" className=\"opacity-60\" size={16} />\n          Clone\n        </DropdownMenuItem>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/dropdown-menu3.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

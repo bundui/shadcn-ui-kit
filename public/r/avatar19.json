@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar19",
+  "title": "Avatar",
+  "description": "Avatar built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/avatar/19/index.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\n\nexport default function AvatarComponent() {\n  return (\n    <div className=\"flex items-center gap-1.5\">\n      <Avatar>\n        <AvatarImage src=\"https://i.pravatar.cc/150?img=1\" alt=\"Toby Belhome\" />\n        <AvatarFallback>TB</AvatarFallback>\n      </Avatar>\n\n      <div className=\"flex flex-col\">\n        <div className=\"flex items-center gap-1.5\">\n          <span className=\"text-sm font-semibold\">Toby Belhome</span>\n        </div>\n        <span className=\"text-muted-foreground text-xs\">Developer</span>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/avatar19.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

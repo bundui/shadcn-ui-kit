@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "carousel12",
+  "title": "Carousel",
+  "description": "Carousel built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/carousel/12/index.tsx",
+      "content": "\"use client\";\n\nimport Image from \"next/image\";\nimport {\n  Carousel,\n  CarouselContent,\n  CarouselItem,\n  CarouselNext,\n  CarouselPrevious\n} from \"@/components/ui/carousel\";\n\nconst slides = [\n  {\n    image: \"https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop\",\n    title: \"Beautiful Landscape\",\n    description: \"Explore the wonders of nature\"\n  },\n  {\n    image: \"https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop\",\n    title: \"Mountain View\",\n    description: \"Experience breathtaking views\"\n  },\n  {\n    image: \"https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop\",\n    title: \"Forest Path\",\n    description: \"Discover hidden trails\"\n  }\n];\n\nexport default function CarouselComponent() {\n  return (\n    <Carousel className=\"w-full max-w-lg\">\n      <CarouselContent>\n        {slides.map((slide, index) => (\n          <CarouselItem key={index}>\n            <div className=\"relative overflow-hidden rounded-lg\">\n              <figure>\n                <Image\n                  src={slide.image}\n                  alt={slide.title}\n                  width={800}\n                  height={600}\n                  className=\"aspect-video object-cover\"\n                />\n              </figure>\n              <div className=\"absolute inset-0 flex flex-col justify-end bg-linear-to-t from-black/80 via-black/40 to-transparent p-6\">\n                <h3 className=\"mb-1 text-lg font-semibold text-white\">{slide.title}</h3>\n                <p className=\"text-sm text-white/80\">{slide.description}</p>\n              </div>\n            </div>\n          </CarouselItem>\n        ))}\n      </CarouselContent>\n      <CarouselPrevious />\n      <CarouselNext />\n    </Carousel>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/carousel12.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

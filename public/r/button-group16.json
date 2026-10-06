@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group16",
+  "title": "Button group",
+  "description": "Button group built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/button-group/16/index.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\n\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\nimport { Button } from \"@/components/ui/button\";\nimport { ButtonGroup } from \"@/components/ui/button-group\";\nimport {\n  Select,\n  SelectContent,\n  SelectGroup,\n  SelectItem,\n  SelectLabel,\n  SelectTrigger,\n  SelectValue,\n} from \"@/components/ui/select\";\nimport { PlusIcon, Settings2Icon } from \"lucide-react\";\n\nconst users = [\n  {\n    id: \"1\",\n    name: \"Nathaniel H.\",\n    email: \"nathaniel@example.com\",\n    avatar: \"https://i.pravatar.cc/150?u=a042581f4e29026024d\",\n    initials: \"NH\",\n  },\n  {\n    id: \"2\",\n    name: \"Elizabeth M.\",\n    email: \"elizabeth@example.com\",\n    avatar: \"https://i.pravatar.cc/150?u=a042581f4e29026704d\",\n    initials: \"EM\",\n  },\n  {\n    id: \"3\",\n    name: \"Michael R.\",\n    email: \"michael@example.com\",\n    avatar: \"https://i.pravatar.cc/150?u=a04258114e29026302d\",\n    initials: \"MR\",\n  },\n  {\n    id: \"4\",\n    name: \"Emily W.\",\n    email: \"emily@example.com\",\n    avatar: \"https://i.pravatar.cc/150?u=a04258114e29026702d\",\n    initials: \"EW\",\n  },\n];\n\nexport default function ButtonGroupComponent() {\n  const [selectedUserId, setSelectedUserId] = useState<string>(\"3\");\n\n  return (\n    <ButtonGroup>\n      <Select value={selectedUserId} onValueChange={setSelectedUserId}>\n        <SelectTrigger className=\"w-40\">\n          <SelectValue placeholder=\"Select user\" />\n        </SelectTrigger>\n        <SelectContent position=\"popper\" className=\"min-w-[200px]\">\n          <SelectGroup>\n            <SelectLabel>Team Members</SelectLabel>\n            {users.map((user) => (\n              <SelectItem key={user.id} value={user.id}>\n                <span className=\"flex items-center gap-2\">\n                  <Avatar className=\"size-5\">\n                    <AvatarImage src={user.avatar} alt={user.name} />\n                    <AvatarFallback className=\"text-[10px]\">\n                      {user.initials}\n                    </AvatarFallback>\n                  </Avatar>\n                  <span className=\"truncate\">{user.name}</span>\n                </span>\n              </SelectItem>\n            ))}\n          </SelectGroup>\n        </SelectContent>\n      </Select>\n      <Button> Send</Button>\n    </ButtonGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button-group16.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

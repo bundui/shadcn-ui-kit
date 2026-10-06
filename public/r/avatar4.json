@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar4",
+  "title": "Avatar",
+  "description": "An image element with a fallback for representing the user. Every avatar style is compatible with Radix UI and Base UI out of the box.",
+  "files": [
+    {
+      "path": "contents/components/avatar/4/index.tsx",
+      "content": "import {\n  Avatar,\n  AvatarBadge,\n  AvatarFallback,\n  AvatarImage,\n} from \"@/components/ui/avatar\";\n\nexport default function AvatarComponent() {\n  return (\n    <Avatar>\n      <AvatarImage alt=\"Kelly King\" src=\"https://i.pravatar.cc/150?img=80\" />\n      <AvatarFallback>KK</AvatarFallback>\n      <AvatarBadge className=\"bg-emerald-500\">\n        <span className=\"sr-only\">Online</span>\n      </AvatarBadge>\n    </Avatar>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/avatar4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

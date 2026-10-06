@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress6",
+  "title": "Progress",
+  "description": "Progress built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/progress/6/index.tsx",
+      "content": "\"use client\";\n\nimport { Progress } from \"@/components/ui/progress\";\nimport { Card, CardContent, CardHeader, CardTitle } from \"@/components/ui/card\";\n\nexport default function ProgressComponent() {\n  return (\n    <Card className=\"w-full max-w-sm\">\n      <CardHeader>\n        <CardTitle>Project Status</CardTitle>\n      </CardHeader>\n      <CardContent className=\"space-y-4\">\n        <div className=\"space-y-2\">\n          <div className=\"flex items-center justify-between text-sm\">\n            <span>Design Phase</span>\n            <span className=\"text-muted-foreground font-medium\">85%</span>\n          </div>\n          <Progress value={85} />\n        </div>\n        <div className=\"space-y-2\">\n          <div className=\"flex items-center justify-between text-sm\">\n            <span>Development</span>\n            <span className=\"text-muted-foreground font-medium\">60%</span>\n          </div>\n          <Progress value={60} />\n        </div>\n        <div className=\"space-y-2\">\n          <div className=\"flex items-center justify-between text-sm\">\n            <span>Testing</span>\n            <span className=\"text-muted-foreground font-medium\">30%</span>\n          </div>\n          <Progress value={30} />\n        </div>\n      </CardContent>\n    </Card>\n  );\n}\n\n",
+      "type": "registry:component",
+      "target": "components/progress6.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton6",
+  "title": "Skeleton",
+  "description": "Skeleton built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/skeleton/6/index.tsx",
+      "content": "import { Skeleton } from \"@/components/ui/skeleton\";\n\nexport default function SkeletonCard() {\n  return (\n    <div className=\"w-full max-w-sm space-y-6\">\n      <div className=\"grow space-y-2\">\n        <Skeleton className=\"h-3 w-full\" />\n        <Skeleton className=\"h-3 w-1/2\" />\n      </div>\n      <div className=\"grow space-y-2\">\n        <Skeleton className=\"h-3 w-full\" />\n        <Skeleton className=\"h-3 w-1/3\" />\n      </div>\n      <div className=\"grow space-y-2\">\n        <Skeleton className=\"h-3 w-full\" />\n        <Skeleton className=\"h-3 w-2/3\" />\n      </div>\n      <div className=\"grow space-y-2\">\n        <Skeleton className=\"h-3 w-full\" />\n        <Skeleton className=\"h-3 w-1/2\" />\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/skeleton6.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

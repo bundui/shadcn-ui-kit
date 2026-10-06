@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination5",
+  "title": "Pagination",
+  "description": "Pagination with page navigation, next and previous links. All pagination variants blend into Radix UI and Base UI codebases.",
+  "files": [
+    {
+      "path": "contents/components/pagination/5/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport { Pagination, PaginationContent, PaginationItem } from \"@/components/ui/pagination\";\n\ntype PaginationProps = {\n  currentPage: number;\n  totalPages: number;\n};\n\nexport default function PaginationComponent() {\n  return <PaginationRender currentPage={1} totalPages={10} />;\n}\n\nfunction PaginationRender({ currentPage, totalPages }: PaginationProps) {\n  return (\n    <div className=\"flex items-center w-full justify-between gap-3\">\n      <p aria-live=\"polite\" className=\"text-muted-foreground grow text-sm\">\n        Page <span className=\"text-foreground\">{currentPage}</span> of{\" \"}\n        <span className=\"text-foreground\">{totalPages}</span>\n      </p>\n      <Pagination className=\"w-auto\">\n        <PaginationContent className=\"gap-3\">\n          <PaginationItem>\n            <Button\n              aria-disabled={currentPage === 1 ? true : undefined}\n              asChild\n              className=\"aria-disabled:pointer-events-none aria-disabled:opacity-50\"\n              role={currentPage === 1 ? \"link\" : undefined}\n              variant=\"outline\">\n              <a href={currentPage === 1 ? undefined : `#/page/${currentPage - 1}`}>Previous</a>\n            </Button>\n          </PaginationItem>\n          <PaginationItem>\n            <Button\n              aria-disabled={currentPage === totalPages ? true : undefined}\n              asChild\n              className=\"aria-disabled:pointer-events-none aria-disabled:opacity-50\"\n              role={currentPage === totalPages ? \"link\" : undefined}\n              variant=\"outline\">\n              <a href={currentPage === totalPages ? undefined : `#/page/${currentPage + 1}`}>\n                Next\n              </a>\n            </Button>\n          </PaginationItem>\n        </PaginationContent>\n      </Pagination>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/pagination5.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

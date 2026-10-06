@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "progress5",
+  "title": "Progress",
+  "description": "Progress built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/progress/5/index.tsx",
+      "content": "\"use client\";\n\nimport { Progress } from \"@/components/ui/progress\";\nimport { CheckIcon } from \"lucide-react\";\n\nconst steps = [\n  { label: \"Account\", completed: true },\n  { label: \"Profile\", completed: true },\n  { label: \"Settings\", completed: false },\n  { label: \"Review\", completed: false }\n];\n\nexport default function ProgressComponent() {\n  const completedSteps = steps.filter((step) => step.completed).length;\n  const progress = (completedSteps / steps.length) * 100;\n\n  return (\n    <div className=\"w-full max-w-sm space-y-4\">\n      <div className=\"space-y-2\">\n        <div className=\"flex items-center justify-between text-sm\">\n          <span>Setup Progress</span>\n          <span className=\"text-muted-foreground\">{completedSteps}/{steps.length}</span>\n        </div>\n        <Progress value={progress} />\n      </div>\n      <div className=\"space-y-2\">\n        {steps.map((step, index) => (\n          <div key={index} className=\"flex items-center gap-2 text-sm\">\n            {step.completed ? (\n              <CheckIcon className=\"text-primary h-4 w-4\" />\n            ) : (\n              <div className=\"bg-muted h-4 w-4 rounded-full\" />\n            )}\n            <span className={step.completed ? \"\" : \"text-muted-foreground\"}>{step.label}</span>\n          </div>\n        ))}\n      </div>\n    </div>\n  );\n}\n\n",
+      "type": "registry:component",
+      "target": "components/progress5.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

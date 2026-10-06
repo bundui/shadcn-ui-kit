@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "empty1",
+  "title": "Empty",
+  "description": "An empty state component. All variants slot into Radix UI and Base UI interfaces with no rework.",
+  "files": [
+    {
+      "path": "contents/components/empty/1/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport {\n  Empty,\n  EmptyContent,\n  EmptyDescription,\n  EmptyHeader,\n  EmptyMedia,\n  EmptyTitle,\n} from \"@/components/ui/empty\";\nimport { IconFolderCode } from \"@tabler/icons-react\";\n\nexport default function EmptyComponent() {\n  return (\n    <Empty>\n      <EmptyHeader>\n        <EmptyMedia variant=\"icon\">\n          <IconFolderCode />\n        </EmptyMedia>\n        <EmptyTitle>No Projects Yet</EmptyTitle>\n        <EmptyDescription>\n          You haven&apos;t created any projects yet. Get started by creating\n          your first project.\n        </EmptyDescription>\n      </EmptyHeader>\n      <EmptyContent className=\"flex-row justify-center gap-2\">\n        <Button size=\"sm\">Create Project</Button>\n        <Button size=\"sm\" variant=\"outline\">\n          Import Project\n        </Button>\n      </EmptyContent>\n    </Empty>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/empty1.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

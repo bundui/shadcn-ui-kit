@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "skeleton1",
+  "title": "Skeleton",
+  "description": "Use to show a placeholder while content is loading. All skeleton variants are usable across Radix UI and Base UI interfaces.",
+  "files": [
+    {
+      "path": "contents/components/skeleton/1/index.tsx",
+      "content": "import { Skeleton } from \"@/components/ui/skeleton\";\n\nexport default function Example() {\n  return (\n    <div className=\"flex items-center space-x-4\">\n      <Skeleton className=\"h-12 w-12 rounded-full\" />\n      <div className=\"space-y-2\">\n        <Skeleton className=\"h-4 w-[250px]\" />\n        <Skeleton className=\"h-4 w-[200px]\" />\n      </div>\n    </div>\n  );\n}\n\n",
+      "type": "registry:component",
+      "target": "components/skeleton1.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

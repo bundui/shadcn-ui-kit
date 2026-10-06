@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button2",
+  "title": "Button",
+  "description": "Displays a button or a component that looks like a button. Every button example is built to work with both Radix UI and Base UI.",
+  "files": [
+    {
+      "path": "contents/components/button/2/index.tsx",
+      "content": "import { Loader2 } from \"lucide-react\";\nimport { Button } from \"@/components/ui/button\";\n\nexport default function ButtonComponent() {\n  return (\n    <Button className=\"gap-2\" disabled>\n      <Loader2 className=\"size-4 animate-spin\" />\n      Loading\n    </Button>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button2.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

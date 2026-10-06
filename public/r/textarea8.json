@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea8",
+  "title": "Textarea",
+  "description": "Textarea built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/textarea/8/index.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport { Textarea } from \"@/components/ui/textarea\";\n\nexport default function TextareaComponent() {\n  const [value, setValue] = useState(\"\");\n  const maxLength = 200;\n\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-2 *:not-first:mt-2\">\n      <Label htmlFor=\"message\">Message</Label>\n      <Textarea\n        id=\"message\"\n        maxLength={maxLength}\n        onChange={(e) => setValue(e.target.value)}\n        placeholder=\"Enter your message here...\"\n        value={value}\n      />\n      <p className=\"text-muted-foreground text-right text-sm\">\n        {value.length}/{maxLength}\n      </p>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/textarea8.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

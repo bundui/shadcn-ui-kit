@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar20",
+  "title": "Avatar",
+  "description": "Avatar built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/avatar/20/index.tsx",
+      "content": "import {\n  Avatar,\n  AvatarFallback,\n  AvatarGroup,\n  AvatarGroupCount,\n  AvatarImage,\n} from \"@/components/ui/avatar\";\n\nexport default function AvatarComponent() {\n  return (\n    <div className=\"flex flex-col items-center gap-4 text-center\">\n      <AvatarGroup>\n        <Avatar>\n          <AvatarImage\n            src=\"https://i.pravatar.cc/150?img=1\"\n            alt=\"Sarah Belhome\"\n          />\n          <AvatarFallback>SB</AvatarFallback>\n        </Avatar>\n        <Avatar>\n          <AvatarImage\n            src=\"https://i.pravatar.cc/150?img=2\"\n            alt=\"Max Belhome\"\n          />\n          <AvatarFallback>MB</AvatarFallback>\n        </Avatar>\n        <Avatar>\n          <AvatarImage\n            src=\"https://i.pravatar.cc/150?img=3\"\n            alt=\"Evil Rabbit\"\n          />\n          <AvatarFallback>BR</AvatarFallback>\n        </Avatar>\n        <AvatarGroupCount>+4</AvatarGroupCount>\n      </AvatarGroup>\n      <div className=\"space-y-0.5\">\n        <h6 className=\"text-sm font-medium\">No active collaborators</h6>\n        <p className=\"text-muted-foreground text-xs\">\n          Invite teammates to start working together.\n        </p>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/avatar20.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

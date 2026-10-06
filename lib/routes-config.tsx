@@ -1,49 +1,729 @@
-type PageRoutesType = {
+export type PageRouteItem = {
   title: string;
-  items: PageRoutesItemType;
+  href?: string;
+  icon?: string;
+  items?: PageRouteItem[];
+  searchKeys?: string[];
 };
 
-type PageRoutesItemType = {
+export type PageRoutesType = {
   title: string;
-  href: string;
-  icon?: string;
-  isComing?: boolean;
-  items?: PageRoutesItemType;
-}[];
+  items: PageRouteItem[];
+};
 
-export const page_routes: PageRoutesType[] = [
+export const dashboard_routes: PageRoutesType[] = [
   {
-    title: "Menu",
+    title: "Dashboards",
     items: [
       {
-        title: "Dashboard",
-        href: "/dashboard/default",
-        icon: "PieChart"
+        title: "Classic",
+        href: "https://shadcnuikit.com/dashboard/default",
+        icon: "ChartPie",
+        searchKeys: ["dashboard"],
       },
-      { title: "Users", href: "/dashboard/pages/users", icon: "Users" },
+      {
+        title: "E-commerce",
+        href: "https://shadcnuikit.com/dashboard/ecommerce",
+        icon: "ShoppingBag",
+        searchKeys: ["dashboard", "ecommerce", "shop"],
+      },
+      {
+        title: "Sales",
+        href: "https://shadcnuikit.com/dashboard/sales",
+        icon: "BadgeDollarSign",
+        searchKeys: ["dashboard", "sales", "sale", "order"],
+      },
+      {
+        title: "CRM",
+        href: "https://shadcnuikit.com/dashboard/crm",
+        icon: "ChartBarDecreasing",
+        searchKeys: ["dashboard", "crm", "customer"],
+      },
+      {
+        title: "Website Analytics",
+        href: "https://shadcnuikit.com/dashboard/website-analytics",
+        icon: "Gauge",
+        searchKeys: ["dashboard", "website analytics", "analytics"],
+      },
+      {
+        title: "Project Management",
+        href: "https://shadcnuikit.com/dashboard/project-management",
+        icon: "FolderDot",
+        searchKeys: ["dashboard", "project", "project management"],
+      },
+      {
+        title: "Real Estate Dashboard",
+        href: "https://shadcnuikit.com/dashboard/real-estate",
+        icon: "FolderDot",
+        searchKeys: ["dashboard", "real estate", "property"],
+      },
+      {
+        title: "HR Dashboard",
+        href: "https://shadcnuikit.com/dashboard/hr",
+        icon: "Users",
+        searchKeys: ["dashboard", "hr"],
+      },
+      {
+        title: "AI Analytics",
+        href: "https://shadcnuikit.com/dashboard/ai-analytics",
+        icon: "Sparkles",
+        searchKeys: ["dashboard", "ai", "ai analytics", "tokens", "llm", "model usage"],
+      },
+      {
+        title: "Real Estate Listings",
+        href: "https://shadcnuikit.com/dashboard/real-estate/list",
+        icon: "FolderDot",
+        searchKeys: ["dashboard", "real estate", "property", "listings"],
+      },
+      {
+        title: "Real Estate Detail",
+        href: "https://shadcnuikit.com/dashboard/real-estate/detail",
+        icon: "FolderDot",
+        searchKeys: [
+          "dashboard",
+          "real estate",
+          "property",
+          "listings",
+          "detail",
+        ],
+      },
+      {
+        title: "Real Estate Filter",
+        href: "https://shadcnuikit.com/dashboard/real-estate/filter",
+        icon: "FolderDot",
+        searchKeys: ["dashboard", "real estate", "property", "filter"],
+      },
+      {
+        title: "File Manager",
+        href: "https://shadcnuikit.com/dashboard/file-manager",
+        icon: "Folder",
+        searchKeys: ["dashboard", "file manager"],
+      },
+      {
+        title: "Crypto",
+        href: "https://shadcnuikit.com/dashboard/crypto",
+        icon: "WalletMinimal",
+        searchKeys: ["dashboard", "crypto"],
+      },
+      {
+        title: "Academy/School",
+        href: "https://shadcnuikit.com/dashboard/academy",
+        icon: "GraduationCap",
+        searchKeys: ["dashboard", "academy", "school", "education"],
+      },
+      {
+        title: "Hospital Management",
+        href: "https://shadcnuikit.com/dashboard/hospital-management",
+        icon: "SquareActivity",
+        searchKeys: [
+          "dashboard",
+          "hospital",
+          "hospital management",
+          "healthcare",
+          "medical",
+        ],
+      },
+      {
+        title: "Hotel",
+        href: "https://shadcnuikit.com/dashboard/hotel",
+        icon: "Building2",
+        searchKeys: [
+          "dashboard",
+          "hotel",
+          "hotel management",
+          "accommodation",
+          "travel",
+        ],
+      },
+      {
+        title: "Hotel Bookings",
+        href: "https://shadcnuikit.com/dashboard/hotel/bookings",
+        icon: "Building2",
+        searchKeys: [
+          "dashboard",
+          "hotel",
+          "hotel management",
+          "accommodation",
+          "travel",
+        ],
+      },
+      {
+        title: "Logistics",
+        href: "https://shadcnuikit.com/dashboard/logistics",
+        icon: "Truck",
+        searchKeys: [
+          "dashboard",
+          "logistics",
+          "delivery",
+          "shipping",
+          "transportation",
+        ],
+      },
+      {
+        title: "Finance Dashboard",
+        href: "https://shadcnuikit.com/dashboard/finance",
+        icon: "BadgeDollarSign",
+        searchKeys: ["dashboard", "finance"],
+      },
+      {
+        title: "Payment Dashboard",
+        href: "https://shadcnuikit.com/dashboard/payment",
+        icon: "CreditCard",
+        searchKeys: ["dashboard", "payment"],
+      },
+    ],
+  },
+  {
+    title: "Dashboard Apps",
+    items: [
+      {
+        title: "Chats",
+        href: "https://shadcnuikit.com/dashboard/apps/chat",
+        icon: "MessageSquare",
+        searchKeys: ["app", "chat", "messenger"],
+      },
+      {
+        title: "Social Media",
+        href: "https://shadcnuikit.com/dashboard/apps/social-media",
+        icon: "MessageSquare",
+        searchKeys: ["app", "social-media"],
+      },
+      {
+        title: "Mail App",
+        href: "https://shadcnuikit.com/dashboard/apps/mail",
+        icon: "Mail",
+        searchKeys: ["app", "mail", "email"],
+      },
+      {
+        title: "Kanban",
+        href: "https://shadcnuikit.com/dashboard/apps/kanban",
+        icon: "SquareKanban",
+        searchKeys: [
+          "app",
+          "kanban",
+          "kanban board",
+          "kanban ui",
+          "kanban app",
+        ],
+      },
+      {
+        title: "Todo List App",
+        href: "https://shadcnuikit.com/dashboard/apps/todo-list-app",
+        icon: "SquareCheck",
+        searchKeys: ["app", "todo list app", "tasks", "todo app"],
+      },
+      {
+        title: "Tasks",
+        href: "https://shadcnuikit.com/dashboard/apps/tasks",
+        icon: "CircleCheck",
+        searchKeys: ["app", "todo list app", "tasks", "todo app"],
+      },
+      {
+        title: "Notes App",
+        href: "https://shadcnuikit.com/dashboard/apps/notes",
+        icon: "StickyNote",
+        searchKeys: ["app", "notes", "note", "note app", "note ui"],
+      },
+      {
+        title: "Event Calendar",
+        href: "https://shadcnuikit.com/dashboard/apps/calendar",
+        icon: "Calendar",
+        searchKeys: ["app", "calendar", "event", "event app", "event ui"],
+      },
+      {
+        title: "File Manager App",
+        href: "https://shadcnuikit.com/dashboard/apps/file-manager",
+        icon: "Package",
+        searchKeys: ["app", "file manager", "file", "file app", "file ui"],
+      },
+      {
+        title: "Api Keys",
+        href: "https://shadcnuikit.com/dashboard/apps/api-keys",
+        icon: "Key",
+        searchKeys: ["app", "api keys", "api", "api app", "api ui"],
+      },
+      {
+        title: "POS App",
+        href: "https://shadcnuikit.com/dashboard/apps/pos-app",
+        icon: "Cookie",
+        searchKeys: ["app", "pos app", "pos", "pos app", "pos ui"],
+      },
+      {
+        title: "Courses",
+        href: "https://shadcnuikit.com/dashboard/apps/courses",
+        icon: "BookA",
+        searchKeys: ["app", "education", "courses"],
+      },
+      {
+        title: "Workflow Automation",
+        href: "https://shadcnuikit.com/dashboard/workflow-automation",
+        icon: "BookA",
+        searchKeys: ["app", "workflow", "automation"],
+      },
+    ],
+  },
+  {
+    title: "Dashboard AI Apps",
+    items: [
+      {
+        title: "AI Chat",
+        href: "https://shadcnuikit.com/dashboard/apps/ai-chat",
+        icon: "MessageSquare",
+        searchKeys: [
+          "app",
+          "ai",
+          "ai chat",
+          "chatbot",
+          "chatbot app",
+          "chatbot ui",
+        ],
+      },
+      {
+        title: "AI Image Generator",
+        href: "https://shadcnuikit.com/dashboard/apps/ai-image-generator",
+        icon: "ImageUp",
+        searchKeys: ["app", "ai", "ai image generator"],
+      },
+      {
+        title: "Text to Speech",
+        href: "https://shadcnuikit.com/dashboard/apps/text-to-speech",
+        icon: "ImageUp",
+        searchKeys: ["app", "ai", "text-to-speech"],
+      },
+    ],
+  },
+  {
+    title: "Dashboard Pages",
+    items: [
+      {
+        title: "Profile",
+        href: "https://shadcnuikit.com/dashboard/pages/profile",
+        icon: "ContactRound",
+        searchKeys: [
+          "pages",
+          "profile",
+          "user",
+          "user profile",
+          "user details",
+          "user info",
+        ],
+      },
+      {
+        title: "Profile V2",
+        href: "https://shadcnuikit.com/dashboard/pages/user-profile",
+        icon: "ContactRound",
+        searchKeys: [
+          "pages",
+          "profile",
+          "user",
+          "user profile",
+          "user details",
+          "user info",
+        ],
+      },
+      {
+        title: "Users List",
+        href: "https://shadcnuikit.com/dashboard/pages/users",
+        icon: "Users",
+        searchKeys: [
+          "pages",
+          "users",
+          "user list",
+          "user management",
+          "user management ui",
+        ],
+      },
+      {
+        title: "Onboarding Flow",
+        href: "https://shadcnuikit.com/dashboard/pages/onboarding-flow",
+        icon: "Puzzle",
+        searchKeys: [
+          "pages",
+          "users",
+          "user list",
+          "user management",
+          "user management ui",
+        ],
+      },
       {
         title: "Settings",
-        href: "/dashboard/pages/settings",
-        icon: "Settings"
+        icon: "Settings",
+        items: [
+          {
+            title: "Profile",
+            href: "https://shadcnuikit.com/dashboard/pages/settings",
+            icon: "Settings",
+            searchKeys: [
+              "pages",
+              "settings",
+              "profile",
+              "user",
+              "user profile",
+              "user details",
+              "user info",
+              "profile",
+              "user",
+              "user profile",
+              "user details",
+              "billing",
+              "user info",
+            ],
+          },
+          {
+            title: "Account",
+            href: "https://shadcnuikit.com/dashboard/pages/settings/account",
+            icon: "Settings",
+            searchKeys: [
+              "pages",
+              "account",
+              "user",
+              "user profile",
+              "user details",
+              "user info",
+              "profile",
+              "user",
+              "user profile",
+              "user details",
+              "user info",
+            ],
+          },
+          {
+            title: "Billing",
+            href: "https://shadcnuikit.com/dashboard/pages/settings/billing",
+            icon: "Settings",
+            searchKeys: [
+              "pages",
+              "account",
+              "user",
+              "user profile",
+              "user details",
+              "user info",
+              "profile",
+              "user",
+              "user profile",
+              "user details",
+              "billing",
+            ],
+          },
+          {
+            title: "Appearance",
+            href: "https://shadcnuikit.com/dashboard/pages/settings/appearance",
+            icon: "Settings",
+            searchKeys: [
+              "pages",
+              "appearance",
+              "theme",
+              "theme settings",
+              "theme editor",
+              "theme editor ui",
+              "profile",
+              "user",
+              "user profile",
+              "user details",
+              "user info",
+            ],
+          },
+          {
+            title: "Notifications Page",
+            href: "https://shadcnuikit.com/dashboard/pages/notifications",
+            icon: "Settings",
+            searchKeys: [
+              "pages",
+              "notifications",
+              "notification",
+              "notification settings",
+              "notification ui",
+              "profile",
+              "user",
+              "user profile",
+              "user details",
+              "user info",
+            ],
+          },
+          {
+            title: "Notifications",
+            href: "https://shadcnuikit.com/dashboard/pages/settings/notifications",
+            icon: "Settings",
+            searchKeys: [
+              "pages",
+              "notifications",
+              "notification",
+              "notification settings",
+              "notification ui",
+              "profile",
+              "user",
+              "user profile",
+              "user details",
+              "user info",
+            ],
+          },
+          {
+            title: "Display",
+            href: "https://shadcnuikit.com/dashboard/pages/settings/display",
+            icon: "Settings",
+            searchKeys: [
+              "pages",
+              "display",
+              "display settings",
+              "display ui",
+              "profile",
+              "user",
+              "user profile",
+              "user details",
+              "user info",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Products",
+        icon: "PackageSearch",
+        items: [
+          {
+            title: "Product List",
+            href: "https://shadcnuikit.com/dashboard/pages/products",
+            icon: "PackageSearch",
+            searchKeys: ["pages", "products", "product list"],
+          },
+          {
+            title: "Product Detail",
+            href: "https://shadcnuikit.com/dashboard/pages/products/details",
+            icon: "PackageSearch",
+            searchKeys: [
+              "pages",
+              "product",
+              "product details",
+              "product info",
+              "product page",
+            ],
+          },
+          {
+            title: "Add Product",
+            href: "https://shadcnuikit.com/dashboard/pages/products/create",
+            icon: "PackageSearch",
+            searchKeys: ["pages", "add product", "add product page"],
+          },
+        ],
+      },
+      {
+        title: "Orders",
+        icon: "Truck",
+        items: [
+          {
+            title: "Orders List",
+            href: "https://shadcnuikit.com/dashboard/pages/orders",
+            icon: "Truck",
+            searchKeys: ["pages", "order list", "orders"],
+          },
+          {
+            title: "Order Detail",
+            href: "https://shadcnuikit.com/dashboard/pages/orders/details",
+            icon: "Truck",
+            searchKeys: ["pages", "order details", "order info", "order page"],
+          },
+        ],
+      },
+      {
+        title: "Notifications",
+        href: "https://shadcnuikit.com/dashboard/pages/notifications",
+        icon: "Bell",
+        searchKeys: [
+          "pages",
+          "notifications",
+          "notification",
+          "notification settings",
+          "notification ui",
+        ],
+      },
+      {
+        title: "Empty States",
+        icon: "EmptyState",
+        items: [
+          {
+            title: "Empty State 01",
+            href: "https://shadcnuikit.com/dashboard/pages/empty-states/01",
+            icon: "EmptyState",
+            searchKeys: [
+              "pages",
+              "empty states",
+              "empty state",
+              "empty state ui",
+            ],
+          },
+          {
+            title: "Empty State 02",
+            href: "https://shadcnuikit.com/dashboard/pages/empty-states/02",
+            icon: "EmptyState",
+            searchKeys: [
+              "pages",
+              "empty states",
+              "empty state",
+              "empty state ui",
+            ],
+          },
+          {
+            title: "Empty State 03",
+            href: "https://shadcnuikit.com/dashboard/pages/empty-states/03",
+            icon: "EmptyState",
+            searchKeys: [
+              "pages",
+              "empty states",
+              "empty state",
+              "empty state ui",
+            ],
+          },
+          {
+            title: "Empty State 04",
+            href: "https://shadcnuikit.com/dashboard/pages/empty-states/04",
+            icon: "EmptyState",
+            searchKeys: [
+              "pages",
+              "empty states",
+              "empty state",
+              "empty state ui",
+            ],
+          },
+        ],
+      },
+      {
+        title: "Pricing",
+        icon: "Gem",
+        items: [
+          {
+            title: "Column",
+            href: "https://shadcnuikit.com/dashboard/pages/pricing/column",
+            icon: "Gem",
+            searchKeys: ["pages", "pricing", "pricing table", "pricing page"],
+          },
+          {
+            title: "Table",
+            href: "https://shadcnuikit.com/dashboard/pages/pricing/table",
+            icon: "Gem",
+            searchKeys: ["pages", "pricing", "pricing table", "pricing page"],
+          },
+          {
+            title: "Single",
+            href: "https://shadcnuikit.com/dashboard/pages/pricing/single",
+            icon: "Gem",
+            searchKeys: ["pages", "pricing", "pricing table", "pricing page"],
+          },
+        ],
       },
       {
         title: "Authentication",
-        href: "/",
         icon: "Fingerprint",
         items: [
-          { title: "Login", href: "/login" },
-          { title: "Register", href: "/register" }
-        ]
+          {
+            title: "Login v1",
+            href: "https://shadcnuikit.com/dashboard/login/v1",
+            icon: "Fingerprint",
+            searchKeys: [
+              "pages",
+              "sig-in",
+              "authentication",
+              "login page",
+              "login form",
+            ],
+          },
+          {
+            title: "Login v2",
+            href: "https://shadcnuikit.com/dashboard/login/v2",
+            icon: "Fingerprint",
+            searchKeys: [
+              "pages",
+              "sig-in",
+              "authentication",
+              "login page",
+              "login form",
+            ],
+          },
+          {
+            title: "Register v1",
+            href: "https://shadcnuikit.com/dashboard/register/v1",
+            icon: "Fingerprint",
+            searchKeys: [
+              "pages",
+              "signup",
+              "authentication",
+              "register page",
+              "register form",
+            ],
+          },
+          {
+            title: "Register v2",
+            href: "https://shadcnuikit.com/dashboard/register/v2",
+            icon: "Fingerprint",
+            searchKeys: [
+              "pages",
+              "signup",
+              "authentication",
+              "register page",
+              "register form",
+            ],
+          },
+          {
+            title: "Forgot Password",
+            href: "https://shadcnuikit.com/dashboard/forgot-password",
+            icon: "Fingerprint",
+            searchKeys: [
+              "pages",
+              "forgot password",
+              "authentication",
+              "forgot password page",
+              "forgot password form",
+              "reset password",
+            ],
+          },
+        ],
       },
       {
         title: "Error Pages",
-        href: "/",
-        icon: "Fingerprint",
+        icon: "ShieldAlert",
         items: [
-          { title: "404", href: "/pages/error/404" },
-          { title: "500", href: "/pages/error/500" }
-        ]
-      }
-    ]
-  }
+          {
+            title: "400",
+            href: "https://shadcnuikit.com/dashboard/pages/error/404",
+            icon: "ShieldAlert",
+            searchKeys: ["pages", "400", "error"],
+          },
+          {
+            title: "500",
+            href: "https://shadcnuikit.com/dashboard/pages/error/500",
+            icon: "ShieldAlert",
+            searchKeys: ["pages", "500", "error"],
+          },
+          {
+            title: "403",
+            href: "https://shadcnuikit.com/dashboard/pages/error/403",
+            icon: "ShieldAlert",
+            searchKeys: ["pages", "403", "error"],
+          },
+        ],
+      },
+      {
+        title: "Widgets",
+        icon: "ChefHatIcon",
+        items: [
+          {
+            title: "Fitness",
+            href: "https://shadcnuikit.com/dashboard/widgets/fitness",
+            icon: "ChefHatIcon",
+            searchKeys: ["pages", "400", "error"],
+          },
+          {
+            title: "E-commerce",
+            href: "https://shadcnuikit.com/dashboard/widgets/ecommerce",
+            icon: "ChefHatIcon",
+            searchKeys: ["pages", "400", "error"],
+          },
+          {
+            title: "Analytics",
+            href: "https://shadcnuikit.com/dashboard/widgets/analytics",
+            icon: "ChefHatIcon",
+            searchKeys: ["analytics"],
+          },
+        ],
+      },
+    ],
+  },
 ];

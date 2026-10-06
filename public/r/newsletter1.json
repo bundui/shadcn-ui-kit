@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "newsletter1",
+  "title": "Newsletter sections",
+  "description": "Newsletter signup with headline, short text, and email input plus button.",
+  "files": [
+    {
+      "path": "contents/blocks/marketing/newsletter-sections/1/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@/components/ui/card\";\nimport { Input } from \"@/components/ui/input\";\nimport { Label } from \"@/components/ui/label\";\n\nexport default function Newsletter1() {\n  return (\n    <section className=\"w-full bg-linear-to-r py-16 lg:py-24\">\n      <div className=\"container mx-auto flex flex-col items-center justify-center space-y-6 px-4 text-center md:px-6\">\n        <div className=\"max-w-xl\">\n          <h2 className=\"text-3xl font-bold leading-tight md:text-4xl\">Join Our Community</h2>\n          <p className=\"text-muted-foreground mt-4 md:text-lg\">\n            Subscribe to our newsletter to get the latest updates, exclusive\n            content, and special offers directly in your inbox.\n          </p>\n        </div>\n        <div className=\"w-full max-w-md\">\n          <Card className=\"w-full max-w-md shadow-none\">\n            <CardHeader className=\"space-y-1\">\n              <CardTitle className=\"text-2xl\">\n                Subscribe to our Newsletter\n              </CardTitle>\n              <CardDescription>\n                Stay up-to-date with our latest news and exclusive offers.\n              </CardDescription>\n            </CardHeader>\n            <CardContent className=\"grid gap-4\">\n              <Input id=\"email\" type=\"email\" placeholder=\"you@example.com\" />\n            </CardContent>\n            <CardFooter>\n              <Button className=\"w-full\">Subscribe</Button>\n            </CardFooter>\n          </Card>\n        </div>\n      </div>\n    </section>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/newsletter1.tsx"
+    }
+  ],
+  "type": "registry:block"
+}

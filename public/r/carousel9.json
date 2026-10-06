@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "carousel9",
+  "title": "Carousel",
+  "description": "Carousel built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/carousel/9/index.tsx",
+      "content": "\"use client\";\n\nimport { useState, useEffect } from \"react\";\nimport Image from \"next/image\";\nimport { cn } from \"@/lib/utils\";\nimport {\n  Carousel,\n  CarouselContent,\n  CarouselItem,\n  CarouselNext,\n  CarouselPrevious,\n  type CarouselApi,\n} from \"@/components/ui/carousel\";\n\nconst images = [\n  \"https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop\",\n  \"https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop\",\n  \"https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop\",\n  \"https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&h=600&fit=crop\",\n];\n\nexport default function CarouselComponent() {\n  const [api, setApi] = useState<CarouselApi>();\n  const [current, setCurrent] = useState(0);\n\n  useEffect(() => {\n    if (!api) {\n      return;\n    }\n\n    setCurrent(api.selectedScrollSnap());\n\n    api.on(\"select\", () => {\n      setCurrent(api.selectedScrollSnap());\n    });\n  }, [api]);\n\n  return (\n    <div className=\"w-full max-w-xs\">\n      <Carousel setApi={setApi} className=\"w-full\">\n        <CarouselContent>\n          {images.map((src, index) => (\n            <CarouselItem key={index}>\n              <figure>\n                <Image\n                  src={src}\n                  alt={`Image ${index + 1}`}\n                  width={800}\n                  height={600}\n                  className=\"aspect-4/3 rounded-lg object-cover\"\n                />\n              </figure>\n            </CarouselItem>\n          ))}\n        </CarouselContent>\n        <CarouselPrevious />\n        <CarouselNext />\n      </Carousel>\n      <div className=\"mt-4 grid grid-cols-4 gap-2\">\n        {images.map((src, index) => (\n          <button\n            key={index}\n            onClick={() => api?.scrollTo(index)}\n            className={cn(\n              \"overflow-hidden rounded-md border-2 transition-all\",\n              index === current\n                ? \"border-primary\"\n                : \"border-transparent opacity-50\"\n            )}\n          >\n            <Image\n              src={src}\n              alt={`Thumbnail ${index + 1}`}\n              width={160}\n              height={120}\n              className=\"aspect-4/3 h-auto w-full object-cover\"\n            />\n          </button>\n        ))}\n      </div>\n    </div>\n  );\n}\n\n",
+      "type": "registry:component",
+      "target": "components/carousel9.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

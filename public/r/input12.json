@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input12",
+  "title": "Input",
+  "description": "Input built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/input/12/index.tsx",
+      "content": "\"use client\";\n\nimport { useId, useState, type ChangeEvent } from \"react\";\n\nimport { Input } from \"@/components/ui/input\";\nimport { Label } from \"@/components/ui/label\";\n\nconst maxLength = 12;\nconst initialValue = \"\";\n\nexport default function Component() {\n  const [value, setValue] = useState(initialValue);\n  const [characterCount, setCharacterCount] = useState(initialValue.length);\n\n  const id = useId();\n\n  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {\n    if (e.target.value.length <= maxLength) {\n      setValue(e.target.value);\n      setCharacterCount(e.target.value.length);\n    }\n  };\n\n  return (\n    <div className=\"w-full max-w-xs space-y-2\">\n      <Label htmlFor={id}>Input with characters left</Label>\n      <Input\n        type=\"text\"\n        placeholder=\"Username\"\n        value={value}\n        maxLength={maxLength}\n        onChange={handleChange}\n      />\n      <p className=\"text-muted-foreground text-xs\">\n        <span className=\"tabular-nums\">{maxLength - characterCount}</span> characters left\n      </p>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/input12.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

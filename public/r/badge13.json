@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge13",
+  "title": "Badge",
+  "description": "Badge built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/badge/13/index.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\nimport { Badge } from \"@/components/ui/badge\";\n\nexport default function BadgeComponent() {\n  return (\n    <Avatar size=\"lg\">\n      <AvatarImage alt=\"Toby Belhome\" src=\"https://i.pravatar.cc/150?img=12\" />\n      <AvatarFallback>TB</AvatarFallback>\n      <Badge className=\"border-background absolute -top-1 left-full z-10 min-w-5 -translate-x-3.5 px-1\">\n        3\n      </Badge>\n    </Avatar>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/badge13.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

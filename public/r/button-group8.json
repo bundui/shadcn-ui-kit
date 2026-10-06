@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group8",
+  "title": "Button group",
+  "description": "Button group built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/button-group/8/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport { ButtonGroup } from \"@/components/ui/button-group\";\nimport { MinusIcon, PlusIcon } from \"lucide-react\";\n\nexport default function ButtonGroupComponent() {\n  return (\n    <ButtonGroup\n      orientation=\"vertical\"\n      aria-label=\"Media controls\"\n      className=\"h-fit\"\n    >\n      <Button variant=\"outline\" size=\"icon\">\n        <PlusIcon />\n      </Button>\n      <Button variant=\"outline\" size=\"icon\">\n        <MinusIcon />\n      </Button>\n    </ButtonGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button-group8.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

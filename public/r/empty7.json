@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "empty7",
+  "title": "Empty",
+  "description": "Empty built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/empty/7/index.tsx",
+      "content": "import {\n  Empty,\n  EmptyContent,\n  EmptyDescription,\n  EmptyHeader,\n  EmptyTitle,\n} from \"@/components/ui/empty\";\nimport { Button } from \"@/components/ui/button\";\n\nexport default function EmptyComponent() {\n  return (\n    <Empty>\n      <EmptyHeader>\n        <EmptyTitle className=\"font-heading font-semibold text-8xl\">404</EmptyTitle>\n        <EmptyDescription>\n          The page you're looking for might have been moved or doesn't exist.\n        </EmptyDescription>\n      </EmptyHeader>\n      <EmptyContent className=\"flex-row justify-center gap-2\">\n        <Button size=\"sm\">Go back</Button>\n        <Button size=\"sm\" variant=\"outline\">\n          Contact support\n        </Button>\n      </EmptyContent>\n    </Empty>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/empty7.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

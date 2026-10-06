@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group4",
+  "title": "Button group",
+  "description": "A container that groups related buttons together with consistent styling. The variants fit naturally into codebases using Radix UI or Base UI.",
+  "files": [
+    {
+      "path": "contents/components/button-group/4/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport { ButtonGroup } from \"@/components/ui/button-group\";\nimport { ChevronLeftIcon, ChevronRightIcon } from \"lucide-react\";\n\nexport default function ButtonGroupComponent() {\n  return (\n    <ButtonGroup>\n      <Button variant=\"outline\" size=\"icon\">\n        <ChevronLeftIcon />\n      </Button>\n      <Button variant=\"outline\" size=\"icon\">\n        <ChevronRightIcon />\n      </Button>\n    </ButtonGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button-group4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button3",
+  "title": "Button",
+  "description": "Displays a button or a component that looks like a button. Every button example is built to work with both Radix UI and Base UI.",
+  "files": [
+    {
+      "path": "contents/components/button/3/index.tsx",
+      "content": "import { TrashIcon } from \"lucide-react\";\n\nimport { Button } from \"@/components/ui/button\";\n\nexport default function Component() {\n  return (\n    <Button variant=\"destructive\">\n      <TrashIcon aria-hidden=\"true\" className=\"-ms-1 opacity-60\" size={16} />\n      Delete\n    </Button>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button3.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

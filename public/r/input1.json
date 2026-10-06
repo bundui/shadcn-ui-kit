@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input1",
+  "title": "Input",
+  "description": "A text input with a label, placeholder, and helper text. Each input variant pairs cleanly with Radix UI and Base UI form controls.",
+  "files": [
+    {
+      "path": "contents/components/input/1/index.tsx",
+      "content": "import { Input } from \"@/components/ui/input\";\n\nexport default function Component() {\n  return <Input className=\"w-full max-w-sm\" type=\"email\" id=\"email\" placeholder=\"Email\" />;\n}\n",
+      "type": "registry:component",
+      "target": "components/input1.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

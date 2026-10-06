@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "bubble3",
+  "title": "Bubble",
+  "description": "Chat bubble components for displaying messages with grouping, alignment, and reactions. All bubble examples remain fully compatible with Radix UI and Base UI.",
+  "files": [
+    {
+      "path": "contents/components/bubble/3/index.tsx",
+      "content": "import { Bubble, BubbleContent, BubbleGroup } from \"@/components/ui/bubble\";\n\nexport default function BubbleDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-6\">\n      <BubbleGroup>\n        <Bubble variant=\"muted\">\n          <BubbleContent>Did you see the release notes?</BubbleContent>\n        </Bubble>\n        <Bubble variant=\"muted\">\n          <BubbleContent>\n            The new table blocks look great and the dark mode contrast is much\n            better now.\n          </BubbleContent>\n        </Bubble>\n        <Bubble variant=\"muted\">\n          <BubbleContent>We should upgrade this week.</BubbleContent>\n        </Bubble>\n      </BubbleGroup>\n      <BubbleGroup>\n        <Bubble align=\"end\">\n          <BubbleContent>Agreed, I already tried the beta.</BubbleContent>\n        </Bubble>\n        <Bubble align=\"end\">\n          <BubbleContent>\n            I will open a migration branch tomorrow morning.\n          </BubbleContent>\n        </Bubble>\n      </BubbleGroup>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/bubble3.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

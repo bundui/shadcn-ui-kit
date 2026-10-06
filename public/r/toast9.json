@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast9",
+  "title": "Sonner toast",
+  "description": "Sonner toast built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/sonner-toast/9/index.tsx",
+      "content": "\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { toast } from \"sonner\";\n\nexport default function ToastComponent() {\n  const handleLogout = () => {\n    toast.warning(\"Are you sure you want to logout?\", {\n      duration: 5000,\n      action: {\n        label: \"Logout\",\n        onClick: () => {\n          toast.success(\"Logged out successfully\", {\n            description: \"You have been signed out of your account.\"\n          });\n        }\n      },\n      cancel: {\n        label: \"Cancel\",\n        onClick: () => {\n          toast.info(\"Logout cancelled\");\n        }\n      }\n    });\n  };\n\n  return (\n    <Button variant=\"outline\" onClick={handleLogout}>\n      Logout\n    </Button>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/toast9.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

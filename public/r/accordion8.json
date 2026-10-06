@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion8",
+  "title": "Accordion",
+  "description": "Accordion built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/accordion/8/index.tsx",
+      "content": "import {\n  Accordion,\n  AccordionContent,\n  AccordionItem,\n  AccordionTrigger,\n} from \"@/components/ui/accordion\";\n\nconst items = [\n  {\n    content:\n      \"Our platform offers flexible pricing plans to suit teams of all sizes. You can start with our free tier and upgrade as your needs grow. All plans include core features with additional benefits for premium subscribers.\",\n    id: \"1\",\n    title: \"What pricing plans are available?\",\n  },\n  {\n    content:\n      \"Yes, you can cancel your subscription at any time from your account settings. Your access will continue until the end of your current billing period, and you won't be charged for the next cycle.\",\n    id: \"2\",\n    title: \"Can I cancel my subscription anytime?\",\n  },\n  {\n    content:\n      \"We accept all major credit cards, PayPal, and bank transfers for annual plans. All payments are processed securely through our encrypted payment gateway to ensure your financial information is protected.\",\n    id: \"3\",\n    title: \"What payment methods do you accept?\",\n  },\n  {\n    content:\n      \"Our support team is available 24/7 via email and live chat. Premium plan subscribers get priority support with faster response times. We also maintain a comprehensive knowledge base with tutorials and documentation.\",\n    id: \"4\",\n    title: \"What kind of support do you provide?\",\n  },\n];\n\nexport default function Component() {\n  return (\n    <div className=\"w-full max-w-md\">\n      <Accordion\n        className=\"w-full space-y-3 rounded-none border-none\"\n        collapsible\n        type=\"single\"\n      >\n        {items.map((item) => (\n          <AccordionItem\n            className=\"bg-background has-focus-visible:border-ring has-focus-visible:ring-ring/50 rounded-md border p-2 outline-none last:border-b has-focus-visible:ring-[3px]\"\n            key={item.id}\n            value={item.id}\n          >\n            <AccordionTrigger className=\"py-2 text-sm hover:no-underline focus-visible:ring-0\">\n              {item.title}\n            </AccordionTrigger>\n            <AccordionContent className=\"text-muted-foreground\">\n              {item.content}\n            </AccordionContent>\n          </AccordionItem>\n        ))}\n      </Accordion>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/accordion8.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

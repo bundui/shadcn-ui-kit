@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs5",
+  "title": "Tabs",
+  "description": "Tabs built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/tabs/5/index.tsx",
+      "content": "import { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/components/ui/tabs\";\n\nexport default function Component() {\n  return (\n    <Tabs defaultValue=\"overview\" className=\"gap-0\">\n      <TabsList className=\"relative h-auto w-full gap-0.5 bg-transparent p-0 before:absolute before:inset-x-0 before:bottom-0 before:h-px\">\n        <TabsTrigger\n          className=\"data-[state=active]:bg-muted! overflow-hidden rounded-b-none border-0 py-2 data-[state=active]:z-10 data-[state=active]:shadow-none!\"\n          value=\"overview\"\n        >\n          Overview\n        </TabsTrigger>\n        <TabsTrigger\n          className=\"data-[state=active]:bg-muted! overflow-hidden rounded-b-none border-0 py-2 data-[state=active]:z-10 data-[state=active]:shadow-none!\"\n          value=\"analytics\"\n        >\n          Analytics\n        </TabsTrigger>\n        <TabsTrigger\n          className=\"data-[state=active]:bg-muted! overflow-hidden rounded-b-none border-0 py-2 data-[state=active]:z-10 data-[state=active]:shadow-none!\"\n          value=\"reports\"\n        >\n          Reports\n        </TabsTrigger>\n      </TabsList>\n      <div className=\"bg-muted rounded-br-lg rounded-bl-lg p-4 -mt-px\">\n        <TabsContent value=\"overview\">\n          <p className=\"text-xs\">Content for Tab 1</p>\n        </TabsContent>\n        <TabsContent value=\"analytics\">\n          <p className=\"text-xs\">Content for Tab 2</p>\n        </TabsContent>\n        <TabsContent value=\"reports\">\n          <p className=\"text-xs\">Content for Tab 3</p>\n        </TabsContent>\n      </div>\n    </Tabs>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/tabs5.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

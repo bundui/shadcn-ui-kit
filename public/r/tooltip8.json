@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip8",
+  "title": "Tooltip",
+  "description": "Tooltip built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/tooltip/8/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport { Tooltip, TooltipContent, TooltipTrigger } from \"@/components/ui/tooltip\";\n\nexport default function Component() {\n  return (\n    <Tooltip>\n      <TooltipTrigger asChild>\n        <Button variant=\"outline\">Light</Button>\n      </TooltipTrigger>\n      <TooltipContent className=\"bg-neutral-200 text-neutral-950 dark:bg-neutral-50 [&_svg]:bg-neutral-200 [&_svg]:fill-neutral-200 dark:[&_svg]:bg-neutral-50 dark:[&_svg]:fill-neutral-50\">\n        <p>This tooltip will be always light</p>\n      </TooltipContent>\n    </Tooltip>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/tooltip8.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

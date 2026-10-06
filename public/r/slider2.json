@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider2",
+  "title": "Slider",
+  "description": "An input where the user selects a value from within a given range. Each slider example tracks the behavior of Radix UI and Base UI primitives.",
+  "files": [
+    {
+      "path": "contents/components/slider/2/index.tsx",
+      "content": "import { Label } from \"@/components/ui/label\";\nimport { Slider } from \"@/components/ui/slider\";\n\nexport default function SliderComponent() {\n  return (\n    <div className=\"w-full max-w-xs\">\n      <div>\n        <Slider aria-label=\"Slider with reference labels\" defaultValue={[15]} max={35} min={5} />\n        <span\n          aria-hidden=\"true\"\n          className=\"text-muted-foreground mt-4 flex w-full items-center justify-between gap-1 text-xs font-medium\">\n          <span>5 GB</span>\n          <span>20 GB</span>\n          <span>35 GB</span>\n        </span>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/slider2.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

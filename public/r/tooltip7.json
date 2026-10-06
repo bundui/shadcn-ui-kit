@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip7",
+  "title": "Tooltip",
+  "description": "Tooltip built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/tooltip/7/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport { Tooltip, TooltipContent, TooltipTrigger } from \"@/components/ui/tooltip\";\n\nexport default function Component() {\n  return (\n    <Tooltip>\n      <TooltipTrigger asChild>\n        <Button variant=\"outline\">\n          No arrow\n        </Button>\n      </TooltipTrigger>\n      <TooltipContent className=\"[&_svg]:invisible\">\n        <p>This tooltip don&apos;t have arrow</p>\n      </TooltipContent>\n    </Tooltip>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/tooltip7.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible4",
+  "title": "Collapsible",
+  "description": "An interactive component which expands/collapses a panel. Every example works interchangeably with Radix UI and Base UI primitives.",
+  "files": [
+    {
+      "path": "contents/components/collapsible/4/index.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\nimport { ReplyIcon } from \"lucide-react\";\nimport { Collapsible, CollapsibleContent, CollapsibleTrigger } from \"@/components/ui/collapsible\";\nimport { Button } from \"@/components/ui/button\";\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\nimport {\n  InputGroup,\n  InputGroupInput,\n  InputGroupAddon,\n  InputGroupButton\n} from \"@/components/ui/input-group\";\n\nexport default function CollapsibleComponent() {\n  const [isOpen, setIsOpen] = useState(false);\n  const [comment, setComment] = useState(\"\");\n\n  return (\n    <div className=\"w-full max-w-md space-y-4 rounded-lg border p-4\">\n      <div className=\"flex items-start gap-3\">\n        <Avatar>\n          <AvatarImage src=\"https://i.pravatar.cc/150?img=1\" alt=\"User\" />\n          <AvatarFallback>JD</AvatarFallback>\n        </Avatar>\n        <div className=\"flex-1 space-y-2\">\n          <div className=\"flex items-center gap-2\">\n            <span className=\"text-sm font-semibold\">John Doe</span>\n            <span className=\"text-muted-foreground text-xs\">2 hours ago</span>\n          </div>\n          <p className=\"text-sm\">\n            Just finished building an amazing new feature! What do you think about it?\n          </p>\n          <Collapsible open={isOpen} onOpenChange={setIsOpen}>\n            <CollapsibleTrigger asChild>\n              <Button variant=\"ghost\" size=\"sm\" className=\"h-8 gap-2\">\n                <span className=\"text-xs\">Reply</span>\n                <ReplyIcon className=\"h-3 w-3\" />\n              </Button>\n            </CollapsibleTrigger>\n            <CollapsibleContent className=\"pt-2\">\n              <form className=\"space-y-2\">\n                <InputGroup>\n                  <InputGroupInput placeholder=\"Write your comment...\" />\n                  <InputGroupAddon align=\"inline-end\">\n                    <InputGroupButton variant=\"default\">Send</InputGroupButton>\n                  </InputGroupAddon>\n                </InputGroup>\n              </form>\n            </CollapsibleContent>\n          </Collapsible>\n        </div>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/collapsible4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

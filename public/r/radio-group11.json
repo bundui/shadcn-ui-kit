@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group11",
+  "title": "Radio group",
+  "description": "Radio group built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/radio-group/11/index.tsx",
+      "content": "import { useId } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport { RadioGroup, RadioGroupItem } from \"@/components/ui/radio-group\";\n\nexport default function Component() {\n  const id = useId();\n\n  const items = [\n    { label: \"North America\", value: \"1\" },\n    { label: \"Europe\", value: \"2\" },\n    { label: \"Asia Pacific\", value: \"3\" }\n  ];\n\n  return (\n    <fieldset className=\"space-y-4\">\n      <legend className=\"text-foreground text-sm leading-none font-medium\">Data center region</legend>\n      <RadioGroup className=\"flex flex-wrap gap-2\" defaultValue=\"1\">\n        {items.map((item) => (\n          <div\n            className=\"border-input has-data-[state=checked]:border-primary/50 relative flex flex-col items-start gap-4 rounded-md border p-3 shadow-xs outline-none\"\n            key={`${id}-${item.value}`}>\n            <div className=\"flex items-center gap-2\">\n              <RadioGroupItem\n                className=\"after:absolute after:inset-0\"\n                id={`${id}-${item.value}`}\n                value={item.value}\n              />\n              <Label htmlFor={`${id}-${item.value}`}>{item.label}</Label>\n            </div>\n          </div>\n        ))}\n      </RadioGroup>\n    </fieldset>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/radio-group11.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

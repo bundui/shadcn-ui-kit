@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner12",
+  "title": "Spinner",
+  "description": "Spinner built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/spinner/12/index.tsx",
+      "content": "import { Spinner } from \"@/components/ui/spinner\";\nimport { CheckCircle2 } from \"lucide-react\";\n\nexport default function SpinnerComponent() {\n  return (\n    <div className=\"grid gap-3 text-sm\">\n      <div className=\"flex items-center gap-3\">\n        <CheckCircle2 className=\"size-5 fill-green-500 text-primary-foreground\" />\n        Movement in the Day Care\n      </div>\n      <div className=\"flex items-center gap-3\">\n        <Spinner className=\"size-5 text-muted-foreground\" />\n        Free Play: Painting and Crafting\n      </div>\n      <div className=\"text-muted-foreground flex items-center gap-3 pl-8\">\n        Convert PDF\n      </div>\n      <div className=\"text-muted-foreground flex items-center gap-3 pl-8\">\n        Create PDF single pages\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/spinner12.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea7",
+  "title": "Textarea",
+  "description": "Textarea built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/textarea/7/index.tsx",
+      "content": "\"use client\";\n\nimport { useId } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport { Textarea } from \"@/components/ui/textarea\";\n\nexport default function TextareaComponent() {\n  const id = useId();\n  return (\n    <div className=\"w-full max-w-sm *:not-first:mt-2\">\n      <Label htmlFor={id}>Autogrowing textarea</Label>\n      <Textarea\n        className=\"field-sizing-content max-h-29.5 min-h-0 resize-none py-1.75\"\n        id={id}\n        placeholder=\"Leave a comment\"\n      />\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/textarea7.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

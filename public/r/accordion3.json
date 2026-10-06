@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "accordion3",
+  "title": "Accordion",
+  "description": "A vertically stacked set of interactive headings that each reveal a section of content. Each accordion variant is fully compatible with both Radix UI and Base UI primitives.",
+  "files": [
+    {
+      "path": "contents/components/accordion/3/index.tsx",
+      "content": "import {\n  Accordion,\n  AccordionContent,\n  AccordionItem,\n  AccordionTrigger,\n} from \"@/components/ui/accordion\";\n\nconst items = [\n  {\n    content:\n      \"Our platform offers flexible pricing plans to suit teams of all sizes. You can start with our free tier and upgrade as your needs grow. All plans include core features with additional benefits for premium subscribers.\",\n    id: \"1\",\n    title: \"What pricing plans are available?\",\n  },\n  {\n    content:\n      \"Yes, you can cancel your subscription at any time from your account settings. Your access will continue until the end of your current billing period, and you won't be charged for the next cycle.\",\n    id: \"2\",\n    title: \"Can I cancel my subscription anytime?\",\n  },\n  {\n    content:\n      \"We accept all major credit cards, PayPal, and bank transfers for annual plans. All payments are processed securely through our encrypted payment gateway to ensure your financial information is protected.\",\n    id: \"3\",\n    title: \"What payment methods do you accept?\",\n  },\n  {\n    content:\n      \"Our support team is available 24/7 via email and live chat. Premium plan subscribers get priority support with faster response times. We also maintain a comprehensive knowledge base with tutorials and documentation.\",\n    id: \"4\",\n    title: \"What kind of support do you provide?\",\n  },\n];\n\nexport default function Component() {\n  return (\n    <div className=\"w-full max-w-md\">\n      <Accordion\n        className=\"rounded-none border-none **:data-[slot=accordion-content]:px-0\"\n        collapsible\n        type=\"single\"\n      >\n        {items.map((item) => (\n          <AccordionItem\n            className=\"data-open:bg-transparent!\"\n            key={item.id}\n            value={item.id}\n          >\n            <AccordionTrigger className=\"justify-start gap-3 px-0 hover:no-underline **:data-[slot=accordion-trigger-icon]:ml-0! [&>svg]:-order-1\">\n              {item.title}\n            </AccordionTrigger>\n            <AccordionContent className=\"text-muted-foreground ps-7\">\n              {item.content}\n            </AccordionContent>\n          </AccordionItem>\n        ))}\n      </Accordion>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/accordion3.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sheet3",
+  "title": "Sheet",
+  "description": "Extends the Dialog component to display content that complements the main content of the screen. Each sheet variant adapts to either Radix UI or Base UI foundations.",
+  "files": [
+    {
+      "path": "contents/components/sheet/3/index.tsx",
+      "content": "\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport {\n  Sheet,\n  SheetContent,\n  SheetDescription,\n  SheetHeader,\n  SheetTitle,\n  SheetTrigger\n} from \"@/components/ui/sheet\";\n\nexport default function SheetComponent() {\n  return (\n    <Sheet>\n      <SheetTrigger asChild>\n        <Button variant=\"outline\">Open Left Sheet</Button>\n      </SheetTrigger>\n      <SheetContent side=\"left\">\n        <SheetHeader>\n          <SheetTitle>Navigation</SheetTitle>\n          <SheetDescription>\n            Navigate through different sections of the application.\n          </SheetDescription>\n        </SheetHeader>\n      </SheetContent>\n    </Sheet>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/sheet3.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

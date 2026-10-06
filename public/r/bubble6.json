@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "bubble6",
+  "title": "Bubble",
+  "description": "Bubble built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/bubble/6/index.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\nimport { Bubble, BubbleContent, BubbleGroup } from \"@/components/ui/bubble\";\n\nexport default function BubbleDemo() {\n  return (\n    <div className=\"flex w-full max-w-sm flex-col gap-6\">\n      <div className=\"flex items-end gap-2\">\n        <Avatar size=\"sm\">\n          <AvatarImage alt=\"Mia Park\" src=\"https://i.pravatar.cc/150?img=47\" />\n          <AvatarFallback>MP</AvatarFallback>\n        </Avatar>\n        <BubbleGroup>\n          <Bubble variant=\"muted\">\n            <BubbleContent>\n              Morning! Did you get a chance to review the draft?\n            </BubbleContent>\n          </Bubble>\n          <Bubble variant=\"muted\">\n            <BubbleContent>No rush, just checking in.</BubbleContent>\n          </Bubble>\n        </BubbleGroup>\n      </div>\n      <div className=\"flex flex-col items-end gap-1\">\n        <Bubble align=\"end\">\n          <BubbleContent>Just finished it. Leaving comments now.</BubbleContent>\n        </Bubble>\n        <span className=\"text-muted-foreground text-xs\">Read 09:41</span>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/bubble6.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

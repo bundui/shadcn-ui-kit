@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast5",
+  "title": "Sonner toast",
+  "description": "An opinionated toast component for React. Every toast example sits comfortably next to Radix UI and Base UI components.",
+  "files": [
+    {
+      "path": "contents/components/sonner-toast/5/index.tsx",
+      "content": "\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { toast } from \"sonner\";\n\nexport default function ToastComponent() {\n  const handleProfileUpdate = () => {\n    toast.success(\"Profile updated\", {\n      description: \"Your changes have been saved successfully.\",\n      action: {\n        label: \"Undo\",\n        onClick: () => {\n          toast.info(\"Changes reverted\", {\n            description: \"Your profile has been restored to previous state.\"\n          });\n        }\n      }\n    });\n  };\n\n  return (\n    <Button variant=\"outline\" onClick={handleProfileUpdate}>\n      Save Changes\n    </Button>\n  );\n}\n\n",
+      "type": "registry:component",
+      "target": "components/toast5.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

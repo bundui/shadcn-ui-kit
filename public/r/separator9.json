@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "separator9",
+  "title": "Separator",
+  "description": "Separator built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/separator/9/index.tsx",
+      "content": "import { Separator } from \"@/components/ui/separator\";\n\nexport default function Example() {\n  return (\n    <div className=\"h-42\">\n      <div className=\"flex h-full flex-col items-center gap-2\">\n        <Separator orientation=\"vertical\" className=\"flex-1 self-center!\" />\n        <span className=\"text-muted-foreground shrink-0 text-sm\">or</span>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/separator9.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

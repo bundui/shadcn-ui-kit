@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner7",
+  "title": "Spinner",
+  "description": "Spinner built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/spinner/7/index.tsx",
+      "content": "import { Badge } from \"@/components/ui/badge\";\nimport { Spinner } from \"@/components/ui/spinner\";\n\nexport default function Component() {\n  return (\n    <div className=\"flex items-center\">\n      <Badge>\n        <Spinner data-icon=\"inline-start\" />\n        Syncing\n      </Badge>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/spinner7.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

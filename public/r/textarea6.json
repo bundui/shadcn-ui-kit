@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea6",
+  "title": "Textarea",
+  "description": "Textarea built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/textarea/6/index.tsx",
+      "content": "import { useId } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport { Textarea } from \"@/components/ui/textarea\";\n\nexport default function TextareaComponent() {\n  const id = useId();\n  return (\n    <div className=\"group relative w-full max-w-sm\">\n      <Label\n        className=\"bg-background text-foreground absolute start-3 top-0 z-10 block -translate-y-1/2 px-2 text-xs font-medium group-has-disabled:opacity-50\"\n        htmlFor={id}>\n        Textarea with overlapping label\n      </Label>\n      <Textarea className=\"border-input bg-background\" id={id} />\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/textarea6.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

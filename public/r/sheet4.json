@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sheet4",
+  "title": "Sheet",
+  "description": "Extends the Dialog component to display content that complements the main content of the screen. Each sheet variant adapts to either Radix UI or Base UI foundations.",
+  "files": [
+    {
+      "path": "contents/components/sheet/4/index.tsx",
+      "content": "\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { Input } from \"@/components/ui/input\";\nimport { Label } from \"@/components/ui/label\";\nimport {\n  Sheet,\n  SheetClose,\n  SheetContent,\n  SheetDescription,\n  SheetFooter,\n  SheetHeader,\n  SheetTitle,\n  SheetTrigger\n} from \"@/components/ui/sheet\";\n\nexport default function SheetComponent() {\n  return (\n    <Sheet>\n      <SheetTrigger asChild>\n        <Button variant=\"outline\">Open Form Sheet</Button>\n      </SheetTrigger>\n      <SheetContent>\n        <SheetHeader>\n          <SheetTitle>Create Account</SheetTitle>\n          <SheetDescription>Fill in your information to create a new account.</SheetDescription>\n        </SheetHeader>\n        <div className=\"grid gap-4 p-4\">\n          <div className=\"grid gap-2\">\n            <Label htmlFor=\"name\">Name</Label>\n            <Input id=\"name\" placeholder=\"John Doe\" />\n          </div>\n          <div className=\"grid gap-2\">\n            <Label htmlFor=\"email\">Email</Label>\n            <Input id=\"email\" type=\"email\" placeholder=\"john@example.com\" />\n          </div>\n          <div className=\"grid gap-2\">\n            <Label htmlFor=\"password\">Password</Label>\n            <Input id=\"password\" type=\"password\" />\n          </div>\n        </div>\n        <SheetFooter>\n          <SheetClose asChild>\n            <Button type=\"submit\">Create Account</Button>\n          </SheetClose>\n        </SheetFooter>\n      </SheetContent>\n    </Sheet>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/sheet4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

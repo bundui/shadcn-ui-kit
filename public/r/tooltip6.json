@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tooltip6",
+  "title": "Tooltip",
+  "description": "Tooltip built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/tooltip/6/index.tsx",
+      "content": "\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { Tooltip, TooltipContent, TooltipTrigger } from \"@/components/ui/tooltip\";\n\nexport const title = \"Tooltip with Image\";\n\nconst Example = () => (\n  <Tooltip>\n    <TooltipTrigger asChild>\n      <Button variant=\"outline\">Product Preview</Button>\n    </TooltipTrigger>\n    <TooltipContent className=\"max-w-xs p-0\">\n      <div className=\"flex flex-col gap-1 p-3\">\n        <img\n          alt=\"Preview\"\n          className=\"mb-1 aspect-video w-full max-w-sm rounded-md\"\n          height={300}\n          src=\"https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=514&q=80\"\n          width={514}\n        />\n        <p className=\"font-semibold\">Product Preview</p>\n        <p className=\"text-xs\">View the full product details and specifications</p>\n      </div>\n    </TooltipContent>\n  </Tooltip>\n);\n\nexport default Example;\n",
+      "type": "registry:component",
+      "target": "components/tooltip6.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

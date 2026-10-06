@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog2",
+  "title": "Alert dialog",
+  "description": "A modal dialog that interrupts the user with important content and expects a response. Every variant pairs seamlessly with Radix UI and Base UI dialog primitives.",
+  "files": [
+    {
+      "path": "contents/components/alert-dialog/2/index.tsx",
+      "content": "import { CircleAlertIcon } from \"lucide-react\";\n\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogTitle,\n  AlertDialogTrigger\n} from \"@/components/ui/alert-dialog\";\nimport { Button } from \"@/components/ui/button\";\n\nexport default function AlertComponent() {\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger asChild>\n        <Button variant=\"outline\">Alert dialog with icon</Button>\n      </AlertDialogTrigger>\n      <AlertDialogContent>\n        <div className=\"flex flex-col gap-2 max-sm:items-center sm:flex-row sm:gap-4\">\n          <div\n            aria-hidden=\"true\"\n            className=\"flex size-9 shrink-0 items-center justify-center rounded-full border\">\n            <CircleAlertIcon className=\"opacity-80\" size={16} />\n          </div>\n          <AlertDialogHeader>\n            <AlertDialogTitle className=\"font-normal\">Are you sure?</AlertDialogTitle>\n            <AlertDialogDescription>\n              Are you sure you want to delete your account? All your data will be removed.\n            </AlertDialogDescription>\n          </AlertDialogHeader>\n        </div>\n        <AlertDialogFooter>\n          <AlertDialogCancel>Cancel</AlertDialogCancel>\n          <AlertDialogAction>Confirm</AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/alert-dialog2.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

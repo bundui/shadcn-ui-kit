@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea4",
+  "title": "Textarea",
+  "description": "A multi-line text input control. Every textarea variant fits projects standardized on Radix UI or Base UI.",
+  "files": [
+    {
+      "path": "contents/components/textarea/4/index.tsx",
+      "content": "import { useId } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport { Textarea } from \"@/components/ui/textarea\";\n\nexport default function Component() {\n  const id = useId();\n  return (\n    <div className=\"w-full max-w-sm *:not-first:mt-2\">\n      <Label htmlFor={id}>Textarea with error</Label>\n      <Textarea aria-invalid defaultValue=\"Hello!\" id={id} placeholder=\"Leave a comment\" />\n      <p aria-live=\"polite\" className=\"text-destructive mt-2 text-xs\" role=\"alert\">\n        Message should be at least 10 characters\n      </p>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/textarea4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

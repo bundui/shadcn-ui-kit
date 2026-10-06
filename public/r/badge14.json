@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge14",
+  "title": "Badge",
+  "description": "Badge built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/badge/14/index.tsx",
+      "content": "import { BellIcon } from \"lucide-react\";\n\nimport { Badge } from \"@/components/ui/badge\";\n\nexport default function BadgeComponent() {\n  return (\n    <Badge\n      className=\"bg-background h-9 gap-2.5 rounded-full p-1 pe-4\"\n      variant=\"outline\"\n    >\n      <span className=\"bg-muted flex size-7 shrink-0 items-center justify-center rounded-full\">\n        <BellIcon aria-hidden=\"true\" className=\"size-4\" />\n      </span>\n      12+ New Updates\n    </Badge>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/badge14.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

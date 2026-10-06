@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch3",
+  "title": "Switch",
+  "description": "A control that allows the user to toggle between on and off. Every switch variant toggles reliably with Radix UI and Base UI semantics.",
+  "files": [
+    {
+      "path": "contents/components/switch/3/index.tsx",
+      "content": "import { useId } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport { Switch } from \"@/components/ui/switch\";\n\nexport default function SwitchComponent() {\n  const id = useId();\n  return (\n    <div className=\"inline-flex items-center gap-2\">\n      <Switch className=\"rounded-sm [&_span]:rounded\" id={id} />\n      <Label className=\"sr-only\" htmlFor={id}>\n        Square switch\n      </Label>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/switch3.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

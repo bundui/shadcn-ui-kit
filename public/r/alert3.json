@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert3",
+  "title": "Alert",
+  "description": "Displays a callout for user attention. All alert examples work out of the box with Radix UI and Base UI.",
+  "files": [
+    {
+      "path": "contents/components/alert/3/index.tsx",
+      "content": "import { Alert, AlertDescription, AlertTitle } from \"@/components/ui/alert\";\nimport { CheckCircle2Icon } from \"lucide-react\";\n\nexport default function AlertComponent() {\n  return (\n    <Alert>\n      <CheckCircle2Icon className=\"size-4\" />\n      <AlertTitle>Success! Your changes have been saved</AlertTitle>\n      <AlertDescription>This is an alert with icon, title and description.</AlertDescription>\n    </Alert>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/alert3.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

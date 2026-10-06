@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "spinner4",
+  "title": "Spinner",
+  "description": "An indicator that can be used to show a loading state. All spinner styles work anywhere Radix UI or Base UI components are used.",
+  "files": [
+    {
+      "path": "contents/components/spinner/4/index.tsx",
+      "content": "import { LoaderIcon } from \"lucide-react\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction Spinner({ className, ...props }: React.ComponentProps<\"svg\">) {\n  return (\n    <LoaderIcon\n      role=\"status\"\n      aria-label=\"Loading\"\n      className={cn(\"size-4 animate-spin\", className)}\n      {...props}\n    />\n  )\n}\n\nexport default function SpinnerComponent() {\n  return (\n    <div className=\"flex items-center gap-4\">\n      <Spinner />\n    </div>\n  )\n}\n",
+      "type": "registry:component",
+      "target": "components/spinner4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

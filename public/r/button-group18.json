@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group18",
+  "title": "Button group",
+  "description": "Button group built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/button-group/18/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport { ButtonGroup } from \"@/components/ui/button-group\";\nimport { InputGroup, InputGroupInput } from \"@/components/ui/input-group\";\nimport { Loader2 } from \"lucide-react\";\n\nexport default function ButtonGroupComponent() {\n  return (\n    <ButtonGroup className=\"max-w-xs\">\n      <InputGroup>\n        <InputGroupInput placeholder=\"Search articles...\" />\n      </InputGroup>\n      <Button disabled>\n        <Loader2 className=\"size-4 animate-spin\" />\n      </Button>\n    </ButtonGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button-group18.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

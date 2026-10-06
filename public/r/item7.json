@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "item7",
+  "title": "Item",
+  "description": "Item built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/item/7/index.tsx",
+      "content": "import * as React from \"react\";\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\nimport { Button } from \"@/components/ui/button\";\nimport {\n  Item,\n  ItemActions,\n  ItemContent,\n  ItemDescription,\n  ItemGroup,\n  ItemMedia,\n  ItemSeparator,\n  ItemTitle,\n} from \"@/components/ui/item\";\nimport { PlusIcon } from \"lucide-react\";\n\nconst people = [\n  {\n    username: \"shadcn\",\n    avatar: \"https://i.pravatar.cc/150?u=shadcn\",\n    email: \"shadcn@vercel.com\",\n  },\n  {\n    username: \"maxleiter\",\n    avatar: \"https://i.pravatar.cc/150?u=maxleiter\",\n    email: \"maxleiter@vercel.com\",\n  },\n  {\n    username: \"evilrabbit\",\n    avatar: \"https://i.pravatar.cc/150?u=evilrabbit\",\n    email: \"evilrabbit@vercel.com\",\n  },\n];\n\nexport default function ItemComponent() {\n  return (\n    <ItemGroup className=\"max-w-sm w-full gap-3\">\n      {people.map((person, index) => (\n        <Item key={person.username} variant=\"outline\">\n          <ItemMedia>\n            <Avatar>\n              <AvatarImage src={person.avatar} className=\"grayscale\" />\n              <AvatarFallback>{person.username.charAt(0)}</AvatarFallback>\n            </Avatar>\n          </ItemMedia>\n          <ItemContent className=\"gap-1\">\n            <ItemTitle>{person.username}</ItemTitle>\n            <ItemDescription>{person.email}</ItemDescription>\n          </ItemContent>\n          <ItemActions>\n            <Button variant=\"ghost\" size=\"icon\" className=\"rounded-full\">\n              <PlusIcon />\n            </Button>\n          </ItemActions>\n        </Item>\n      ))}\n    </ItemGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/item7.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

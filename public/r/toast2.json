@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast2",
+  "title": "Sonner toast",
+  "description": "An opinionated toast component for React. Every toast example sits comfortably next to Radix UI and Base UI components.",
+  "files": [
+    {
+      "path": "contents/components/sonner-toast/2/index.tsx",
+      "content": "\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { toast } from \"sonner\";\n\nexport default function ToastComponent() {\n  const handleEmailSent = () => {\n    toast.success(\"Email sent successfully\", {\n      description: \"Your message has been delivered to the recipient.\",\n      duration: 3000\n    });\n  };\n\n  return (\n    <Button variant=\"outline\" onClick={handleEmailSent}>\n      Send Email\n    </Button>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/toast2.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

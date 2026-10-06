@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "switch1",
+  "title": "Switch",
+  "description": "A control that allows the user to toggle between on and off. Every switch variant toggles reliably with Radix UI and Base UI semantics.",
+  "files": [
+    {
+      "path": "contents/components/switch/1/index.tsx",
+      "content": "\"use client\";\n\nimport { Label } from \"@/components/ui/label\";\nimport { Switch } from \"@/components/ui/switch\";\n\nexport default function Example() {\n  return (\n    <div className=\"flex items-center space-x-2\">\n      <Switch id=\"airplane-mode\" />\n      <Label htmlFor=\"airplane-mode\">Airplane Mode</Label>\n    </div>\n  );\n}\n\n",
+      "type": "registry:component",
+      "target": "components/switch1.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

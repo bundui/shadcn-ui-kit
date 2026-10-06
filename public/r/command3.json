@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "command3",
+  "title": "Command",
+  "description": "Command menu for search and quick actions. Each command menu example runs on Radix UI and Base UI without extra work.",
+  "files": [
+    {
+      "path": "contents/components/command/3/index.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\nimport {\n  Command,\n  CommandEmpty,\n  CommandGroup,\n  CommandInput,\n  CommandItem,\n  CommandList\n} from \"@/components/ui/command\";\nimport { FileIcon, FolderIcon, ImageIcon, FileTextIcon } from \"lucide-react\";\n\nconst files = [\n  { name: \"document.pdf\", type: \"pdf\", icon: FileTextIcon },\n  { name: \"presentation.pptx\", type: \"presentation\", icon: FileIcon },\n  { name: \"spreadsheet.xlsx\", type: \"spreadsheet\", icon: FileIcon },\n  { name: \"photo.jpg\", type: \"image\", icon: ImageIcon },\n  { name: \"archive.zip\", type: \"archive\", icon: FolderIcon },\n  { name: \"notes.txt\", type: \"text\", icon: FileTextIcon }\n];\n\nexport default function CommandComponent() {\n  const [search, setSearch] = useState(\"\");\n\n  const filteredFiles = files.filter((file) =>\n    file.name.toLowerCase().includes(search.toLowerCase())\n  );\n\n  return (\n    <Command className=\"w-full max-w-md rounded-lg border shadow-md **:data-[slot=input-group]:border-border **:data-[slot=input-group]:bg-background\">\n      <CommandInput\n        placeholder=\"Search files...\"\n        value={search}\n        onValueChange={setSearch}\n      />\n      <CommandList>\n        <CommandEmpty>No files found.</CommandEmpty>\n        <CommandGroup heading=\"Files\">\n          {filteredFiles.map((file) => (\n            <CommandItem\n              key={file.name}\n              onSelect={() => {\n                console.log(`Opening: ${file.name}`);\n              }}>\n              <file.icon />\n              <span>{file.name}</span>\n            </CommandItem>\n          ))}\n        </CommandGroup>\n      </CommandList>\n    </Command>\n  );\n}\n\n",
+      "type": "registry:component",
+      "target": "components/command3.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

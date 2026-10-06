@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card7",
+  "title": "Card",
+  "description": "Card built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/card/7/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport {\n  Card,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@/components/ui/card\";\n\nexport default function CookieConsentCard() {\n  return (\n    <Card className=\"w-full max-w-sm shadow-none\">\n      <CardHeader>\n        <CardTitle>Cookie Settings</CardTitle>\n        <CardDescription>\n          We use cookies to enhance your browsing experience, serve personalized\n          content, and analyze our traffic. By clicking &quot;Accept All&quot;, you consent to our\n          use of cookies.\n        </CardDescription>\n      </CardHeader>\n      <CardFooter className=\"flex justify-end gap-2\">\n        <Button variant=\"outline\">Reject</Button>\n        <Button>Accept All</Button>\n      </CardFooter>\n    </Card>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/card7.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider10",
+  "title": "Slider",
+  "description": "Slider built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/slider/10/index.tsx",
+      "content": "\"use client\";\n\nimport { useState } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport { Slider } from \"@/components/ui/slider\";\n\nexport default function SliderComponent() {\n  const min_price = 5;\n  const max_price = 1240;\n  const [value, setValue] = useState([min_price, max_price]);\n\n  const formatPrice = (price: number) => {\n    return price === max_price ? `$${price.toLocaleString()}+` : `$${price.toLocaleString()}`;\n  };\n\n  return (\n    <div className=\"w-full max-w-xs *:not-first:mt-3\">\n      <Label className=\"tabular-nums\">\n        From {formatPrice(value[0])} to {formatPrice(value[1])}\n      </Label>\n      <Slider\n        aria-label=\"Price range slider\"\n        max={max_price}\n        min={min_price}\n        onValueChange={setValue}\n        value={value}\n      />\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/slider10.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

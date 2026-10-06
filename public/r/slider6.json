@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider6",
+  "title": "Slider",
+  "description": "Slider built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/slider/6/index.tsx",
+      "content": "import { Slider } from \"@/components/ui/slider\";\n\nexport default function SliderComponent() {\n  return (\n    <div className=\"w-full max-w-xs\">\n      <div>\n        <span\n          aria-hidden=\"true\"\n          className=\"text-muted-foreground mb-3 flex w-full items-center justify-between gap-2 text-xs font-medium\">\n          <span>Low</span>\n          <span>High</span>\n        </span>\n        <Slider\n          aria-label=\"Slider with labels and tooltip\"\n          defaultValue={[50]}\n          step={10}\n        />\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/slider6.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "select13",
+  "title": "Select",
+  "description": "Select built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/select/13/index.tsx",
+      "content": "import { useId } from \"react\";\n\nimport { Label } from \"@/components/ui/label\";\nimport {\n  Select,\n  SelectContent,\n  SelectItem,\n  SelectTrigger,\n  SelectValue\n} from \"@/components/ui/select\";\n\nexport default function Component() {\n  const id = useId();\n  return (\n    <div className=\"w-full max-w-xs\">\n      <Select defaultValue=\"1\">\n        <SelectTrigger\n          className=\"h-auto w-full ps-2 text-left [&>span]:flex [&>span]:items-center [&>span]:gap-2 [&>span_img]:shrink-0\"\n          id={id}>\n          <SelectValue placeholder=\"Choose a plan\" />\n        </SelectTrigger>\n        <SelectContent className=\"[&_*[role=option]]:ps-2 [&_*[role=option]]:pe-8 [&_*[role=option]>span]:start-auto [&_*[role=option]>span]:end-2\">\n          <SelectItem value=\"1\">\n            <span className=\"flex items-center gap-2\">\n              <img\n                alt=\"Jenny Hamilton\"\n                className=\"size-6 rounded-full\"\n                src=\"https://i.pravatar.cc/40?u=jennycodes\"\n              />\n              <span>\n                <span className=\"block font-medium\">Jenny Hamilton</span>\n                <span className=\"text-muted-foreground block text-xs\">@jennycodes</span>\n              </span>\n            </span>\n          </SelectItem>\n          <SelectItem value=\"2\">\n            <span className=\"flex items-center gap-2\">\n              <img\n                alt=\"Paul Smith\"\n                className=\"size-6 rounded-full\"\n                src=\"https://i.pravatar.cc/40?u=paulsmith\"\n              />\n              <span>\n                <span className=\"block font-medium\">Paul Smith</span>\n                <span className=\"text-muted-foreground block text-xs\">@paulsmith</span>\n              </span>\n            </span>\n          </SelectItem>\n          <SelectItem value=\"3\">\n            <span className=\"flex items-center gap-2\">\n              <img\n                alt=\"Luna Wyen\"\n                className=\"size-6 rounded-full\"\n                src=\"https://i.pravatar.cc/40?u=wyen.luna\"\n              />\n              <span>\n                <span className=\"block font-medium\">Luna Wyen</span>\n                <span className=\"text-muted-foreground block text-xs\">@wyen.luna</span>\n              </span>\n            </span>\n          </SelectItem>\n        </SelectContent>\n      </Select>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/select13.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "breadcrumb5",
+  "title": "Breadcrumb",
+  "description": "Displays the path to the current resource using a hierarchy of links. Each breadcrumb layout works equally well with Radix UI and Base UI.",
+  "files": [
+    {
+      "path": "contents/components/breadcrumb/5/index.tsx",
+      "content": "import { HomeIcon } from \"lucide-react\";\n\nimport {\n  Breadcrumb,\n  BreadcrumbItem,\n  BreadcrumbLink,\n  BreadcrumbList,\n  BreadcrumbPage,\n  BreadcrumbSeparator\n} from \"@/components/ui/breadcrumb\";\n\nexport default function Component() {\n  return (\n    <Breadcrumb>\n      <BreadcrumbList>\n        <BreadcrumbItem>\n          <BreadcrumbLink href=\"#\">\n            <HomeIcon aria-hidden=\"true\" size={16} />\n            <span className=\"sr-only\">Home</span>\n          </BreadcrumbLink>\n        </BreadcrumbItem>\n        <BreadcrumbSeparator> · </BreadcrumbSeparator>\n        <BreadcrumbItem>\n          <BreadcrumbLink href=\"#\">Components</BreadcrumbLink>\n        </BreadcrumbItem>\n        <BreadcrumbSeparator> · </BreadcrumbSeparator>\n        <BreadcrumbItem>\n          <BreadcrumbPage>Breadcrumb</BreadcrumbPage>\n        </BreadcrumbItem>\n      </BreadcrumbList>\n    </Breadcrumb>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/breadcrumb5.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

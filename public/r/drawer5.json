@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "drawer5",
+  "title": "Drawer",
+  "description": "A drawer is a panel that slides in from the side of the screen. Each drawer variant is interchangeable between Radix UI and Base UI projects.",
+  "files": [
+    {
+      "path": "contents/components/drawer/5/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport {\n  Drawer,\n  DrawerClose,\n  DrawerContent,\n  DrawerDescription,\n  DrawerFooter,\n  DrawerHeader,\n  DrawerTitle,\n  DrawerTrigger,\n} from \"@/components/ui/drawer\";\nimport { Input } from \"@/components/ui/input\";\nimport { Label } from \"@/components/ui/label\";\n\nexport default function DrawerComponent() {\n  return (\n    <Drawer>\n      <DrawerTrigger asChild>\n        <Button variant=\"outline\">Login</Button>\n      </DrawerTrigger>\n      <DrawerContent>\n        <div className=\"mx-auto w-full max-w-sm\">\n          <DrawerHeader>\n            <DrawerTitle className=\"font-normal\">Login</DrawerTitle>\n            <DrawerDescription>\n              Please login again to continue using the application.\n            </DrawerDescription>\n          </DrawerHeader>\n          <form className=\"grid gap-4 p-4\">\n            <div className=\"grid gap-2\">\n              <Label htmlFor=\"email\">Email</Label>\n              <Input\n                required\n                id=\"email\"\n                type=\"email\"\n                autoComplete=\"username\"\n                placeholder=\"hello@shadcnuikit.com\"\n              />\n            </div>\n            <div className=\"grid gap-2\">\n              <Label htmlFor=\"password\">Password</Label>\n              <Input\n                required\n                id=\"password\"\n                type=\"password\"\n                placeholder=\"••••••••••\"\n                autoComplete=\"current-password\"\n              />\n            </div>\n          </form>\n          <DrawerFooter>\n            <Button type=\"submit\">Login</Button>\n            <DrawerClose asChild>\n              <Button type=\"button\" variant=\"outline\">\n                Cancel\n              </Button>\n            </DrawerClose>\n          </DrawerFooter>\n        </div>\n      </DrawerContent>\n    </Drawer>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/drawer5.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

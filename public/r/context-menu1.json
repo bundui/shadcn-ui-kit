@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "context-menu1",
+  "title": "Context menu",
+  "description": "A context menu is a menu that appears when the user right-clicks on an element. Every variant aligns with both Radix UI and Base UI menu behavior.",
+  "files": [
+    {
+      "path": "contents/components/context-menu/1/index.tsx",
+      "content": "import {\n  ContextMenu,\n  ContextMenuContent,\n  ContextMenuItem,\n  ContextMenuTrigger,\n} from \"@/components/ui/context-menu\";\n\nexport default function Example() {\n  return (\n    <ContextMenu>\n      <ContextMenuTrigger className=\"flex h-[150px] w-[300px] items-center justify-center rounded-md border border-dashed text-sm\">\n        Right click here\n      </ContextMenuTrigger>\n      <ContextMenuContent className=\"w-64\">\n        <ContextMenuItem inset>Back</ContextMenuItem>\n        <ContextMenuItem inset disabled>\n          Forward\n        </ContextMenuItem>\n        <ContextMenuItem inset>Reload</ContextMenuItem>\n      </ContextMenuContent>\n    </ContextMenu>\n  );\n}\n\n",
+      "type": "registry:component",
+      "target": "components/context-menu1.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar7",
+  "title": "Calendar",
+  "description": "Calendar built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/calendar/7/index.tsx",
+      "content": "\"use client\";\n\nimport { addDays } from \"date-fns\";\nimport { useState } from \"react\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { Calendar } from \"@/components/ui/calendar\";\n\nexport default function Component() {\n  const today = new Date();\n  const selectedDay = addDays(today, -28);\n  const [month, setMonth] = useState(selectedDay);\n  const [date, setDate] = useState<Date | undefined>(selectedDay);\n\n  return (\n    <div className=\"rounded-md border p-2\">\n      <Calendar\n        mode=\"single\"\n        month={month}\n        onMonthChange={setMonth}\n        onSelect={setDate}\n        selected={date}\n      />\n      <Button\n        className=\"mt-2 mb-1\"\n        onClick={() => {\n          setDate(today);\n          setMonth(today);\n        }}\n        size=\"sm\"\n        variant=\"outline\">\n        Today\n      </Button>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/calendar7.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

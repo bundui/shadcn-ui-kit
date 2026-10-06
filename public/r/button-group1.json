@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button-group1",
+  "title": "Button group",
+  "description": "A container that groups related buttons together with consistent styling. The variants fit naturally into codebases using Radix UI or Base UI.",
+  "files": [
+    {
+      "path": "contents/components/button-group/1/index.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport { Button } from \"@/components/ui/button\";\nimport { ButtonGroup } from \"@/components/ui/button-group\";\n\nexport default function ButtonGroupComponent() {\n  const [label, setLabel] = React.useState(\"personal\");\n\n  return (\n    <ButtonGroup>\n      <Button variant=\"outline\">Previous</Button>\n      <Button variant=\"outline\">Next</Button>\n    </ButtonGroup>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button-group1.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

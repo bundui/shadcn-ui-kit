@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "checkbox12",
+  "title": "Checkbox",
+  "description": "Checkbox built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/checkbox/12/index.tsx",
+      "content": "\"use client\";\n\nimport { useMemo, useState } from \"react\";\n\nimport { Checkbox } from \"@/components/ui/checkbox\";\nimport { Label } from \"@/components/ui/label\";\n\ninterface ChildItem {\n  id: string;\n  label: string;\n}\n\nconst childItems: ChildItem[] = [\n  { id: \"child1\", label: \"Read\" },\n  { id: \"child2\", label: \"Write\" },\n  { id: \"child3\", label: \"Delete\" },\n];\n\nexport default function Component() {\n  const [checkedItems, setCheckedItems] = useState<Record<string, boolean>>(\n    childItems.reduce((acc, item) => ({ ...acc, [item.id]: false }), {}),\n  );\n\n  const parentState = useMemo<boolean | \"indeterminate\">(() => {\n    const checkedCount = Object.values(checkedItems).filter(Boolean).length;\n    if (checkedCount === 0) return false;\n    if (checkedCount === childItems.length) return true;\n    return \"indeterminate\";\n  }, [checkedItems]);\n\n  const handleParentChange = (checked: boolean | \"indeterminate\") => {\n    const isChecked = checked === true;\n    const newState = childItems.reduce(\n      (acc, item) => ({ ...acc, [item.id]: isChecked }),\n      {},\n    );\n    setCheckedItems(newState);\n  };\n\n  const handleChildChange = (\n    id: string,\n    checked: boolean | \"indeterminate\",\n  ) => {\n    setCheckedItems((prev) => ({\n      ...prev,\n      [id]: checked === true,\n    }));\n  };\n\n  return (\n    <div className=\"space-y-3\">\n      <div className=\"flex items-center space-x-2\">\n        <Checkbox\n          checked={parentState}\n          id=\"parent\"\n          onCheckedChange={handleParentChange}\n        />\n        <Label className=\"font-semibold\" htmlFor=\"parent\">\n          Select all permissions\n        </Label>\n      </div>\n      <div className=\"ml-6 space-y-2\">\n        {childItems.map((item) => (\n          <div key={item.id} className=\"flex items-center space-x-2\">\n            <Checkbox\n              checked={checkedItems[item.id]}\n              id={item.id}\n              onCheckedChange={(checked) => handleChildChange(item.id, checked)}\n            />\n            <Label htmlFor={item.id}>{item.label}</Label>\n          </div>\n        ))}\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/checkbox12.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

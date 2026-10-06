@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea10",
+  "title": "Textarea",
+  "description": "Textarea built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/textarea/10/index.tsx",
+      "content": "import { Label } from \"@/components/ui/label\";\nimport { Textarea } from \"@/components/ui/textarea\";\nimport { Tooltip } from \"@/components/ui/tooltip\";\nimport { TooltipTrigger } from \"@/components/ui/tooltip\";\nimport { InfoIcon } from \"lucide-react\";\nimport { TooltipContent } from \"@/components/ui/tooltip\";\n\nexport default function TextareaComponent() {\n  return (\n    <div className=\"grid w-full max-w-sm gap-1.5 *:not-first:mt-2\">\n      <Label htmlFor=\"message\">\n        Your message{\" \"}\n        <Tooltip>\n          <TooltipTrigger asChild>\n            <InfoIcon className=\"text-muted-foreground size-3\" />\n          </TooltipTrigger>\n          <TooltipContent>\n            <p>This is a tooltip</p>\n          </TooltipContent>\n        </Tooltip>\n      </Label>\n      <Textarea placeholder=\"Type your message here.\" id=\"message\" />\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/textarea10.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

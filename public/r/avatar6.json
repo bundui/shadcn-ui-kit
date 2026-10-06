@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar6",
+  "title": "Avatar",
+  "description": "Avatar built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/avatar/6/index.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\nimport { Badge } from \"@/components/ui/badge\";\n\nexport default function AvatarComponent() {\n  return (\n    <Avatar>\n      <AvatarImage alt=\"Kelly King\" src=\"https://i.pravatar.cc/150?img=10\" />\n      <AvatarFallback>KK</AvatarFallback>\n      <Badge className=\"border-background absolute -top-1.5 left-full z-10 min-w-5 -translate-x-3.5 px-1\">\n        6\n      </Badge>\n    </Avatar>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/avatar6.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

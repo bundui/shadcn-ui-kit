@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hover-card1",
+  "title": "Hover card",
+  "description": "A hover card is a card that appears when the user hovers over an element. Every variant behaves consistently across Radix UI and Base UI.",
+  "files": [
+    {
+      "path": "contents/components/hover-card/1/index.tsx",
+      "content": "import { HoverCard, HoverCardContent, HoverCardTrigger } from \"@/components/ui/hover-card\";\nimport { Button } from \"@/components/ui/button\";\n\nexport default function HoverCardComponent() {\n  return (\n    <HoverCard>\n      <HoverCardTrigger asChild>\n        <Button variant=\"link\">@nextjs</Button>\n      </HoverCardTrigger>\n      <HoverCardContent className=\"w-80\">\n        <div className=\"flex justify-between space-x-4\">\n          <div className=\"space-y-1\">\n            <h4 className=\"text-sm font-semibold\">@nextjs</h4>\n            <p className=\"text-sm\">The React Framework – created and maintained by @vercel.</p>\n          </div>\n        </div>\n      </HoverCardContent>\n    </HoverCard>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/hover-card1.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

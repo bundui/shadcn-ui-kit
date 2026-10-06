@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs4",
+  "title": "Tabs",
+  "description": "A set of layered sections of content, known as tab panels, that are displayed one at a time. Each tabs example mirrors the patterns used by Radix UI and Base UI.",
+  "files": [
+    {
+      "path": "contents/components/tabs/4/index.tsx",
+      "content": "import { Tabs, TabsContent, TabsList, TabsTrigger } from \"@/components/ui/tabs\";\n\nexport default function Component() {\n  return (\n    <Tabs defaultValue=\"overview\">\n      <TabsList variant=\"line\">\n        <TabsTrigger value=\"overview\">Overview</TabsTrigger>\n        <TabsTrigger value=\"analytics\">Analytics</TabsTrigger>\n        <TabsTrigger value=\"reports\">Reports</TabsTrigger>\n      </TabsList>\n      <div className=\"bg-muted rounded-lg p-4\">\n        <TabsContent value=\"overview\">\n          <p className=\"text-xs\">Content for Tab 1</p>\n        </TabsContent>\n        <TabsContent value=\"analytics\">\n          <p className=\"text-xs\">Content for Tab 2</p>\n        </TabsContent>\n        <TabsContent value=\"reports\">\n          <p className=\"text-xs\">Content for Tab 3</p>\n        </TabsContent>\n      </div>\n    </Tabs>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/tabs4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

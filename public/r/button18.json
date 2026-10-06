@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button18",
+  "title": "Button",
+  "description": "Button built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/button/18/index.tsx",
+      "content": "\"use client\";\n\nimport { ChevronDownIcon } from \"lucide-react\";\nimport { useState } from \"react\";\n\nimport { Button } from \"@/components/ui/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuRadioGroup,\n  DropdownMenuRadioItem,\n  DropdownMenuTrigger\n} from \"@/components/ui/dropdown-menu\";\n\nconst options = [\n  {\n    description:\n      \"All commits from this branch will be added to the base branch via a commit version.\",\n    label: \"Merge pull request\"\n  },\n  {\n    description:\n      \"The 6 commits from this branch will be combined into one commit in the base branch.\",\n    label: \"Squash and merge\"\n  },\n  {\n    description: \"The 6 commits from this branch will be rebased and added to the base branch.\",\n    label: \"Rebase and merge\"\n  }\n];\n\nexport default function Component() {\n  const [selectedIndex, setSelectedIndex] = useState(\"0\");\n\n  return (\n    <div className=\"divide-primary-foreground/30 inline-flex divide-x rounded-md shadow-xs rtl:space-x-reverse\">\n      <Button className=\"rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10\">\n        {options[Number(selectedIndex)].label}\n      </Button>\n      <DropdownMenu>\n        <DropdownMenuTrigger asChild>\n          <Button\n            aria-label=\"Options\"\n            className=\"rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10\"\n            size=\"icon\">\n            <ChevronDownIcon aria-hidden=\"true\" size={16} />\n          </Button>\n        </DropdownMenuTrigger>\n        <DropdownMenuContent\n          align=\"end\"\n          className=\"max-w-64 md:max-w-xs\"\n          side=\"bottom\"\n          sideOffset={4}>\n          <DropdownMenuRadioGroup onValueChange={setSelectedIndex} value={selectedIndex}>\n            {options.map((option, index) => (\n              <DropdownMenuRadioItem\n                className=\"items-start [&>span]:pt-1.5\"\n                key={option.label}\n                value={String(index)}>\n                <div className=\"flex flex-col gap-1\">\n                  <span className=\"text-sm font-medium\">{option.label}</span>\n                  <span className=\"text-muted-foreground text-xs\">{option.description}</span>\n                </div>\n              </DropdownMenuRadioItem>\n            ))}\n          </DropdownMenuRadioGroup>\n        </DropdownMenuContent>\n      </DropdownMenu>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/button18.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

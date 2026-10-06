@@ -1,4 +1,5 @@
 import { icons } from "lucide-react";
+import React from "react";
 
 type IconProps = {
   name: string;

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field9",
+  "title": "Field",
+  "description": "Field built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/field/9/index.tsx",
+      "content": "import { Field, FieldLabel } from \"@/components/ui/field\";\nimport { Switch } from \"@/components/ui/switch\";\n\nexport default function FieldComponent() {\n  return (\n    <Field orientation=\"horizontal\" className=\"w-fit\">\n      <FieldLabel htmlFor=\"2fa\">Multi-factor authentication</FieldLabel>\n      <Switch id=\"2fa\" />\n    </Field>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/field9.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

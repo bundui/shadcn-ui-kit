@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toast7",
+  "title": "Sonner toast",
+  "description": "Sonner toast built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/sonner-toast/7/index.tsx",
+      "content": "\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { toast } from \"sonner\";\n\nexport default function ToastComponent() {\n  const handlePasswordChange = () => {\n    toast.promise(\n      new Promise((resolve) => {\n        setTimeout(() => resolve({ success: true }), 2000);\n      }),\n      {\n        style: {\n          '--normal-bg': 'light-dark(var(--color-sky-600), var(--color-sky-400))',\n          '--normal-text': 'var(--color-white)',\n          '--normal-border': 'light-dark(var(--color-sky-600), var(--color-sky-400))'\n        } as React.CSSProperties,\n        loading: \"Changing password...\",\n        success: \"Password changed successfully\",\n        error: \"Failed to change password. Please try again.\"\n      }\n    );\n  };\n\n  return (\n    <Button variant=\"outline\" onClick={handlePasswordChange}>\n      Custom Color\n    </Button>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/toast7.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

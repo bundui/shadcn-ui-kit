@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar18",
+  "title": "Avatar",
+  "description": "Avatar built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/avatar/18/index.tsx",
+      "content": "import { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\n\nexport default function AvatarComponent() {\n  return (\n    <div className=\"relative w-fit\">\n      <Avatar className=\"ring-offset-background size-12 ring-2 ring-green-500 ring-offset-2\">\n        <AvatarImage alt=\"@tobybelhome\" src=\"https://i.pravatar.cc/150?img=1\" />\n        <AvatarFallback>TB</AvatarFallback>\n      </Avatar>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/avatar18.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "badge7",
+  "title": "Badge",
+  "description": "Badge built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/badge/7/index.tsx",
+      "content": "import { Badge } from \"@/components/ui/badge\";\n\nexport default function Component() {\n  return (\n    <Badge className=\"gap-1.5\" variant=\"outline\">\n      <span aria-hidden=\"true\" className=\"size-1.5 rounded-full bg-amber-500\" />\n      Pending\n    </Badge>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/badge7.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

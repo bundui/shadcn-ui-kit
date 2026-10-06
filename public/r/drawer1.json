@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "drawer1",
+  "title": "Drawer",
+  "description": "A drawer is a panel that slides in from the side of the screen. Each drawer variant is interchangeable between Radix UI and Base UI projects.",
+  "files": [
+    {
+      "path": "contents/components/drawer/1/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport {\n  Drawer,\n  DrawerClose,\n  DrawerContent,\n  DrawerFooter,\n  DrawerHeader,\n  DrawerTitle,\n  DrawerTrigger,\n} from \"@/components/ui/drawer\";\n\nexport default function DrawerComponent() {\n  return (\n    <Drawer direction=\"top\">\n      <DrawerTrigger asChild>\n        <Button variant=\"outline\">Top</Button>\n      </DrawerTrigger>\n      <DrawerContent>\n        <div className=\"mx-auto w-full max-w-sm\">\n          <DrawerHeader>\n            <DrawerTitle className=\"font-normal\">Please login again.</DrawerTitle>\n          </DrawerHeader>\n          <p className=\"text-muted-foreground p-4\">\n            Your session has expired. Please login again to continue using the\n            application.\n          </p>\n          <DrawerFooter>\n            <Button type=\"submit\">Login</Button>\n            <DrawerClose asChild>\n              <Button type=\"button\" variant=\"outline\">\n                Cancel\n              </Button>\n            </DrawerClose>\n          </DrawerFooter>\n        </div>\n      </DrawerContent>\n    </Drawer>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/drawer1.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "field5",
+  "title": "Field",
+  "description": "A field is a form control that allows the user to enter a value. Each field example is compatible with form primitives from Radix UI and Base UI.",
+  "files": [
+    {
+      "path": "contents/components/field/5/index.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport { Field, FieldDescription, FieldTitle } from \"@/components/ui/field\";\nimport { Slider } from \"@/components/ui/slider\";\n\nexport default function FieldComponent() {\n  const [value, setValue] = React.useState([200, 800]);\n\n  return (\n    <Field className=\"w-full max-w-xs\">\n      <FieldTitle>Price Range</FieldTitle>\n      <FieldDescription>\n        Set your budget range ($\n        <span className=\"font-medium tabular-nums\">{value[0]}</span> -{\" \"}\n        <span className=\"font-medium tabular-nums\">{value[1]}</span>).\n      </FieldDescription>\n      <Slider\n        value={value}\n        onValueChange={(value) => setValue(value as [number, number])}\n        max={1000}\n        min={0}\n        step={10}\n        className=\"mt-2 w-full\"\n        aria-label=\"Price Range\"\n      />\n    </Field>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/field5.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

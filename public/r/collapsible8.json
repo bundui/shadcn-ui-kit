@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible8",
+  "title": "Collapsible",
+  "description": "Collapsible built with shadcn/ui.",
+  "files": [
+    {
+      "path": "contents/components/collapsible/8/index.tsx",
+      "content": "import { Collapsible, CollapsibleContent, CollapsibleTrigger } from \"@/components/ui/collapsible\";\nimport { CodeIcon } from \"lucide-react\";\n\nexport default function CollapsibleComponent() {\n  return (\n    <Collapsible className=\"bg-muted/50 w-full max-w-md rounded-lg border\">\n      <CollapsibleTrigger className=\"flex w-full items-center gap-2 p-4 text-sm font-medium\">\n        <CodeIcon className=\"h-4 w-4\" /> View code\n      </CollapsibleTrigger>\n      <CollapsibleContent className=\"px-4 pb-4\">\n        <pre className=\"bg-background rounded-md p-3 text-xs\">\n          <code>{`function hello() {\n    console.log(\"Hello, World!\");\n}`}</code>\n        </pre>\n      </CollapsibleContent>\n    </Collapsible>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/collapsible8.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

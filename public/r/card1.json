@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "card1",
+  "title": "Card",
+  "description": "Displays a card with header, content, and footer. Every card layout can be used alongside Radix UI and Base UI components.",
+  "files": [
+    {
+      "path": "contents/components/card/1/index.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport {\n  Card,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@/components/ui/card\";\n\nexport default function PricingCard() {\n  return (\n    <Card className=\"w-full max-w-xs shadow-none\">\n      <CardHeader>\n        <CardTitle>Upgrade to Pro</CardTitle>\n        <CardDescription>\n          Unlock advanced automation, analytics, and priority support designed\n          for SaaS teams to scale faster, optimize operations, and deliver a\n          world-class experience to your users.\n        </CardDescription>\n      </CardHeader>\n      <CardFooter>\n        <Button className=\"w-full\">Start Free Trial</Button>\n      </CardFooter>\n    </Card>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/card1.tsx"
+    }
+  ],
+  "type": "registry:component"
+}

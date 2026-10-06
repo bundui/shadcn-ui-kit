@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "command4",
+  "title": "Command",
+  "description": "Command menu for search and quick actions. Each command menu example runs on Radix UI and Base UI without extra work.",
+  "files": [
+    {
+      "path": "contents/components/command/4/index.tsx",
+      "content": "\"use client\";\n\nimport {\n  Command,\n  CommandEmpty,\n  CommandGroup,\n  CommandInput,\n  CommandItem,\n  CommandList,\n  CommandSeparator\n} from \"@/components/ui/command\";\nimport { Avatar, AvatarFallback, AvatarImage } from \"@/components/ui/avatar\";\nimport { UserIcon } from \"lucide-react\";\n\nconst users = [\n  {\n    id: 1,\n    name: \"John Doe\",\n    email: \"john@example.com\",\n    avatar: \"https://i.pravatar.cc/150?img=1\",\n    role: \"Developer\"\n  },\n  {\n    id: 2,\n    name: \"Sarah Miller\",\n    email: \"sarah@example.com\",\n    avatar: \"https://i.pravatar.cc/150?img=2\",\n    role: \"Designer\"\n  },\n  {\n    id: 3,\n    name: \"Mike Johnson\",\n    email: \"mike@example.com\",\n    avatar: \"https://i.pravatar.cc/150?img=3\",\n    role: \"Manager\"\n  },\n  {\n    id: 4,\n    name: \"Emma Wilson\",\n    email: \"emma@example.com\",\n    avatar: \"https://i.pravatar.cc/150?img=4\",\n    role: \"Developer\"\n  }\n];\n\nexport default function CommandComponent() {\n  return (\n    <div className=\"w-full max-w-md rounded-lg border shadow-md\">\n      <Command className=\"**:data-[slot=input-group]:border-border **:data-[slot=input-group]:bg-background\">\n        <CommandInput placeholder=\"Search users by name or email...\" />\n        <CommandList>\n          <CommandEmpty>No users found.</CommandEmpty>\n          <CommandGroup heading=\"Users\">\n            {users.map((user) => (\n              <CommandItem key={user.id}>\n                <Avatar className=\"h-6 w-6\">\n                  <AvatarImage src={user.avatar} alt={user.name} />\n                  <AvatarFallback>\n                    {user.name\n                      .split(\" \")\n                      .map((n) => n[0])\n                      .join(\"\")}\n                  </AvatarFallback>\n                </Avatar>\n                <div className=\"flex flex-col\">\n                  <span>{user.name}</span>\n                  <span className=\"text-muted-foreground text-xs\">{user.email}</span>\n                </div>\n                <span className=\"text-muted-foreground ml-auto text-xs\">{user.role}</span>\n              </CommandItem>\n            ))}\n          </CommandGroup>\n          <CommandSeparator />\n          <CommandGroup heading=\"Actions\">\n            <CommandItem>\n              <UserIcon />\n              <span>Add New User</span>\n            </CommandItem>\n          </CommandGroup>\n        </CommandList>\n      </Command>\n    </div>\n  );\n}\n",
+      "type": "registry:component",
+      "target": "components/command4.tsx"
+    }
+  ],
+  "type": "registry:component"
+}
